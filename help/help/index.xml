@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Debug on</title><link>https://doks-child-theme.netlify.app/help/help/</link><description>Recent content in Debug on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 21 Aug 2023 16:18:47 +0200</lastBuildDate><atom:link href="https://doks-child-theme.netlify.app/help/help/index.xml" rel="self" type="application/rss+xml"/><item><title>Support</title><link>https://doks-child-theme.netlify.app/help/help/support/</link><pubDate>Wed, 26 Jul 2023 08:45:50 +0200</pubDate><guid>https://doks-child-theme.netlify.app/help/help/support/</guid><description>Forum #
+Join our forum if you have any questions or simply want to take a look at others topics!
+👉 Any questions relative to your development with Reachy?Go to Pollen Community Pollen Robotics support #
+For any specific questions concerning your robot or if you meet problems with the product, please contact us at support@pollen-robotics.com.</description></item><item><title>Debug</title><link>https://doks-child-theme.netlify.app/help/help/debug/</link><pubDate>Wed, 26 Jul 2023 08:44:51 +0200</pubDate><guid>https://doks-child-theme.netlify.app/help/help/debug/</guid><description>Problem with the motors #
+The motors are managed by the reachy2-core service.
+Check all logs of the service with:
+journalctl -b -u reachy2-core
+Problem with the cameras or sound #
+With teleoperation application #
+During teleoperation, the cameras and sound are managed by the webrtc service.
+This service is automatically launched when you start Reachy 2 computer.
+If you have switched between the Python SDK and the teleoperation application without robot rebooting, first make sure:</description></item></channel></rss>

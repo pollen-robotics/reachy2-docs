@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>VR Installation on</title><link>https://doks-child-theme.netlify.app/vr/getting-started/</link><description>Recent content in VR Installation on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 21 Aug 2023 15:59:42 +0200</lastBuildDate><atom:link href="https://doks-child-theme.netlify.app/vr/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>Check robot is ready</title><link>https://doks-child-theme.netlify.app/vr/getting-started/check-robot/</link><pubDate>Mon, 21 Aug 2023 16:00:11 +0200</pubDate><guid>https://doks-child-theme.netlify.app/vr/getting-started/check-robot/</guid><description>Little checks before start #
+When starting the robot, the services required for teleoperation are automatically launched.
+SR camera must be unplugged #
+Make sure the SR camera is unplugged: it could cause troubles to launch the teleop cameras service.
+Have you done anything since the last boot? #
+In the following cases:
+you have just unplugged the SR camera, without rebooting the robot you have used the Python SDK during your session with the robot Then disconnect all running clients (if you used the Python SDK), and restart the webrtc service from the dashboard.</description></item><item><title>Connect to Reachy 2</title><link>https://doks-child-theme.netlify.app/vr/getting-started/connect/</link><pubDate>Mon, 21 Aug 2023 16:00:11 +0200</pubDate><guid>https://doks-child-theme.netlify.app/vr/getting-started/connect/</guid><description>Launch the app #
+Once everything is installed, you can launch the application.
+First connect your headset to your computer and make sure it is ready for use.
+Meta Quest headset must be used with the link.
+Then run the Reachy2Teleoperation.exe file from the previously unzipped folder to start the application.
+Find Reachy IP address #
+If you haven&amp;rsquo;t unplugged it, the LCD screen connected in Reachy&amp;rsquo;s back should be diplaying its IP address.</description></item><item><title>Installation</title><link>https://doks-child-theme.netlify.app/vr/getting-started/installation/</link><pubDate>Mon, 21 Aug 2023 16:00:11 +0200</pubDate><guid>https://doks-child-theme.netlify.app/vr/getting-started/installation/</guid><description>⬇️ Download the latest version of the app On the Windows computer #
+1. Check VR device installation #
+Make sure that your VR device is properly installed and running (please refer to your device documentation).
+2. Download application #
+Download the zip archive from our github repo, and unzip it.
+Reachy 2 is already fully compatible with the teleoperation application. You have nothing to install on the robot.</description></item><item><title>Setup your teleop session</title><link>https://doks-child-theme.netlify.app/vr/getting-started/setup/</link><pubDate>Mon, 21 Aug 2023 16:00:11 +0200</pubDate><guid>https://doks-child-theme.netlify.app/vr/getting-started/setup/</guid><description>Audio and microphone setup #
+To have a better experience within the VR, configure the audio of your headset from your headset settings.
+You should be able to speak through the robot and hear from it when you are in the transition room.
+Check both audio input and output are on, and set them to a correct value.
+On the Meta Quest 2 headset, we use the following parameters:
+audio input: 100% audio ouput: 65% Motion sickness options #
+Once in the transition room, you have options you can configure to help you avoid motion sickness.</description></item></channel></rss>

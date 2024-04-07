@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>First Moves on</title><link>https://doks-child-theme.netlify.app/sdk/first-moves/</link><description>Recent content in First Moves on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 25 Jul 2023 17:38:17 +0200</lastBuildDate><atom:link href="https://doks-child-theme.netlify.app/sdk/first-moves/index.xml" rel="self" type="application/rss+xml"/><item><title>2. Understand moves in Reachy 2</title><link>https://doks-child-theme.netlify.app/sdk/first-moves/moves/</link><pubDate>Tue, 25 Jul 2023 17:39:13 +0200</pubDate><guid>https://doks-child-theme.netlify.app/sdk/first-moves/moves/</guid><description>Moves methods #
+ReachySDK for Reachy 2 offers you methods to make movements with the arms and head, controlling the target position in several way, choosing the duration of the movement, or even the interpolation mode.
+Those methods work the same way on the left and right arms and on the head, but not on the mobile base.
+The methods to use in order to control the robot are:
+for the arms: goto_joints(): you control directly the goal position of each joint of the arm, in degrees goto_from_matrix(): you control the target pose of the end effector in the robot&amp;rsquo;s coordinate system, from a 4x4 homogeneous matrix for the head: look_at(): you control the head by giving a point in the robot coordinate system the head will look at rotate_to(): you control directly the roll, pitch and yaw goal positions of the neck, in degrees orient(): you control the head orientation with a quaternion Moves properties #
+Moves IDs #
+The previous methods all return an id, that you can use to get information on this movements or to cancel this movement.</description></item><item><title>7. Record and replay trajectories</title><link>https://doks-child-theme.netlify.app/sdk/first-moves/record/</link><pubDate>Tue, 25 Jul 2023 17:39:07 +0200</pubDate><guid>https://doks-child-theme.netlify.app/sdk/first-moves/record/</guid><description>You can easily record joint trajectories directly on Reachy, store and replay them later. This page will show you how to implement such mechanisms.
+All examples given below will show trajectories record on each of the robot joints. The position of each motor will be stored at a predefined frequency (typically 100Hz). Similarly, the replay will set new target position using the same frequency. Those basics examples does not perform any kind of filtering or modification of the data.</description></item><item><title>4. Use arms kinematics</title><link>https://doks-child-theme.netlify.app/sdk/first-moves/kinematics/</link><pubDate>Tue, 25 Jul 2023 17:39:00 +0200</pubDate><guid>https://doks-child-theme.netlify.app/sdk/first-moves/kinematics/</guid><description>Note : Make sure you checked the safety page before controlling the arm.
+Arm coordinate system #
+Joint coordinates #
+If you remember the goto_joint() function, to generate a trajectory for the arm, you need to pass a list of joints with the requested position as argument.
+For example, to place the right arm in a right angled position, we defined the following list:
+right_angled_position = [0, 0, 0, -90, 0, 0, 0]
+and then call the function with is:</description></item><item><title>1. Start with Reachy 2</title><link>https://doks-child-theme.netlify.app/sdk/first-moves/intro/</link><pubDate>Tue, 25 Jul 2023 17:38:52 +0200</pubDate><guid>https://doks-child-theme.netlify.app/sdk/first-moves/intro/</guid><description>Enable teleop cameras for the SDK #
+SR camera #
+The SR camera is unplugged by default.
+If you want to use it, plug the SR camera on the robot&amp;rsquo;s computer remaining USB port (2).
+Make sure to unplug it if you want to use the teleoperation.
+Teleop cameras #
+The teleop cameras are shared between the teleop service and the SDK server, and can only be used by one at the same time.</description></item><item><title>5. Control the head</title><link>https://doks-child-theme.netlify.app/sdk/first-moves/head/</link><pubDate>Tue, 25 Jul 2023 17:38:48 +0200</pubDate><guid>https://doks-child-theme.netlify.app/sdk/first-moves/head/</guid><description>Head presentation #
+Reachy 2&amp;rsquo;s head is mounted on an Orbita3D actuator, referred to as the neck actuator, giving 3 degrees of freedom to control the head orientation.
+Note : the antennas are not motorized for the moment
+Your browser does not support the video element.
+The complete head&amp;rsquo;s specifications are given here.
+Before starting to control it, connect to your Reachy and turn it on. As in the other pages:</description></item><item><title>6. Get images from cameras</title><link>https://doks-child-theme.netlify.app/sdk/first-moves/cameras/</link><pubDate>Tue, 25 Jul 2023 17:38:34 +0200</pubDate><guid>https://doks-child-theme.netlify.app/sdk/first-moves/cameras/</guid><description>This section assumes that you went through the Hello World so that you know how to connect to the robot.
+Reachy 2 has 2 types of camera:
+the teleop cameras, with a right and left cameras, located in Reachy 2&amp;rsquo;s head and used for the teleoperation the SR camera, which is a depth camera, located in Reachy 2&amp;rsquo;s torso and mainly useful for manipulation tasks Each camera can be accessed separately through reachy.</description></item><item><title>3. Basic arm control</title><link>https://doks-child-theme.netlify.app/sdk/first-moves/arm/</link><pubDate>Tue, 25 Jul 2023 17:38:27 +0200</pubDate><guid>https://doks-child-theme.netlify.app/sdk/first-moves/arm/</guid><description>Note : Make sure you checked the safety page before controlling the arm.
+Arm presentation #
+Reachy&amp;rsquo;s arm offers 7 degrees of freedom. It also gives access to one joint for the gripper.
+The arm is divided as follow:
+shoulder, composed of 2 joints (pitch and roll) elbow, composed of 2 joints (yaw and pitch) wrist, composed of 3 joints (roll, pitch and yaw) We refer to the shoulder, elbow and wrist as actuators.</description></item></channel></rss>

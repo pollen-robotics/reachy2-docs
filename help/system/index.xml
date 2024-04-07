@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>System on</title><link>https://doks-child-theme.netlify.app/help/system/</link><description>Recent content in System on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 26 Jul 2023 08:46:02 +0200</lastBuildDate><atom:link href="https://doks-child-theme.netlify.app/help/system/index.xml" rel="self" type="application/rss+xml"/><item><title>Find Reachy 2's IP</title><link>https://doks-child-theme.netlify.app/help/system/find-my-ip/</link><pubDate>Wed, 26 Jul 2023 08:46:47 +0200</pubDate><guid>https://doks-child-theme.netlify.app/help/system/find-my-ip/</guid><description>Here are 4 different options to find out the IP address of your robot.
+Make sure your robot has already been connected to a network before trying to get its IP address.
+LCD display screen #
+If you haven&amp;rsquo;t unplugged it, the LCD screen connected in Reachy&amp;rsquo;s back should be diplaying its IP address.
+Hard-wired connection #
+Use the appropriate cable and connect your computer directly to Reachy 2&amp;rsquo;s computer. The cable has to be plugged in port (b) of Reachy 2&amp;rsquo;s hardware interface.</description></item></channel></rss>

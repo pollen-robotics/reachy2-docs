@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Getting Started on</title><link>https://doks-child-theme.netlify.app/sdk/getting-started/</link><description>Recent content in Getting Started on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 25 Jul 2023 18:49:17 +0200</lastBuildDate><atom:link href="https://doks-child-theme.netlify.app/sdk/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>Safety first</title><link>https://doks-child-theme.netlify.app/sdk/getting-started/safety/</link><pubDate>Tue, 25 Jul 2023 18:50:18 +0200</pubDate><guid>https://doks-child-theme.netlify.app/sdk/getting-started/safety/</guid><description>Especially, the screws in the Reachy&amp;rsquo;s back and the ones fixatings its metal support should be well tightened.
+Turning on/off the motors #
+If at anytime when you&amp;rsquo;re working with Reachy you feel that you&amp;rsquo;re losing control of the robot&amp;rsquo;s movements, don&amp;rsquo;t hesitate to turn the motors off. Use the switch button placed in its back.
+Also, don&amp;rsquo;t forget to turn the motors off when you&amp;rsquo;re done working with the robot.</description></item><item><title>Installation</title><link>https://doks-child-theme.netlify.app/sdk/getting-started/install/</link><pubDate>Tue, 25 Jul 2023 18:50:10 +0200</pubDate><guid>https://doks-child-theme.netlify.app/sdk/getting-started/install/</guid><description>How to install the Python SDK #
+The Python SDK is a pure Python library. The installation should thus be rather straightforward. It supports Python &amp;gt;= 3.10 (older versions will not work because of typing syntax). It works on Windows/Mac/Linux.
+We recommend to use virtual environment for your development. They make the installation simple and avoid compatibility issues. They also come with their pip command.
+From PyPi #
+pip3 install reachy-sdk
+From the source #
+git clone https://github.</description></item><item><title>Hello World</title><link>https://doks-child-theme.netlify.app/sdk/getting-started/hello-world/</link><pubDate>Tue, 25 Jul 2023 18:50:04 +0200</pubDate><guid>https://doks-child-theme.netlify.app/sdk/getting-started/hello-world/</guid><description>Enable cameras for the SDK #
+SR camera #
+The SR camera is unplugged by default.
+If you want to use it, plug the SR camera on the robot&amp;rsquo;s computer remaining USB port (2).
+Make sure to unplug it if you want to use the teleoperation.
+Teleop cameras #
+The teleop cameras are shared between the teleop service and the SDK server, and can only be used by one at the same time.</description></item><item><title>Connect to Reachy 2</title><link>https://doks-child-theme.netlify.app/sdk/getting-started/connect/</link><pubDate>Tue, 25 Jul 2023 18:49:56 +0200</pubDate><guid>https://doks-child-theme.netlify.app/sdk/getting-started/connect/</guid><description>The last required step before being able to use your Reachy 2 is to find its IP address.
+Note: if you haven&amp;rsquo;t connected Reachy to a network yet, please first follow the instructions ???
+Using the LCD screen #
+If you haven&amp;rsquo;t unplugged it, the LCD screen connected in Reachy&amp;rsquo;s back should be diplaying its IP address.
+If the LCD screen is not working or is unplugged, check out the page Find my IP section to learn other ways to get the IP address.</description></item><item><title>SDK Overview</title><link>https://doks-child-theme.netlify.app/sdk/getting-started/overview/</link><pubDate>Tue, 25 Jul 2023 18:49:56 +0200</pubDate><guid>https://doks-child-theme.netlify.app/sdk/getting-started/overview/</guid><description>Understand the SDK structure #
+Reachy #
+Parts #
+Actuators #
+Reachy&amp;rsquo;s arm offers 7 degrees of freedom. It also gives access to one joint for the gripper.
+The arm is divided as follow:
+shoulder, composed of 2 joints (pitch and roll) elbow, composed of 2 joints (yaw and pitch) wrist, composed of 3 joints (roll, pitch and yaw) We refer to the shoulder, elbow and wrist as actuators.
+For some actions, such as changing the compliance, is the the lowest level of control you will have.</description></item></channel></rss>

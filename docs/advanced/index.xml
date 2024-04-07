@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Advanced usage on</title><link>https://doks-child-theme.netlify.app/docs/advanced/</link><description>Recent content in Advanced usage on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 25 Jul 2023 14:29:14 +0200</lastBuildDate><atom:link href="https://doks-child-theme.netlify.app/docs/advanced/index.xml" rel="self" type="application/rss+xml"/><item><title>Calibrate teleop cameras</title><link>https://doks-child-theme.netlify.app/docs/advanced/calibrate-cameras/</link><pubDate>Wed, 09 Aug 2023 14:43:31 +0200</pubDate><guid>https://doks-child-theme.netlify.app/docs/advanced/calibrate-cameras/</guid><description>0. Dependencies #
+You will need to install Pollen&amp;rsquo;s multical fork. Follow instructions here.
+1. Charuco calibration board #
+If you don&amp;rsquo;t have one, generate a charuco board with the following command:
+$ python3 generate_board.py
+Print it on a A4 paper and place it on a flat surface (we use a wooden board).
+Mesure as accurately as possible the size of the squares and the size of the markers and edit the example_boards/pollen_charuco.</description></item><item><title>Access Reachy 2 computer</title><link>https://doks-child-theme.netlify.app/docs/advanced/access-computer/</link><pubDate>Wed, 09 Aug 2023 14:43:24 +0200</pubDate><guid>https://doks-child-theme.netlify.app/docs/advanced/access-computer/</guid><description>There are several ways to connect to your robot.
+SSH connection #
+Using the robot&amp;rsquo;s IP address (check Find Reachy 2&amp;rsquo;s IP if you don&amp;rsquo;t know it), you can directly connect via ssh to Reachy 2&amp;rsquo;s computer:
+ssh bedrock@&amp;lt;Reachy.2.IP.address&amp;gt;
+For example, with robot&amp;rsquo;s IP being 192.168.1.42:
+ssh bedrock@192.168.1.42
+👉 Password: root Hard-wired connection #
+Use the appropriate cable and connect your computer directly to Reachy 2&amp;rsquo;s computer. The cable has to be plugged in port (b) of Reachy 2&amp;rsquo;s hardware interface.</description></item></channel></rss>

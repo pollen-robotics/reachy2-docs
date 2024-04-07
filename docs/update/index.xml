@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Update Reachy on</title><link>https://doks-child-theme.netlify.app/docs/update/</link><description>Recent content in Update Reachy on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 25 Jul 2023 15:19:04 +0200</lastBuildDate><atom:link href="https://doks-child-theme.netlify.app/docs/update/index.xml" rel="self" type="application/rss+xml"/><item><title>Update Reachy 2 software</title><link>https://doks-child-theme.netlify.app/docs/update/update/</link><pubDate>Tue, 25 Jul 2023 15:15:22 +0200</pubDate><guid>https://doks-child-theme.netlify.app/docs/update/update/</guid><description>Use the dashboard #
+The update of the robot can be entirely done with the dashboard.
+From the Updates tab, check if updates are available:
+Only advanced update management is working so far
+Advanced update management #
+From the dashboard Update page, click on Advanced udpate management:
+You can directly access the advanced update dashboard from http://&amp;lt;IP.address&amp;gt;:5000/
+Fetch updates #
+Click Fetch Updates to check if there is any available update on one of the robot&amp;rsquo;s services.</description></item></channel></rss>

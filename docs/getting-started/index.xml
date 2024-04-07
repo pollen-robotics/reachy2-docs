@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Getting Started on</title><link>https://doks-child-theme.netlify.app/docs/getting-started/</link><description>Recent content in Getting Started on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 25 Jul 2023 14:15:43 +0200</lastBuildDate><atom:link href="https://doks-child-theme.netlify.app/docs/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello World</title><link>https://doks-child-theme.netlify.app/docs/getting-started/hello-world/</link><pubDate>Wed, 09 Aug 2023 14:44:11 +0200</pubDate><guid>https://doks-child-theme.netlify.app/docs/getting-started/hello-world/</guid><description>1. Check services are running #
+All elements of the robots should have started automatically.
+Check this is the case on the dashboard
+2 services must be launched:
+reachy2-core reachy2-webrtc Click on Logs for both services to check they have correctly started.
+You should see content appearing under the services tab:
+If you see any error, click on Restart to restart them.
+2. Try sending commands #
+(Temporary checkup)
+To check everything is working fine, you can use the examples of the Python SDK.</description></item><item><title>Start your robot</title><link>https://doks-child-theme.netlify.app/docs/getting-started/turn-on/</link><pubDate>Wed, 09 Aug 2023 14:44:11 +0200</pubDate><guid>https://doks-child-theme.netlify.app/docs/getting-started/turn-on/</guid><description>Power up your robot #
+To start your robot:
+Press the mobile base button (next to the mobile base&amp;rsquo;s LCD screen). The mobile base&amp;rsquo;s screen should turn on, indicating the current state of the battery (remaining battery percentage, current flow, etc).
+Automatic calibration process
+Put the robot in a environment with no obstacle, and make sure its arms or grippers are not touching the tripod.
+👉 The robot is going to slightly move during the calibration.</description></item><item><title>Stop your robot</title><link>https://doks-child-theme.netlify.app/docs/getting-started/turn-off/</link><pubDate>Wed, 09 Aug 2023 14:44:11 +0200</pubDate><guid>https://doks-child-theme.netlify.app/docs/getting-started/turn-off/</guid><description>Power off your robot #
+Power off your robot in the exact opposite order you turned it on!
+To stop your robot:
+From the dashboard, click on the Power Off button in the footer. Press the emergency stop button. Press the mobile base button. Wait for the led of the computer to turn off, then unplug the green port from the robot&amp;rsquo;s computer. Understanding the power buttons and battery life good practices #
+The mobile base uses the 24V battery to power the wheels directly.</description></item><item><title>Connect your robot to the network</title><link>https://doks-child-theme.netlify.app/docs/getting-started/network/</link><pubDate>Wed, 09 Aug 2023 14:44:05 +0200</pubDate><guid>https://doks-child-theme.netlify.app/docs/getting-started/network/</guid><description>On the first connection, connect Reachy 2 to your network using an ethernet cable. You will then be able to choose another network using the dashboard.
+Hard-wired connection #
+Use an ethernet cable to connect your robot to the network.
+The ethernet plug is available at position (b) on Reachy’s hardware interface.
+The computer inside Reachy is configured to use DHCP. It should thus be directly accessible on your network.</description></item><item><title>Connect to the dashboard</title><link>https://doks-child-theme.netlify.app/docs/getting-started/dashboard/</link><pubDate>Wed, 09 Aug 2023 14:43:48 +0200</pubDate><guid>https://doks-child-theme.netlify.app/docs/getting-started/dashboard/</guid><description>The dashboard is here to give you an overview of the robot&amp;rsquo;s state (what services are running, is there an error on a motor,&amp;hellip;) and give you the possibility to access quickly some features (changing a robot&amp;rsquo;s part compliance for example).
+This tool has been thought to help you start easier with the robot and facilitate quick debugging.
+1. Find Reachy 2&amp;rsquo;s IP address #
+After you connected the robot to the network, it should have an IP address.</description></item><item><title>Connect your robot to the WiFi</title><link>https://doks-child-theme.netlify.app/docs/getting-started/wifi/</link><pubDate>Wed, 09 Aug 2023 14:43:31 +0200</pubDate><guid>https://doks-child-theme.netlify.app/docs/getting-started/wifi/</guid><description>WiFi #
+On your first connection to a network, the simpliest is to connect your robot with an ethernet cable.
+If you cannot do this:
+Use the appropriate cable and connect your computer directly to Reachy 2&amp;rsquo;s computer. The cable has to be plugged in port (b) of Reachy 2&amp;rsquo;s hardware interface.
+We use tiofor the serial connection. If you haven&amp;rsquo;t installed it yet on your computer: apt install tio</description></item><item><title>Unpack Reachy 2</title><link>https://doks-child-theme.netlify.app/docs/getting-started/unpack/</link><pubDate>Wed, 09 Aug 2023 14:43:24 +0200</pubDate><guid>https://doks-child-theme.netlify.app/docs/getting-started/unpack/</guid><description>Your robot is already assembled! #
+Simply unpack your robot, everything is already assembled and plugged.
+Screw the robot antennas #
+Plug the WiFi antennas #
+Plug the antennas on the robot computer. Make sure to place them correctly so that the robot&amp;rsquo;s arms cannot touch them:
+Plug the emergency stop button #
+To plug the emergency state button, you will find a little black connector on the mobile base. Simply connect the button cable to it.</description></item></channel></rss>
