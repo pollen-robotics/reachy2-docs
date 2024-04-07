@@ -1,0 +1,6 @@
+{{ $video := resources.Get (.Get 0) }}
+<video controls="controls" width={{(.Get 1)}} autoplay loop>
+    <source type="video/mp4" src="{{ $video.RelPermalink }}">
+    </source>
+    <p>Your browser does not support the video element.</p>
+</video>

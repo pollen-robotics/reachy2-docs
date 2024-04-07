@@ -1,0 +1,60 @@
+{{ define "main" }}
+<section class="section container-fluid mt-n3 pb-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 text-center">
+      <h1 class="mt-0">{{ .Title }}</h1>
+    </div>
+    <div class="col-lg-9 col-xl-8 text-center">
+      <p class="lead">{{ .Params.lead | safeHTML }}</p>
+    </div>
+  </div>
+  <div class="text-center">
+    <img class="img-fluid" sizes="100vw" src="hello-reachy.png" width="20%">
+  </div>
+</section>
+{{ end }}
+
+{{ define "sidebar-prefooter" }}
+<section class="section section-sm">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <!-- <div class="col-lg-5">
+        <h2 class="h4"><a href="{{ "advanced/overview/reachy2/" | absURL }}">Discover Reachy</a></h2>
+        <p>Get to know Reachy. See what it is composed of, its mechanical specifications and how its software is working.</p>
+      </div> -->
+      <div class="col-lg-5">
+        <h2 class="h4"><a href="{{ "docs/getting-started/unpack/" | absURL }}">Setup Reachy 2</a></h2>
+        <p>Just got your Reachy kit? Check how to install your robot and start having fun with it.</p>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4"><a href="{{ "sdk/introduction/introduction/" | absURL }}">Python SDK</a></h2>
+        <p>Easy control of a Reachy robot in Python: read sensor information (eg. camera, joint position, force) and send actuator commands.</p>
+      </div>
+    </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-5">
+        <h2 class="h4"><a href="{{ "vr/introduction/introduction/" | absURL }}">VR teleoperation</a></h2>
+        <p>Control the robot remotely using Reachy's VR teleoperation application.</p>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4"><a href="{{ "dashboard/introduction/introduction/" | absURL }}">Dashboard</a></h2>
+        <p>Use Reachy's dashboard to easily debug and do basic control.</p>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4"><a href="{{ "help/help/debug/" | absURL }}">FAQ/Support</a></h2>
+        <p>Can't solve your problem? Ask for help!</p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ define "sidebar-footer" }}
+<section class="section section-sm container-fluid">
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-9">
+      {{- .Content -}}
+    </div>
+  </div>
+</section>
+{{ end }}
