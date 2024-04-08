@@ -8,7 +8,9 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "20"
 ---
+
 ## Problem with the motors
 
 The motors are managed by the reachy2-core service.  

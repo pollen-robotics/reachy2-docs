@@ -21,7 +21,7 @@ Put the robot in a environment with no obstacle, and make sure its arms or gripp
 
 {{< alert icon="👉" text="The robot is going to slightly move during the calibration. Do not touch the robot during the calibration, and make sure the arms will not meet any obstacle during their movements." >}}
 
-Turn anti-clockwise the emergency stop button to raise it. The automatic calibration process will start.  
+Press and turn clockwise the emergency stop button to raise it. The automatic calibration process will start.  
 
 > Do not move the robot until the computer is ready for use.
 

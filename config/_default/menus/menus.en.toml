@@ -358,7 +358,7 @@
 [[main]]
   name = "Help"
   weight = 50
-  url = "/help/help/debug/"
+  url = "/help/help/recovering/"
 
 #############################################
 # Menu VR
@@ -501,14 +501,20 @@
   identifier = "help-debug"
 
 [[help]]
-  name = "Debug"
+  name = "Recovering"
   weight = 100
+  parent="help-debug"
+  url = "/help/help/recovering/"
+
+[[help]]
+  name = "Debug"
+  weight = 110
   parent="help-debug"
   url = "/help/help/debug/"
 
 [[help]]
   name = "Support"
-  weight = 110
+  weight = 120
   parent="help-debug"
   url = "/help/help/support/"
 
