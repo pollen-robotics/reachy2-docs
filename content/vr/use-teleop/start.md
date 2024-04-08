@@ -8,6 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "100"
 ---
 
 {{< warning icon="👉🏾" text="Before starting teleoperating Reachy, please make sure you read the  <b><a href=\"https://docs.pollen-robotics.com/vr/use-teleop/best-practice/\">Best Practice</a></b>" >}}

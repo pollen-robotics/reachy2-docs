@@ -8,6 +8,7 @@ type: docs
 draft: false
 images: []
 toc: true
+weight: "40"
 ---
 
 {{< alert icon="⬇️" text="<a href=\"https://github.com/pollen-robotics/ReachyTeleoperation/releases\"> Download the latest version of the app</a>">}}

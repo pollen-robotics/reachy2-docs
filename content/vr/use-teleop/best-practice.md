@@ -8,6 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "80"
 ---
 
 {{< warning icon="👉🏾" text="This page contains really important information about the use of the teleoperation app. <b>Please make sure you read it carefully before teleoperating Reachy.</b>" >}}

@@ -8,6 +8,7 @@ type: docs
 draft: false
 images: []
 toc: true
+weight: "50"
 ---
 
 ## Little checks before start

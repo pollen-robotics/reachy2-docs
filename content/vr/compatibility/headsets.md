@@ -7,6 +7,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "20"
 ---
 
 So far, the VR teleoperation application has been tested with the following devices:

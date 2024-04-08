@@ -8,6 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "110"
 ---
 
 During Reachy teleoperation, several messages can show up in front of view.  

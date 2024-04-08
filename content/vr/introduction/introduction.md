@@ -8,6 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "10"
 ---
 
 The Virtual Reality (VR) teleoperation application enables you to **control the robot remotely** with VR device.  

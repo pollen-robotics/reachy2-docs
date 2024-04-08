@@ -7,6 +7,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "30"
 ---
 
 The application is built on Unity 2020.3 LTS for which the requirements can be found [here](https://docs.unity3d.com/2020.3/Documentation/Manual/system-requirements.html).
