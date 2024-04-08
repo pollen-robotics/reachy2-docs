@@ -8,6 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "60"
 ---
 The page services is dedicated to the services setup for Reachy. Working with services has the advantage of having Reachy's code running automatically at boot whithout needing to open a terminal and start it yourself. However using the services can make debugging the robot more difficult because the code running for Reachy is "hidden", that is why we made this page.
 

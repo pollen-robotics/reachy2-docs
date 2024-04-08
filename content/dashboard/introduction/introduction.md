@@ -8,6 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "10"
 ---
 
 We developed Reachy's dashboard to give you an overview of the state of your Reachy (which motors are detected, what services are running, what are the motors temperatures...) as well as giving you the possiblity to access quickly some features (changing a robot's part compliance for example).

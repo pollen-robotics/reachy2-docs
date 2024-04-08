@@ -8,6 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "20"
 ---
 When you receive your Reachy, it can be quite confusing at first to get your hands on, that is where the dashboard comes handy.
 

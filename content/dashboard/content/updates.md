@@ -8,5 +8,6 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "70"
 ---
 {{< img-center "images/dashboard/content/updates.png" 600x "Updates page" >}}

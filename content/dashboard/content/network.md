@@ -8,6 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "50"
 ---
 The wifi page of the dashboard lets you handle the network connection of the robot and typically looks like the following:
 
