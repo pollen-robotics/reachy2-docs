@@ -32,6 +32,8 @@ If the LCD screen is not working or is unplugged, check out the page [Find my IP
 
 Create a new robot entry in the menu with the IP address you previously found.  
 
+> Note that you must select the input fields with your VR beam and fill them in using your computer keyboard.  
+
 Once the robot is created, select it and click on "**Connect**".  
 You should then arrive in the *transition room* of the application.  
 
