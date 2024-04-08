@@ -18,7 +18,7 @@
   url = "/docs/getting-started/unpack/"
 
 [[docs]]
-  name = "Start you robot"
+  name = "Start your robot"
   weight = 110
   parent = "docs-getting-started"
   url = "/docs/getting-started/turn-on/"
