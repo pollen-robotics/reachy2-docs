@@ -8,6 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "90"
 ---
 > Note : Make sure you checked the [safety page]({{< ref "sdk/getting-started/safety" >}}) before controlling the arm.
 

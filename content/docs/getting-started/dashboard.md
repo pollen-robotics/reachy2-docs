@@ -7,6 +7,7 @@ lastmod: 2023-08-09T14:43:48+02:00
 draft: false
 images: []
 toc: true
+weight: "40"
 ---
 The dashboard is here to give you an overview of the robot's state (what services are running, is there an error on a motor,...) and give you the possibility to access quickly some features (changing a robot's part compliance for example).
 

@@ -8,6 +8,7 @@ draft: false
 type: docs
 images: []
 toc: true
+weight: "130"
 ---
 
 You can easily record joint trajectories directly on Reachy, store and replay them later. This page will show you how to implement such mechanisms. 

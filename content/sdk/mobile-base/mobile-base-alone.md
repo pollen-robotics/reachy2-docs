@@ -7,6 +7,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "180"
 ---
 
 There is no need to instanciate the entire Reachy stack to interact with the mobile base. 

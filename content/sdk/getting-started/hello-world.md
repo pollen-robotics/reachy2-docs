@@ -7,6 +7,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "40"
 ---
 
 ## Enable cameras for the SDK

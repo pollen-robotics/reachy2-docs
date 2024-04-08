@@ -7,6 +7,7 @@ lastmod: 2023-08-09T14:43:24+02:00
 draft: false
 images: []
 toc: true
+weight: "90"
 ---
 There are several ways to connect to your robot.
 

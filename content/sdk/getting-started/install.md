@@ -8,6 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "20"
 ---
 
 ## How to install the Python SDK

@@ -7,6 +7,7 @@ lastmod: 2023-08-09T14:44:05+02:00
 draft: false
 images: []
 toc: true
+weight: "30"
 ---
 > On the **first connection, connect Reachy 2 to your network using an ethernet cable**. You will then be able to choose another network using the dashboard.
 

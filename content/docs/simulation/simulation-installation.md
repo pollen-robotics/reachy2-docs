@@ -7,6 +7,7 @@ lastmod: 2023-08-09T14:45:14+02:00
 draft: false
 images: []
 toc: true
+weight: "70"
 ---
 If you want to try movements on the robot without using the real robot, you can install a simulated Reachy 2 on your computer, and run it the same way the real robot is run.
 

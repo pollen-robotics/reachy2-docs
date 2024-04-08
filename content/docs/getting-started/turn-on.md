@@ -7,6 +7,7 @@ lastmod: 2023-08-09T14:44:11+02:00
 draft: false
 images: []
 toc: true
+weight: "20"
 ---
 <!-- ## On first start
 To facilitate the next step ([Connect your robot to the network]({{< ref "/docs/getting-started/network" >}})), plug the LCD screen on the last free USB port of the hub. This must be done before turning on the robot. -->

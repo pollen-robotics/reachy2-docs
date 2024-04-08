@@ -8,6 +8,7 @@ draft: false
 type: docs
 images: []
 toc: true
+weight: "120"
 ---
 This section assumes that you went through the [Hello World]({{< ref "sdk/getting-started/hello-world" >}}) so that you know how to connect to the robot.
 

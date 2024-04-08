@@ -8,6 +8,7 @@ draft: false
 type: docs
 images: []
 toc: true
+weight: "80"
 ---
 
 ## Moves methods

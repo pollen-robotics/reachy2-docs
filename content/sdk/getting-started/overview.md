@@ -8,6 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "50"
 ---
 
 ## Understand the SDK structure

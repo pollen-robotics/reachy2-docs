@@ -8,6 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "70"
 ---
 
 ## Enable teleop cameras for the SDK

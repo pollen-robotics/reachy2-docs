@@ -7,6 +7,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "170"
 ---
 ## Overview
 The basic idea is that the LIDAR is used to detect surrounding obstacles and reduce or nullify speed commands that would create a collision with the mobile base.

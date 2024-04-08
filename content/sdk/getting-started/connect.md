@@ -7,6 +7,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "30"
 ---
 
 The last required step before being able to use your Reachy 2 is to find its IP address. 

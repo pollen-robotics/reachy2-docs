@@ -8,6 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
+weight: "60"
 ---
 
 Especially, the screws in the Reachy's back and the ones fixatings its metal support should be well tightened.
