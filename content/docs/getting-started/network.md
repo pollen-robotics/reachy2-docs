@@ -15,10 +15,14 @@ weight: "30"
 
 Use an **ethernet cable** to connect your robot to the network.  
 
-The ethernet plug is available at position (b) on [Reachy’s hardware interface]({{< ref "reachy2" >}}).  
-The computer inside Reachy is configured to use DHCP. It should thus be directly accessible on your network.  
+Ethernet plugs are available at position (c) of the robot's computer interface.  
+Reachy 2's computer is configured to use DHCP. It should thus be directly accessible on your network.  
+
+{{< img-center "images/docs/network/hardware-interface.png" 400x "hardware-interface" >}}
 
 To easily find the IP address of the robot, read the little LCD screen plugged in the back of the robot. Wait for the IP address to appear, it may take a few minutes.  
+
+{{< img-center "images/vr/getting-started/lcd-display.png" 200x "lcd-display" >}}
 
 > Every 10 seconds, the screen switches between WiFi and Ethernet information.  
 

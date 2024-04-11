@@ -513,8 +513,14 @@
   url = "/help/help/debug/"
 
 [[help]]
-  name = "Support"
+  name = "Hardware intervention"
   weight = 120
+  parent="help-debug"
+  url = "/help/help/torso/"
+
+[[help]]
+  name = "Support"
+  weight = 130
   parent="help-debug"
   url = "/help/help/support/"
 
