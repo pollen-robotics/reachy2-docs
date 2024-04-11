@@ -11,10 +11,14 @@ toc: true
 weight: "40"
 ---
 
+{{< img-center "images/dashboard/content/visu.png" 600x "Visualization page" >}}
+
 ## Foxglove
 
 ??
 
 ## VNC
 
-??
+Open a window to visualize graphical elements running on the robot.  
+
+As [RViz](http://wiki.ros.org/rviz) is launched by default with the [reachy2-core service]({{< ref "/dashboard/content/services" >}}), you can see the Rviz window showing a simplified robot moving.
