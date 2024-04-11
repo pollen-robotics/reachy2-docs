@@ -8,7 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
-weight: "70"
+weight: "30"
 ---
 
 ## Updates availability

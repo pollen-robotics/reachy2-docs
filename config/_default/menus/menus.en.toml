@@ -112,16 +112,16 @@
   identifier = "dashboard-introduction"
 
 [[dashboard]]
-  name = "What is the dashboard?"
+  name = "Introduction"
   weight = 100
   parent = "dashboard-introduction"
   url = "/dashboard/introduction/introduction/"
 
 [[dashboard]]
-  name = "First connection"
+  name = "Connection"
   weight = 110
   parent = "dashboard-introduction"
-  url = "/dashboard/introduction/first-connection/"
+  url = "/dashboard/introduction/connection/"
 
 #######################
 ## Content section
@@ -133,34 +133,34 @@
   identifier = "dashboard-content"
 
 [[dashboard]]
-  name = "Reachy control"
-  weight = 200
-  parent = "dashboard-content"
-  url = "/dashboard/content/dashboard/"
-
-[[dashboard]]
-  name = "Visualization tools"
-  weight = 210
-  parent = "dashboard-content"
-  url = "/dashboard/content/visualization/"
-
-[[dashboard]]
-  name = "Network"
-  weight = 220
-  parent = "dashboard-content"
-  url = "/dashboard/content/network/"
-
-[[dashboard]]
   name = "Services"
-  weight = 230
+  weight = 200
   parent = "dashboard-content"
   url = "/dashboard/content/services/"
 
 [[dashboard]]
+  name = "Network"
+  weight = 210
+  parent = "dashboard-content"
+  url = "/dashboard/content/network/"
+
+[[dashboard]]
   name = "Updates"
-  weight = 240
+  weight = 220
   parent = "dashboard-content"
   url = "/dashboard/content/updates/"
+
+[[dashboard]]
+  name = "Visualization tools"
+  weight = 230
+  parent = "dashboard-content"
+  url = "/dashboard/content/visualization/"
+
+[[dashboard]]
+  name = "Reachy control"
+  weight = 240
+  parent = "dashboard-content"
+  url = "/dashboard/content/dashboard/"
 
 #############################################
 # Menu SDK

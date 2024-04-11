@@ -8,13 +8,12 @@ draft: false
 images: []
 type: docs
 toc: true
-weight: "60"
+weight: "10"
 ---
 
 Working with services has the advantage of having the code running automatically at boot, whithout needing to connect to the robot and start it yourself. However using the services can make debugging the robot more difficult because the code running for Reachy is "hidden", that is why we made this page.
 
 This page is mainly useful to restart the service in order to [recover from a problem]({{< ref "/help/help/recovering" >}}).
-
 
 ## Content
 

@@ -15,9 +15,11 @@ This tool has been thought to help you **start easier with the robot** and **fac
 
 ## 1. Find Reachy 2's IP address
 
-After you connected the robot to the network, it should have an IP address. You can find it on the LCD screen if you haven't unplugged it yet. 
+The LCD screen connected in Reachy's back should be diplaying its IP address.
 
-In case the screen does not display the IP address, follow the instructions of [Find Reachy 2's IP]({{< ref "help/system/find-my-ip" >}}).
+{{< img-center "images/vr/getting-started/lcd-display.png" 400x "" >}}
+
+If the LCD screen is not working or is unplugged, check out the page [Find my IP section]({{< ref "help/system/find-my-ip" >}}) to learn other ways to get the IP address.
 
 > Note the LCD screen will not work if you plug it after having turned on the computer.
 

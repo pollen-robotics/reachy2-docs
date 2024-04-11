@@ -22,7 +22,7 @@ Then run the *Reachy2Teleoperation.exe* file from the previously unzipped folder
 
 ## Find Reachy IP address
 
-If you haven't unplugged it, the LCD screen connected in Reachy's back should be diplaying its IP address.
+The LCD screen connected in Reachy's back should be diplaying its IP address.
 
 {{< img-center "images/vr/getting-started/lcd-display.png" 400x "" >}}
 

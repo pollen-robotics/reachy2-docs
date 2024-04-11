@@ -15,7 +15,8 @@ weight: "40"
 
 ## Foxglove
 
-??
+Open a [Foxglove](https://foxglove.dev/) window to visualize data of the robot.  
+It specially enables to visualize ROS data from the robot.
 
 ## VNC
 

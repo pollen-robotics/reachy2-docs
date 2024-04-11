@@ -8,7 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
-weight: "50"
+weight: "20"
 ---
 The wifi tab of the dashboard lets you handle the network connection of the robot.  
 You can get the IP address and choose the network you want to connect the robot to.  
