@@ -12,7 +12,7 @@ weight: "10"
 
 ## Your robot is nearly already assembled!
 
-{{< alert icon="👉" text="The robot weigh is around 50kg (110lb). You will need to be at least 3 to carry the robot out of the box." >}}
+{{< alert icon="👉" text="The robot weigh is around 50kg (110lb). You will need to be at least 3 to carry the robot out of the box. </br>Wear suitable personal protective equipment (e.g. safety shoes) when unpacking the robot. When lifting Reachy 2, pay attention to lift correctly using with your legs, to avoid back injury. Be also aware of your fingers position on the robot." >}}
 
 Unpack your robot, you just have a few things to plug to finish assembling it.  
 Check your box contains, in addition to the robot, the following elements:
@@ -22,6 +22,8 @@ Check your box contains, in addition to the robot, the following elements:
 - a mini USB cable
 - an emergency stop button
 - robot antennas screws
+
+{{< alert icon="👉" text="Make a visual check of all the robot to check nothing seems damage after the travel, especially the cables. In case of doubt on any element, please contact us. </br>Do not use the robot if something is damaged." >}}
 
 ## Adjust robot size
 

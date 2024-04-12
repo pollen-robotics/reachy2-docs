@@ -549,7 +549,7 @@
   identifier = "help-safety"
 
 [[help]]
-  name = "Use Reachy properly"
+  name = "Use Reachy 2 properly"
   weight = 300
   parent="help-safety"
   url = "/help/safety/correct-use/"

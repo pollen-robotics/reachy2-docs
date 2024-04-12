@@ -1,6 +1,6 @@
 ---
 title: "Safety first"
-description: "What you need to be aware of as a user to prevent Reachy from getting damaged and you from getting hurt."
+description: "What you need to be aware of as a user to prevent Reachy 2 from getting damaged and you from getting hurt."
 lead: "Before showing you how to control each part of the robot, let's talk a bit about safety, both for you and the robot."
 date: 2023-07-25T18:50:18+02:00
 lastmod: 2023-07-25T18:50:18+02:00
@@ -11,75 +11,116 @@ toc: true
 weight: "60"
 ---
 
-Especially, the screws in the Reachy's back and the ones fixatings its metal support should be well tightened.
+{{< warning icon="👉🏾" text="Reachy 2 is much more powerful than the previous version. To avoid any accident, please follow carefully the safety guidelines. </br>Non-compliance to these guidelines can lead to severe injuries or death." >}}
 
-## Turning on/off the motors
+> There is currently **no internal security** on the robot: it won't stop if hitting anything or anyone, even itself. Remain constantly watchful when using it.
 
-If at anytime when you're working with Reachy you feel that you're losing control of the robot's movements, don't hesitate to turn the motors off. Use the switch button placed in its back. 
+## Users
 
-{{< img-center "images/sdk/getting-started/power_button.jpeg" 400x "" >}}
+### Attention and reaction
 
-Also, don't forget to turn the motors off when you're done working with the robot.
+Users must be in **full possession of their physical and mental powers at all times** when using the robot. Reachy 2 must never be used by someone having consumed substances that could affect their reactions, such as medication, drugs or alcohol.  
+
+Users must **keep attention focused** on the robot at any time, especially if they are near the robot workspace, and imperatively if they are in its workspace or if they are responsible for the [emergency stop button]({{< ref "/sdk/getting-started/safety#emergency-stop-button" >}}).  
+
+### Qualified users
+
+The robot must not be used if no qualified user is present.  
+
+People using the robot or interacting with it must all be aware of the risks and be explicitly informed of the robot capabilities, limitations and restrictions. They must all be able to act with the appropriate behavior using the robot.  
+
+{{< alert icon="👉" text="No one should use the robot without knowing the safety guidelines." >}}
+
+## Emergency stop button
+
+The robot is delivered with an emergency stop button.  
+
+Pressing the emergency stop button will **immediately power off all motors**, from the arms to the mobile base wheels. Nevertheless it won't power off the computer, which means <u>you won't lose anything running on the computer</u>.  
+
+> If at anytime you feel that you're losing control of the robot's movements or notice an unexpected behavior, **never hesitate to press the emergency stop button**.
+
+Someone must be holding the emergency stop button at any time when using the robot, being ready to press the button if needed, and keep its attention focused on the robot.
+
+{{< alert icon="👉" text="Objects may fall out of the grippers when pressing the emergency stop button. Make sure they cannot cause injuries." >}}
 
 ## Don't harm yourself...
 
-Even though there is little chance that you get hurt using Reachy, you might get surprised by its movements, especially the first times. 
+Reachy 2 is a powerful robot that may hurt you if it is misused.  
 
-We recommend that you move both Reachy's arms with your hands before you start programing it. The goal is that you get a sense of Reachy's working space, the positions it can reach so that you won't get hit when you actually send it commands.
+If you do not respect the safety guidelines, you expose yourself to the following risks:
+- pinching
+- crushing
+- punches
+- electrical hazard
 
-## and don't harm Reachy!
+### Alertness
+
+People interacting with the robot or present in its workspace must always look at the robot.
+
+### Appropriate behavior
+
+Do not expose yourself to dangerous punches:
+
+Never place your head in between or underneath segments of the robot.  
+
+If you are in the workspace of the robot, always stay in a position that allows you to quickly retract or recoil.
+
+### Free space for retracting
+
+If people are standing in the robot workspace, make sure they have **sufficient space to retract or recoil**, and that this space is free of obstacles.  
+
+People must never be blocked between the robot and a wall or furniture.
+
+### Objects manipulation with Reachy 2
+
+Be careful with the objects you manipulate with the robot. Sharp and pointed object manipulation is dangerous, do not get close to the robot if it manipulates such objects.  
+
+For all manipulation tasks, users are responsible for assessing the hazards and risks relative to the objects they manipulated with the robot. 
+
+### Manipulate the robot
+
+When the robot is in use, never manipulate robot parts at the same time.  
+
+Do not put your fingers in the actuators or between robot parts to avoid pinching or crushing.
+
+### Hardware intervention
+
+Never make any hardware intervention on the robot, such as screwing on unscrewing something on it, if it is powered on.
+
+## and don't harm Reachy 2!
 
 There are a few things you need to know to make sure that your Reachy doesn't get damaged when using it.
 
-### Don't stay in stiff mode if you're not moving the robot
+### Carrying heavy objects
 
-Each Reachy's motor can be in one of two compliance modes:
-* **compliant**: the motor is soft and can be freely turned by hand. It cannot be controlled, setting a new target position will have no effect. Yet you can still read the motor position.
-* **stiff**: the motor is hard and cannot be moved by hand. It can be controlled by setting new target position. In this mode, the motor use its maximum torque to maintain its present position until a target position is sent.
+Be careful of the position of the arms when lifting heavy objects with the robot.  
+Avoid carrying the object to far from the robot torso, mainly to avoid risk of front toppling.  
 
-You can change the compliance mode of a joint with its *compliant* attribute.
+Do not try to lift objects over 3kg (6.6lb).
 
-```python
-reachy.r_arm.r_gripper.compliant = False # stiff mode
+### Pulling/pushing
 
-reachy.r_arm.r_gripper.compliant = True # compliant mode
-```
+Do not try to pull or push elements with too much opposition!  
 
-or if you prefer to change the compliance of all the joints in a part of Reachy (left/right arm or the head), you can use the *turn_on()* and *turn_off()* methods. 
+This may result in a robot toppling.
 
-*turn_on()* puts all the joints of the requested part in stiff mode whereas *turn_off()* put them in compliant mode.
+### Obstacles
 
-```python
-reachy.turn_on('r_arm')
-```
-Try this on your robot to feel the resistance applied by the right arm's motors in stiff mode. You can compare with the left arm which should be in compliant mode. You should hear a small noise coming from the right arm's motors, especially if you try to move them with your hands, it's totally normal when they are in stiff mode.
+Be aware of obstacles!  
 
-If you want to the right arm's motors back to compliant mode:
-```python
-reachy.turn_off('r_arm')
-```
+When you are sending movements instructions to Reachy, be careful to obstacles the robot can meet. The robot will try to reach the positions you asked for as hard as it can, whether or not there is something on its way.  
 
-> #### What you need to keep in mind
-> **You must be careful not to let the joints in stiff mode when you're not using the robot**. This mode can be really demanding for a motor, letting a motor in stiff mode will damage it after some time.
->
-> If an arm is lifted or if the neck is lowered, maintaining the position in stiff mode will be exhausting because the motors would have to compensate the gravity and they could get damaged.
-> You can make the analogy with a human. If we ask you to keep stretched out arms, after a certain time it will be painful. So is the case for the joints of the robot.
+Because of the force of the robot, and depending on the weigh or fragility of the object, two things may occur:
+- make the object fall and/or break it
+- make Reachy 2 tumble
 
-### Be aware of obstacles
+### Self-collision
 
-When you are sending movements instructions to Reachy, be careful to obstacles that you could block Reachy during its movements.
+When you are moving both arms simultaneously, there are no safety measures implemented to prevent them from hitting each other.  
+Nothing will neither prevent Reachy's arms from hitting its chest if you ask them to.  
 
-For example, when you are asking to an arm to go between two positions, it will try to do it as hard as it can, whether or not there is something on its way. Also when you are moving both arms simultaneously, there are no safety measures implemented to prevent them from hitting each other.
-Nothing will also prevent Reachy's arms from hitting its chest if you ask them to.
-If situations like these happen, don't hesitate to turn off the motors so that Reachy's motors will stop trying to reach a position they can't get.
+If situations like these happen, do not hesitate to turn off the motors so that Reachy's motors will stop trying to reach a position they can't get to.
 
-### Check the temperatures
+### Anti-collision LIDAR safety
 
-Reachy's motors will heat when you are using its joints so you should manage the motors temperatures.
-The temperatures of each motor can be checked with the [dashboard]({{< ref "dashboard/content/dashboard" >}}) or be accessed using [Reachy's Python SDK]({{< ref "/sdk/first-moves/arm#temperature" >}}).
-
-There are two important temperature constants you need to know, their values depend on Reachy's part:
-* **fan trigger temperature**: temperature at which the motor will start to get hot and the matching fan should be turned on automatically. The fans allow to work longer with hot joints but enventually the temperature will keep rising if the joints keep being sollicitated. The default value is 45°C on Reachy.
-* **shutdown temperature**: when this temperature is reached, the motor will normally shutdown and stop working until it has cooled down. This is a precaution measure to protect the motor. The default value is 55°C on Reachy.
-
-Even though there exists a shutdown temperature, we recommand that when you intend on using the robot for a long period, you let the arms rest and their motors cool down regularly (5 minutes rest every 30 minutes of effort).
+:warning: The anti-collision LIDAR safety has been deactivated.
