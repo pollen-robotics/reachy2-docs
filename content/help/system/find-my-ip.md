@@ -8,7 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
-weight: "40"
+weight: "50"
 ---
 
 Here are 4 different options to find out the IP address of your robot.  

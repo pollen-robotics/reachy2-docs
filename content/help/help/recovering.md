@@ -22,5 +22,5 @@ To do so:
 2. Press the emergency stop button
 3. Make sure to put the arms and head in a suitable position before restarting the motors
 4. Press and turn clockwise the emergency stop button to raise it
-5. Go to the dashboard and click on *Restart* for `reachy2-core` then `webrtc`
+5. [Go to the dashboard]({{< ref "/dashboard/introduction/connection" >}}) and click on *Restart* for `reachy2-core` then `webrtc`
 

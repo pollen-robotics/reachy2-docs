@@ -29,7 +29,7 @@ Choose a wifi network to connect the robot to.
 Get the last software versions of the robot, and choose the services you want to update.
 
 * **Visualize robot state** - [**Visualization tools page**]({{< ref "/dashboard/content/visualization" >}})</br> 
-Get RViz visulization or even display live data from ROS topics with Foxglove.
+Get RViz visualization or even display live data from ROS topics with Foxglove.
 
 * **Send robot commands** - [**Reachy control page**]({{< ref "/dashboard/content/dashboard" >}})</br> 
 *Coming soon*

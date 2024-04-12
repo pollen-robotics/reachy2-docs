@@ -7,7 +7,7 @@ draft: false
 images: []
 type: docs
 toc: true
-weight: "60"
+weight: "70"
 ---
 
 ## Watch all guidelines in video!
