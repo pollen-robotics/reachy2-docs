@@ -310,27 +310,6 @@
   parent = "sdk-mobile-base"
   url = "/sdk/mobile-base/mobile-base-alone"
 
-##################
-## Appendix section
-##################
-
-[[sdk]]
-  name = "Appendix"
-  weight = 50
-  identifier = "sdk-appendix"
-
-[[sdk]]
-  name = "APIs"
-  weight = 500
-  parent = "sdk-appendix"
-  url = "/sdk/appendix/apis"
-
-[[sdk]]
-  name = "Support"
-  weight = 510
-  parent = "sdk-appendix"
-  url = "/sdk/appendix/support"
-
 #############################################
 # Menu main - add parts to main page nav menu here!
 #############################################
