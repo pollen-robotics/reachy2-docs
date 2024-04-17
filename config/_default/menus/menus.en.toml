@@ -271,44 +271,26 @@
   parent = "sdk-first-moves"
   url = "/sdk/first-moves/record"
 
+[[sdk]]
+  name = "8. Use the mobile base"
+  weight = 370
+  parent = "sdk-first-moves"
+  url = "/sdk/first-moves/mobile-base"
+
 ##################
-## Mobile base section
+## Advanced section
 ##################
-
-[[sdk]]
-  name = "Mobile base"
-  weight = 40
-  identifier = "sdk-mobile-base"
-
-[[sdk]]
-  name = "Getting started with the mobile base"
-  weight = 400
-  parent = "sdk-mobile-base"
-  url = "/sdk/mobile-base/getting-started"
-
-[[sdk]]
-  name = "Moving the mobile base"
-  weight = 410
-  parent = "sdk-mobile-base"
-  url = "/sdk/mobile-base/moving-the-base"
 
 [[sdk]]
   name = "Advanced"
-  weight = 420
-  parent = "sdk-mobile-base"
-  url = "/sdk/mobile-base/drive-control-modes"
+  weight = 40
+  identifier = "sdk-advanced"
 
 [[sdk]]
-  name = "Anti-collision safety"
-  weight = 430
-  parent = "sdk-mobile-base"
-  url = "/sdk/mobile-base/safety"
-
-[[sdk]]
-  name = "Using the mobile base without Reachy"
-  weight = 440
-  parent = "sdk-mobile-base"
-  url = "/sdk/mobile-base/mobile-base-alone"
+  name = "Mobile base modes"
+  weight = 400
+  parent = "sdk-advanced"
+  url = "/sdk/advanced/mobile-base"
 
 #############################################
 # Menu main - add parts to main page nav menu here!

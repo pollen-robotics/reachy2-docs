@@ -37,7 +37,7 @@ The robot is delivered with an emergency stop button.
 
 Pressing the emergency stop button will **immediately power off all motors**, from the arms to the mobile base wheels. Nevertheless it won't power off the computer, which means <u>you won't lose anything running on the computer</u>.  
 
-> If at anytime you feel that you're losing control of the robot's movements or notice an unexpected behavior, **never hesitate to press the emergency stop button**.
+> If you feel like you are losing control of the robot's movements or notice an unexpected behavior at anytime, **never hesitate to press the emergency stop button**.
 
 Someone must be holding the emergency stop button at any time when using the robot, being ready to press the button if needed, and keep its attention focused on the robot.
 

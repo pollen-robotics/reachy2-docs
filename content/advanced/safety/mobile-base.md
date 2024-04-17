@@ -22,7 +22,7 @@ We recommend that you get a feel for the inertia of the robot by holding on to t
 Block a wheel with your foot and try to gently tilt the robot.
 
 
-Then use the controller to move around the robot as explained in [Moving the mobile base]({{< ref "sdk/mobile-base/moving-the-base" >}})
+Then use the controller to move around the robot as explained in [Moving the mobile base]({{< ref "sdk/first-moves/mobile-base" >}})
 
 {{< video "videos/advanced/mobile-base/controller_mouvement.mp4" "100%" >}}
 
