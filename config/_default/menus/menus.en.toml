@@ -18,32 +18,38 @@
   url = "/docs/getting-started/unpack/"
 
 [[docs]]
-  name = "Start your robot"
+  name = "Safety guidelines"
   weight = 110
+  parent = "docs-getting-started"
+  url = "/docs/getting-started/safety/"
+
+[[docs]]
+  name = "Start your robot"
+  weight = 120
   parent = "docs-getting-started"
   url = "/docs/getting-started/turn-on/"
 
 [[docs]]
   name = "Connect your robot to the network"
-  weight = 120
+  weight = 130
   parent = "docs-getting-started"
   url = "/docs/getting-started/network/"
 
 [[docs]]
   name = "Connect to the dashboard"
-  weight = 130
+  weight = 140
   parent = "docs-getting-started"
   url = "/docs/getting-started/dashboard/"
 
 [[docs]]
   name = "Hello world"
-  weight = 140
+  weight = 150
   parent = "docs-getting-started"
   url = "/docs/getting-started/hello-world/"
 
 [[docs]]
   name = "Stop your robot"
-  weight = 150
+  weight = 160
   parent = "docs-getting-started"
   url = "/docs/getting-started/turn-off/"
 

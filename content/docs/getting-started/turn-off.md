@@ -7,7 +7,7 @@ lastmod: 2023-08-09T14:44:11+02:00
 draft: false
 images: []
 toc: true
-weight: "60"
+weight: "70"
 ---
 ## Power off your robot
 
