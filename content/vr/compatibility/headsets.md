@@ -14,7 +14,7 @@ So far, the VR teleoperation application has been tested with the following devi
 * **Meta Quest 2** (with Oculus Link)
 * **Meta Quest 3** (with Oculus Link)
 
-No native application for Meta Quest headsets has been released at the moment.
+> No native application for Meta Quest headsets has been released at the moment.
 
 
 The application should also support any device compatible with Unity 2022.3 including but not limited to the following devices:  

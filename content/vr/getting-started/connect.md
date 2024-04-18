@@ -16,7 +16,7 @@ weight: "60"
 Once everything is installed, you can launch the application.  
 First connect your headset to your computer and make sure it is ready for use.
 
-> Meta Quest headset must be used with the link.
+> Meta Quest headsets must be used with the link.
 
 Then run the *Reachy2Teleoperation.exe* file from the previously unzipped folder to start the application.
 
@@ -45,4 +45,6 @@ Make sure the connection is fine by checking the information displayed at the to
 You must see:
 - a green text telling you "Connected to Reachy"
 - the view of the robot displayed in miniature
-- a good network connection
+- a good network connection indication
+
+{{< img-center "images/vr/getting-started/mirror-scene.png" 600x "" >}}

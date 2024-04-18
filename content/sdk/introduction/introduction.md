@@ -12,7 +12,7 @@ weight: "10"
 
 ## The SDK in a nutshell
 
-The [Python SDK](https://github.com/pollen-robotics/reachy-sdk) lets you easily control and program a Reachy robot. It is used to read information (eg. camera image or joint position) and send commands to make the robot move.
+The [Python SDK](https://github.com/pollen-robotics/reachy2-sdk) lets you easily control and program a Reachy robot. It is used to read information (eg. camera image or joint position) and send commands to make the robot move.
 
 It is designed to:
 
