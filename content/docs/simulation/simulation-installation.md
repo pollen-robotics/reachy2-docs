@@ -9,7 +9,7 @@ images: []
 toc: true
 weight: "70"
 ---
-If you want to try movements on the robot without using the real robot, you can install a simulated Reachy 2 on your computer, and run it the same way the real robot is run.
+If you want to try movements on the robot without using the real robot, you can install a simulated Reachy 2 on your computer, and run it the same way the real robot is run. The easiest way is using a docker image. We will thus assume that you already have docker installed and setup.
 
 Clone the sources of our docker, and pull the sources:
 ```python
