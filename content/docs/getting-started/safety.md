@@ -10,9 +10,9 @@ toc: true
 weight: "20"
 ---
 
-{{< warning icon="👉🏾" text="Reachy 2 is much more powerful than the previous version. To avoid any accident, please follow carefully the safety guidelines. </br>Non-compliance to these guidelines can lead to severe injuries or death." >}}
+{{< warning icon="👉🏾" text="Reachy 2 is much more powerful than the previous version. To avoid any accident, please follow carefully the safety guidelines!" >}}
 
-> There is currently **no internal security** on the robot: it won't stop if hitting anything or anyone, even itself. Remain constantly watchful when using it.
+> There is currently **no automatic collision security** on the robot: it won't stop if hitting anything or anyone, even itself. Remain constantly watchful when using it.
 
 ## Users
 
