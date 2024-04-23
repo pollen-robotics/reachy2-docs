@@ -33,3 +33,5 @@ From your computer, on the same network, open a navigator and go to:
 You should arrive on a services page:
 
 {{< img-center "images/docs/getting-started/dashboard.png" 600x "dashboard" >}}
+
+Usage of the dashboard is detailed in the next sections.
