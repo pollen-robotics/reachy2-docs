@@ -24,7 +24,7 @@ Put the robot in a environment with no obstacle, and make sure its arms or gripp
 
 Press and turn clockwise the emergency stop button to raise it. The automatic calibration process will start.  
 
-> Do not move the robot until the computer is ready for use.
+> Do not move the robot until the services running on the computer are ready for use.
 
 <p align="center">
     {{< video "videos/docs/getting-started/calibration-process.mp4" "40%" >}}
