@@ -11,10 +11,16 @@ weight: "100"
 ---
 ## 0. Dependencies
 
+On your own computer:
 You will need to install Pollen's multical fork. Follow [instructions here](https://github.com/pollen-robotics/multical).
+
+You will need to install pollen-vision repo as well. [Clone the repo](https://github.com/pollen-robotics/pollen-vision/tree/develop), then `pip install -e .[depthai_wrapper]`
+
+> We recommand to use a virtual environment.
 
 ## 1. Charuco calibration board
 
+Go to `pollen-vision/pollen_vision/pollen_vision/camera_wrappers/depthai/calibration`.
 If you don't have one, generate a charuco board with the following command:
 
 ```console
@@ -27,12 +33,20 @@ Mesure as accurately as possible the size of the squares and the size of the mar
 
 ## 2. Get some images
 
-Run: 
-```console
-$ python3 acquire.py --config CONFIG_??
+Connect the teleop cameras to your computer.  
+
+Still in `pollen-vision/pollen_vision/pollen_vision/camera_wrappers/depthai/calibration`.
+
+If it is your first calibration:
+```bash
+echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="03e7", MODE="0666"' | sudo tee /etc/udev/rules.d/80-movidius.rules
+sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
-(`CONFIG_??` is the name of the config file you want to use, it must be in `pollen_vision/config_files/`. Dont set the `--config` argument to see available config files)
+Run: 
+```console
+$ python3 acquire.py --config CONFIG_IMX296
+```
 
 Press `return` to save a pair of images in `./calib_images/` (by default, use `--imagesPath` to change this).
 
