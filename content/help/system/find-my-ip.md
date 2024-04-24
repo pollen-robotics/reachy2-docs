@@ -58,9 +58,9 @@ Find the serial number of your robot on its back, connect your computer on the s
 ping <robot.serial.number>.local
 ```
 
->For example, if the serial number is reachy2-beta0003:
+>For example, if the serial number is reachy2-beta1:
 >```bash
->ping <reachy2-beta0003>.local
+>ping reachy2-beta1.local
 >```
 
 ## Using a smartphone

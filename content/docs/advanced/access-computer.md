@@ -57,5 +57,5 @@ ping <robot.serial.number>.local
 
 >For example, if the serial number is reachy2-beta1:
 >```bash
->ping <reachy2-beta1>.local
+>ping reachy2-beta1.local
 >```
