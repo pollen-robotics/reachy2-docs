@@ -46,7 +46,7 @@ reachy.r_arm.elbow.pitch.goal_position = -90
 
 You have 2 different cameras type on Reachy:
 - the **teleop** cameras, which are the cameras in Reachy's head. They are mobile cameras which can move the head and with stereovision, that are used for the teleoperation.
-- the **SR** cameras, which are the short-range cameras on Reachy's torso. They are fix cameras, with an accessible dpeth map, mainly useful for manipulation tasks.
+- the **SR** cameras, which are the short-range cameras on Reachy's torso. They are fix cameras, with an accessible depth map, mainly useful for manipulation tasks.
 
 You can access those cameras doing:
 
