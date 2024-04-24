@@ -1,6 +1,6 @@
 ---
 title: "Setup your teleop session"
-description: ""
+description: "Setup audio and motion sickness options before starting teleoperation"
 lead: "How to setup the parameters before starting teleoperation"
 date: 2023-08-21T16:00:11+02:00
 lastmod: 2023-08-21T16:00:11+02:00
