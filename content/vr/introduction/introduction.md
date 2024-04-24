@@ -16,3 +16,5 @@ The Virtual Reality (VR) teleoperation application enables you to **control the 
 By connecting to your robot, the teleoperation application gives you the ability to **move Reachy's arm** with the tracking of the VR controllers, to **rotate Reachy's head** following your own head movements and to **see through Reachy's cameras**.  
 
 You can also **manipulate objects** remotely controlling Reachy's grippers with your controllers' triggers.  
+
+{{< youtube vVIBlbS2zJs >}}

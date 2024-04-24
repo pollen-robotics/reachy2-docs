@@ -428,10 +428,28 @@
   url = "vr/use-teleop/start"
 
 [[vr]]
-  name = "Teleoperation messages"
+  name = "Control the mobile base"
   weight = 440
   parent = "vr-use"
+  url = "vr/use-teleop/mobile-base"
+
+[[vr]]
+  name = "Reduce motion sickness"
+  weight = 440
+  parent = "vr-use"
+  url = "vr/use-teleop/motion-sickness"
+
+[[vr]]
+  name = "Teleoperation messages"
+  weight = 450
+  parent = "vr-use"
   url = "vr/use-teleop/messages"
+
+[[vr]]
+  name = "Emergency stop"
+  weight = 460
+  parent = "vr-use"
+  url = "vr/use-teleop/emergency-stop"
 
 ##################
 ## Problem section

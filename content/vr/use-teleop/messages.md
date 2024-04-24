@@ -8,7 +8,7 @@ draft: false
 images: []
 type: docs
 toc: true
-weight: "110"
+weight: "130"
 ---
 
 During Reachy teleoperation, several messages can show up in front of view.  
@@ -22,4 +22,4 @@ When possible, please consider acting to prevent these warnings from becoming er
 
 Other messages may signal **errors**, which will lead to a fast dysfunction of the teleoperation. These messages are to take into account quickly, as you may not be controlling the robot properly anymore when they appear. These messages are displayed on a **red background**.  
 
-{{< warning icon="👉🏾" text="When error messages appear, <b>stop teleoperation</b> and act conquently to protect your robot. " >}}
+{{< warning icon="👉🏾" text="When error messages appear, <b>stop teleoperation</b> and act appropriately depending on the error type. " >}}
