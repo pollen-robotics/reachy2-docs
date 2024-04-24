@@ -1,7 +1,7 @@
 ---
 title: "Installation"
-description: ""
-lead: "How to install the VR teleoperation application"
+description: "How to install the VR teleoperation application"
+lead: "How to install the VR teleoperation application on your computer"
 date: 2023-08-21T16:00:11+02:00
 lastmod: 2023-08-21T16:00:11+02:00
 type: docs
@@ -11,7 +11,7 @@ toc: true
 weight: "40"
 ---
 
-{{< alert icon="⬇️" text="<a href=\"https://github.com/pollen-robotics/ReachyTeleoperation/releases\"> Download the latest version of the app</a>">}}
+> Reachy 2 is already fully compatible with the teleoperation application. You have nothing to install on the robot.
 
 ## On the Windows computer
 
@@ -21,9 +21,7 @@ Make sure that your VR device is properly installed and running (please refer to
 
 ### 2. Download application
 
-[Download the zip archive from our github repo](https://github.com/pollen-robotics/ReachyTeleoperation/releases), and unzip it.
-
-> Reachy 2 is already fully compatible with the teleoperation application. You have nothing to install on the robot.
+Download the zip archive we sent you, and unzip it.
 
 {{< alert icon="👉" text="No standalone application is available yet for Reachy 2 teleoperation." >}}
 
