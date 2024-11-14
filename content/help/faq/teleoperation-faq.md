@@ -1,5 +1,5 @@
 ---
-title : "Teleoperation"
+title : "Teleoperation issues"
 description: "VR teleoperation application FAQ"
 lead: "Frequently asked questions on VR teleoperation application"
 date: 2023-07-26T08:44:51+02:00
@@ -13,15 +13,6 @@ menu:
 toc: true
 weight: 230
 ---
-
-## Problem with the motors
-
-The motors are managed by the reachy2-core service.  
-Check all logs of the service with:
-
-```bash
-journalctl -b -u reachy2-core
-```
 
 ## Problem with the cameras or sound
 
@@ -39,16 +30,4 @@ Check all logs of the service with:
 
 ```bash
 journalctl -b -u webrtc
-```
-
-### With the Python SDK
-
-If you are using the cameras with the Python SDK, the cameras are then managed by the reachy2-core service.  
-
-> First make sure you have enabled correctly the [cameras for the SDK]({{< ref "sdk/first-moves/cameras#enable-teleop-cameras-for-the-sdk">}})  
-
-Check all logs of the service with:
-
-```bash
-journalctl -b -u reachy2-core
 ```
