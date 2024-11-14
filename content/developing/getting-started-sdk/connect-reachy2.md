@@ -10,7 +10,7 @@ type: docs
 menu:
   developing:
     parent: "Getting started with the SDK"
-weight: 100
+weight: 110
 toc: true
 ---
 

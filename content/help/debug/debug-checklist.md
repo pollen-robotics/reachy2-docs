@@ -11,7 +11,7 @@ menu:
   help:
     parent: "Debug"
 toc: true
-weight: 20
+weight: 100
 ---
 
 ## Problem with the motors

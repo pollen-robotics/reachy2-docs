@@ -10,7 +10,7 @@ type: docs
 menu:
   teleoperation:
     parent: "Using Reachy2Teleoperation application"
-weight: 300
+weight: 310
 toc: true
 ---
 

@@ -10,7 +10,7 @@ type: docs
 menu:
   hardware-guide:
     parent: "Specifications"
-weight: 800
+weight: 140
 toc: true
 ---
 

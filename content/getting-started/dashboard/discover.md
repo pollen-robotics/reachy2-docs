@@ -10,7 +10,7 @@ type: docs
 menu:
   getting-started:
     parent: "Dashboard"
-weight: 1000
+weight: 400
 toc: true
 ---
 

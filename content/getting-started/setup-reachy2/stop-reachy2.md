@@ -10,7 +10,7 @@ type: docs
 menu:
   getting-started:
     parent: "Setup Reachy 2"
-weight: 500
+weight: 230
 toc: true
 ---
 

@@ -10,7 +10,7 @@ type: docs
 menu:
   developing:
     parent: "Advanced tutorials"
-weight: 100
+weight: 300
 toc: true
 ---
 

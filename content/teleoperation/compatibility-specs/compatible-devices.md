@@ -10,7 +10,7 @@ type: docs
 menu:
   teleoperation:
     parent: "Compatibility & Specifications"
-weight: 200
+weight: 100
 toc: true
 ---
 

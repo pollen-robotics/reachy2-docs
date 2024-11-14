@@ -11,7 +11,7 @@ menu:
   help:
     parent: "FAQ"
 toc: true
-weight: 20
+weight: 200
 ---
 
 ## Problem with the motors

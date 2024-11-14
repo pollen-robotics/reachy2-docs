@@ -10,7 +10,7 @@ type: docs
 menu:
   hardware-guide:
     parent: "Makers"
-weight: 500
+weight: 200
 toc: true
 ---
 

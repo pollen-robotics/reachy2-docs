@@ -10,7 +10,7 @@ type: docs
 menu:
   developing:
     parent: "SDK basics"
-weight: 100
+weight: 270
 toc: true
 ---
 

@@ -7,4 +7,7 @@ draft: false
 images: []
 weight: 100
 type: docs
+menu:
+    help:
+weight: 20
 ---

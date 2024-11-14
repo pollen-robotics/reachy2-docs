@@ -11,7 +11,7 @@ menu:
   help:
     parent: "Contact support"
 toc: true
-weight: 20
+weight: 300
 ---
 
 ## Problem with the motors

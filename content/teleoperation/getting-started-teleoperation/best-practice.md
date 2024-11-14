@@ -10,7 +10,7 @@ type: docs
 menu:
   teleoperation:
     parent: "Getting started with teleoperation"
-weight: 400
+weight: 220
 toc: true
 ---
 
