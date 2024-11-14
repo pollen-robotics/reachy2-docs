@@ -8,7 +8,7 @@ draft: false
 images: []
 type: docs
 menu:
-  developing:
+  developing-with-reachy-2:
     parent: "SDK basics"
 weight: 260
 toc: true

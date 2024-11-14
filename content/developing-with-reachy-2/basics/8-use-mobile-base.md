@@ -1,16 +1,16 @@
 ---
-title: "6. Get images from cameras"
-description: "Images acquisition using the Python SDK"
-lead: "Images acquisition "
+title: "8. Use the mobile base"
+description: "First mobile base movements using the Python SDK"
+lead: "First mobile base movements"
 date: 2023-07-26T08:05:23+02:00
 lastmod: 2023-07-26T08:05:23+02:00
 draft: false
 images: []
 type: docs
 menu:
-  developing:
+  developing-with-reachy-2:
     parent: "SDK basics"
-weight: 250
+weight: 270
 toc: true
 ---
 

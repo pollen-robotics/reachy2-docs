@@ -8,6 +8,6 @@ draft: false
 images: []
 type: docs
 menu:
-  developing:
+  developing-with-reachy-2:
 weight: 30
 ---

@@ -8,7 +8,7 @@ draft: false
 images: []
 type: docs
 menu:
-  developing:
+  developing-with-reachy-2:
     parent: "Advanced tutorials"
 weight: 300
 toc: true

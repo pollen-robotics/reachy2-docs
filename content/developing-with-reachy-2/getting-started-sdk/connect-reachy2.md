@@ -8,7 +8,7 @@ draft: false
 images: []
 type: docs
 menu:
-  developing:
+  developing-with-reachy-2:
     parent: "Getting started with the SDK"
 weight: 110
 toc: true

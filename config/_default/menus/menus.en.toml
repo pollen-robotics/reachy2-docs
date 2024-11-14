@@ -13,8 +13,8 @@
   weight = 20
 
 [[main]]
-  name = "Developing with Reachy 2"
-  url = "/developing/getting-started-sdk/installation/"
+  name = "Developing with reachy 2"
+  url = "/developing-with-reachy-2/getting-started-sdk/installation/"
   weight = 30
 
 [[main]]
