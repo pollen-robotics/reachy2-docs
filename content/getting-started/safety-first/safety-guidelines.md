@@ -1,7 +1,7 @@
 ---
 title: "Safety guidelines"
 description: "Safety guidelines as mandatory reading"
-lead: "Everything you must know before using Reachyh 2 for a safe experience with the robot"
+lead: "Everything you must know before using Reachy 2 for a safe experience with the robot"
 date: 2023-07-26T08:05:23+02:00
 lastmod: 2023-07-26T08:05:23+02:00
 draft: false
