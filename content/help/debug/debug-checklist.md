@@ -14,41 +14,17 @@ toc: true
 weight: 100
 ---
 
-## Problem with the motors
 
-The motors are managed by the reachy2-core service.  
-Check all logs of the service with:
+## Fast recovering
 
-```bash
-journalctl -b -u reachy2-core
-```
+The simpliest way to recover from an error (for example an arm not responding anymore) is to **power cycle the motors and restart the services**.  
 
-## Problem with the cameras or sound
+It as a fast recovery procedure that may cover 80% of unexpected behavior.   
 
-### With teleoperation application
+To do so:
+1. Suspend your current use of the robot
+2. Press the emergency stop button
+3. Make sure to put the arms and head in a suitable position before restarting the motors
+4. Press and turn clockwise the emergency stop button to raise it
+5. Go to the dashboard and click on *Restart* for `reachy2-core` then `webrtc`
 
-During teleoperation, the cameras and sound are managed by the webrtc service.  
-This service is automatically launched when you start Reachy 2 computer. 
-
-> If you have switched between the Python SDK and the teleoperation application without robot rebooting, first make sure:
->- that any running client to the sdk has been disconnected
->- that the speaker has been plugged back
->- that the webrtc services has been restarted
-
-Check all logs of the service with:
-
-```bash
-journalctl -b -u webrtc
-```
-
-### With the Python SDK
-
-If you are using the cameras with the Python SDK, the cameras are then managed by the reachy2-core service.  
-
-> First make sure you have enabled correctly the [cameras for the SDK]({{< ref "sdk/first-moves/cameras#enable-teleop-cameras-for-the-sdk">}})  
-
-Check all logs of the service with:
-
-```bash
-journalctl -b -u reachy2-core
-```

@@ -18,8 +18,6 @@ weight: 210
 
 If you are using the cameras with the Python SDK, the cameras are then managed by the reachy2-core service.  
 
-> First make sure you have enabled correctly the [cameras for the SDK]({{< ref "sdk/first-moves/cameras#enable-teleop-cameras-for-the-sdk">}})  
-
 Check all logs of the service with:
 
 ```bash

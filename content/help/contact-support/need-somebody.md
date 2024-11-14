@@ -14,41 +14,14 @@ toc: true
 weight: 300
 ---
 
-## Problem with the motors
+## Forum
 
-The motors are managed by the reachy2-core service.  
-Check all logs of the service with:
+Join **[our forum](https://forum.pollen-robotics.com/)** if you have any questions or simply want to take a look at others topics!
 
-```bash
-journalctl -b -u reachy2-core
-```
+{{< alert icon="👉" text="Any questions relative to your development with Reachy?</br><b>Go to <a href=\"https://forum.pollen-robotics.com\" target=\"_blank\" rel=\"noopener noreferrer\">Pollen Community</a></b>" >}}
 
-## Problem with the cameras or sound
 
-### With teleoperation application
+## Pollen Robotics support
 
-During teleoperation, the cameras and sound are managed by the webrtc service.  
-This service is automatically launched when you start Reachy 2 computer. 
+For any specific questions concerning your robot or if you meet problems with the product, please contact us at [support@pollen-robotics.com](mailto:support@pollen-robotics.com).
 
-> If you have switched between the Python SDK and the teleoperation application without robot rebooting, first make sure:
->- that any running client to the sdk has been disconnected
->- that the speaker has been plugged back
->- that the webrtc services has been restarted
-
-Check all logs of the service with:
-
-```bash
-journalctl -b -u webrtc
-```
-
-### With the Python SDK
-
-If you are using the cameras with the Python SDK, the cameras are then managed by the reachy2-core service.  
-
-> First make sure you have enabled correctly the [cameras for the SDK]({{< ref "sdk/first-moves/cameras#enable-teleop-cameras-for-the-sdk">}})  
-
-Check all logs of the service with:
-
-```bash
-journalctl -b -u reachy2-core
-```

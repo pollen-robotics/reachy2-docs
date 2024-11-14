@@ -52,7 +52,7 @@ nmcli device wifi connect <wifi.name> password <your.password>
 There are several ways to connect to your robot.
 
 ## SSH connection
-Using the robot's IP address (check [Find Reachy 2's IP]({{< ref "help/system/find-my-ip" >}}) if you don't know it), you can directly connect via ssh to Reachy 2's computer:
+Using the robot's IP address (check Find Reachy 2's IP if you don't know it), you can directly connect via ssh to Reachy 2's computer:
 
 ```python
 ssh bedrock@<Reachy.2.IP.address>

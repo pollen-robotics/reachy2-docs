@@ -25,7 +25,7 @@ toc: true
 
 Users must be in **full possession of their physical and mental powers at all times** when using the robot. Reachy 2 must never be used by someone having consumed substances that could affect their reactions, such as medication, drugs or alcohol.  
 
-Users must **keep attention focused** on the robot at any time, especially if they are near the robot workspace, and imperatively if they are in its workspace or if they are responsible for the [emergency stop button]({{< ref "/sdk/getting-started/safety#emergency-stop-button" >}}).  
+Users must **keep attention focused** on the robot at any time, especially if they are near the robot workspace, and imperatively if they are in its workspace or if they are responsible for the emergency stop button.  
 
 ### Qualified users
 
@@ -98,7 +98,7 @@ Never make any hardware intervention on the robot, such as screwing on unscrewin
 
 ### Robot toppling risk
 
-The following section ["...and don't harm Reachy 2!"]({{< ref "/sdk/getting-started/safety#and-dont-harm-reachy-2" >}}) mainly describes risks of robot toppling or collision. This may damage the robot, but also harm anyone near to the robot.    
+The following section ["...and don't harm Reachy 2!"]({{< ref "/getting-started/safety-first/safety-guidelines#and-dont-harm-reachy-2" >}}) mainly describes risks of robot toppling or collision. This may damage the robot, but also harm anyone near to the robot.    
 **All events of the following section can lead to users injuries**, so read them as users safety guidelines as well.
 
 ## ...and don't harm Reachy 2!
