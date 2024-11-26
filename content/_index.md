@@ -1,5 +1,5 @@
 ---
-title : "Reachy 2 (beta) Documentation"
+title : "Reachy 2 Documentation"
 description: "Reachy 2 Documentation"
 lead: "Covers everything you need to know from the physical installation of Reachy 2 to advanced uses like VR teleoperation."
 date: 2020-10-06T08:47:36+00:00

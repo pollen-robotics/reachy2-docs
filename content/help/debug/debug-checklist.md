@@ -1,15 +1,19 @@
 ---
-title : "Recovering"
-description: "Simple recovering process in case of problems"
-lead: "Something is not working?"
+title : "Quick debug checklist"
+description: "Debug"
+lead: "Easy steps to debug yourself common issues"
 date: 2023-07-26T08:44:51+02:00
 lastmod: 2023-07-26T08:44:51+02:00
 draft: false
 images: []
 type: docs
+menu:
+  help:
+    parent: "Debug"
 toc: true
-weight: "10"
+weight: 100
 ---
+
 
 ## Fast recovering
 
