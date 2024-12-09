@@ -1,0 +1,4 @@
+<details>
+    <summary>{{ with .Get "title" }}{{.}}{{ end }}</summary>
+    {{ with .Get "text" }}{{ . | safeHTML }}{{ end }}
+  </details>

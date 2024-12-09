@@ -1,7 +1,7 @@
 ---
 title: "Connect to Reachy 2"
-description: "Establish connection with the robot form the VR teleoperation application"
-lead: "Establish connection with the robot form the VR teleoperation application"
+description: "Establish connection with the robot from the VR teleoperation application"
+lead: "Establish connection with the robot from the VR teleoperation application"
 date: 2023-07-26T08:05:23+02:00
 lastmod: 2023-07-26T08:05:23+02:00
 draft: false
@@ -14,26 +14,39 @@ weight: 210
 toc: true
 ---
 
-## Launch the app
+## 1. Find Reachy 2 IP
 
-Once everything is installed, you can launch the application.  
-First connect your headset to your computer and make sure it is ready for use.
+In many cases, you will be able to use the name of the robot to connect.  
+Find your robot name in its back, below its neck.  
 
-> Meta Quest headsets must be used with the link.
 
-Then run the *Reachy2Teleoperation.exe* file from the previously unzipped folder to start the application.
+If your network setup is configured so it does not work with the local name, you can get its exact IP by connecting to the dashboard, in the Network section.  
 
-## Find Reachy IP address
 
-The LCD screen connected in Reachy's back should be diplaying its IP address.
+Can't find the IP? Use the LCD screen to get information.
 
-{{< img-center "images/vr/getting-started/lcd-display.png" 400x "" >}}
+## 2. Check your VR setup is ready
 
-If the LCD screen is not working or is unplugged, check out the page Find my IP section to learn other ways to get the IP address.
+- First check your PC is connected to the **same network as the robot**.
+- Connect your VR device to your PC and make sure it is ready to be used. Depending on your headset, the menus you should get in when ready for use is different. Check your headset section for more information on how to start correctly.
+{{<toggle-list title="Meta headsets (Quest 2, Quest 3 and Rift)" text="Follow the steps of the section <a href=\"https://www.meta.com/en-gb/help/quest/articles/headsets-and-accessories/oculus-link/connect-with-air-link/\"><b>Setup Link</b> from the official Meta website</a>. <br /> You should then enter a white menu. When you are in, your VR device is ready.">}}
+{{<toggle-list title="HTC Vive" text="yeh">}}
+{{<toggle-list title="Valve Index" text="yeh">}}
 
-## Connect to the robot
+
+## 3. Launch the application
+
+Once everything is ready, you can launch the application.  
+
+Run *Reachy2Teleoperation* from your computer.
+
+
+## 4. Connect to the robot
 
 Create a new robot entry in the menu with the IP address you previously found.  
+The IP can either be:
+- the robot name followed by **.local**.<br />For example, if your robot name was **reachy2-beta0**, enter "**reachy2-beta0.local**".
+- the real robot IP, as written in the Network section of the dashboard.
 
 > Note that you must select the input fields with your VR beam and fill them in using your computer keyboard.  
 
