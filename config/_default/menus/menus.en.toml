@@ -4,7 +4,7 @@
 
 [[main]]
   name = "Getting started"
-  url = "/getting-started/safety-first/safety-guidelines/"
+  url = "/getting-started/robot-introduction/discover-robot/"
   weight = 10
 
 [[main]]
@@ -14,13 +14,13 @@
 
 [[main]]
   name = "Developing with reachy 2"
-  url = "/developing-with-reachy-2/getting-started-sdk/installation/"
+  url = "/developing-with-reachy-2/sdk-introduction/discover-sdk/"
   weight = 30
 
 [[main]]
   name = "Teleoperation"
   weight = 40
-  url = "/teleoperation/compatibility-specs/compatible-devices/"
+  url = "/teleoperation/teleoperation-introduction/discover-teleoperation/"
 
 [[main]]
   name = "Help"

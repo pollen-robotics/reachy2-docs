@@ -1,5 +1,5 @@
 ---
-title: "Stop Reachy 2"
+title: "Stop Reachy"
 description: "Turn off the robot"
 lead: "At the end, stop your robot"
 date: 2023-07-26T08:05:23+02:00
@@ -10,7 +10,7 @@ type: docs
 menu:
   getting-started:
     parent: "Setup Reachy 2"
-weight: 230
+weight: 240
 toc: true
 ---
 
