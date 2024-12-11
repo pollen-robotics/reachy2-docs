@@ -18,9 +18,42 @@ toc: true
 
 ## Key Points
 
+#### 1) Be Vigilant
+{{< img-center "images/getting-started/safety-first/safety-guidelines/1_Be_vigilant.jpg" 400x "Be vigilant" >}}
+Always keep your eyes on the robot while it operates.
+
+#### 2) Ready to stop
+{{< img-center "images/getting-started/safety-first/safety-guidelines/2_Ready_to_stop.jpg" 400x "Ready to stop" >}}
+Always be ready to press the emergency stop button in case of unexpected behaviour.
+
+#### 3) Maintain a safe distance
+{{< img-center "images/getting-started/safety-first/safety-guidelines/3_Maintain_a safe_distance.jpg" 400x "Maintain a safe distance" >}}
+Keep at least 1 meter clear on all sides of the robot.
+
+#### 4) Avoid the blind spot
+{{< img-center "images/getting-started/safety-first/safety-guidelines/4_Avoid_the_blind_spot.jpg" 400x "Avoid the blind spot" >}}
+Never stands behind Reachy while it operates.
+
+#### 5) Wear gloves
+{{< img-center "images/getting-started/safety-first/safety-guidelines/5_Wear_gloves.jpg" 400x "Wear gloves" >}}
+Protect yourself from pinches when handling Reachy.
+
+#### 6) Stay within limits
+{{< img-center "images/getting-started/safety-first/safety-guidelines/6_Stay_within_limits.jpg" 400x "Stay within limits" >}}
+Never lift object heavier than 3kg or extend them too far.
+
+#### 7) LIDAR Safety
+{{< img-center "images/getting-started/safety-first/safety-guidelines/7_LIDAR_safety.jpg" 400x "LIDAR Safety" >}}
+Stay out of the robot's movement zones to avoid collisions.
+
+#### 8) Stable ground
+{{< img-center "images/getting-started/safety-first/safety-guidelines/8_Stable_Ground.jpg" 400x "Stable ground" >}}
+Operate Reachy only on flat, stable surfaces.
+
+
 - **Stay Alert**: Reachy 2 is powerful and lacks automatic collision detection. It will not stop if it encounters obstacles, including people or itself. Remain vigilant at all times.
 - **Qualified Users Only**: People using the robot or interacting with it must all be aware of the risks and be explicitly informed of the robot capabilities, limitations and restrictions. They must all be able to act with the appropriate behavior using the robot by knowing the safety guidelines.
-- **Emergency Stop Button**: Always keep a person ready to use the emergency stop button. Press it immediately if you lose control of the robot or notice unexpected movements. Objects held by Reachy may fall if the button is pressed, so ensure the workspace is clear of items that could cause harm.
+- **Emergency Stop Button**: Always keep a person ready to use the emergency stop button. Press it immediately if you lose control of the robot or notice unexpected movements. Objects held by Reachy may fall if the button is pressed, so ensure the workspace is clear of items that could cause harm.  
 
 ---
 

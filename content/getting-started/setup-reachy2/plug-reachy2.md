@@ -19,7 +19,7 @@ toc: true
 <img src="/gifs/getting-started/setup-reachy2/plug-reachy2/Reachy2_getting-started-2-A_Plug-stop-btn_864x864.gif" alt="Plug stop button" style="display: block; margin: 0 auto;" width="300">  
 
 <br />
-Connect the emergency stop button to one of the black connectors (**A**) on the mobile base
+Connect the emergency stop button to one of the black connectors (<b>A</b>) on the mobile base
 
 ## B) Connect the battery
 
@@ -35,7 +35,7 @@ Plug the black and red wire (**B1**) to the mobile base. Then plug the yellow co
 <img src="/gifs/getting-started/setup-reachy2/plug-reachy2/Reachy2_getting-started-2-C_Connect-USB port_864x864.gif" alt="Connect USB port" style="display: block; margin: 0 auto;" width="300"> 
 
 <br />
-Connect USB cable (**C**) coming from the mobile base together 
+Connect USB cable (<b>C</b>) coming from the mobile base together 
 
 ## D) Connect Reachy to your network 
 
