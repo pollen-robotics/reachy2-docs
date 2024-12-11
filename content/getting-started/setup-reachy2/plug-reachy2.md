@@ -1,7 +1,7 @@
 ---
 title: "Plug Reachy"
-description: "Connect your robot to the network"
-lead: "Follow these steps to make your first connection to Reachy 2"
+description: "Steps to finish assembling the robot"
+lead: "Follow these steps to finish assembling the robot"
 date: 2023-07-26T08:05:23+02:00
 lastmod: 2023-07-26T08:05:23+02:00
 draft: false
@@ -10,32 +10,36 @@ type: docs
 menu:
   getting-started:
     parent: "Setup Reachy 2"
-weight: 220
+weight: 210
 toc: true
 ---
 
-> On the **first connection, connect Reachy 2 to your network using an ethernet cable**. You will then be able to choose another network using the dashboard.
+## A) Plug in the emergency stop button
 
-## Hard-wired connection
+<img src="/gifs/getting-started/setup-reachy2/plug-reachy2/Reachy2_getting-started-2-A_Plug-stop-btn_864x864.gif" alt="Plug stop button" style="display: block; margin: 0 auto;" width="300">  
 
-Use an **ethernet cable** to connect your robot to the network.  
+<br />
+Connect the emergency stop button to one of the black connectors (**A**) on the mobile base
 
-Ethernet plugs are available at position (c) of the robot's computer interface.  
-Reachy 2's computer is configured to use DHCP. It should thus be directly accessible on your network.  
+## B) Connect the battery
 
-{{< img-center "images/docs/network/hardware-interface.png" 400x "hardware-interface" >}}
+<img src="/gifs/getting-started/setup-reachy2/plug-reachy2/Reachy2_getting-started-2-B_connect-battery_864x864.gif" alt="Connect battery" style="display: block; margin: 0 auto;" width="300">  
 
-To easily find the IP address of the robot, read the little LCD screen plugged in the back of the robot. Wait for the IP address to appear, it may take a few minutes.  
+<br />
+Make sure the emergency stop button is pressed.
 
-{{< img-center "images/vr/getting-started/lcd-display.png" 200x "lcd-display" >}}
+Plug the black and red wire (**B1**) to the mobile base. Then plug the yellow connector (**B2**) of the mobile base so the robot will be powered when the emergency stop button will be released. 
 
-> Every 10 seconds, the screen switches between WiFi and Ethernet information.  
+## C) Connect the mobile base to the USB port
 
+<img src="/gifs/getting-started/setup-reachy2/plug-reachy2/Reachy2_getting-started-2-C_Connect-USB port_864x864.gif" alt="Connect USB port" style="display: block; margin: 0 auto;" width="300"> 
 
-## WiFi
+<br />
+Connect USB cable (**C**) coming from the mobile base together 
 
-After your first connection with an ethernet connection, simply use the **dashboard** to connect Reachy to WiFi.  
+## D) Connect Reachy to your network 
 
+<img src="/gifs/getting-started/setup-reachy2/plug-reachy2/Reachy2_getting-started-2-D_plug-ethernet_864x864.gif" alt="Plug Ethernet cable" style="display: block; margin: 0 auto;" width="300"> 
 
-> **If you cannot use an ethernet connection for your first connection:**
-<!-- > {{< my-button link="/single-pages/connect-wifi/" label="How to connect to WiFi without using the dashboard?" >}} -->
+<br />
+Plug ethernet cable from Reachy’s computer to your router. It should be directly accessible on your network.

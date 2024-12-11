@@ -30,8 +30,8 @@ Can't find the IP? Use the LCD screen to get information.
 - First check your PC is connected to the **same network as the robot**.
 - Connect your VR device to your PC and make sure it is ready to be used. Depending on your headset, the menus you should get in when ready for use is different. Check your headset section for more information on how to start correctly.
 {{<toggle-list title="Meta headsets (Quest 2, Quest 3 and Rift)" text="Follow the steps of the section <a href=\"https://www.meta.com/en-gb/help/quest/articles/headsets-and-accessories/oculus-link/connect-with-air-link/\"><b>Setup Link</b> from the official Meta website</a>. <br /> You should then enter a white menu. When you are in, your VR device is ready.">}}
-{{<toggle-list title="HTC Vive" text="yeh">}}
-{{<toggle-list title="Valve Index" text="yeh">}}
+{{<toggle-list title="HTC Vive" text="<i>Coming soon</i>">}}
+{{<toggle-list title="Valve Index" text="<i>Coming soon</i>">}}
 
 
 ## 3. Launch the application

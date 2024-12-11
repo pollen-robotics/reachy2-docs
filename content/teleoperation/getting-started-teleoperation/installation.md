@@ -22,9 +22,9 @@ toc: true
 Make sure that your VR device is properly installed and running on your computer.
 Please refer to your device documentation.
 
-{{<toggle-list title="Meta headsets (Quest 2, Quest 3 and Rift)" text="yeh">}}
-{{<toggle-list title="HTC Vive" text="yeh">}}
-{{<toggle-list title="Valve Index" text="yeh">}}
+{{<toggle-list title="Meta headsets (Quest 2, Quest 3 and Rift)" text="<i>Coming soon</i>">}}
+{{<toggle-list title="HTC Vive" text="<i>Coming soon</i>">}}
+{{<toggle-list title="Valve Index" text="<i>Coming soon</i>">}}
 
 ## 2. Install our teleoperation application
 
