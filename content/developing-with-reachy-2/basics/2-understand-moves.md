@@ -14,7 +14,7 @@ weight: 210
 toc: true
 ---
 
-> You can choose to follow our online documentation or to make your Reachy move by following the [notebook](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/2_goto_introduction.ipynb). 
+> You can choose to follow our online documentation or to make your Reachy move by following the [notebook n°2](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/2_goto_introduction.ipynb). 
 
 ## Moves methods
 
