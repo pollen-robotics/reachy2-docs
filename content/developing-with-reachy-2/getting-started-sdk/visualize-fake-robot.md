@@ -14,4 +14,14 @@ weight: 120
 toc: true
 ---
 
-Ohlala it's safe now
+For now, Reachy doesn't have any collision avoidance restrictions (left arm against right arm, arm against torso, etc.).
+
+So before implementing any new behaviour on your Reachy, we recommand you to test your movements on a fake mode. That means that your physical robot won't move but the simulated one will.  As so, you will be able to visualize what Reachy will do and to adapt your moves before testing it on the real one. 
+
+For that, blablabla
+
+
+Then you can go back to the dashboard, click on **Visualisation tools** and you will see Rviz with your fake Reachy. 
+
+
+Now, you are ready to make your robot move ! You can skip to the *Basics*.

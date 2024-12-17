@@ -18,18 +18,18 @@ toc: true
 
 ### Joint coordinates
 
-If you remember the [`goto_joint()` function]({{< ref "developing-with-reachy-2/basics/3-basic-arm-control#goto_joints" >}}), to generate a trajectory for the arm, you need to pass a list of joints with the requested position as argument.
+If you remember the [`goto()` function]({{< ref "developing-with-reachy-2/basics/3-basic-arm-control#goto" >}}), to generate a trajectory for the arm, you need to pass a list of joints with the requested position as argument.
 
 For example, to place the right arm in a right angled position, we defined the following list: 
 
 ```python
-right_angled_position = [0, 0, 0, -90, 0, 0, 0]
+right_angled_position = [0, 10, -10, -90, 0, 0, 0]
 ```
 
 and then call the function with is:
 
 ```python
-reachy.r_arm.goto_joints(right_angled_position)
+reachy.r_arm.goto(right_angled_position)
 ```
 
 In this basic arm control, we used what is called **joint coordinates** to move Reachy. This means that we controlled each joint separately.
@@ -40,7 +40,7 @@ Controlling a robot in joint coordinates can be hard and is often far from what 
 
 The **kinematic model** describes the motion of a robot in mathematical form without considering the forces and torque affecting it. It only focuses on the geometric relationship between elements.
 
-We have defined the whole kinematic model of the arm. This means the translation and rotation required to go from one joint to the next one. On a right arm equipped with a gripper this actually look like this:
+We have defined the whole kinematic model of the arm. This means the translation and rotation required to go from one joint to the next one. On a right arm equipped with a gripper, this actually looks like this:
 
 |Motor|Translation|Rotation|
 |-----|-----------|--------|
@@ -102,7 +102,7 @@ Each arm has a **`forward_kinematics()`** method. To use it, you first need to c
 ```python
 from reachy_sdk import ReachySDK
 
-reachy = ReachySDK(host='192.168.0.42')  # Replace with the actual IP
+reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
 
 reachy.r_arm.forward_kinematics()
 >>> array([[ 0.04622308, -0.03799621, -0.99820825,  0.31144822],
@@ -115,9 +115,9 @@ The method returns a 4x4 matrix indicating the position and orientation of the e
 
 > By specifying no argument, it will give the current 3D position and orientation of the end effector.
 
-You can compute the forward kinematics of the arm for other joints positions, by giving as an argument a seven-element-long list, as for the `goto_joints()`method. The arm will not move, but you can get the target position and orientation of the arm in this configuration.  
+You can compute the forward kinematics of the arm for other joints positions, by giving as an argument a seven-element-long list, as for the `goto()`method. The arm will not move, but you can get the target position and orientation of the arm in this configuration.  
 
-For example, for the right arm right angled position:
+For example, for the right arm right-angled-position:
 ```python
 reachy.r_arm.forward_kinematics([0, 0, 0, -90, 0, 0, 0])
 >>> array([[ 0.04622308, -0.03799621, -0.99820825,  0.31144822],
