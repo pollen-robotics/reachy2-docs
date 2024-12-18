@@ -13,7 +13,7 @@ menu:
 weight: 260
 toc: true
 ---
-
+<br>
 
 You can easily record joint trajectories directly on Reachy, store and replay them later. This page will show you how to implement such mechanisms. 
 
@@ -121,3 +121,6 @@ for joints_positions in trajectories:
 ```
 
 > The check_positions parameter is used to check that the goal positions have been reached after the command has been sent, and that there has been no problem with an unreachable position. That process can take time et slow your replaying. Since it's a recording, all poses are necessarily reachable, so there's no need to waste process time on this check. 
+
+
+Now all we have to do is move the mobile base!

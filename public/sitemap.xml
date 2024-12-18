@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://localhost:1313/help/debug/</loc>
+    <lastmod>2023-08-21T16:18:47+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/help/recovering/</loc>
+    <lastmod>2023-07-26T08:44:51+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/getting-started/safety-first/</loc>
+    <lastmod>2023-07-25T15:34:19+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/teleoperation/compatibility-specs/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/getting-started-sdk/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ai-with-reachy-2/perception/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/hardware-guide/specifications/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/faq/</loc>
+    <lastmod>2023-08-21T16:18:47+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ai-with-reachy-2/autonomous-behaviors/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/teleoperation/getting-started-teleoperation/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/hardware-guide/makers/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/basics/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/getting-started/setup-reachy2/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/contact-support/</loc>
+    <lastmod>2023-08-21T16:18:47+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/advanced-tutos/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/getting-started/update-reachy2/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/teleoperation/using-application/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/simulation/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/debug/debug-checklist/</loc>
+    <lastmod>2023-07-26T08:44:51+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/teleoperation/compatibility-specs/compatible-devices/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/hardware-guide/specifications/general/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/getting-started-sdk/installation/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/getting-started/safety-first/safety-guidelines/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ai-with-reachy-2/perception/use-pollen-vision/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/getting-started-sdk/connect-reachy2/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/teleoperation/compatibility-specs/latency-network/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/hardware-guide/specifications/vision/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/hardware-guide/specifications/audio/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/getting-started-sdk/visualize-fake-robot/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/hardware-guide/specifications/motors-actuators/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/hardware-guide/specifications/grippers/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/hardware-guide/specifications/mobile-base/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/faq/robot-faq/</loc>
+    <lastmod>2023-07-26T08:44:51+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/getting-started/setup-reachy2/assemble-and-plug/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/hardware-guide/makers/cad-files/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/teleoperation/getting-started-teleoperation/installation/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ai-with-reachy-2/autonomous-behaviors/record-data-learning-models/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/faq/sdk-faq/</loc>
+    <lastmod>2023-07-26T08:44:51+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/basics/2-understand-moves/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/teleoperation/getting-started-teleoperation/connect-reachy2/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/getting-started/setup-reachy2/start-reachy2/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/basics/3-basic-arm-control/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/teleoperation/getting-started-teleoperation/best-practice/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/getting-started/setup-reachy2/connect-reachy2/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/faq/teleoperation-faq/</loc>
+    <lastmod>2023-07-26T08:44:51+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/basics/4-use-arm-kinematics/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/getting-started/setup-reachy2/stop-reachy2/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/basics/5-control-head/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/basics/6-get-images-from-cameras/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/basics/7-record-replay-trajectories/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/basics/8-use-mobile-base/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/contact-support/need-somebody/</loc>
+    <lastmod>2023-07-26T08:44:51+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/advanced-tutos/1-reachy-awakening/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/teleoperation/using-application/step-by-step/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/getting-started/update-reachy2/update-software/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/teleoperation/using-application/emergency-stop/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/advanced-tutos/2-reachy-the-mime/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/teleoperation/using-application/control-mobile-base/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/advanced-tutos/3-reachy-the-greengrocer/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/teleoperation/using-application/controllers-inputs/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/teleoperation/using-application/customize-teleop-session/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/teleoperation/using-application/teleoperation-messages/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/getting-started/dashboard/discover/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/simulation/simulation-installation/</loc>
+    <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/getting-started/setup-reachy2/connect-wifi/</loc>
+    <lastmod>2023-08-09T14:43:31+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/</loc>
+    <lastmod>2023-07-26T08:44:10+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ai-with-reachy-2/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/getting-started/dashboard/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/developing-with-reachy-2/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/getting-started/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/hardware-guide/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/teleoperation/</loc>
+    <lastmod>2023-07-25T15:34:02+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2020-10-06T08:47:36+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/contributors/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>

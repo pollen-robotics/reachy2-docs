@@ -88,8 +88,8 @@ You can see the right and left end-effectors animated below.
 
 Forward and inverse kinematics are a way to go from one coordinates system to the other:
 
-* **forward kinematics: joint coordinates –> cartesian coordinates**,
-* **inverse kinematics: cartesian coordinates –> joint coordinates**.
+* **forward kinematics**: joint coordinates –> cartesian coordinates ,
+* **inverse kinematics**: cartesian coordinates –> joint coordinates.
 
 ## Forward kinematics
 
@@ -168,7 +168,7 @@ $$\begin{bmatrix}
 1 & 0 & 0
 \end{bmatrix}$$
 
-We can use scipy to understand what this matrix represents.
+We can use *scipy* to understand what this matrix represents.
 
 ```python
 from scipy.spatial.transform import Rotation as R
@@ -179,7 +179,7 @@ R.from_matrix([
     [0, 1, 0],
     [1, 0, 0],
 ]).as_euler('xyz', degrees=True)
->>> array([  0.        , -89.99999879,   0.        ])
+>>> array([0., -90,0.])
 ```
 So scipy tells us that a rotation of -90° along the y axis has been made to get this matrix, which is coherent with the result because having the hand facing forward corresponds to this rotation according to Reachy's xyz axis that we saw above.
 
@@ -187,7 +187,10 @@ So scipy tells us that a rotation of -90° along the y axis has been made to get
 
 The inverse kinematics is the exact opposite of the forward kinematics. From a 4x4 pose in Reachy 2 coordinate system, it gives a list of joints positions to reach this target.
 
-Knowing where you arm is located in the 3D space can be useful but most of the time what you want is to move the arm in cartesian coordinates. You want to have the possibility to say: “move your hand to [x, y, z] with a 90° rotation around the Y axis”. This is what **`goto()`** does, if the input is a 4x4 matrix. 
+Knowing where you arm is located in the 3D space can be useful but most of the time what you want is to move the arm in cartesian coordinates. You want to have the possibility to say: 
+> “Move your hand to [x, y, z] with a 90° rotation around the Y axis”. 
+
+This is what **`goto()`** does, if the input is a 4x4 matrix. 
 
 ### inverse_kinematics()
 
@@ -243,7 +246,7 @@ And to complete our corners, we can deduce D from A and C. D coordinates should 
 
 $$D = \begin{pmatrix}0.3 & -0.1 & -0.3\end{pmatrix}$$
 
-> **Remember that you always have to provide poses to the inverse kinematics that are actually reachable by the robot.** If you're not sure whether the 3D point that you defined is reachable by Reachy, you can move the arm with your hand in compliant mode (meaning turned off), ask the forward kinematics and check the 3D translation component of the returned pose. 
+{{< warning icon="👉🏾" text="<b>Remember that you always have to provide poses to the inverse kinematics that are actually reachable by the robot.</b> If you're not sure whether the 3D point that you defined is reachable by Reachy, you can move the arm with your hand in compliant mode (meaning turned off), ask the forward kinematics and check the 3D translation component of the returned pose. " >}}
 
 But having the 3D position is not enough to design a pose. You also need to provide the 3D orientation via a rotation matrix. It's often the tricky part when building a target pose matrix.
 
@@ -267,35 +270,14 @@ You can also move the arm with your hand where you want it to be and use the for
 
 Here, having the rotation matrix and the 3D positions for our points A and B, we can build both target pose matrices.
 
-```python
-A = np.array([
-  [0, 0, -1, 0.3],
-  [0, 1, 0, -0.4],  
-  [1, 0, 0, -0.3],
-  [0, 0, 0, 1],  
-])
 
-B = np.array([
-  [0, 0, -1, 0.3],
-  [0, 1, 0, -0.4],  
-  [1, 0, 0, 0.0],
-  [0, 0, 0, 1],  
-])
+| **Matrix** | **Values**                                      |
+|------------|-------------------------------------------------|
+| **A**      | `np.array([[0, 0, -1, 0.3], [0, 1, 0, -0.4], [1, 0, 0, -0.3], [0, 0, 0, 1]])` |
+| **B**      | `np.array([[0, 0, -1, 0.3], [0, 1, 0, -0.4], [1, 0, 0, 0.0], [0, 0, 0, 1]])`  |
+| **C**      | `np.array([[0, 0, -1, 0.3], [0, 1, 0, -0.1], [1, 0, 0, 0.0], [0, 0, 0, 1]])`  |
+| **D**      | `np.array([[0, 0, -1, 0.3], [0, 1, 0, -0.1], [1, 0, 0, -0.3], [0, 0, 0, 1]])` |
 
-C = np.array([
-  [0, 0, -1, 0.3],
-  [0, 1, 0, -0.1],  
-  [1, 0, 0, 0.0],
-  [0, 0, 0, 1],  
-])
-
-D = np.array([
-  [0, 0, -1, 0.3],
-  [0, 1, 0, -0.1],  
-  [1, 0, 0, -0.3],
-  [0, 0, 0, 1],  
-])
-```
 
 #### Sending the movements commands
 
@@ -323,3 +305,5 @@ The result should look like this:
 <p align="center">
     {{< video "videos/sdk/goto_ik.mp4" "80%" >}}
 </p>
+
+Now, we are going to move the head !

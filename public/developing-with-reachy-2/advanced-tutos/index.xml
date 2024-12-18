@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Advanced tutorials on </title>
+    <link>http://localhost:1313/developing-with-reachy-2/advanced-tutos/</link>
+    <description>Recent content in Advanced tutorials on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Jul 2023 08:05:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/developing-with-reachy-2/advanced-tutos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reachy&#39;s Awakening</title>
+      <link>http://localhost:1313/developing-with-reachy-2/advanced-tutos/1-reachy-awakening/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/developing-with-reachy-2/advanced-tutos/1-reachy-awakening/</guid>
+      <description>&lt;br&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction &lt;a href=&#34;#introduction&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Now, you’ve learned the &lt;strong&gt;basics behaviours&lt;/strong&gt; available with reachy2_sdk. But how to use them to &lt;strong&gt;build your own program&lt;/strong&gt; may still seem a little abstract.&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s why we&amp;rsquo;ve created a series of &lt;strong&gt;practical tutorials&lt;/strong&gt; to guide you step-by-step through the process of thinking about and building different programs that will help you understand the mechanics involved in creating &lt;strong&gt;your own behaviour&lt;/strong&gt;!&lt;/p&gt;&#xA;&lt;p&gt;For the moment, there are &lt;strong&gt;three tutorials&lt;/strong&gt; available, ranging from the simplest to the most complex, to help you get to grips with different Reachy functions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reachy the Mime</title>
+      <link>http://localhost:1313/developing-with-reachy-2/advanced-tutos/2-reachy-the-mime/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/developing-with-reachy-2/advanced-tutos/2-reachy-the-mime/</guid>
+      <description>&lt;p&gt;In &lt;a href=&#34;https://github.com/pollen-robotics/reachy2-tutorials/blob/main/2_Reachy_the_mime.ipynb&#34;&gt;this tutorial&lt;/a&gt;,  we will transform Reachy into a mime who pulls an invisible rope.&lt;/p&gt;&#xA;&lt;p&gt;What you will learn :&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;How to use the mobile base,&lt;/li&gt;&#xA;&lt;li&gt;How to synchronize arms and mobile base movements,&lt;/li&gt;&#xA;&lt;li&gt;How and when to use blocking gotos,&lt;/li&gt;&#xA;&lt;li&gt;How to follow a particular trajectory with the end effector.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&#xA;    &#xA;    &lt;p style=&#34;text-align: center;&#34;&gt;&#xA;        &lt;img alt=&#34;&#34; src=&#34;http://localhost:1313/images/sdk/tutorials/gif_rope_hu668050754233931177.gif&#34; width=&#34;400&#34; height=&#34;225&#34;&gt;&#xA;    &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reachy the Greengrocer</title>
+      <link>http://localhost:1313/developing-with-reachy-2/advanced-tutos/3-reachy-the-greengrocer/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/developing-with-reachy-2/advanced-tutos/3-reachy-the-greengrocer/</guid>
+      <description>&lt;br&gt;&#xA;&lt;p&gt;In this &lt;a href=&#34;https://github.com/pollen-robotics/reachy2-tutorials/blob/main/3_Reachy_the_greengrocer.ipynb&#34;&gt;tutorial&lt;/a&gt;, we will ask Reachy to sort fruits on a table and to drop them in user-defined places, according to which fruit it is.&lt;/p&gt;&#xA;&lt;p&gt;What you will learn :&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;How to do object detection&lt;/li&gt;&#xA;&lt;li&gt;How to switch from the image frame to the robot frame&lt;/li&gt;&#xA;&lt;li&gt;How to make Reachy move according to what it sees&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&#xA;    &#xA;    &lt;p style=&#34;text-align: center;&#34;&gt;&#xA;        &lt;img alt=&#34;&#34; src=&#34;http://localhost:1313/images/sdk/tutorials/gif_oranges_hu14571592816885799333.gif&#34; width=&#34;400&#34; height=&#34;331&#34;&gt;&#xA;    &lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

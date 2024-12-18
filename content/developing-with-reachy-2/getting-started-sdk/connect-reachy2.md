@@ -7,13 +7,17 @@ lastmod: 2023-07-26T08:05:23+02:00
 draft: false
 images: []
 type: docs
+url: "/developing-with-reachy-2/getting-started-sdk/connect-reachy2/"
 menu:
   developing-with-reachy-2:
     parent: "Getting started with the SDK"
 weight: 110
 toc: true
+slug: "connect-reachy2"
+url: "/developing-with-reachy-2/getting-started-sdk/connect-reachy2/"
 ---
 
+<br>
 
 To be able to connect to your Reachy 2, you first need to be on the same network (either via Ethernet or WiFi).
 

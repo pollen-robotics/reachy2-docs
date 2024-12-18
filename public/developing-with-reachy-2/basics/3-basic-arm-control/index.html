@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en-US">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="/main.css">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>3. Basic arm control - Reachy 2</title>
+<meta name="description" content="First moves of the arms using the Python SDK">
+<link rel="canonical" href="http://localhost:1313/developing-with-reachy-2/basics/3-basic-arm-control/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3. Basic arm control">
+<meta property="og:description" content="First moves of the arms using the Python SDK">
+<meta property="og:url" content="http://localhost:1313/developing-with-reachy-2/basics/3-basic-arm-control/">
+<meta property="og:site_name" content="Reachy 2">
+<meta property="article:published_time" content="2023-07-26T08:05:23+02:00">
+  <meta property="article:modified_time" content="2023-07-26T08:05:23+02:00">
+  
+  <meta property="og:image" content="http://localhost:1313/favicon.ico"/>
+      <meta property="og:image:alt" content="Reachy 2">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pollenrobotics">
+<meta name="twitter:creator" content="@pollenrobotics">
+<meta name="twitter:title" content="3. Basic arm control">
+<meta name="twitter:description" content="First moves of the arms using the Python SDK">
+<meta name="twitter:image" content="http://localhost:1313/favicon.ico">
+    <meta name="twitter:image:alt" content="3. Basic arm control">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+        "@id": "http://localhost:1313/#/schema/organization/1",
+      "name": "Pollen Robotics",
+      "url": "http://localhost:1313/",
+      "sameAs": [
+        "https://twitter.com/pollenrobotics"
+        , "https://www.linkedin.com/company/12781309/"
+        , "https://github.com/pollen-robotics"
+        ],
+      "logo": {
+          "@type": "ImageObject",
+          "@id": "http://localhost:1313/#/schema/image/1",
+          "url": "http://localhost:1313/logo-pollen.png",
+          "width":  400 ,
+          "height":  400 ,
+          "caption": "Pollen Robotics"
+        },
+        "image": {
+          "@id": "http://localhost:1313/#/schema/image/1"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "http://localhost:1313/#/schema/website/1",
+      "url": "http://localhost:1313/",
+      "name": "Reachy 2",
+      "description": "Everything you need to know to setup, program and start interacting with your Reachy!",
+      "publisher": {
+          "@id": "http://localhost:1313/#/schema/organization/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "http://localhost:1313/developing-with-reachy-2/basics/3-basic-arm-control/",
+      "url": "http://localhost:1313/developing-with-reachy-2/basics/3-basic-arm-control/",
+      "name": "3. Basic arm control",
+      "description": "First moves of the arms using the Python SDK",
+      "isPartOf": {
+        "@id": "http://localhost:1313/#/schema/website/1"
+      },
+      "about": {
+          "@id": "http://localhost:1313/#/schema/organization/1"
+        },
+      "datePublished": "2023-07-26T08:05:23CET",
+      "dateModified": "2023-07-26T08:05:23CET",
+      "breadcrumb": {
+        "@id": "http://localhost:1313/developing-with-reachy-2/basics/3-basic-arm-control/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "http://localhost:1313/developing-with-reachy-2/basics/3-basic-arm-control/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["http://localhost:1313/developing-with-reachy-2/basics/3-basic-arm-control/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "http://localhost:1313/developing-with-reachy-2/basics/3-basic-arm-control/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "http://localhost:1313/",
+          "url": "http://localhost:1313/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "http://localhost:1313/developing-with-reachy-2/",
+          "url": "http://localhost:1313/developing-with-reachy-2/",
+          "name": "Developing With Reachy 2"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "http://localhost:1313/developing-with-reachy-2/basics/",
+          "url": "http://localhost:1313/developing-with-reachy-2/basics/",
+          "name": "Basics"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "http://localhost:1313/developing-with-reachy-2/basics/3-basic-arm-control/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "http://localhost:1313/developing-with-reachy-2/basics/3-basic-arm-control/#/schema/image/2",
+          "url": "http://localhost:1313/favicon.ico",
+          "contentUrl": "http://localhost:1313/favicon.ico",
+          "caption": "3. Basic arm control"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="http://localhost:1313/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="http://localhost:1313/site.webmanifest">
+
+  
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+
+  <body class="docs single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Reachy 2">
+      Reachy 2
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Reachy 2</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/getting-started/safety-first/safety-guidelines/">Getting started</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/hardware-guide/specifications/general/">Hardware guide</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1 active" href="/developing-with-reachy-2/getting-started-sdk/installation/">Developing with reachy 2</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/teleoperation/compatibility-specs/compatible-devices/">Teleoperation</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/help/debug/debug-checklist/">Help</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Search docs..." aria-label="Search docs..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/pollenrobotics"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/pollen-robotics/"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<h3 class="h6 text-uppercase mb-2">Getting started with the SDK</h3>
+  <ul class="list-unstyled">
+      <li><a class="docs-link" href="/developing-with-reachy-2/getting-started-sdk/installation/">Installation</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/getting-started-sdk/connect-reachy2/">Connect to Reachy 2</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/getting-started-sdk/visualize-fake-robot/">Visualize with fake robot</a></li>
+        </ul>
+  <h3 class="h6 text-uppercase mb-2">SDK basics</h3>
+  <ul class="list-unstyled">
+      <li><a class="docs-link" href="/developing-with-reachy-2/basics/1-hello-world/">1. Hello World</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/2-understand-moves/">2. Understand moves in Reachy 2</a></li>
+        <li><a class="docs-link active" href="/developing-with-reachy-2/basics/3-basic-arm-control/">3. Basic arm control</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/4-use-arm-kinematics/">4. Use arm kinematics</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/5-control-head/">5. Control the head</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/6-get-images-from-cameras/">6. Get images from cameras</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/7-record-replay-trajectories/">7. Record and replay trajectories</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/8-use-mobile-base/">8. Use the mobile base</a></li>
+        </ul>
+  <h3 class="h6 text-uppercase mb-2">Advanced tutorials</h3>
+  <ul class="list-unstyled">
+      <li><a class="docs-link" href="/developing-with-reachy-2/advanced-tutos/1-reachy-awakening/">Reachy&#39;s Awakening</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/advanced-tutos/2-reachy-the-mime/">Reachy the Mime</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/advanced-tutos/3-reachy-the-greengrocer/">Reachy the Greengrocer</a></li>
+        </ul>
+  <h3 class="h6 text-uppercase mb-2">Simulation</h3>
+  <ul class="list-unstyled">
+      <li><a class="docs-link" href="/developing-with-reachy-2/simulation/simulation-installation/">Simulation installation</a></li>
+        </ul>
+  
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav id="sidebar-default" class="docs-links" aria-label="Main navigation">
+				
+<h3 class="h6 text-uppercase mb-2">Getting started with the SDK</h3>
+  <ul class="list-unstyled">
+      <li><a class="docs-link" href="/developing-with-reachy-2/getting-started-sdk/installation/">Installation</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/getting-started-sdk/connect-reachy2/">Connect to Reachy 2</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/getting-started-sdk/visualize-fake-robot/">Visualize with fake robot</a></li>
+        </ul>
+  <h3 class="h6 text-uppercase mb-2">SDK basics</h3>
+  <ul class="list-unstyled">
+      <li><a class="docs-link" href="/developing-with-reachy-2/basics/1-hello-world/">1. Hello World</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/2-understand-moves/">2. Understand moves in Reachy 2</a></li>
+        <li><a class="docs-link active" href="/developing-with-reachy-2/basics/3-basic-arm-control/">3. Basic arm control</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/4-use-arm-kinematics/">4. Use arm kinematics</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/5-control-head/">5. Control the head</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/6-get-images-from-cameras/">6. Get images from cameras</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/7-record-replay-trajectories/">7. Record and replay trajectories</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/8-use-mobile-base/">8. Use the mobile base</a></li>
+        </ul>
+  <h3 class="h6 text-uppercase mb-2">Advanced tutorials</h3>
+  <ul class="list-unstyled">
+      <li><a class="docs-link" href="/developing-with-reachy-2/advanced-tutos/1-reachy-awakening/">Reachy&#39;s Awakening</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/advanced-tutos/2-reachy-the-mime/">Reachy the Mime</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/advanced-tutos/3-reachy-the-greengrocer/">Reachy the Greengrocer</a></li>
+        </ul>
+  <h3 class="h6 text-uppercase mb-2">Simulation</h3>
+  <ul class="list-unstyled">
+      <li><a class="docs-link" href="/developing-with-reachy-2/simulation/simulation-installation/">Simulation installation</a></li>
+        </ul>
+  
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>On this page</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#arm-presentation">Arm presentation</a>
+      <ul>
+        <li><a href="#the-actuators">The actuators</a></li>
+        <li><a href="#the-joints">The joints</a></li>
+        <li><a href="#the-gripper">The gripper</a></li>
+      </ul>
+    </li>
+    <li><a href="#arm-moves-methods">Arm moves methods</a>
+      <ul>
+        <li><a href="#goto">goto()</a></li>
+      </ul>
+    </li>
+    <li><a href="#gripper-control">Gripper control</a>
+      <ul>
+        <li><a href="#open">open()</a></li>
+        <li><a href="#close">close()</a></li>
+        <li><a href="#opening">opening</a></li>
+      </ul>
+    </li>
+    <li><a href="#read-arm-position">Read arm position</a>
+      <ul>
+        <li><a href="#in-joint-space--get_current_positions">In joint space : get_current_positions()</a></li>
+        <li><a href="#in-cartesian-space--forward_kinematics">In cartesian space : forward_kinematics()</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>On this page</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#arm-presentation">Arm presentation</a>
+      <ul>
+        <li><a href="#the-actuators">The actuators</a></li>
+        <li><a href="#the-joints">The joints</a></li>
+        <li><a href="#the-gripper">The gripper</a></li>
+      </ul>
+    </li>
+    <li><a href="#arm-moves-methods">Arm moves methods</a>
+      <ul>
+        <li><a href="#goto">goto()</a></li>
+      </ul>
+    </li>
+    <li><a href="#gripper-control">Gripper control</a>
+      <ul>
+        <li><a href="#open">open()</a></li>
+        <li><a href="#close">close()</a></li>
+        <li><a href="#opening">opening</a></li>
+      </ul>
+    </li>
+    <li><a href="#read-arm-position">Read arm position</a>
+      <ul>
+        <li><a href="#in-joint-space--get_current_positions">In joint space : get_current_positions()</a></li>
+        <li><a href="#in-cartesian-space--forward_kinematics">In cartesian space : forward_kinematics()</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>3. Basic arm control</h1>
+			<p class="lead">First moves of the arms using the Python SDK</p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>On this page</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#arm-presentation">Arm presentation</a>
+      <ul>
+        <li><a href="#the-actuators">The actuators</a></li>
+        <li><a href="#the-joints">The joints</a></li>
+        <li><a href="#the-gripper">The gripper</a></li>
+      </ul>
+    </li>
+    <li><a href="#arm-moves-methods">Arm moves methods</a>
+      <ul>
+        <li><a href="#goto">goto()</a></li>
+      </ul>
+    </li>
+    <li><a href="#gripper-control">Gripper control</a>
+      <ul>
+        <li><a href="#open">open()</a></li>
+        <li><a href="#close">close()</a></li>
+        <li><a href="#opening">opening</a></li>
+      </ul>
+    </li>
+    <li><a href="#read-arm-position">Read arm position</a>
+      <ul>
+        <li><a href="#in-joint-space--get_current_positions">In joint space : get_current_positions()</a></li>
+        <li><a href="#in-cartesian-space--forward_kinematics">In cartesian space : forward_kinematics()</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>On this page</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#arm-presentation">Arm presentation</a>
+      <ul>
+        <li><a href="#the-actuators">The actuators</a></li>
+        <li><a href="#the-joints">The joints</a></li>
+        <li><a href="#the-gripper">The gripper</a></li>
+      </ul>
+    </li>
+    <li><a href="#arm-moves-methods">Arm moves methods</a>
+      <ul>
+        <li><a href="#goto">goto()</a></li>
+      </ul>
+    </li>
+    <li><a href="#gripper-control">Gripper control</a>
+      <ul>
+        <li><a href="#open">open()</a></li>
+        <li><a href="#close">close()</a></li>
+        <li><a href="#opening">opening</a></li>
+      </ul>
+    </li>
+    <li><a href="#read-arm-position">Read arm position</a>
+      <ul>
+        <li><a href="#in-joint-space--get_current_positions">In joint space : get_current_positions()</a></li>
+        <li><a href="#in-cartesian-space--forward_kinematics">In cartesian space : forward_kinematics()</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<br>
+<blockquote>
+<p>You can choose to follow our online documentation or to make your Reachy move by following the <a href="https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/3_arm_and_gripper.ipynb">notebook n°3</a>.</p>
+</blockquote>
+<h2 id="arm-presentation">Arm presentation <a href="#arm-presentation" class="anchor" aria-hidden="true">#</a></h2>
+<p>Reachy&rsquo;s arm offers 7 degrees of freedom. It also gives access to one joint for the gripper.<br>
+The <strong>arm</strong> is divided as follow:</p>
+<ul>
+<li><strong>shoulder</strong>, composed of 2 joints (pitch and roll)</li>
+<li><strong>elbow</strong>, composed of 2 joints (yaw and pitch)</li>
+<li><strong>wrist</strong>, composed of 3 joints (roll, pitch and yaw)</li>
+</ul>
+<p>We refer to the shoulder, elbow and wrist as <strong>actuators</strong>.</p>
+<h3 id="the-actuators">The actuators <a href="#the-actuators" class="anchor" aria-hidden="true">#</a></h3>
+<p>Each actuator has a unique name and uid. To access a specific actuator, you can use the attribute under the part you are using. We don&rsquo;t not provide a direct access to all actuators. For the arms, the following actuators are available:</p>
+<pre><code class="language-python">from reachy2_sdk import ReachySDK
+
+reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
+ reachy.r_arm._actuators
+{'shoulder': &lt;Orbita2d on=False joints=
+        &lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=4.38 goal_position=4.38 &gt;
+        &lt;OrbitaJoint axis_type=&quot;roll&quot; present_position=14.31 goal_position=14.31 &gt;
+&gt;, 'elbow': &lt;Orbita2d on=False joints=
+        &lt;OrbitaJoint axis_type=&quot;yaw&quot; present_position=19.74 goal_position=19.74 &gt;
+        &lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=-19.9 goal_position=-19.9 &gt;
+&gt;, 'wrist': &lt;Orbita3d on=False joints=
+        &lt;OrbitaJoint axis_type=&quot;roll&quot; present_position=-9.81 goal_position=-9.81 &gt;
+        &lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=16.29 goal_position=16.29 &gt;
+        &lt;OrbitaJoint axis_type=&quot;yaw&quot; present_position=-28.78 goal_position=-28.78 &gt;}
+</code></pre>
+<p>Because they are parallel actuators, it often doesn&rsquo;t have sense to control one motor of an actuator without controlling the other motors of the same actuator.</p>
+<p>This is why actuators are for several cases the lowest degree of control we give. At the actuator level, you can then:</p>
+<ul>
+<li>modify the actuator compliance</li>
+<li>modify torques</li>
+<li>modify speed</li>
+</ul>
+<h3 id="the-joints">The joints <a href="#the-joints" class="anchor" aria-hidden="true">#</a></h3>
+<p>To access a specific joint, you can either use <em>reachy.joints</em> which has each joint of the robot as attribute or access it via the actuators it belongs to. For example, to access the right arm shoulder roll : <em>reachy.r_arm.shoulder.roll</em>.</p>
+<p>First, connect to your Reachy.</p>
+<pre><code class="language-python">from reachy_sdk import ReachySDK
+
+reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
+
+reachy.r_arm.shoulder.roll
+&lt;OrbitaJoint axis_type=&quot;roll&quot; present_position=3.54 goal_position=3.55 &gt;
+</code></pre>
+<p>Joints in Reachy are abstract elements that do not have a physical element. A joint is controlled by several motors of the actuators. The only thing you can do at joint level is reading the <strong>present_position</strong> and send <strong>goal_position</strong>.</p>
+<h4 id="present_position">present_position <a href="#present_position" class="anchor" aria-hidden="true">#</a></h4>
+<p>You can get the present position of each joint with this attribute.</p>
+<pre><code class="language-python">reachy.r_arm._shoulder.pitch.present_position
+&gt;&gt;&gt; 22.4
+</code></pre>
+<blockquote>
+<p>present_position is returned in <strong>degrees</strong>.</p>
+</blockquote>
+<h4 id="goal_position">goal_position <a href="#goal_position" class="anchor" aria-hidden="true">#</a></h4>
+<p>The <em>goal_position</em> attribute of a joint can be used to set a new joint&rsquo;s target position to make it move. However, we recommend using the <a href="http://localhost:1313/developing-with-reachy-2/basics/3-basic-arm-control/#goto"><strong>goto() method</strong></a> to move the motors which provides better control on the joint&rsquo;s trajectories.</p>
+<p>Using goal_position will make the motor move <strong>as fast as it can</strong>, so be careful when using it.</p>
+<pre><code class="language-python">reachy.r_arm._elbow.pitch.goal_position = -90
+reachy.send_goal_positions()
+</code></pre>
+<blockquote>
+<p>goal_position must be written in <strong>degrees</strong>.</p>
+</blockquote>
+<h3 id="the-gripper">The gripper <a href="#the-gripper" class="anchor" aria-hidden="true">#</a></h3>
+<p>Grippers are part of arms: this means that if the arm is switched on, so is the gripper.</p>
+<p>To get access to a gripper, you have to go through the corresponding arm :</p>
+<pre><code class="language-python">reachy.r_arm.gripper 
+&gt;&gt;&gt; &lt;Hand on=True opening=99.65 &gt;
+</code></pre>
+<p>The opening corresponds to a percentage.</p>
+<h2 id="arm-moves-methods">Arm moves methods <a href="#arm-moves-methods" class="anchor" aria-hidden="true">#</a></h2>
+<p>Arms can be controlled in two spaces:</p>
+<ul>
+<li>the <strong>joint space</strong>, which allows to read and write directly the angle values of each joint of the arm</li>
+<li>the <strong>cartesian space</strong>, which consists in controlling the end effector position and orientation in Reachy&rsquo;s coordinate system</li>
+</ul>
+<blockquote>
+<p>Both spaces are quite different, and <strong>we advise not to mix them</strong> if you are not familiar with the output.
+In fact, values of the joint space are expressed in each actuator&rsquo;s coordinate system (respectively shoulder, elbow and wrist), whereas commands in cartesian space are expressed in Reachy&rsquo;s coordinate system</p>
+</blockquote>
+<h3 id="goto">goto() <a href="#goto" class="anchor" aria-hidden="true">#</a></h3>
+<p>The goto method can be used in joint and cartesian space, it depends on the input parameter, respectively a list of 7 joint values or a 4x4 matrix.</p>
+<h4 id="in-joint-space">In joint space <a href="#in-joint-space" class="anchor" aria-hidden="true">#</a></h4>
+<p>The <strong><code>goto()</code></strong> method takes a seven-elements-long list, with the angles in this order:</p>
+<ul>
+<li>r_arm.shoulder.pitch</li>
+<li>r_arm.shoulder.roll</li>
+<li>r_arm.elbow.yaw</li>
+<li>r_arm.elbow.pitch</li>
+<li>r_arm.wrist.roll</li>
+<li>r_arm.wrist.pitch</li>
+<li>r_arm.wrist.yaw</li>
+</ul>
+<p>Let&rsquo;s see an example of how to use it.</p>
+<p>Let&rsquo;s define a list with <strong>reachy.r_arm.elbow.pitch</strong> at -90 degrees to the set a right-angled position for the right arm:</p>
+<pre><code class="language-python">right_angled_pose = [0, 10, -10, -90, 0, 0, 0]
+</code></pre>
+<p>Then we can send the <code>goto</code> commands to the right arm, after setting the motors in stiff mode :</p>
+<pre><code class="language-python">reachy.r_arm.turn_on() 
+
+reachy.r_arm.goto(right_angled_pose)
+</code></pre>
+<blockquote>
+<p>To find out whether you have to send positive or negative angles, read next section on the arm kinematics.</p>
+</blockquote>
+<h4 id="in-cartesian-space">In cartesian space <a href="#in-cartesian-space" class="anchor" aria-hidden="true">#</a></h4>
+<p>The <strong><code>goto()</code></strong> method takes a 4x4 matrix expressing the target pose of Reachy 2&rsquo;s end effector in Reachy 2 coordinate system.</p>
+<blockquote>
+<p>Read next section on <a href="http://localhost:1313/developing-with-reachy-2/basics/4-use-arm-kinematics/">Use arm kinematics</a> to better understand the use of the <code>goto</code> method.</p>
+</blockquote>
+<h2 id="gripper-control">Gripper control <a href="#gripper-control" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="open">open() <a href="#open" class="anchor" aria-hidden="true">#</a></h3>
+<p>To <strong>open the grippers</strong>, call the <strong><code>open()</code></strong> method on the wanted gripper.<br>
+It will open it entirely:</p>
+<pre><code class="language-python">reachy.r_arm.gripper.open()
+</code></pre>
+<h3 id="close">close() <a href="#close" class="anchor" aria-hidden="true">#</a></h3>
+<p>To <strong>close the grippers</strong>, call the <strong><code>close()</code></strong> method on the wanted gripper.<br>
+It will close the gripper with the appropriate value, which means it will be entirely closed if there is no object to grasp, or set a suitable value if an object has been detected in the gripper during the closing:</p>
+<pre><code class="language-python">reachy.r_arm.gripper.close()
+</code></pre>
+<h3 id="opening">opening <a href="#opening" class="anchor" aria-hidden="true">#</a></h3>
+<p>The opening value corresponds to a <strong>percentage of opening</strong>, which means:</p>
+<ul>
+<li>0 is close</li>
+<li>100 is open</li>
+</ul>
+<p>You can read the opening of the gripper :</p>
+<pre><code class="language-python">reachy.r_arm.gripper.get_current_opening()
+&gt;&gt;&gt; 20  # almost closed
+</code></pre>
+<p>You can also control the opening of the gripper, using the <strong><code>set_opening()</code></strong> method.</p>
+<p>Send your custom opening value, still between 0 and 100, to the gripper with:</p>
+<pre><code class="language-python">reachy.r_arm.gripper.set_opening(50)  # half-opened
+</code></pre>
+<p>Those actions are non-blocking, meaning that the rest of your program won&rsquo;t wait the end of the action to continue.
+You can use the boolean <code>is_moving()</code> for that :</p>
+<pre><code class="language-python">reachy.r_arm.gripper.close()
+while reachy.r_arm.gripper.is_moving() : 
+  time.sleep(0.1)
+reachy.r_arm.gripper.open()
+</code></pre>
+<blockquote>
+<p>Note that there is an smart gripper control that will avoid the gripper from reaching the opening position if an object has been detected while closing the gripper.</p>
+</blockquote>
+<h2 id="read-arm-position">Read arm position <a href="#read-arm-position" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="in-joint-space--get_current_positions">In joint space : get_current_positions() <a href="#in-joint-space--get_current_positions" class="anchor" aria-hidden="true">#</a></h3>
+<p>You can retrieve the values from each <strong>arm joints</strong> using the <strong><code>get_current_positions()</code></strong> method.</p>
+<p>This method returns a seven-elements-long list, with the angles in this order:</p>
+<ul>
+<li>r_arm.shoulder.pitch</li>
+<li>r_arm.shoulder.roll</li>
+<li>r_arm.elbow.yaw</li>
+<li>r_arm.elbow.pitch</li>
+<li>r_arm.wrist.roll</li>
+<li>r_arm.wrist.pitch</li>
+<li>r_arm.wrist.yaw</li>
+</ul>
+<blockquote>
+<p>Angles are returned in <strong>degrees</strong> by default.</p>
+</blockquote>
+<pre><code class="language-python">reachy.goto_posture()
+reachy.r_arm.get_current_positions()
+&gt;&gt;&gt; [0, 10, -10, 0, 0, 0, 0]
+
+#  r_arm.shoulder.pitch=0, 
+#  r_arm.shoulder.roll=10, 
+#  r_arm.elbow.yaw=-10,
+#  r_arm.elbow.pitch=0,
+#  r_arm.wrist.roll=0,
+#  r_arm.wrist.pitch=0,
+#  r_arm.wrist.yaw=0
+</code></pre>
+<h3 id="in-cartesian-space--forward_kinematics">In cartesian space : forward_kinematics() <a href="#in-cartesian-space--forward_kinematics" class="anchor" aria-hidden="true">#</a></h3>
+<p>You can get the end effector position of Reachy in Reachy 2 coordinate system using forward kinematics.</p>
+<p>Call:</p>
+<pre><code class="language-python">reachy.l_arm.forward_kinematics()
+</code></pre>
+<p>to get the position of the left gripper in cartesian space.</p>
+<blockquote>
+<p>Read next section on <a href="http://localhost:1313/developing-with-reachy-2/basics/4-use-arm-kinematics/">Use arm kinematics</a> to better understand the use of the <code>forward_kinematics()</code> method.</p>
+</blockquote>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/developing-with-reachy-2/basics/2-understand-moves/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; 2. Understand moves in Reachy 2
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/developing-with-reachy-2/basics/4-use-arm-kinematics/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					4. Use arm kinematics &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://www.netlify.com/">Netlify</a>, <a class="text-muted" href="https://gohugo.io/">Hugo</a>, and <a class="text-muted" href="https://getdoks.org/">Doks</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.js" defer></script>
+  <script src="/js/highlight.js" defer></script>
+  <script src="/main.js" defer></script>
+  <script src="/index.js" defer></script>
+  
+    
+  </body>
+</html>

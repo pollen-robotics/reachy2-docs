@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/</loc>
+      <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/developing-with-reachy-2/basics/2-understand-moves/</loc>
+      <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/developing-with-reachy-2/basics/3-basic-arm-control/</loc>
+      <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/developing-with-reachy-2/basics/4-use-arm-kinematics/</loc>
+      <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/developing-with-reachy-2/basics/5-control-head/</loc>
+      <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/developing-with-reachy-2/basics/6-get-images-from-cameras/</loc>
+      <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/developing-with-reachy-2/basics/7-record-replay-trajectories/</loc>
+      <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/developing-with-reachy-2/basics/8-use-mobile-base/</loc>
+      <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    </urlset>

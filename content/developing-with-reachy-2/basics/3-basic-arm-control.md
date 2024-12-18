@@ -12,7 +12,10 @@ menu:
     parent: "SDK basics"
 weight: 220
 toc: true
+slug: "3-basic-arm-control"
+url: "/developing-with-reachy-2/basics/3-basic-arm-control/"
 ---
+<br>
 
 > You can choose to follow our online documentation or to make your Reachy move by following the [notebook n°3](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/3_arm_and_gripper.ipynb). 
 

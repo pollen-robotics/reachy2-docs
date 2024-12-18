@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Update Reachy 2 on </title>
+    <link>http://localhost:1313/getting-started/update-reachy2/</link>
+    <description>Recent content in Update Reachy 2 on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Jul 2023 08:05:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/getting-started/update-reachy2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update Reachy 2 software</title>
+      <link>http://localhost:1313/getting-started/update-reachy2/update-software/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/getting-started/update-reachy2/update-software/</guid>
+      <description>&lt;h2 id=&#34;use-the-dashboard&#34;&gt;Use the dashboard &lt;a href=&#34;#use-the-dashboard&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;The update of the robot can be entirely done with the dashboard.&lt;/p&gt;&#xA;&lt;p&gt;From the &lt;strong&gt;Updates&lt;/strong&gt; tab, check if updates are available:&lt;/p&gt;&#xA;&#xA;&#xA;    &#xA;    &lt;p style=&#34;text-align: center;&#34;&gt;&#xA;        &lt;img alt=&#34;&#34; src=&#34;http://localhost:1313/images/docs/update/dashboard-update-page_hu18271103416050952698.png&#34; width=&#34;600&#34; height=&#34;304&#34;&gt;&#xA;    &lt;/p&gt;&#xA;&#xA;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Only advanced update management is working so far&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;advanced-update-management&#34;&gt;Advanced update management &lt;a href=&#34;#advanced-update-management&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;From the dashboard Update page, click on &lt;strong&gt;Advanced udpate management&lt;/strong&gt;:&lt;/p&gt;&#xA;&#xA;&#xA;    &#xA;    &lt;p style=&#34;text-align: center;&#34;&gt;&#xA;        &lt;img alt=&#34;PLUM update&#34; src=&#34;http://localhost:1313/images/docs/update/update_hu2486088215077249392.png&#34; width=&#34;600&#34; height=&#34;298&#34;&gt;&#xA;    &lt;/p&gt;&#xA;&#xA;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;You can directly access the advanced update dashboard from &lt;strong&gt;&lt;code&gt;http://&amp;lt;IP.address&amp;gt;:5000/&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;fetch-updates&#34;&gt;Fetch updates &lt;a href=&#34;#fetch-updates&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;Click &lt;strong&gt;Fetch Updates&lt;/strong&gt; to check if there is any available update on one of the robot&amp;rsquo;s services.&lt;br&gt;&#xA;Once this is done, you can browse between the 5 services to see if a more recent version is available.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -13,11 +13,12 @@ menu:
 weight: 250
 toc: true
 ---
+<br>
 
 > You can choose to follow our online documentation or to see directly the images from your Reachy by following the [notebook n°5](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/5_cameras_images.ipynb). 
 
 
-This section assumes that you went through the [Hello World]({{< ref "developing-with-reachy-2/getting-started-sdk/connect-reachy2" >}}) so that you know how to connect to the robot.
+This section assumes that you went through the [Hello World]({{< ref "developing-with-reachy-2/basics/1-hello-world/" >}}) so that you know how to connect to the robot.
 
 Reachy2 has 2 types of camera:
 - the **teleop** cameras, with a left and right cameras, located in Reachy's head and used for the teleoperation
@@ -44,7 +45,6 @@ reachy.cameras
 	<Camera name="depth" stereo=False> 
 	<Camera name="teleop" stereo=True> 
 >
-
 ```
 
 The list of initialized cameras should contain both the teleop and depth cameras.  
@@ -117,7 +117,7 @@ Image.fromarray(rgb_frame[:,:,::-1])
 
 #### Depth informations
 
-You can use `get_depth_frame()` to get the depth information and display it with opencv:
+You can use `get_depth_frame()` to get the depth information and display it :
 
 ```python
 depth_frame, depth_ts = reachy.cameras.depth.get_depth_frame()
@@ -159,3 +159,6 @@ T_cam_reachy = reachy.cameras.depth.get_extrinsics()
          1.00000000e+00]])
 
 ```
+
+That's it for the cameras  ! 
+Now, we are going to record and replay movements.

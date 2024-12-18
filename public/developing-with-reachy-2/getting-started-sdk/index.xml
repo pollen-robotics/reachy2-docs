@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting started with the SDK on </title>
+    <link>http://localhost:1313/developing-with-reachy-2/getting-started-sdk/</link>
+    <description>Recent content in Getting started with the SDK on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Jul 2023 08:05:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/developing-with-reachy-2/getting-started-sdk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installation</title>
+      <link>http://localhost:1313/developing-with-reachy-2/getting-started-sdk/installation/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/developing-with-reachy-2/getting-started-sdk/installation/</guid>
+      <description>&lt;h2 id=&#34;how-to-install-the-python-sdk&#34;&gt;How to install the Python SDK &lt;a href=&#34;#how-to-install-the-python-sdk&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;The Python SDK is a pure Python library. The installation should thus be rather straightforward. It supports Python &amp;gt;= 3.10 (older versions will not work because of typing syntax).&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;For now, the library &lt;a href=&#34;pollen-robotics/pollen-vision&#34;&gt;pollen_vision&lt;/a&gt; used to do &lt;a href=&#34;http://localhost:1313/ai-with-reachy-2/perception/&#34;&gt;&amp;ldquo;perception&amp;rdquo;&lt;/a&gt;, needs Python 3.10, so you may want to have that version.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;It works on Windows/Mac/Linux.&lt;/p&gt;&#xA;&lt;details&gt;&#xA;&lt;summary&gt;On Linux&lt;/summary&gt;&#xA;&lt;p&gt;We recommend to use &lt;a href=&#34;https://docs.python.org/3/tutorial/venv.html&#34;&gt;virtual environment&lt;/a&gt; for your development. They make the installation simple and avoid compatibility issues. They also come with their &lt;a href=&#34;https://pip.pypa.io/en/stable/&#34;&gt;pip&lt;/a&gt; command.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Connect to Reachy 2</title>
+      <link>http://localhost:1313/developing-with-reachy-2/getting-started-sdk/connect-reachy2/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/developing-with-reachy-2/getting-started-sdk/connect-reachy2/</guid>
+      <description>&lt;br&gt;&#xA;&lt;p&gt;To be able to connect to your Reachy 2, you first need to be on the same network (either via Ethernet or WiFi).&lt;/p&gt;&#xA;&lt;p&gt;Then you need to find your robot&amp;rsquo;s IP address. Unfortunately, you can&amp;rsquo;t use its .local address for the SDK. You have two ways to do that : via the dashboard (the easiest way) or via the LCD screen.&lt;/p&gt;&#xA;&lt;h2 id=&#34;using-the-dashboard&#34;&gt;Using the dashboard &lt;a href=&#34;#using-the-dashboard&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;You can use your robot name to access the dashboard : for that, you type on a browser &lt;code&gt;reachy_name.local:8000/&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Visualize with fake robot</title>
+      <link>http://localhost:1313/developing-with-reachy-2/getting-started-sdk/visualize-fake-robot/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/developing-with-reachy-2/getting-started-sdk/visualize-fake-robot/</guid>
+      <description>&lt;p&gt;For now, Reachy doesn&amp;rsquo;t have any collision avoidance restrictions (left arm against right arm, arm against torso, etc.).&lt;/p&gt;&#xA;&lt;p&gt;So before implementing any new behaviour on your Reachy, we recommand you to test your movements on a fake mode. That means that your physical robot won&amp;rsquo;t move but the simulated one will.  As so, you will be able to visualize what Reachy will do and to adapt your moves before testing it on the real one.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

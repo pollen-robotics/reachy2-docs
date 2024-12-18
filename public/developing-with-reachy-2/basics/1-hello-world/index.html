@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="en-US">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+
+  <script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script>
+
+  <link rel="stylesheet" href="/main.css">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>1. Hello World - Reachy 2</title>
+<meta name="description" content="Basic connection to the robot with the Python SDK">
+<link rel="canonical" href="http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1. Hello World">
+<meta property="og:description" content="Basic connection to the robot with the Python SDK">
+<meta property="og:url" content="http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/">
+<meta property="og:site_name" content="Reachy 2">
+<meta property="article:published_time" content="2023-07-26T08:05:23+02:00">
+  <meta property="article:modified_time" content="2023-07-26T08:05:23+02:00">
+  
+  <meta property="og:image" content="http://localhost:1313/favicon.ico"/>
+      <meta property="og:image:alt" content="Reachy 2">
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pollenrobotics">
+<meta name="twitter:creator" content="@pollenrobotics">
+<meta name="twitter:title" content="1. Hello World">
+<meta name="twitter:description" content="Basic connection to the robot with the Python SDK">
+<meta name="twitter:image" content="http://localhost:1313/favicon.ico">
+    <meta name="twitter:image:alt" content="1. Hello World">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+        "@id": "http://localhost:1313/#/schema/organization/1",
+      "name": "Pollen Robotics",
+      "url": "http://localhost:1313/",
+      "sameAs": [
+        "https://twitter.com/pollenrobotics"
+        , "https://www.linkedin.com/company/12781309/"
+        , "https://github.com/pollen-robotics"
+        ],
+      "logo": {
+          "@type": "ImageObject",
+          "@id": "http://localhost:1313/#/schema/image/1",
+          "url": "http://localhost:1313/logo-pollen.png",
+          "width":  400 ,
+          "height":  400 ,
+          "caption": "Pollen Robotics"
+        },
+        "image": {
+          "@id": "http://localhost:1313/#/schema/image/1"
+        }
+      },
+    {
+      "@type": "WebSite",
+      "@id": "http://localhost:1313/#/schema/website/1",
+      "url": "http://localhost:1313/",
+      "name": "Reachy 2",
+      "description": "Everything you need to know to setup, program and start interacting with your Reachy!",
+      "publisher": {
+          "@id": "http://localhost:1313/#/schema/organization/1"
+        }
+      },
+    {
+      "@type": "WebPage",
+      "@id": "http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/",
+      "url": "http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/",
+      "name": "1. Hello World",
+      "description": "Basic connection to the robot with the Python SDK",
+      "isPartOf": {
+        "@id": "http://localhost:1313/#/schema/website/1"
+      },
+      "about": {
+          "@id": "http://localhost:1313/#/schema/organization/1"
+        },
+      "datePublished": "2023-07-26T08:05:23CET",
+      "dateModified": "2023-07-26T08:05:23CET",
+      "breadcrumb": {
+        "@id": "http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/#/schema/breadcrumb/1"
+      },
+      "primaryImageOfPage": {
+        "@id": "http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/#/schema/image/2"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": ["http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/"]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/#/schema/breadcrumb/1",
+      "name": "Breadcrumbs",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "http://localhost:1313/",
+          "url": "http://localhost:1313/",
+          "name": "Home"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "http://localhost:1313/developing-with-reachy-2/",
+          "url": "http://localhost:1313/developing-with-reachy-2/",
+          "name": "Developing With Reachy 2"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "WebPage",
+          "@id": "http://localhost:1313/developing-with-reachy-2/basics/",
+          "url": "http://localhost:1313/developing-with-reachy-2/basics/",
+          "name": "Basics"
+          }
+        },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/"
+          }
+        }]
+    },
+
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": "http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/#/schema/image/2",
+          "url": "http://localhost:1313/favicon.ico",
+          "contentUrl": "http://localhost:1313/favicon.ico",
+          "caption": "1. Hello World"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="icon" href="http://localhost:1313/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="manifest" crossorigin="use-credentials" href="http://localhost:1313/site.webmanifest">
+
+  
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+
+  <body class="docs single">
+    <div class="sticky-top">
+<div class="header-bar"></div>
+
+<header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+
+    <a class="navbar-brand order-0" href="/" aria-label="Reachy 2">
+      Reachy 2
+    </a>
+
+    <button class="btn btn-menu order-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="offcanvas offcanvas-end border-0 py-lg-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
+      <div class="header-bar d-lg-none"></div>
+      <div class="offcanvas-header d-lg-none">
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="/">Reachy 2</a></h2>
+        <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+      </div>
+      <div class="offcanvas-body p-4 p-lg-0">
+        <ul class="nav flex-column flex-lg-row align-items-lg-center mt-2 mt-lg-0 ms-lg-2 me-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/getting-started/safety-first/safety-guidelines/">Getting started</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/hardware-guide/specifications/general/">Hardware guide</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1 active" href="/developing-with-reachy-2/getting-started-sdk/installation/">Developing with reachy 2</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/teleoperation/compatibility-specs/compatible-devices/">Teleoperation</a>
+              </li>
+            
+          
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1" href="/help/debug/debug-checklist/">Help</a>
+              </li>
+            
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
+          <input id="search" class="form-control is-search" type="search" placeholder="Search docs..." aria-label="Search docs..." autocomplete="off">
+          <div id="suggestions" class="shadow bg-white rounded d-none"></div>
+        </form>
+        <hr class="text-black-50 my-4 d-lg-none">
+        <ul class="nav flex-column flex-lg-row">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://twitter.com/pollenrobotics"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><small class="ms-2 d-lg-none">Twitter</small></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/pollen-robotics/"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><small class="ms-2 d-lg-none">GitHub</small></a>
+            </li>
+          </ul>
+
+        <hr class="text-black-50 my-4 d-lg-none">
+        <button id="mode" class="btn btn-link" type="button" aria-label="Toggle user interface mode">
+          <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+        </button>
+        </div>
+    </div>
+  </nav>
+</header>
+
+
+</div>
+
+
+<div class="container-xxl">
+  <aside class="doks-sidebar">
+    <nav id="doks-docs-nav" class="collapse d-lg-none" aria-label="Tertiary navigation">
+      
+<h3 class="h6 text-uppercase mb-2">Getting started with the SDK</h3>
+  <ul class="list-unstyled">
+      <li><a class="docs-link" href="/developing-with-reachy-2/getting-started-sdk/installation/">Installation</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/getting-started-sdk/connect-reachy2/">Connect to Reachy 2</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/getting-started-sdk/visualize-fake-robot/">Visualize with fake robot</a></li>
+        </ul>
+  <h3 class="h6 text-uppercase mb-2">SDK basics</h3>
+  <ul class="list-unstyled">
+      <li><a class="docs-link active" href="/developing-with-reachy-2/basics/1-hello-world/">1. Hello World</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/2-understand-moves/">2. Understand moves in Reachy 2</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/3-basic-arm-control/">3. Basic arm control</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/4-use-arm-kinematics/">4. Use arm kinematics</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/5-control-head/">5. Control the head</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/6-get-images-from-cameras/">6. Get images from cameras</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/7-record-replay-trajectories/">7. Record and replay trajectories</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/8-use-mobile-base/">8. Use the mobile base</a></li>
+        </ul>
+  <h3 class="h6 text-uppercase mb-2">Advanced tutorials</h3>
+  <ul class="list-unstyled">
+      <li><a class="docs-link" href="/developing-with-reachy-2/advanced-tutos/1-reachy-awakening/">Reachy&#39;s Awakening</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/advanced-tutos/2-reachy-the-mime/">Reachy the Mime</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/advanced-tutos/3-reachy-the-greengrocer/">Reachy the Greengrocer</a></li>
+        </ul>
+  <h3 class="h6 text-uppercase mb-2">Simulation</h3>
+  <ul class="list-unstyled">
+      <li><a class="docs-link" href="/developing-with-reachy-2/simulation/simulation-installation/">Simulation installation</a></li>
+        </ul>
+  
+    </nav>
+  </aside>
+</div>
+
+    <div class="wrap container-xxl" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			<nav id="sidebar-default" class="docs-links" aria-label="Main navigation">
+				
+<h3 class="h6 text-uppercase mb-2">Getting started with the SDK</h3>
+  <ul class="list-unstyled">
+      <li><a class="docs-link" href="/developing-with-reachy-2/getting-started-sdk/installation/">Installation</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/getting-started-sdk/connect-reachy2/">Connect to Reachy 2</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/getting-started-sdk/visualize-fake-robot/">Visualize with fake robot</a></li>
+        </ul>
+  <h3 class="h6 text-uppercase mb-2">SDK basics</h3>
+  <ul class="list-unstyled">
+      <li><a class="docs-link active" href="/developing-with-reachy-2/basics/1-hello-world/">1. Hello World</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/2-understand-moves/">2. Understand moves in Reachy 2</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/3-basic-arm-control/">3. Basic arm control</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/4-use-arm-kinematics/">4. Use arm kinematics</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/5-control-head/">5. Control the head</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/6-get-images-from-cameras/">6. Get images from cameras</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/7-record-replay-trajectories/">7. Record and replay trajectories</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/basics/8-use-mobile-base/">8. Use the mobile base</a></li>
+        </ul>
+  <h3 class="h6 text-uppercase mb-2">Advanced tutorials</h3>
+  <ul class="list-unstyled">
+      <li><a class="docs-link" href="/developing-with-reachy-2/advanced-tutos/1-reachy-awakening/">Reachy&#39;s Awakening</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/advanced-tutos/2-reachy-the-mime/">Reachy the Mime</a></li>
+        <li><a class="docs-link" href="/developing-with-reachy-2/advanced-tutos/3-reachy-the-greengrocer/">Reachy the Greengrocer</a></li>
+        </ul>
+  <h3 class="h6 text-uppercase mb-2">Simulation</h3>
+  <ul class="list-unstyled">
+      <li><a class="docs-link" href="/developing-with-reachy-2/simulation/simulation-installation/">Simulation installation</a></li>
+        </ul>
+  
+			</nav>
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>On this page</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#materials">Materials</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#be-ready-to-move">Be ready to move</a>
+      <ul>
+        <li><a href="#1-connect-to-the-robot">1. Connect to the robot</a></li>
+        <li><a href="#2-turn-on--turn-off-motors">2. Turn on / turn off motors</a></li>
+        <li><a href="#3-start-from-a-standard-posture-optional">3. Start from a standard posture (optional)</a></li>
+      </ul>
+    </li>
+    <li><a href="#reachysdk-object">ReachySDK object</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>On this page</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#materials">Materials</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#be-ready-to-move">Be ready to move</a>
+      <ul>
+        <li><a href="#1-connect-to-the-robot">1. Connect to the robot</a></li>
+        <li><a href="#2-turn-on--turn-off-motors">2. Turn on / turn off motors</a></li>
+        <li><a href="#3-start-from-a-standard-posture-optional">3. Start from a standard posture (optional)</a></li>
+      </ul>
+    </li>
+    <li><a href="#reachysdk-object">ReachySDK object</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>1. Hello World</h1>
+			<p class="lead"></p>
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				<div class="d-xl-none">
+  <button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onThisPage" aria-controls="doks-docs-nav" aria-expanded="false" aria-label="Toggle On this page navigation">
+    <span>On this page</span>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+    </span>
+  </button>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body mt-3 py-1">
+      <div class="page-links">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#materials">Materials</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#be-ready-to-move">Be ready to move</a>
+      <ul>
+        <li><a href="#1-connect-to-the-robot">1. Connect to the robot</a></li>
+        <li><a href="#2-turn-on--turn-off-motors">2. Turn on / turn off motors</a></li>
+        <li><a href="#3-start-from-a-standard-posture-optional">3. Start from a standard posture (optional)</a></li>
+      </ul>
+    </li>
+    <li><a href="#reachysdk-object">ReachySDK object</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>On this page</h3>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#materials">Materials</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#be-ready-to-move">Be ready to move</a>
+      <ul>
+        <li><a href="#1-connect-to-the-robot">1. Connect to the robot</a></li>
+        <li><a href="#2-turn-on--turn-off-motors">2. Turn on / turn off motors</a></li>
+        <li><a href="#3-start-from-a-standard-posture-optional">3. Start from a standard posture (optional)</a></li>
+      </ul>
+    </li>
+    <li><a href="#reachysdk-object">ReachySDK object</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+			</nav>
+			<h2 id="materials">Materials <a href="#materials" class="anchor" aria-hidden="true">#</a></h2>
+<p>To guide you through the SDK&rsquo;s functionalities, you can follow this written documentation (which is more complete), as well as the notebooks provided, so you can learn as you interact with your robot.</p>
+<h4 id="find-the-notebooks">Find the notebooks <a href="#find-the-notebooks" class="anchor" aria-hidden="true">#</a></h4>
+<details>
+<summary> If you cloned the reachy2_sdk repository </summary>
+<p>You can find the example notebooks in reachy2_sdk/src/examples.</p>
+</details>
+<details>
+<summary>If you installed the reachy2_sdk from Pypi</summary> 
+You haven't installed the examples on your computer. You can clone the folder in the directory that you want, by copying and pasting the instructions below into a terminal, in the desired folder. This will add an <i>examples_sdk</i> folder where you can find all the notebooks! 
+<br>
+<br>
+<pre><code class="language-python">git clone --no-checkout https://github.com/pollen-robotics/reachy2-sdk.git examples_sdk
+cd examples_sdk
+git sparse-checkout init --cone
+git sparse-checkout set src/examples
+git checkout develop
+mv src/examples/* .
+rm -rf src/
+</code></pre>
+</details>
+<h4 id="follow-them">Follow them <a href="#follow-them" class="anchor" aria-hidden="true">#</a></h4>
+<details>
+<summary>
+If you have any trouble making the notebooks work, please follow those steps : </summary>
+<ol>
+<li>
+<p>In a terminal, go to the folder containing the notebooks
+(if the repo has been cloned: <em>reachy2_sdk/src/examples</em>, if downloaded: <em>examples_sdk</em>) :</p>
+<blockquote>
+<p><code>cd path/to/folder</code></p>
+</blockquote>
+</li>
+<li>
+<p>Open your code editor by writing the command</p>
+<blockquote>
+<p><code>code .</code></p>
+</blockquote>
+</li>
+<li>
+<p>When you execute the first cell on your code editor, it may ask you if you want to install the jupyter and python extensions : click on “yes”.</p>
+</li>
+<li>
+<p>Then it will ask you to choose the kernel : choose a python environment then select your virtual environment.</p>
+<p>
+    
+        
+        <p style="text-align: center;">
+            <img alt="python env" src="/images/sdk/first-moves/python_env_hu15200639228120757561.png" width="600" height="248">
+        </p>
+    
+
+
+    
+        
+        <p style="text-align: center;">
+            <img alt="reachy env" src="/images/sdk/first-moves/reachy_env_hu2731200236477264881.png" width="600" height="244">
+        </p>
+    
+</p>
+</li>
+<li>
+<p>A windows security popup can appear, click on “Allow”
+
+    
+        
+        <p style="text-align: center;">
+            <img alt="firewall" src="/images/sdk/first-moves/firewall_hu12344950296461999227.png" width="300" height="320">
+        </p>
+    
+</p>
+</li>
+<li>
+<p>Install the ipykernel package to make the notebooks run :
+
+    
+        
+        <p style="text-align: center;">
+            <img alt="pykernel" src="/images/sdk/first-moves/pykernel_hu13426618606470956236.png" width="600" height="282">
+        </p>
+    
+</p>
+</li>
+</ol>
+<p>You are now ready !</p>
+</details>
+<br>
+<h2 id="be-ready-to-move">Be ready to move <a href="#be-ready-to-move" class="anchor" aria-hidden="true">#</a></h2>
+<h3 id="1-connect-to-the-robot">1. Connect to the robot <a href="#1-connect-to-the-robot" class="anchor" aria-hidden="true">#</a></h3>
+<p>If you followed the instructions from <a href="http://localhost:1313/developing-with-reachy-2/getting-started-sdk/connect-reachy2/">&ldquo;Connect to Reachy 2&rdquo;</a>, you know how to get Reachy&rsquo;s IP address and how to connect to the robot in a Python interface with the command  :</p>
+<p><em>(type <code>python</code> first in your terminal)</em></p>
+<pre><code class="language-python">from reachy2_sdk import ReachySDK
+
+reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
+</code></pre>
+<details>
+<summary>Check the connection </summary>
+<p>You can check the connection with your robot with:</p>
+<pre><code class="language-python">reachy.is_connected()
+&gt;&gt;&gt; True
+</code></pre>
+<p>If the connection has been lost, and the problem has been resolved, you can reconnect to the robot with the <code>connect()</code> method:</p>
+<pre><code class="language-python">reachy.connect()
+</code></pre>
+</details>
+<h3 id="2-turn-on--turn-off-motors">2. Turn on / turn off motors <a href="#2-turn-on--turn-off-motors" class="anchor" aria-hidden="true">#</a></h3>
+<h4 id="the-whole-robot">The whole robot <a href="#the-whole-robot" class="anchor" aria-hidden="true">#</a></h4>
+<p>When starting, your robot is in compliant mode, which means you can move its parts by manipulating manually the robot. In this mode, the robot won&rsquo;t respond to any command you send to it.</p>
+<p>At each use, you will have to turn on your robot&rsquo;s motors doing:</p>
+<pre><code class="language-python">reachy.turn_on()
+</code></pre>
+<p>At the end of your session or program, switch off the motors to send them back to compliant mode doing:</p>
+<pre><code class="language-python">reachy.turn_off()
+</code></pre>
+<p>This will act on all parts of your robot, including the mobile base.</p>
+<p>&#x26a0;&#xfe0f; Turning off can be a bit brutal, especially if the arms are raised. You can use <code>reachy.turn_off_smoothly()</code> for torques to gradually decrease.</p>
+<h4 id="robot-parts">Robot parts <a href="#robot-parts" class="anchor" aria-hidden="true">#</a></h4>
+<p>If you want to turn on or off a single part, access directly the relevant part and turn it on or off, for example for the left arm:</p>
+<pre><code class="language-python">reachy.l_arm.turn_on()
+reachy.l_arm.turn_off()
+</code></pre>
+<p>All parts are detailed below in <a href="http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/#reachy-attributes">ReachySDK attributes</a>.</p>
+<p>At any time, you can check the state of your robot using the <code>is_on()</code> or <code>is_off()</code> method. Note that it will return True only if <strong>all parts</strong> are in the requested state. This means both methods can return False if the right arm is on but not the left one for example.</p>
+<pre><code class="language-python"># Turn on all parts
+reachy.turn_on()
+# Check robot state
+reachy.is_on()
+&gt;&gt;&gt; True
+reachy.is_off()
+&gt;&gt;&gt; False
+
+# Turn off only the left arm
+reachy.l_arm.turn_off()
+# Check robot state
+reachy.is_on()  # reachy is not on, as left arm is off
+&gt;&gt;&gt; False
+reachy.is_off()  # but reachy is not fully off neither
+&gt;&gt;&gt; False
+# Check parts state
+reachy.r_arm.is_on()  # right arm is still on
+&gt;&gt;&gt; True
+reachy.l_arm.is_off()  # left arm is off
+&gt;&gt;&gt; True
+</code></pre>
+<h3 id="3-start-from-a-standard-posture-optional">3. Start from a standard posture (optional) <a href="#3-start-from-a-standard-posture-optional" class="anchor" aria-hidden="true">#</a></h3>
+<p>2 standard postures are accessible and can be called easily to setup your starting position:</p>
+<ul>
+<li>the <strong>default</strong> pose, with both arms outstretched on either side of the body (be careful that your robot is at a sufficient height so that the arms do not touch the mobile base).</li>
+<li>the <strong>elbow_90</strong> pose, with the arms bent at 90°.</li>
+</ul>
+<p>To start at the default posture, use the <code>goto_posture()</code> function:</p>
+<pre><code class="language-python">reachy.goto_posture('default')
+</code></pre>
+<p>By default, this movement is made in 2 seconds. You can choose to specify a custom duration. For example, to reach the elbow_90 posture in 5 seconds:</p>
+<pre><code class="language-python">reachy.goto_posture('elbow_90', duration=5)
+</code></pre>
+<h2 id="reachysdk-object">ReachySDK object <a href="#reachysdk-object" class="anchor" aria-hidden="true">#</a></h2>
+<p>The <em>reachy</em> object instanciated from the ReachySDK class above is the root access to get all incoming information from Reachy 2 (joints or sensors) and to control each part of the robot (left/right arm, head, mobile base).</p>
+<p>The <em>reachy</em> object has 7 attributes and numerous methods which you can find in the <a href="https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html">documentation</a>.</p>
+<p>If you want to have an overview, you can browse the basic attributes and methods below.</p>
+
+
+    
+    <p style="text-align: center;">
+        <img alt="" src="/images/sdk/first-moves/reachy_methods_hu13784932229791870277.png" width="400" height="100">
+    </p>
+
+
+<details id="reachy-attributes">
+<summary><b>Reachy's attributes </b></summary>
+<p>The <em>reachy</em> detailed attributes give access to info, parts and sensors of the robot.</p>
+<h4 id="list-of-attributes">List of attributes <a href="#list-of-attributes" class="anchor" aria-hidden="true">#</a></h4>
+<p><a href="http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/#reachyinfo">reachy.info</a><br>
+<a href="http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/#reachymobile_base">reachy.mobile_base</a><br>
+<a href="http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/#reachyjoints">reachy.joints</a><br>
+<a href="http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/#reachyhead">reachy.head</a>
+<a href="http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/#reachyl_arm">reachy.l_arm</a><br>
+<a href="http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/#reachyr_arm">reachy.r_arm</a>
+<a href="http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/#reachycameras">reachy.cameras</a></p>
+<h4 id="reachyinfo">reachy.info <a href="#reachyinfo" class="anchor" aria-hidden="true">#</a></h4>
+<p><a href="https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/config/reachy_info.html">Info object</a> containing Reachy&rsquo;s informations</p>
+<pre><code class="language-python">reachy.info
+&gt;&gt;&gt; &lt;ReachyInfo mode=&quot;FAKE&quot; 
+	robot_serial_number=&quot;reachy2-pvt01&quot; 
+	hardware_version=&quot;&quot; 
+	core_software_version=&quot;1.7.3.18&quot; 
+	battery_voltage=30.0 &gt;
+</code></pre>
+<h4 id="reachymobile_base">reachy.mobile_base <a href="#reachymobile_base" class="anchor" aria-hidden="true">#</a></h4>
+<p><a href="https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.mobile_base">Mobile_base object</a> containing the informations about the mobile base.</p>
+<h4 id="reachyjoints">reachy.joints <a href="#reachyjoints" class="anchor" aria-hidden="true">#</a></h4>
+<p><a href="https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.joints">Joint object</a> containing every joint of the robot, from its arms to its head. This is useful when you want to get information, like the position, from all joints at once.</p>
+<pre><code class="language-python">reachy.joints
+&gt;&gt;&gt; {'r_arm.shoulder.pitch': &lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=0.0 goal_position=0.0 &gt;,
+	'r_arm.shoulder.roll': &lt;OrbitaJoint axis_type=&quot;roll&quot; present_position=0.0 goal_position=0.0 &gt;,
+	'r_arm.elbow.yaw': &lt;OrbitaJoint axis_type=&quot;yaw&quot; present_position=0.0 goal_position=0.0 &gt;,
+	'r_arm.elbow.pitch': &lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=0.0 goal_position=0.0 &gt;,
+	'r_arm.wrist.roll': &lt;OrbitaJoint axis_type=&quot;roll&quot; present_position=0.0 goal_position=0.0 &gt;,
+	'r_arm.wrist.pitch': &lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=-0.0 goal_position=-0.0 &gt;,
+	'r_arm.wrist.yaw': &lt;OrbitaJoint axis_type=&quot;yaw&quot; present_position=-0.0 goal_position=-0.0 &gt;,
+	'l_arm.shoulder.pitch': &lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=0.0 goal_position=0.0 &gt;,
+	'l_arm.shoulder.roll': &lt;OrbitaJoint axis_type=&quot;roll&quot; present_position=0.0 goal_position=0.0 &gt;,
+	'l_arm.elbow.yaw': &lt;OrbitaJoint axis_type=&quot;yaw&quot; present_position=0.0 goal_position=0.0 &gt;,
+	'l_arm.elbow.pitch': &lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=0.0 goal_position=0.0 &gt;,
+	'l_arm.wrist.roll': &lt;OrbitaJoint axis_type=&quot;roll&quot; present_position=0.0 goal_position=0.0 &gt;,
+	'l_arm.wrist.pitch': &lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=-0.0 goal_position=-0.0 &gt;,
+	'l_arm.wrist.yaw': &lt;OrbitaJoint axis_type=&quot;yaw&quot; present_position=-0.0 goal_position=-0.0 &gt;,
+	'head.neck.roll': &lt;OrbitaJoint axis_type=&quot;roll&quot; present_position=0.0 goal_position=0.0 &gt;,
+	'head.neck.pitch': &lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=-0.0 goal_position=-0.0 &gt;,
+	'head.neck.yaw': &lt;OrbitaJoint axis_type=&quot;yaw&quot; present_position=-0.0 goal_position=-0.0 &gt;}
+
+</code></pre>
+<h4 id="reachyhead">reachy.head <a href="#reachyhead" class="anchor" aria-hidden="true">#</a></h4>
+<p><a href="https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.head">Head object</a> containing the three joints composing the Orbita actuator along with methods for its kinematics or to control it.</p>
+<pre><code class="language-python">reachy.head
+&gt;&gt;&gt; &lt;Head on=False actuators=
+	neck: &lt;Orbita3d on=False joints=
+	&lt;OrbitaJoint axis_type=&quot;roll&quot; present_position=0.0 goal_position=0.0 &gt;
+	&lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=-0.0 goal_position=-0.0 &gt;
+	&lt;OrbitaJoint axis_type=&quot;yaw&quot; present_position=-0.0 goal_position=-0.0 &gt;
+
+&gt;&gt;
+</code></pre>
+<h4 id="reachyl_arm">reachy.l_arm <a href="#reachyl_arm" class="anchor" aria-hidden="true">#</a></h4>
+<p><a href="https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.l_arm">Arm object</a> containing every joint in the left arm along with its kinematics methods.</p>
+<pre><code class="language-python">reachy.l_arm
+&gt;&gt;&gt; &lt;Arm on=False actuators=
+	shoulder: &lt;Orbita2d on=False joints=
+	&lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=0.0 goal_position=0.0 &gt;
+	&lt;OrbitaJoint axis_type=&quot;roll&quot; present_position=0.0 goal_position=0.0 &gt;
+&gt;
+	elbow: &lt;Orbita2d on=False joints=
+	&lt;OrbitaJoint axis_type=&quot;yaw&quot; present_position=0.0 goal_position=0.0 &gt;
+	&lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=0.0 goal_position=0.0 &gt;
+&gt;
+	wrist: &lt;Orbita3d on=False joints=
+	&lt;OrbitaJoint axis_type=&quot;roll&quot; present_position=0.0 goal_position=0.0 &gt;
+	&lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=-0.0 goal_position=-0.0 &gt;
+	&lt;OrbitaJoint axis_type=&quot;yaw&quot; present_position=-0.0 goal_position=-0.0 &gt;
+&gt;
+&gt;
+
+</code></pre>
+<h4 id="reachyr_arm">reachy.r_arm <a href="#reachyr_arm" class="anchor" aria-hidden="true">#</a></h4>
+<p><a href="https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.r_arm">Arm object</a> containing every joint in the right arm along with its kinematics methods.</p>
+<pre><code class="language-python">reachy.r_arm
+&gt;&gt;&gt; &lt;Arm on=False actuators=
+	shoulder: &lt;Orbita2d on=False joints=
+	&lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=0.0 goal_position=0.0 &gt;
+	&lt;OrbitaJoint axis_type=&quot;roll&quot; present_position=0.0 goal_position=0.0 &gt;
+&gt;
+	elbow: &lt;Orbita2d on=False joints=
+	&lt;OrbitaJoint axis_type=&quot;yaw&quot; present_position=0.0 goal_position=0.0 &gt;
+	&lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=0.0 goal_position=0.0 &gt;
+&gt;
+	wrist: &lt;Orbita3d on=False joints=
+	&lt;OrbitaJoint axis_type=&quot;roll&quot; present_position=0.0 goal_position=0.0 &gt;
+	&lt;OrbitaJoint axis_type=&quot;pitch&quot; present_position=-0.0 goal_position=-0.0 &gt;
+	&lt;OrbitaJoint axis_type=&quot;yaw&quot; present_position=-0.0 goal_position=-0.0 &gt;
+&gt;
+&gt;
+
+</code></pre>
+<h4 id="reachycameras">reachy.cameras <a href="#reachycameras" class="anchor" aria-hidden="true">#</a></h4>
+<p><a href="https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.cameras">Camera object</a> containing both cameras of Reachy (teleop and depth one).</p>
+<pre><code class="language-python">reachy.cameras
+&gt;&gt;&gt; &lt;CameraManager intialized_cameras=
+	
+&gt;
+
+</code></pre>
+</details>
+<details>
+<summary><b>Reachy's basic methods</b></summary>
+<p>The <em>reachy</em> object has several methods, 8 of them being basic methods useful to start using the robot. The other methods are related to robot movements, and will be detailed in a more advanced section.</p>
+<h4 id="list-of-basic-methods">List of basic methods <a href="#list-of-basic-methods" class="anchor" aria-hidden="true">#</a></h4>
+<ul>
+<li><a href="/developing-with-reachy-2/basics/1-hello-world/#reachyconnect">reachy.connect()</a></li>
+<li><a href="/developing-with-reachy-2/basics/1-hello-world/#reachydisconnect">reachy.disconnect()</a></li>
+<li><a href="/developing-with-reachy-2/basics/1-hello-world/#reachyis_connected">reachy.is_connected()</a></li>
+<li><a href="/developing-with-reachy-2/basics/1-hello-world/#reachyturn_on">reachy.turn_on()</a></li>
+<li><a href="/developing-with-reachy-2/basics/1-hello-world/#reachyturn_off">reachy.turn_off()</a></li>
+<li><a href="/developing-with-reachy-2/basics/1-hello-world/#reachyturn_off_smoothly">reachy.turn_off_smoothly()</a></li>
+<li><a href="/developing-with-reachy-2/basics/1-hello-world/#reachyis_on">reachy.is_on()</a></li>
+<li><a href="/developing-with-reachy-2/basics/1-hello-world/#reachyis_off">reachy.is_off()</a></li>
+<li><a href="/developing-with-reachy-2/basics/1-hello-world/#reachygoto_posture">reachy.goto_posture()</a></li>
+</ul>
+<h4 id="reachyconnect">reachy.connect() <a href="#reachyconnect" class="anchor" aria-hidden="true">#</a></h4>
+<p>Method to establish a connection with the robot.</p>
+<pre><code class="language-python">reachy.connect()
+</code></pre>
+<h4 id="reachydisconnect">reachy.disconnect() <a href="#reachydisconnect" class="anchor" aria-hidden="true">#</a></h4>
+<p>Method to disconnect from the robot.</p>
+<pre><code class="language-python">reachy.disconnect()
+</code></pre>
+<h4 id="reachyis_connected">reachy.is_connected() <a href="#reachyis_connected" class="anchor" aria-hidden="true">#</a></h4>
+<p>Method to check if the robot is connected.</p>
+<pre><code class="language-python">reachy.is_connected()
+</code></pre>
+<h4 id="reachyturn_on">reachy.turn_on() <a href="#reachyturn_on" class="anchor" aria-hidden="true">#</a></h4>
+<p>Method to turn on the whole robot. Turning on the robot means putting all the parts of the robot in stiff mode, including the mobile base if there is one. See next section for more information on what the stiff mode is for a motor.</p>
+<pre><code class="language-python">reachy.turn_on()
+</code></pre>
+<h4 id="reachyturn_off">reachy.turn_off() <a href="#reachyturn_off" class="anchor" aria-hidden="true">#</a></h4>
+<p>Method to turn off the whole robot. Turning off the robot means putting all parts of the robot in compliant mode, including the mobile base if there is one. See next section for more information on what the compliant mode is for a motor.</p>
+<pre><code class="language-python">reachy.turn_off()
+</code></pre>
+<h4 id="reachyturn_off_smoothly">reachy.turn_off_smoothly() <a href="#reachyturn_off_smoothly" class="anchor" aria-hidden="true">#</a></h4>
+<p>Method to turn off the robot in a smooth way : the torques gradually decrease and the robot passes through an intermediate position to avoid brutal colliding with its vertical bars or with obstacles as tables.</p>
+<pre><code class="language-python">reachy.turn_off_smoothly()
+</code></pre>
+<h4 id="reachyis_on">reachy.is_on() <a href="#reachyis_on" class="anchor" aria-hidden="true">#</a></h4>
+<p>Method to check if the robot is turned on.</p>
+<pre><code class="language-python">reachy.is_on()
+</code></pre>
+<h4 id="reachyis_off">reachy.is_off() <a href="#reachyis_off" class="anchor" aria-hidden="true">#</a></h4>
+<p>Method to check if the robot is turned off.</p>
+<pre><code class="language-python">reachy.is_off()
+</code></pre>
+<h4 id="reachygoto_posture">reachy.goto_posture() <a href="#reachygoto_posture" class="anchor" aria-hidden="true">#</a></h4>
+<p>Method to make the robot go to a specific posture (&ldquo;default&rdquo; or &ldquo;elbow_90&rdquo;)</p>
+<pre><code class="language-python">reachy.goto_posture()
+</code></pre>
+</details>
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/developing-with-reachy-2/getting-started-sdk/visualize-fake-robot/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Visualize with fake robot
+				</div>
+			</div>
+		</a>
+	<a class="ms-auto" href="/developing-with-reachy-2/basics/2-understand-moves/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					2. Understand moves in Reachy 2 &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+			
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a class="text-muted" href="https://www.netlify.com/">Netlify</a>, <a class="text-muted" href="https://gohugo.io/">Hugo</a>, and <a class="text-muted" href="https://getdoks.org/">Doks</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/bootstrap.js" defer></script>
+  <script src="/js/highlight.js" defer></script>
+  <script src="/main.js" defer></script>
+  <script src="/index.js" defer></script>
+  
+    
+  </body>
+</html>

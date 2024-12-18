@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dashboard on </title>
+    <link>http://localhost:1313/getting-started/dashboard/</link>
+    <description>Recent content in Dashboard on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Jul 2023 08:05:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/getting-started/dashboard/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Discover the dashboard</title>
+      <link>http://localhost:1313/getting-started/dashboard/discover/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/getting-started/dashboard/discover/</guid>
+      <description>&lt;h2 id=&#34;1-find-reachy-2s-ip-address&#34;&gt;1. Find Reachy 2&amp;rsquo;s IP address &lt;a href=&#34;#1-find-reachy-2s-ip-address&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;After you connected the robot to the network, it should have an IP address. The LCD screen connected in Reachy&amp;rsquo;s back should be diplaying its IP address.&lt;/p&gt;&#xA;&#xA;&#xA;    &#xA;    &lt;p style=&#34;text-align: center;&#34;&gt;&#xA;        &lt;img alt=&#34;&#34; src=&#34;http://localhost:1313/images/vr/getting-started/lcd-display_hu5867175946019624151.png&#34; width=&#34;400&#34; height=&#34;454&#34;&gt;&#xA;    &lt;/p&gt;&#xA;&#xA;&#xA;&lt;p&gt;If the LCD screen is not working or is unplugged, check out the page Find my IP section to learn other ways to get the IP address.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Note the LCD screen will not work if you plug it after having turned on the computer.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

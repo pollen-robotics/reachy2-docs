@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Setup Reachy 2 on </title>
+    <link>http://localhost:1313/getting-started/setup-reachy2/</link>
+    <description>Recent content in Setup Reachy 2 on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 09 Aug 2023 14:43:31 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/getting-started/setup-reachy2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Assemble &amp; Plug Reachy 2</title>
+      <link>http://localhost:1313/getting-started/setup-reachy2/assemble-and-plug/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/getting-started/setup-reachy2/assemble-and-plug/</guid>
+      <description>&lt;h2 id=&#34;your-robot-is-nearly-already-assembled&#34;&gt;Your robot is nearly already assembled! &lt;a href=&#34;#your-robot-is-nearly-already-assembled&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;div class=&#34;alert alert-warning d-flex&#34; role=&#34;alert&#34;&gt;&#xA;  &lt;div class=&#34;flex-shrink-1 alert-icon&#34;&gt;👉&lt;/div&gt;&#xA;  &lt;div class=&#34;w-100&#34;&gt;The robot weigh is around 50kg (110lb). You will need to be at least 3 to carry the robot out of the box. &lt;/br&gt;Wear suitable personal protective equipment (e.g. safety shoes) when unpacking the robot. When lifting Reachy 2, pay attention to lift correctly using with your legs, to avoid back injury. Be also aware of your fingers position on the robot.&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Unpack your robot, you just have a few things to plug to finish assembling it.&lt;br&gt;&#xA;Check your box contains, in addition to the robot, the following elements:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Start Reachy 2</title>
+      <link>http://localhost:1313/getting-started/setup-reachy2/start-reachy2/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/getting-started/setup-reachy2/start-reachy2/</guid>
+      <description>&lt;h2 id=&#34;power-up-your-robot&#34;&gt;Power up your robot &lt;a href=&#34;#power-up-your-robot&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;To start your robot:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Press the mobile base button (next to the mobile base&amp;rsquo;s LCD screen). The mobile base&amp;rsquo;s screen should turn on, indicating the current state of the battery (remaining battery percentage, current flow, etc).&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Automatic calibration process&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Put the robot in a environment with no obstacle, and make sure its arms or grippers are not touching the tripod.&lt;/p&gt;&#xA;&lt;div class=&#34;alert alert-warning d-flex&#34; role=&#34;alert&#34;&gt;&#xA;  &lt;div class=&#34;flex-shrink-1 alert-icon&#34;&gt;👉&lt;/div&gt;&#xA;  &lt;div class=&#34;w-100&#34;&gt;The robot is going to slightly move during the calibration. Do not touch the robot during the calibration, and make sure the arms will not meet any obstacle during their movements.&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Press and turn clockwise the emergency stop button to raise it. The automatic calibration process will start.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Connect Reachy 2</title>
+      <link>http://localhost:1313/getting-started/setup-reachy2/connect-reachy2/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/getting-started/setup-reachy2/connect-reachy2/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;On the &lt;strong&gt;first connection, connect Reachy 2 to your network using an ethernet cable&lt;/strong&gt;. You will then be able to choose another network using the dashboard.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;hard-wired-connection&#34;&gt;Hard-wired connection &lt;a href=&#34;#hard-wired-connection&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Use an &lt;strong&gt;ethernet cable&lt;/strong&gt; to connect your robot to the network.&lt;/p&gt;&#xA;&lt;p&gt;Ethernet plugs are available at position (c) of the robot&amp;rsquo;s computer interface.&lt;br&gt;&#xA;Reachy 2&amp;rsquo;s computer is configured to use DHCP. It should thus be directly accessible on your network.&lt;/p&gt;&#xA;&#xA;&#xA;    &#xA;    &lt;p style=&#34;text-align: center;&#34;&gt;&#xA;        &lt;img alt=&#34;hardware-interface&#34; src=&#34;http://localhost:1313/images/docs/network/hardware-interface_hu7048387083434653906.png&#34; width=&#34;400&#34; height=&#34;225&#34;&gt;&#xA;    &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stop Reachy 2</title>
+      <link>http://localhost:1313/getting-started/setup-reachy2/stop-reachy2/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/getting-started/setup-reachy2/stop-reachy2/</guid>
+      <description>&lt;h2 id=&#34;power-off-your-robot&#34;&gt;Power off your robot &lt;a href=&#34;#power-off-your-robot&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Power off your robot in the exact opposite order you turned it on!&lt;/p&gt;&#xA;&lt;p&gt;To stop your robot:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;From the dashboard, click on the Power Off button in the footer.&lt;/li&gt;&#xA;&lt;li&gt;Press the emergency stop button.&lt;/li&gt;&#xA;&lt;li&gt;Press the mobile base button.&lt;/li&gt;&#xA;&lt;li&gt;Wait for the led of the computer to turn off, then unplug the green port from the robot&amp;rsquo;s computer.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;understanding-the-power-buttons-and-battery-life-good-practices&#34;&gt;Understanding the power buttons and battery life good practices &lt;a href=&#34;#understanding-the-power-buttons-and-battery-life-good-practices&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;The mobile base uses the 24V battery to power the wheels directly. DC-DC converters are used to generate 5V (emergency button power, USB HUB power and relay logic) and 12V for the upper body.&#xA;The 5V converter draws almost 100mA when idle and is necessary for the emergency button logic.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Connect your robot to the WiFi</title>
+      <link>http://localhost:1313/getting-started/setup-reachy2/connect-wifi/</link>
+      <pubDate>Wed, 09 Aug 2023 14:43:31 +0200</pubDate>
+      <guid>http://localhost:1313/getting-started/setup-reachy2/connect-wifi/</guid>
+      <description>&lt;h2 id=&#34;wifi&#34;&gt;WiFi &lt;a href=&#34;#wifi&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;On your first connection to a network, the simpliest is to connect your robot with an ethernet cable.&lt;/p&gt;&#xA;&lt;p&gt;If you cannot do this:&lt;/p&gt;&#xA;&lt;p&gt;Use the appropriate cable and connect your computer directly to Reachy 2&amp;rsquo;s computer. The cable has to be plugged in port (b) of Reachy 2&amp;rsquo;s hardware interface.&lt;/p&gt;&#xA;&#xA;&#xA;    &#xA;    &lt;p style=&#34;text-align: center;&#34;&gt;&#xA;        &lt;img alt=&#34;Serial connection port&#34; src=&#34;http://localhost:1313/images/docs/getting-started/serial-connection_hu11597659459956327932.png&#34; width=&#34;400&#34; height=&#34;225&#34;&gt;&#xA;    &lt;/p&gt;&#xA;&#xA;&#xA;&lt;p&gt;We use &lt;code&gt;tio&lt;/code&gt;for the serial connection. If you haven&amp;rsquo;t installed it yet on your computer:&#xA;&lt;code&gt;apt install tio&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

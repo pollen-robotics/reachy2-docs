@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Autonomous behaviors on </title>
+    <link>http://localhost:1313/ai-with-reachy-2/autonomous-behaviors/</link>
+    <description>Recent content in Autonomous behaviors on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Jul 2023 08:05:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/ai-with-reachy-2/autonomous-behaviors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Record data for learning models</title>
+      <link>http://localhost:1313/ai-with-reachy-2/autonomous-behaviors/record-data-learning-models/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/ai-with-reachy-2/autonomous-behaviors/record-data-learning-models/</guid>
+      <description>&lt;p&gt;This is how to update the robot&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

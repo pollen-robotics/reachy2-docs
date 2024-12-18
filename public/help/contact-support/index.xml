@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contact support on </title>
+    <link>http://localhost:1313/help/contact-support/</link>
+    <description>Recent content in Contact support on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Jul 2023 08:44:51 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/help/contact-support/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I need somebody</title>
+      <link>http://localhost:1313/help/contact-support/need-somebody/</link>
+      <pubDate>Wed, 26 Jul 2023 08:44:51 +0200</pubDate>
+      <guid>http://localhost:1313/help/contact-support/need-somebody/</guid>
+      <description>&lt;h2 id=&#34;forum&#34;&gt;Forum &lt;a href=&#34;#forum&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Join &lt;strong&gt;&lt;a href=&#34;https://forum.pollen-robotics.com/&#34;&gt;our forum&lt;/a&gt;&lt;/strong&gt; if you have any questions or simply want to take a look at others topics!&lt;/p&gt;&#xA;&lt;div class=&#34;alert alert-warning d-flex&#34; role=&#34;alert&#34;&gt;&#xA;  &lt;div class=&#34;flex-shrink-1 alert-icon&#34;&gt;👉&lt;/div&gt;&#xA;  &lt;div class=&#34;w-100&#34;&gt;Any questions relative to your development with Reachy?&lt;/br&gt;&lt;b&gt;Go to &lt;a href=&#34;https://forum.pollen-robotics.com&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Pollen Community&lt;/a&gt;&lt;/b&gt;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;pollen-robotics-support&#34;&gt;Pollen Robotics support &lt;a href=&#34;#pollen-robotics-support&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;For any specific questions concerning your robot or if you meet problems with the product, please contact us at &lt;a href=&#34;mailto:support@pollen-robotics.com&#34;&gt;support@pollen-robotics.com&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

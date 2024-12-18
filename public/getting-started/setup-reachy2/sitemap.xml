@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>http://localhost:1313/getting-started/setup-reachy2/assemble-and-plug/</loc>
+      <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/getting-started/setup-reachy2/start-reachy2/</loc>
+      <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/getting-started/setup-reachy2/connect-reachy2/</loc>
+      <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/getting-started/setup-reachy2/stop-reachy2/</loc>
+      <lastmod>2023-07-26T08:05:23+02:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/getting-started/setup-reachy2/connect-wifi/</loc>
+      <lastmod>2023-08-09T14:43:31+02:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    </urlset>

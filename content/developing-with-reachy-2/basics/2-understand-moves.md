@@ -14,6 +14,8 @@ weight: 210
 toc: true
 ---
 
+<br>
+
 > You can choose to follow our online documentation or to make your Reachy move by following the [notebook n°2](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/2_goto_introduction.ipynb). 
 
 ## Moves methods
@@ -25,19 +27,24 @@ Those methods work the same way on the arms and the head, but **not on the mobil
 
 The methods to use in order to control the robot are:  
 
--  for the arms:  
+-  **for the arms :**
     - **`goto()`**: depending on the parameter entered, you can control either :
         - the joint value of each joint in degrees : *list of 7 values (joint space)*
         - the end-effector position in the robot frame of reference : *4x4 homogeneous matrix (cartesian space)*
-    - **`translate_by()`** and **`rotate_by()`** : you can translate or rotate the position of the end-effector in space, in robot frame or gripper frame
 
-- for the head:  
+    - **`translate_by()`** and **`rotate_by()`** : you can translate or rotate the position of the end-effector in space, in robot frame or gripper frame.
+<br>
+<br>
+- **for the head :**
     - **`goto()`**: depending on the parameter entered, you can control either :
         - the joint value of each head joint in degrees : *list of  3 values (joint space)*
         - the head orientation in the robot frame : *quaternion (cartesian space)*
-        > Be careful that, between the joint and cartesian spaces, there is a 10-degree difference in pitch : to have the head looking forward, in joint space you have to put rpy = [0,10,0] whereas in cartesian space, it's the equivalent of [0,0,0].
-    
+        <br>
+        :warning: between the joint and cartesian spaces, there is a 10-degree difference in pitch : to have the head looking forward, in joint space you have to put rpy = [0,10,0] whereas in cartesian space, it's the equivalent of [0,0,0].
+   <br>
+   <br>
     - **`look_at()`**: you control the head by giving a point in the robot coordinate system the head will look at
+
     - **`rotate_by()`**: you can rotate the head in relation to its current position, by setting roll, pitch and yaw values in degrees, either in relation to the robot's frame of reference or to the head.
 
 

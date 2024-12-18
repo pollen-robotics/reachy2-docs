@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SDK basics on </title>
+    <link>http://localhost:1313/developing-with-reachy-2/basics/</link>
+    <description>Recent content in SDK basics on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Jul 2023 08:05:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/developing-with-reachy-2/basics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1. Hello World</title>
+      <link>http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/</guid>
+      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials &lt;a href=&#34;#materials&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;To guide you through the SDK&amp;rsquo;s functionalities, you can follow this written documentation (which is more complete), as well as the notebooks provided, so you can learn as you interact with your robot.&lt;/p&gt;&#xA;&lt;h4 id=&#34;find-the-notebooks&#34;&gt;Find the notebooks &lt;a href=&#34;#find-the-notebooks&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h4&gt;&#xD;&#xA;&lt;details&gt;&#xA;&lt;summary&gt; If you cloned the reachy2_sdk repository &lt;/summary&gt;&#xA;&lt;p&gt;You can find the example notebooks in reachy2_sdk/src/examples.&lt;/p&gt;&#xA;&lt;/details&gt;&#xA;&lt;details&gt;&#xA;&lt;summary&gt;If you installed the reachy2_sdk from Pypi&lt;/summary&gt; &#xA;You haven&#39;t installed the examples on your computer. You can clone the folder in the directory that you want, by copying and pasting the instructions below into a terminal, in the desired folder. This will add an &lt;i&gt;examples_sdk&lt;/i&gt; folder where you can find all the notebooks! &#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;git clone --no-checkout https://github.com/pollen-robotics/reachy2-sdk.git examples_sdk&#xA;cd examples_sdk&#xA;git sparse-checkout init --cone&#xA;git sparse-checkout set src/examples&#xA;git checkout develop&#xA;mv src/examples/* .&#xA;rm -rf src/&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;/details&gt;&#xA;&lt;h4 id=&#34;follow-them&#34;&gt;Follow them &lt;a href=&#34;#follow-them&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h4&gt;&#xD;&#xA;&lt;details&gt;&#xA;&lt;summary&gt;&#xA;If you have any trouble making the notebooks work, please follow those steps : &lt;/summary&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;In a terminal, go to the folder containing the notebooks&#xA;(if the repo has been cloned: &lt;em&gt;reachy2_sdk/src/examples&lt;/em&gt;, if downloaded: &lt;em&gt;examples_sdk&lt;/em&gt;) :&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2. Understand moves in Reachy 2</title>
+      <link>http://localhost:1313/developing-with-reachy-2/basics/2-understand-moves/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/developing-with-reachy-2/basics/2-understand-moves/</guid>
+      <description>&lt;br&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;You can choose to follow our online documentation or to make your Reachy move by following the &lt;a href=&#34;https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/2_goto_introduction.ipynb&#34;&gt;notebook n°2&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;moves-methods&#34;&gt;Moves methods &lt;a href=&#34;#moves-methods&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;ReachySDK for Reachy 2 offers you methods to make movements with the arms and head, controlling the target position in several way, choosing the duration of the movement, or even the interpolation mode.&lt;/p&gt;&#xA;&lt;p&gt;Those methods work the same way on the arms and the head, but &lt;strong&gt;not on the mobile base&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3. Basic arm control</title>
+      <link>http://localhost:1313/developing-with-reachy-2/basics/3-basic-arm-control/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/developing-with-reachy-2/basics/3-basic-arm-control/</guid>
+      <description>&lt;br&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;You can choose to follow our online documentation or to make your Reachy move by following the &lt;a href=&#34;https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/3_arm_and_gripper.ipynb&#34;&gt;notebook n°3&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;arm-presentation&#34;&gt;Arm presentation &lt;a href=&#34;#arm-presentation&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Reachy&amp;rsquo;s arm offers 7 degrees of freedom. It also gives access to one joint for the gripper.&lt;br&gt;&#xA;The &lt;strong&gt;arm&lt;/strong&gt; is divided as follow:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;shoulder&lt;/strong&gt;, composed of 2 joints (pitch and roll)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;elbow&lt;/strong&gt;, composed of 2 joints (yaw and pitch)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;wrist&lt;/strong&gt;, composed of 3 joints (roll, pitch and yaw)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;We refer to the shoulder, elbow and wrist as &lt;strong&gt;actuators&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>4. Use arm kinematics</title>
+      <link>http://localhost:1313/developing-with-reachy-2/basics/4-use-arm-kinematics/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/developing-with-reachy-2/basics/4-use-arm-kinematics/</guid>
+      <description>&lt;h2 id=&#34;arm-coordinate-system&#34;&gt;Arm coordinate system &lt;a href=&#34;#arm-coordinate-system&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;h3 id=&#34;joint-coordinates&#34;&gt;Joint coordinates &lt;a href=&#34;#joint-coordinates&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;If you remember the &lt;a href=&#34;http://localhost:1313/developing-with-reachy-2/basics/3-basic-arm-control/#goto&#34;&gt;&lt;code&gt;goto()&lt;/code&gt; function&lt;/a&gt;, to generate a trajectory for the arm, you need to pass a list of joints with the requested position as argument.&lt;/p&gt;&#xA;&lt;p&gt;For example, to place the right arm in a right angled position, we defined the following list:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;right_angled_position = [0, 10, -10, -90, 0, 0, 0]&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;and then call the function with is:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;reachy.r_arm.goto(right_angled_position)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;In this basic arm control, we used what is called &lt;strong&gt;joint coordinates&lt;/strong&gt; to move Reachy. This means that we controlled each joint separately.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>5. Control the head</title>
+      <link>http://localhost:1313/developing-with-reachy-2/basics/5-control-head/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/developing-with-reachy-2/basics/5-control-head/</guid>
+      <description>&lt;br&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;You can choose to follow our online documentation or to make your Reachy move by following the &lt;a href=&#34;https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/4_head_control.ipynb&#34;&gt;notebook n°4&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;head-presentation&#34;&gt;Head presentation &lt;a href=&#34;#head-presentation&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Reachy 2&amp;rsquo;s head is mounted on an Orbita3D actuator, referred to as the &lt;strong&gt;neck&lt;/strong&gt; actuator, giving 3 degrees of freedom to control the head orientation.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Note : the antennas control will be soon integrated in the SDK ! Stay tuned !&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p align=&#34;center&#34;&gt;&#xA;    &#xA;    &lt;video controls=&#34;controls&#34; width=80% autoplay loop&gt;&#xA;        &lt;source type=&#34;video/mp4&#34; src=&#34;http://localhost:1313/videos/sdk/orbita.mp4&#34;&gt;&#xA;        &lt;/source&gt;&#xA;    &lt;/video&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Before starting to control it, connect to your Reachy and turn it on. As in the other pages:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>6. Get images from cameras</title>
+      <link>http://localhost:1313/developing-with-reachy-2/basics/6-get-images-from-cameras/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/developing-with-reachy-2/basics/6-get-images-from-cameras/</guid>
+      <description>&lt;br&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;You can choose to follow our online documentation or to see directly the images from your Reachy by following the &lt;a href=&#34;https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/5_cameras_images.ipynb&#34;&gt;notebook n°5&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;This section assumes that you went through the &lt;a href=&#34;http://localhost:1313/developing-with-reachy-2/basics/1-hello-world/&#34;&gt;Hello World&lt;/a&gt; so that you know how to connect to the robot.&lt;/p&gt;&#xA;&lt;p&gt;Reachy2 has 2 types of camera:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;the &lt;strong&gt;teleop&lt;/strong&gt; cameras, with a left and right cameras, located in Reachy&amp;rsquo;s head and used for the teleoperation&lt;/li&gt;&#xA;&lt;li&gt;the &lt;strong&gt;depth&lt;/strong&gt; camera, equipped with a depth sensor, located in Reachy 2’s torso and mainly useful for manipulation tasks&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Each camera can be accessed separately through &lt;em&gt;reachy.cameras&lt;/em&gt;. Teleop cameras  have a right and left view, with the left and right sides considered from Reachy point of view, while the depth camera has a left (i.e. mono RGB) and depth view.  To be able to specify the view you want to get a frame from, you will need to import CameraView:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>7. Record and replay trajectories</title>
+      <link>http://localhost:1313/developing-with-reachy-2/basics/7-record-replay-trajectories/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/developing-with-reachy-2/basics/7-record-replay-trajectories/</guid>
+      <description>&lt;br&gt;&#xA;&lt;p&gt;You can easily record joint trajectories directly on Reachy, store and replay them later. This page will show you how to implement such mechanisms.&lt;/p&gt;&#xA;&lt;p&gt;All examples given below will show trajectories record on each of the robot joints. The position of each motor will be stored at a predefined frequency (typically 100Hz). Similarly, the replay will set new target position using the same frequency. Those basics examples does not perform any kind of filtering or modification of the data.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>8. Use the mobile base</title>
+      <link>http://localhost:1313/developing-with-reachy-2/basics/8-use-mobile-base/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/developing-with-reachy-2/basics/8-use-mobile-base/</guid>
+      <description>&lt;br&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;You can choose to follow our online documentation or to see directly the images from your Reachy by following the &lt;a href=&#34;https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/6_mobile_base.ipynb&#34;&gt;notebook n°6&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;what-is-accessible-on-the-mobile-base&#34;&gt;What is accessible on the mobile base &lt;a href=&#34;#what-is-accessible-on-the-mobile-base&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;The following elements are accessible with &lt;em&gt;reachy.mobile_base&lt;/em&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;battery level,&lt;/li&gt;&#xA;&lt;li&gt;odometry of the base,&lt;/li&gt;&#xA;&lt;li&gt;lidar&lt;/li&gt;&#xA;&lt;li&gt;control and drive modes,&lt;/li&gt;&#xA;&lt;li&gt;goto, translate_by/rotate_by and set_speed methods to make the mobile base move.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;informations&#34;&gt;Informations &lt;a href=&#34;#informations&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;You can find the infos by calling the attribute mobile_base directly :&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

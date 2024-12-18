@@ -13,6 +13,7 @@ menu:
 weight: 270
 toc: true
 ---
+<br>
 
 > You can choose to follow our online documentation or to see directly the images from your Reachy by following the [notebook n°6](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/6_mobile_base.ipynb). 
 
@@ -94,7 +95,7 @@ reachy_mobile.mobile_base.goto(x=0.0, y=0.0, theta=0.0)
 
 We recommend taking the time to play around with this concept.
 
-> Note the **goto() method of the mobile base <u>does not</u> work like [moves methods explained previously]({{< ref "/developing-with-reachy-2/basics/8-use-mobile-base">}})**  
+> Note the **goto() method of the mobile base <u>does not</u> work like [moves methods explained previously]({{< ref "/developing-with-reachy-2/basics/3-basic-arm-control#goto">}})**  
 
 The mobile_base gotos are always blocking methods. Meaning that the rest of the code will not be executed until the goto is finished. 
 
@@ -141,3 +142,6 @@ reachy.mobile_base.send_speed_command()
 :bulb: The way this is implemented in the HAL is simply to listen to the /cmd_vel topic, apply some smoothing, perform the kinematic calculations and send the speed commands to the wheels. This makes it very easy to create control interfaces using ROS, see the [keyboard example](https://github.com/pollen-robotics/zuuu_hal/blob/main/examples/zuuu_teleop_keyboard.py) or the [joy controller example](https://github.com/pollen-robotics/zuuu_hal/blob/main/examples/zuuu_teleop_joy.py).
 
 *Note: the HAL has a drive mode to set speed commands for variable amounts of time. Instead of relying on a topic, it creates a service. The niche usage didn't warrant the added complexity, so the interface with the SDK was not made. But if needed, it exists!*
+
+
+Well done, now you know all the basics about Reachy's SDK ! Now, let's learn how to implement complex behaviours ! 

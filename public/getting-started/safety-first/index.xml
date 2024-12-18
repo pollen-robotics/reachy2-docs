@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Safety first on </title>
+    <link>http://localhost:1313/getting-started/safety-first/</link>
+    <description>Recent content in Safety first on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Jul 2023 08:05:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/getting-started/safety-first/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Safety guidelines</title>
+      <link>http://localhost:1313/getting-started/safety-first/safety-guidelines/</link>
+      <pubDate>Wed, 26 Jul 2023 08:05:23 +0200</pubDate>
+      <guid>http://localhost:1313/getting-started/safety-first/safety-guidelines/</guid>
+      <description>&lt;div class=&#34;alert alert-danger d-flex&#34; role=&#34;alert&#34;&gt;&#xA;  &lt;div class=&#34;flex-shrink-1 alert-icon&#34;&gt;👉🏾&lt;/div&gt;&#xA;  &lt;div class=&#34;w-100&#34;&gt;Reachy 2 is much more powerful than the previous version. To avoid any accident, please follow carefully the safety guidelines!&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;There is currently &lt;strong&gt;no automatic collision security&lt;/strong&gt; on the robot: it won&amp;rsquo;t stop if hitting anything or anyone, even itself. Remain constantly watchful when using it.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;users&#34;&gt;Users &lt;a href=&#34;#users&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;h3 id=&#34;attention-and-reaction&#34;&gt;Attention and reaction &lt;a href=&#34;#attention-and-reaction&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;Users must be in &lt;strong&gt;full possession of their physical and mental powers at all times&lt;/strong&gt; when using the robot. Reachy 2 must never be used by someone having consumed substances that could affect their reactions, such as medication, drugs or alcohol.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

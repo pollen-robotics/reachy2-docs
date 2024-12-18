@@ -13,6 +13,7 @@ menu:
 weight: 240
 toc: true
 ---
+<br>
 
 > You can choose to follow our online documentation or to make your Reachy move by following the [notebook n°4](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/4_head_control.ipynb). 
 
@@ -165,7 +166,7 @@ reachy.head.neck.roll.goal_position = 30
 reachy.send_goal_positions()
 ```
 
-> goal_position must be written in **degrees**.
+:warning: goal_position must be written in **degrees**.
 
 
 ## Read head position
@@ -177,7 +178,7 @@ You can read the head positions using :
 
 - Joint space : `get_current_positions()` will give the neck's roll, pitch and yaw present_position
 
-> *Don't forget, there is a 10-degrees difference between the cartesian space and joint space, so we recommand you to not mix them.*
+:warning: *Don't forget, there is a 10-degrees difference between the cartesian space and joint space, so we recommand you to not mix them.*
 
 ### In cartesian space :
 
@@ -195,3 +196,5 @@ In case you feel more comfortable using roll, pitch, yaw angles rather than work
 reachy.head.get_current_positions()
 >>> [11.881595589573665, -8.976164597791765, 22.07170507647743]
 ```
+
+Now that we can move the head, let's focus on its cameras !
