@@ -143,5 +143,12 @@ reachy.mobile_base.send_speed_command()
 
 *Note: the HAL has a drive mode to set speed commands for variable amounts of time. Instead of relying on a topic, it creates a service. The niche usage didn't warrant the added complexity, so the interface with the SDK was not made. But if needed, it exists!*
 
+## Lidar
+
+A safety measure prevents the robot from approaching obstacles detected by its lidar. If you ever need to get closer, you can always disable this safety feature via the SDK : 
+
+```python 
+reachy.mobile_base.lidar.safety_enabled(False)
+```
 
 Well done, now you know all the basics about Reachy's SDK ! Now, let's learn how to implement complex behaviours ! 

@@ -161,6 +161,17 @@ The **`goto()`** method takes a 4x4 matrix expressing the target pose of Reachy 
 > Read next section on [Use arm kinematics]({{< ref "developing-with-reachy-2/basics/4-use-arm-kinematics" >}}) to better understand the use of the `goto` method.  
 
 
+### translate_by() and rotate_by()
+
+To simplify your life, you have access to functions to easily compute translation or rotation, in the robot or gripper frame, in **cartesian space**. 
+For example you can use the `translate_by(...)` method to send the gripper up, asking for a translation 10cm up in Reachy's frame (+0.1m on Reachy's z axis), and a rotation of 20° around the z axis of the gripper : 
+
+```python
+reachy.r_arm.translate_by(x=0, y=0, z=0.1, frame="robot")
+reachy.r_arm.rotate_by(roll=0, pitch=0, yaw=20, frame="gripper")
+```
+
+
 ## Gripper control
 
 ### open()

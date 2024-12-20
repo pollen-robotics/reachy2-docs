@@ -20,10 +20,10 @@ In [this tutorial](https://github.com/pollen-robotics/reachy2-tutorials/blob/mai
 
 What you will learn :
 
-- How to use the mobile base,
-- How to synchronize arms and mobile base movements,
-- How and when to use blocking gotos,
-- How to follow a particular trajectory with the end effector.
+- How to use the **mobile base**,
+- How to **synchronize** arms and mobile base movements,
+- How and when to use **blocking** gotos,
+- How to follow a particular **trajectory** with the end effector.
 
 
 {{< img-center "images/sdk/tutorials/gif_rope.gif" 400x "" >}}

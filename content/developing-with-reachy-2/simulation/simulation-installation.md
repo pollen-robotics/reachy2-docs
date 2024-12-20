@@ -39,6 +39,7 @@ docker compose -f mode/dev.yaml up -d core
 
 Build:
 ```python
+full_build
 cbuilds
 ```
 

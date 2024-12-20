@@ -41,8 +41,8 @@ In [this tutorial](https://github.com/pollen-robotics/reachy2-tutorials/blob/mai
 
 What you will learn:
 
-- How to make it move its head
-- How to make it move its arms
-- How to synchronize head and arms movements
+- How to make it move its **head**
+- How to make it move its **arms**
+- How to **synchronize** head and arms movements
 
 {{< img-center "images/sdk/tutorials/gif_awake.gif" 400x "" >}}
