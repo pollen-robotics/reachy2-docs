@@ -1,7 +1,7 @@
 ---
 title: "Safety guidelines"
-description: "Safety guidelines as mandatory reading"
-lead: "Everything you must know before using Reachy 2 for a safe experience with the robot"
+description: "Safety Guidelines for Using Reachy 2"
+lead: "Safety Guidelines for Using Reachy 2"
 date: 2023-07-26T08:05:23+02:00
 lastmod: 2023-07-26T08:05:23+02:00
 draft: false
@@ -14,139 +14,93 @@ weight: 100
 toc: true
 ---
 
+{{< warning icon="👉🏾" text="Read this guide carefully before operating Reachy 2 to ensure safe and effective use." >}}
 
-{{< warning icon="👉🏾" text="Reachy 2 is much more powerful than the previous version. To avoid any accident, please follow carefully the safety guidelines!" >}}
+## Key Points
 
-> There is currently **no automatic collision security** on the robot: it won't stop if hitting anything or anyone, even itself. Remain constantly watchful when using it.
+#### 1) Be Vigilant
+{{< img-center "images/getting-started/safety-first/safety-guidelines/1_Be_vigilant.jpg" 400x "Be vigilant" >}}
+Always keep your eyes on the robot while it operates.
 
-## Users
+#### 2) Ready to stop
+{{< img-center "images/getting-started/safety-first/safety-guidelines/2_Ready_to_stop.jpg" 400x "Ready to stop" >}}
+Always be ready to press the emergency stop button in case of unexpected behaviour.
 
-### Attention and reaction
+#### 3) Maintain a safe distance
+{{< img-center "images/getting-started/safety-first/safety-guidelines/3_Maintain_a safe_distance.jpg" 400x "Maintain a safe distance" >}}
+Keep at least 1 meter clear on all sides of the robot.
 
-Users must be in **full possession of their physical and mental powers at all times** when using the robot. Reachy 2 must never be used by someone having consumed substances that could affect their reactions, such as medication, drugs or alcohol.  
+#### 4) Avoid the blind spot
+{{< img-center "images/getting-started/safety-first/safety-guidelines/4_Avoid_the_blind_spot.jpg" 400x "Avoid the blind spot" >}}
+Never stands behind Reachy while it operates.
 
-Users must **keep attention focused** on the robot at any time, especially if they are near the robot workspace, and imperatively if they are in its workspace or if they are responsible for the emergency stop button.  
+#### 5) Wear gloves
+{{< img-center "images/getting-started/safety-first/safety-guidelines/5_Wear_gloves.jpg" 400x "Wear gloves" >}}
+Protect yourself from pinches when handling Reachy.
 
-### Qualified users
+#### 6) Stay within limits
+{{< img-center "images/getting-started/safety-first/safety-guidelines/6_Stay_within_limits.jpg" 400x "Stay within limits" >}}
+Never lift object heavier than 3kg or extend them too far.
 
-The robot must not be used if no qualified user is present.  
+#### 7) LIDAR Safety
+{{< img-center "images/getting-started/safety-first/safety-guidelines/7_LIDAR_safety.jpg" 400x "LIDAR Safety" >}}
+Stay out of the robot's movement zones to avoid collisions.
 
-People using the robot or interacting with it must all be aware of the risks and be explicitly informed of the robot capabilities, limitations and restrictions. They must all be able to act with the appropriate behavior using the robot.  
+#### 8) Stable ground
+{{< img-center "images/getting-started/safety-first/safety-guidelines/8_Stable_Ground.jpg" 400x "Stable ground" >}}
+Operate Reachy only on flat, stable surfaces.
 
-{{< alert icon="👉" text="No one should use the robot without knowing the safety guidelines." >}}
 
-## Emergency stop button
+- **Stay Alert**: Reachy 2 is powerful and lacks automatic collision detection. It will not stop if it encounters obstacles, including people or itself. Remain vigilant at all times.
+- **Qualified Users Only**: People using the robot or interacting with it must all be aware of the risks and be explicitly informed of the robot capabilities, limitations and restrictions. They must all be able to act with the appropriate behavior using the robot by knowing the safety guidelines.
+- **Emergency Stop Button**: Always keep a person ready to use the emergency stop button. Press it immediately if you lose control of the robot or notice unexpected movements. Objects held by Reachy may fall if the button is pressed, so ensure the workspace is clear of items that could cause harm.  
 
-The robot is delivered with an emergency stop button.  
+---
 
-Pressing the emergency stop button will **immediately power off all motors**, from the arms to the mobile base wheels. Nevertheless it won't power off the computer, which means <u>you won't lose anything running on the computer</u>.  
+## Safe Operation Tips
 
-> If you feel like you are losing control of the robot's movements or notice an unexpected behavior at anytime, **never hesitate to press the emergency stop button**.
+### User Responsibilities
 
-Someone must be holding the emergency stop button at any time when using the robot, being ready to press the button if needed, and keep its attention focused on the robot.
+- **Constant Attention**: If you’re in Reachy’s workspace, you must stay focused and prepared to step back quickly. Only trained, aware individuals should handle or be near Reachy.
+- **Proximity Awareness**: Ensure no body part is within Reachy’s range, especially near moving arms. Always maintain a position that allows you to safely and quickly step away if necessary.
 
-{{< alert icon="👉" text="Objects may fall out of the grippers when pressing the emergency stop button. Make sure they cannot cause injuries." >}}
+### Workspace and Positioning
 
-## Don't harm yourself...
+- **Clear Workspace**: Maintain enough space around Reachy for quick movement. Avoid positioning yourself or others between Reachy and walls or furniture.
+- **Safety Bubble:** Maintain a "safety bubble" around Reachy to prevent unintended contact or injury. This bubble should extend at least **1 meter** on all sides during operation, with the exception of the front, where closer interaction is allowed for specific tasks. However, no one should ever stand or move within **1 meter** behind the robot, as it lacks rear sensors to detect obstacles or individuals, increasing the risk of accidents, especially during teleoperation.
+- **Avoid Close Contact** : Never place your head, hands, or other body parts beneath Reachy’s arms or torso, especially when in motion.
+- **Pinch Point Awareness :** When handling or manipulating Reachy, be cautious of pinch points between its joints and moving parts. To reduce the risk of injury, it is strongly recommended to wear protective gloves during any manual interaction with the robot.
 
-Reachy 2 is a powerful robot that may hurt you if it is misused.  
+### Handling Objects with Reachy
 
-If you do not respect the safety guidelines, you expose yourself to the following risks:
-- pinching
-- crushing
-- punches
-- electrical hazard
+- **Object Risks**: Be cautious when using Reachy to handle sharp or heavy objects. Ensure the workspace is clear of people if Reachy is carrying or manipulating risky items.
+- **Weight Limits**: Never exceed the 3 kg (6.6 lb) weight limit when lifting with Reachy, and keep objects close to the torso to avoid tipping risks.
 
-### Alertness
+### Manual Interaction with Reachy
 
-People interacting with the robot or present near its workspace must always look at the robot.  
+- **Avoid Pinch Points**: Never place fingers in or between Reachy’s moving parts while it’s active.
+- **Maintenance Safety**: Power down Reachy entirely before performing any adjustments or repairs to prevent unintended movements.
 
-If the robot is being teleoperated with its mobile base, people in the surroundings must be informed of the robot presence, and the operator must never make the robot pop by surprise near a person or come close to a person, making the person reachable by the arms.
+---
 
-### Appropriate position
+## Protecting Reachy from Damage
 
-Do not expose yourself to dangerous punches!
+### Preventing Robot Toppling
 
-People must never place their head, or any other body parts, in between or underneath segments of the robot when the robot is in use. Their head should never be reachable by the robots' arms if the robot is in use.  
+- **Heavy Lifts**: Do not attempt to lift or extend objects too far out with Reachy’s arms. This could cause the robot to tip.
+- **Avoid Push-Pull Forces**: Pushing or pulling overly heavy objects can lead to tipping. Assess the weight and resistance of any object before operating.
 
-If people are near the workspace of the robot, they must always stay in a position that allow them to quickly retract or recoil.
+### Obstacle Awareness and Self-Collisions
 
-> When the robot is in use, no one should enter or stay in the robot workspace.
+- **Monitor Obstacles**: Reachy will follow commands precisely, so make sure there are no objects or people in its intended path.
+- **Self-Collision Prevention**: When operating both arms, avoid movements that could cause the arms or torso to collide. Power off the motors if any unintended contact occurs.
 
-### Free space for retracting
+### Mobile Base Caution
 
-If people are standing near the robot workspace, make sure they have **sufficient space to retract or recoil**, and that this space is free of obstacles.  
+- **Use on Flat Surfaces**: Operate Reachy only on level ground. Slopes increase the risk of tipping.
+- **Speed Limits:** Reachy’s maximum movement speed is 2,5**m/s**. Avoid abrupt direction changes or oscillatory commands that could destabilize the robot.
+- **Active LIDAR for Anti-Collison** : Reachy’s LIDAR anti-collision system is active and monitors obstacles on a 2D plane at the height of the mobile base. It enforces a 0,70 meter (distance from the center of the robot) deceleration zone and a 0,55 meter full stop zone to prevent collisions. However, operators must remain vigilant, as the LIDAR does not detect higher obstacles like tables or elevated objects, nor does it account for the robot's arms. Always ensure the workspace is clear of potential hazards.
 
-People must never be blocked between the robot and a wall or furniture.
+---
 
-### Objects manipulation with Reachy 2
-
-Be careful with the objects you manipulate with the robot. Sharp and pointed object manipulation is dangerous, do not get close to the robot if it manipulates such objects.  
-
-For all manipulation tasks, users are responsible for assessing the hazards and risks relative to the objects they manipulated with the robot. 
-
-### Manipulate the robot
-
-When the robot is in use, never manipulate robot parts at the same time.  
-
-Users must be careful if putting their fingers in the actuators or between robot parts to avoid pinching or crushing.  
-:warning: They must <u>never</u> put their fingers in the actuators or between robot parts if the robot is in use.  
-
-### Hardware intervention
-
-Never make any hardware intervention on the robot, such as screwing on unscrewing something, if it is powered on.
-
-### Robot toppling risk
-
-The following section ["...and don't harm Reachy 2!"]({{< ref "/getting-started/safety-first/safety-guidelines#and-dont-harm-reachy-2" >}}) mainly describes risks of robot toppling or collision. This may damage the robot, but also harm anyone near to the robot.    
-**All events of the following section can lead to users injuries**, so read them as users safety guidelines as well.
-
-## ...and don't harm Reachy 2!
-
-There are a few things you need to know to make sure that your Reachy doesn't get damaged when using it.
-
-### Carrying heavy objects
-
-Be careful of the position of the arms when lifting heavy objects with the robot.  
-Avoid carrying the object to far from the robot torso, mainly to avoid risk of front toppling.  
-
-Do not try to lift objects over 3kg (6.6lb).
-
-### Pulling/pushing
-
-Do not try to pull or push elements that are too heavy or oppositing too much!  
-
-This may result in a robot toppling.
-
-### Obstacles
-
-Be aware of obstacles!  
-
-When you are sending movements instructions to Reachy, be careful to obstacles the robot can meet. The robot will try to reach the positions you asked for as hard as it can, whether or not there is something on its way.  
-
-Because of the force of the robot, and depending on the weigh or fragility of the object, two things may occur:
-- make the object fall and/or break it
-- make Reachy 2 tumble
-
-### Self-collision
-
-When you are moving both arms simultaneously, there are no safety measures implemented to prevent them from hitting each other.  
-Nothing will neither prevent Reachy's arms from hitting its chest if you ask them to.  
-
-If situations like these happen, do not hesitate to turn off the motors so that Reachy's motors will stop trying to reach a position they can't get to.
-
-### Mobile base
-
-#### Surface
-
-The mobile robot is made to be used on **flat surfaces**.  
-Never use the robot on slopes, this may result in a robot toppling.
-
-#### Speed and movements
-
-Speed and commands are limited when using the Python SDK, nevertheless you can still generate behaviors that may be dangerous. Do not ask for high speeds and strong stops, or suddent changes of directions.  
-Provoking oscillations of the robot may lead to a robot toppling.
-
-### Anti-collision LIDAR safety
-
-:warning: The anti-collision LIDAR safety has been deactivated.
+By adhering to these guidelines, you’ll help ensure a safe environment for both Reachy 2 and its users.

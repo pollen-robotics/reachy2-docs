@@ -14,4 +14,4 @@ weight: 200
 toc: true
 ---
 
-This is how you assemble your robot
+*Page in progress*
