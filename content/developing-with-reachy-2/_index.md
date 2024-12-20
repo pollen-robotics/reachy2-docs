@@ -8,3 +8,11 @@ draft: false
 images: []
 type: docs
 ---
+
+In this section, you will learn how to : 
+
+-  ["install the reachy2_sdk library"]({{< ref "developing-with-reachy-2/getting-started-sdk/installation" >}})
+- ["connect to your robot"]({{< ref "developing-with-reachy-2/getting-started-sdk/connect-reachy2" >}})
+- ["use a simulated robot"]({{< ref "developing-with-reachy-2/simulation/" >}})
+- ["use basic sdk functions"]({{< ref "developing-with-reachy-2/basics/" >}})
+- ["build complex behaviors"]({{< ref "developing-with-reachy-2/advanced-tutos/" >}})

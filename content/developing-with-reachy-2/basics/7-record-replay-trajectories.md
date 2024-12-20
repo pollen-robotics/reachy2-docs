@@ -13,7 +13,7 @@ menu:
 weight: 260
 toc: true
 ---
-
+<br>
 
 You can easily record joint trajectories directly on Reachy, store and replay them later. This page will show you how to implement such mechanisms. 
 
@@ -23,20 +23,20 @@ In the following examples, we will assume that you are already connected to your
 
 ## Recording a trajectory
 
-To record a trajectory, we will simply get the current position of individual motors at a predefiend frequency. We will first define a list of motors that we want to record. In this example, we will only record the joints from the right arm, but you can similarly record a single motor, or all motors of the robot at once.
+To record a trajectory, we will simply get the current positions of individual motors at a predefined frequency. We will first define a list of motors that we want to record. In this example, we will only record the joints from the right arm, but you can similarly record a single motor, or all motors of the robot at once.
 
 ```python
 # assuming we run something like this before:
-# reachy = ReachySDK(host='192.168.0.42') 
+# reachy = ReachySDK(host='10.0.0.201') 
 
 recorded_joints = [
-    reachy.r_arm.r_shoulder_pitch,
-    reachy.r_arm.r_shoulder_roll,
-    reachy.r_arm.r_arm_yaw,
-    reachy.r_arm.r_elbow_pitch,
-    reachy.r_arm.r_forearm_yaw,
-    reachy.r_arm.r_wrist_pitch,
-    reachy.r_arm.r_wrist_roll,
+    reachy.r_arm._shoulder.pitch,
+    reachy.r_arm._shoulder.roll,
+    reachy.r_arm._elbow.yaw,
+    reachy.r_arm._elbow.pitch,
+    reachy.r_arm._wrist.roll,
+    reachy.r_arm._wrist.pitch,
+    reachy.r_arm._wrist.yaw,
 ]
 ```
 
@@ -65,7 +65,7 @@ while (time.time() - start) < record_duration:
 ```
 If you want to record a demonstration on the robot, first make sure the robot is compliant. Then, put it in the starting position. Run the code, and start moving the robot. After 5 seconds, the loop will stop and the movements you have made on Reachy will be recorded. 
 
-Depending on your uses, you can define another duration. You can also choose not to use a specify duration but maybe use start and stop event to record. In such case, the easy way is probably to run the loop within a thread or an asynchronous fonction, so it can run in background.
+Depending on your uses, you can define another duration. You can also choose not to use a specify duration but maybe use start and stop event to record. In such case, the easiest way is probably to run the loop within a thread or an asynchronous fonction, so it can run in background.
 
 ## Visualise your recordings
 
@@ -98,20 +98,17 @@ But before actually replaying the trajectory, there are a few key points that yo
 To avoid that, you can use the goto function to first go to the first point of your trajectories:
 
 ```python
-from reachy_sdk.trajectory import goto
-
 # Set all used joint stiff
-for joint in recorded_joints:
-    joint.compliant = False
+reachy.r_arm.turn_on()
 
 # Create a dict associating a joint to its first recorded position
 first_point = dict(zip(recorded_joints, trajectories[0]))
 
 # Goes to the start of the trajectory in 3s
-goto(first_point, duration=3.0)
+reachy.r_arm.goto(first_point, duration=3.0)
 ```
 
-Now that we are in position, we can actually play the trajectory. To do that, we simply loop over our recordings and set the goal position of each joints at the same frequency:
+Now that we are in position, we can actually play the trajectory. To do that, we simply loop over our recordings and set the goal position of each joints then send all the commands at the same frequency:
 
 ```python
 import time
@@ -119,6 +116,11 @@ import time
 for joints_positions in trajectories:
     for joint, pos in zip(recorded_joints, joints_positions):
         joint.goal_position = pos
-
+    reachy.send_goal_positions(check_positions=False)
     time.sleep(1 / sampling_frequency)
 ```
+
+> The check_positions parameter is used to check that the goal positions have been reached after the command has been sent, and that there has been no problem with an unreachable position. That process can take time et slow your replaying. Since it's a recording, all poses are necessarily reachable, so there's no need to waste process time on this check. 
+
+
+Now all we have to do is move the mobile base!

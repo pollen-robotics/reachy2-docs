@@ -14,13 +14,15 @@ weight: 400
 toc: true
 ---
 
-If you want to try movements on the robot without using the real robot, you can install a simulated Reachy 2 on your computer, and run it the same way the real robot is run. The easiest way is using a docker image. We will thus assume that you already have docker installed and setup.
+If you want to try movements on the robot without using the real robot, you can install a simulated Reachy 2 on your computer, and run it the same way the real robot is run. You'll have a rviz window to see the fake robot move. 
+
+The easiest way is using a docker image. We will thus assume that you already have docker installed and setup.
 
 Clone the sources of our docker, and pull the sources:
 ```python
 git clone git@github.com:pollen-robotics/docker_reachy2_core.git  
 cd docker_reachy2_core  
-./pull_sources.sh beta  
+./sources checkout stable  
 ```
 
 Then download the configuration files:
@@ -31,12 +33,13 @@ cp -r reachy_config_example/.reachy_config ~/
 
 In your docker_reachy2_core folder, compose a container with:
 ```python
-docker compose -f dev.yaml up -d core
+docker compose -f mode/dev.yaml up -d core
 ```
 > This can take a few minutes to compose.
 
 Build:
 ```python
+full_build
 cbuilds
 ```
 

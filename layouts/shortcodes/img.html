@@ -1,3 +1,7 @@
 {{ $image := resources.Get (.Get 0) }}
-{{ $image := $image.Resize (.Get 1) }}
-<img alt="{{(.Get 2)}}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+{{ if $image }}
+  {{ $resized := $image.Resize (.Get 1) }}
+  <img alt="{{ .Get 2 }}" src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}">
+{{ else }}
+  <p>Image not found : {{ .Get 0 }}</p>
+{{ end }}
