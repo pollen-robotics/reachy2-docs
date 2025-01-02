@@ -27,16 +27,16 @@ Then you need to find your robot's IP address. Unfortunately, you can't use its 
 
 You can use your robot name to access the dashboard : for that, you type on a browser `reachy_name.local:8000/`. 
 
-Once you are in the dashboard, you can click on **Network** and you will find the IP adresses of your robot (WiFi and Ethernet). 
+Once you are in the dashboard, you can click on **Network** and you will find the IP addresses of your robot (WiFi and Ethernet). 
 
 
 ## Using the LCD screen
 
-If you are not able to access the dashboard, you can turn off completely your robot. Then, you can plug the supplied LCD screen on the USB port of the mobile base. [PHOTO]
+If you are not able to access the dashboard, you can turn off completely your robot. Then, you can plug the supplied LCD screen on the USB port of the mobile base.
 
-Turn on your robot again, and it should display display the robot's IP addresses (alternately Ethernet and WiFi). [PHOTO]
+Turn on your robot again, and it should display display the robot's IP addresses (alternately Ethernet and WiFi) : 
 
-{{< img-center "images/sdk/getting-started/lcd-display.png" 400x "" >}}
+{{< img-center "images/sdk/getting-started/IP_address.jpg" 400x "" >}}
 
 
 You can check that everything is working as expected by running the following Python code in a terminal on your virtual environment :
