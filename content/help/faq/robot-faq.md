@@ -204,3 +204,18 @@ An `AVG SLOPE SCORE` below `0.1%` is OK.
 Ideally it could be under `0.05%`.
 
 The lower, the better.
+
+## 6. Change the sound volume
+
+If you want to change the volume, especially for the starting sound of your robot or the output sound when you teleoperate, you need to go on a terminal **when the webRTC service is running** : 
+
+Run:
+```console
+$ ssh bedrock@your_robot_ip #password : root
+$ docker exec -it webrtc_streaming_playback_ros bash
+$ alsamixer -c 1 
+```
+
+Then, you can set the volume as you wish. 
+
+
