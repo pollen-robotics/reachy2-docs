@@ -22,38 +22,37 @@ toc: true
 {{< img-center "images/getting-started/safety-first/safety-guidelines/1_Be_vigilant.jpg" 400x "Be vigilant" >}}
 Always keep your eyes on the robot while it operates.
 
-#### 2) Ready to stop
+#### 2) Ready to Stop
 {{< img-center "images/getting-started/safety-first/safety-guidelines/2_Ready_to_stop.jpg" 400x "Ready to stop" >}}
-Always be ready to press the emergency stop button in case of unexpected behaviour.
+Always be ready to press the emergency stop button in case of unexpected behavior.
 
-#### 3) Maintain a safe distance
+#### 3) Maintain a Safe Distance
 {{< img-center "images/getting-started/safety-first/safety-guidelines/3_Maintain_a safe_distance.jpg" 400x "Maintain a safe distance" >}}
 Keep at least 1 meter clear on all sides of the robot.
 
-#### 4) Avoid the blind spot
+#### 4) Avoid the Blind Spot
 {{< img-center "images/getting-started/safety-first/safety-guidelines/4_Avoid_the_blind_spot.jpg" 400x "Avoid the blind spot" >}}
-Never stands behind Reachy while it operates.
+Never stand behind Reachy while it operates.
 
-#### 5) Wear gloves
+#### 5) Wear Gloves
 {{< img-center "images/getting-started/safety-first/safety-guidelines/5_Wear_gloves.jpg" 400x "Wear gloves" >}}
 Protect yourself from pinches when handling Reachy.
 
-#### 6) Stay within limits
+#### 6) Stay Within Limits
 {{< img-center "images/getting-started/safety-first/safety-guidelines/6_Stay_within_limits.jpg" 400x "Stay within limits" >}}
-Never lift object heavier than 3kg or extend them too far.
+Never lift objects heavier than 3 kg or extend them too far.
 
-#### 7) LIDAR Safety
+#### 7) Mobile Base Safety
 {{< img-center "images/getting-started/safety-first/safety-guidelines/7_LIDAR_safety.jpg" 400x "LIDAR Safety" >}}
 Stay out of the robot's movement zones to avoid collisions.
 
-#### 8) Stable ground
+#### 8) Stable Ground
 {{< img-center "images/getting-started/safety-first/safety-guidelines/8_Stable_Ground.jpg" 400x "Stable ground" >}}
 Operate Reachy only on flat, stable surfaces.
 
-
 - **Stay Alert**: Reachy 2 is powerful and lacks automatic collision detection. It will not stop if it encounters obstacles, including people or itself. Remain vigilant at all times.
-- **Qualified Users Only**: People using the robot or interacting with it must all be aware of the risks and be explicitly informed of the robot capabilities, limitations and restrictions. They must all be able to act with the appropriate behavior using the robot by knowing the safety guidelines.
-- **Emergency Stop Button**: Always keep a person ready to use the emergency stop button. Press it immediately if you lose control of the robot or notice unexpected movements. Objects held by Reachy may fall if the button is pressed, so ensure the workspace is clear of items that could cause harm.  
+- **Qualified Users Only**: People using the robot or interacting with it must all be aware of the risks and be explicitly informed of the robot's capabilities, limitations, and restrictions. They must all be able to act with the appropriate behavior using the robot by knowing the safety guidelines.
+- **Emergency Stop Button**: Always keep a person ready to use the emergency stop button. Press it immediately if you lose control of the robot or notice unexpected movements. Objects held by Reachy may fall if the button is pressed, so ensure the workspace is clear of items that could cause harm.
 
 ---
 
@@ -67,9 +66,9 @@ Operate Reachy only on flat, stable surfaces.
 ### Workspace and Positioning
 
 - **Clear Workspace**: Maintain enough space around Reachy for quick movement. Avoid positioning yourself or others between Reachy and walls or furniture.
-- **Safety Bubble:** Maintain a "safety bubble" around Reachy to prevent unintended contact or injury. This bubble should extend at least **1 meter** on all sides during operation, with the exception of the front, where closer interaction is allowed for specific tasks. However, no one should ever stand or move within **1 meter** behind the robot, as it lacks rear sensors to detect obstacles or individuals, increasing the risk of accidents, especially during teleoperation.
-- **Avoid Close Contact** : Never place your head, hands, or other body parts beneath Reachy’s arms or torso, especially when in motion.
-- **Pinch Point Awareness :** When handling or manipulating Reachy, be cautious of pinch points between its joints and moving parts. To reduce the risk of injury, it is strongly recommended to wear protective gloves during any manual interaction with the robot.
+- **Safety Bubble**: Maintain a "safety bubble" around Reachy to prevent unintended contact or injury. This bubble should extend at least **1 meter** on all sides during operation, with the exception of the front, where closer interaction is allowed for specific tasks. However, no one should ever stand or move within **1 meter** behind the robot, as it lacks rear sensors to detect obstacles or individuals, increasing the risk of accidents, especially during teleoperation.
+- **Avoid Close Contact**: Never place your head, hands, or other body parts beneath Reachy’s arms or torso, especially when in motion.
+- **Pinch Point Awareness**: When handling or manipulating Reachy, be cautious of pinch points between its joints and moving parts. To reduce the risk of injury, it is strongly recommended to wear protective gloves during any manual interaction with the robot.
 
 ### Handling Objects with Reachy
 
@@ -98,8 +97,8 @@ Operate Reachy only on flat, stable surfaces.
 ### Mobile Base Caution
 
 - **Use on Flat Surfaces**: Operate Reachy only on level ground. Slopes increase the risk of tipping.
-- **Speed Limits:** Reachy’s maximum movement speed is 2,5**m/s**. Avoid abrupt direction changes or oscillatory commands that could destabilize the robot.
-- **Active LIDAR for Anti-Collison** : Reachy’s LIDAR anti-collision system is active and monitors obstacles on a 2D plane at the height of the mobile base. It enforces a 0,70 meter (distance from the center of the robot) deceleration zone and a 0,55 meter full stop zone to prevent collisions. However, operators must remain vigilant, as the LIDAR does not detect higher obstacles like tables or elevated objects, nor does it account for the robot's arms. Always ensure the workspace is clear of potential hazards.
+- **Speed Limits**: Reachy’s maximum movement speed is 2.5 m/s. Avoid abrupt direction changes or oscillatory commands that could destabilize the robot.
+- **Active LIDAR for Anti-Collision**: Reachy’s LIDAR anti-collision system is active and monitors obstacles on a 2D plane at the height of the mobile base. It enforces a 0.7-meter (distance from the center of the robot) deceleration zone and a 0.55-meter full stop zone to prevent collisions. However, operators must remain vigilant, as the LIDAR does not detect higher obstacles like tables or elevated objects, nor does it account for the robot's arms. Always ensure the workspace is clear of potential hazards.
 
 ---
 
