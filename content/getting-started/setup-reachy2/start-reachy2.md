@@ -14,14 +14,14 @@ weight: 220
 toc: true
 ---
 
-**A) Start the mobile base**
+## A) Start the Mobile Base
 
 <img src="/gifs/getting-started/setup-reachy2/start-reachy2/Reachy2_getting-started-3-A_start-mobile-base_864x864.gif" alt="Start mobile base" style="display: block; margin: 0 auto;" width="300">  
 
 <br />
 Press the mobile base button (next to the mobile base’s LCD screen).
 
-**B) Calibrate Reachy**
+## B) Calibrate Reachy
 
 <img src="/gifs/getting-started/setup-reachy2/start-reachy2/Reachy2_getting-started-3-B_Calibrate-Reachy_864x864.gif" alt="Calibrate Reachy" style="display: block; margin: 0 auto;" width="300"> 
 
@@ -30,11 +30,10 @@ Press and turn the emergency stop button clockwise to raise it. The automatic ca
 
 {{< alert icon="🤖" text="The robot is going to move slightly during the calibration process. Do not touch the robot, and make sure the arms do not encounter any obstacles (tripod included) during its movements." >}}
 
-
-**C) Turn on Reachy’s computer**
+## C) Turn on Reachy’s Computer
 
 <img src="/gifs/getting-started/setup-reachy2/start-reachy2/Reachy2_getting-started-3-C_Turn-on-Reachys-computer_864x864.gif" alt="Turn on Reachy's computer" style="display: block; margin: 0 auto;" width="300"> 
 
-Press button located on Reachy’s back. This takes up to 2 minutes for the computer to start. You will hear a little bubbly sound when Reachy is ready.
+Press the button located on Reachy’s back. It takes up to 2 minutes for the computer to start. You will hear a little bubbly sound when Reachy is ready.
 
-{{< alert icon="🔌" text="We advise to unplug the computer after each use for power saving, because the USB ports are still consuming current when the computer is off." >}}
+{{< alert icon="🔌" text="We advise unplugging the computer after each use for power saving, because the USB ports still consume current when the computer is off." >}}
