@@ -59,8 +59,6 @@ reachy.cameras
 
 The list of initialized cameras should contain both the teleop and SR camera.  
 
-For each camera, namely the teleop and the SR ones, you must call the `capture()`function each time you want to get an image. This captures an image from both view of the given camera at the same time. You can then access one of the image with the `get_frame()` method.
-
 ### Teleop camera
 
 To get both views of the robot teleop cameras:
@@ -70,7 +68,6 @@ from reachy2_sdk.media.camera import CameraView
 
 reachy = ReachySDK(host='192.168.0.42')
 
-reachy.cameras.teleop.capture()
 l_frame = reachy.cameras.teleop.get_frame(CameraView.LEFT)
 r_frame = reachy.cameras.teleop.get_frame(CameraView.RIGHT)
 ```
@@ -89,14 +86,13 @@ cv.destroyAllWindows()
 The SR camera works exactly the same as the teleop camera, but you have more elements captured. In fact, it a RGBD camera, so you have both access to the RGB images and depth information.  
 
 #### RGB images
-Getting RGB images from the SR camera looks the same as from the teleop one: after having called `capture()`, use `get_frame()` specifying the CameraView you want to get.
+
 ```python
 from reachy_sdk import ReachySDK
 from reachy2_sdk.media.camera import CameraView
 
 reachy = ReachySDK(host='192.168.0.42')
 
-reachy.cameras.SR.capture()
 l_frame = reachy.cameras.SR.get_frame(CameraView.LEFT)
 r_frame = reachy.cameras.SR.get_frame(CameraView.RIGHT)
 ```
@@ -122,7 +118,6 @@ from reachy2_sdk.media.camera import CameraView
 
 reachy = ReachySDK(host='192.168.0.42')
 
-reachy.cameras.SR.capture()
 l_depth_frame = reachy.cameras.SR.get_depth_frame(CameraView.LEFT)
 r_depth_frame = reachy.cameras.SR.get_depth_frame(CameraView.RIGHT)
 depth = reachy.cameras.SR.get_depthmap()
@@ -140,5 +135,3 @@ cv2.imshow("disparity", disparity)
 cv.waitKey(0)
 cv.destroyAllWindows()
 ```
-
-> Note that when you call `capture()` on the SR camera, both RGB images and depth information are captured at the same time.
