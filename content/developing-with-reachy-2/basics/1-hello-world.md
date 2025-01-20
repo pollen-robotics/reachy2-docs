@@ -85,7 +85,7 @@ You are now ready !
 
 ### 1. Connect to the robot
 
-If you followed the instructions from ["Connect to Reachy 2"]({{< ref "developing-with-reachy-2/getting-started-sdk/connect-reachy2/" >}}), you know how to get Reachy's IP address and how to connect to the robot in a Python interface with the command  : 
+If you followed the instructions from ["Connect to Reachy 2"]({{< ref "developing-with-reachy-2/getting-started-sdk/connect-reachy2" >}}), you know how to get Reachy's IP address and how to connect to the robot in a Python interface with the command  : 
 
 *(type `python` first in your terminal)*
 
