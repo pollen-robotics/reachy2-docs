@@ -18,7 +18,7 @@ toc: true
 > You can choose to follow our online documentation or to see directly the images from your Reachy by following the [notebook n°5](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/5_cameras_images.ipynb). 
 
 
-This section assumes that you went through the [Hello World]({{< ref "developing-with-reachy-2/basics/1-hello-world/" >}}) so that you know how to connect to the robot.
+This section assumes that you went through the [Hello World]({{< ref "developing-with-reachy-2/basics/1-hello-world" >}}) so that you know how to connect to the robot.
 
 Reachy2 has 2 types of camera:
 - the **teleop** cameras, with a left and right cameras, located in Reachy's head and used for the teleoperation
