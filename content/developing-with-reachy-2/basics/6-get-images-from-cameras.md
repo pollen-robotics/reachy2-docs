@@ -1,7 +1,7 @@
 ---
 title: "6. Get images from cameras"
-description: "Images acquisition using the Python SDK"
-lead: "Images acquisition "
+description: "Image acquisition using the Python SDK"
+lead: "Image acquisition"
 date: 2023-07-26T08:05:23+02:00
 lastmod: 2023-07-26T08:05:23+02:00
 draft: false
@@ -15,25 +15,23 @@ toc: true
 ---
 <br>
 
-> You can choose to follow our online documentation or to see directly the images from your Reachy by following the [notebook n°5](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/5_cameras_images.ipynb). 
+> You can choose to follow our online documentation or directly see images from your Reachy by following the [notebook n°5](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/5_cameras_images.ipynb).
 
+This section assumes that you have gone through the [Hello World]({{< ref "developing-with-reachy-2/basics/1-hello-world" >}}) guide to learn how to connect to the robot.
 
-This section assumes that you went through the [Hello World]({{< ref "developing-with-reachy-2/basics/1-hello-world" >}}) so that you know how to connect to the robot.
+Reachy 2 has two types of cameras:
+- **Teleop cameras**, which include left and right cameras located in Reachy's head, used for teleoperation.
+- **Depth camera**, equipped with a depth sensor, located in Reachy 2’s torso, primarily useful for manipulation tasks.
 
-Reachy2 has 2 types of camera:
-- the **teleop** cameras, with a left and right cameras, located in Reachy's head and used for the teleoperation
-- the **depth** camera, equipped with a depth sensor, located in Reachy 2’s torso and mainly useful for manipulation tasks
-
-Each camera can be accessed separately through *reachy.cameras*. Teleop cameras  have a right and left view, with the left and right sides considered from Reachy point of view, while the depth camera has a left (i.e. mono RGB) and depth view.  To be able to specify the view you want to get a frame from, you will need to import CameraView:
+Each camera can be accessed separately through *reachy.cameras*. Teleop cameras have left and right views, with the sides defined from Reachy's perspective, while the depth camera provides a left (i.e., mono RGB) and depth view. To specify the view you want to get a frame from, you will need to import `CameraView`:
 
 ```python
 from reachy2_sdk.media.camera import CameraView
 ```
 
-
 ## Get images
 
-First, connect to your Reachy.
+First, connect to your Reachy:
 
 ```python
 from reachy_sdk import ReachySDK
@@ -41,45 +39,45 @@ from reachy_sdk import ReachySDK
 reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
 
 reachy.cameras
->>> <CameraManager intialized_cameras=
+>>> <CameraManager initialized_cameras=
 	<Camera name="depth" stereo=False> 
 	<Camera name="teleop" stereo=True> 
 >
 ```
 
-The list of initialized cameras should contain both the teleop and depth cameras.  
+The list of initialized cameras should include both teleop and depth cameras.
 
-For each camera, namely the teleop and the deoth ones, you must call the `get_frame()`function each time you want to get an image. 
+For each one of the two cameras, you must call the `get_frame()` function whenever you want to retrieve an image.
 
 ### Teleop camera
 
 #### RGB images
 
-To get both views of the robot teleop cameras and the timestamp :
+To get images from the left and right teleop cameras along with their timestamps:
 ```python
 from reachy2_sdk.media.camera import CameraView
 
-l_frame, l_ts= reachy.cameras.teleop.get_frame(CameraView.LEFT)
+l_frame, l_ts = reachy.cameras.teleop.get_frame(CameraView.LEFT)
 r_frame, r_ts = reachy.cameras.teleop.get_frame(CameraView.RIGHT)
 ```
 
-> By default, if you don't specify which camera you want, it will be the left one. 
+> By default, if no camera view is specified, the left camera is used.
 
-Let's display the captured frame with PIL:
-
+To display the captured frame using PIL:
 ```python
 from PIL import Image
-Image.fromarray(l_frame[:,:,::-1])
+Image.fromarray(l_frame[:, :, ::-1])
 ```
 
 #### Camera parameters
-The intrinsic camera parameters, as defined [here](https://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/CameraInfo.html), are available :
+
+The intrinsic camera parameters, as defined [here](https://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/CameraInfo.html), are available:
 
 ```python
-height, width, distortion_model, D, K, R, P =  reachy.cameras.teleop.get_parameters(CameraView.LEFT)
+height, width, distortion_model, D, K, R, P = reachy.cameras.teleop.get_parameters(CameraView.LEFT)
 ```
 
-As well as the extrinsic parameters (meaning the transformation of Reachy's origin in the camera's frame) : 
+Extrinsic parameters (the transformation from Reachy's origin to the camera's frame) are also available:
 ```python
 T_cam_reachy = reachy.cameras.teleop.get_extrinsics()
 >>> array([[-8.20152401e-04, -9.99999365e-01, -7.72635108e-04,
@@ -92,14 +90,13 @@ T_cam_reachy = reachy.cameras.teleop.get_extrinsics()
          1.00000000e+00]])
 ```
 
-
-
 ### Depth camera
-The depth camera works exactly the same as the teleop camera, but you have more elements captured. In fact, it a RGBD camera, so you have both access to the RGB image and depth information.  
+
+The depth camera operates similarly to the teleop camera but captures additional data. It is an RGBD camera, providing both RGB images and depth information.
 
 #### RGB image
-You can use `get_frame()` to get the image : 
 
+You can retrieve RGB images using `get_frame()`:
 ```python
 from reachy_sdk import ReachySDK
 from reachy2_sdk.media.camera import CameraView
@@ -109,26 +106,23 @@ reachy = ReachySDK(host='10.0.0.201')
 rgb_frame, rgb_ts = reachy.cameras.depth.get_frame()
 ```
 
-Let's display it with PIL:
+To display it using PIL:
 ```python
-Image.fromarray(rgb_frame[:,:,::-1])
-
+Image.fromarray(rgb_frame[:, :, ::-1])
 ```
 
-#### Depth informations
+#### Depth information
 
-You can use `get_depth_frame()` to get the depth information and display it :
-
+Retrieve depth data using `get_depth_frame()`:
 ```python
 depth_frame, depth_ts = reachy.cameras.depth.get_depth_frame()
-Image.fromarray(depth_frame[:,:,::-1])
+Image.fromarray(depth_frame[:, :, ::-1])
 ```
 
 #### Camera parameters
-The intrinsic camera parameters, as defined [here](https://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/CameraInfo.html), are available :
-
+The intrinsic camera parameters, as defined [here](https://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/CameraInfo.html), are available as follows:
 ```python
-height, width, distortion_model, D, K, R, P =  reachy.cameras.depth.get_parameters()
+height, width, distortion_model, D, K, R, P = reachy.cameras.depth.get_parameters()
 >>> (720,
  1280,
  'rational_polynomial',
@@ -143,10 +137,9 @@ height, width, distortion_model, D, K, R, P =  reachy.cameras.depth.get_paramete
  array([[692.074646  ,   0.        , 637.12384033,   0.        ],
         [  0.        , 691.86395264, 358.03106689,   0.        ],
         [  0.        ,   0.        ,   1.        ,   0.        ]]))
-
 ```
 
-As well as the extrinsic parameters (meaning the transformation of Reachy's origin in the camera's frame) : 
+Extrinsic parameters (the transformation from Reachy's origin to the camera's frame) are also available:
 ```python
 T_cam_reachy = reachy.cameras.depth.get_extrinsics()
 >>> array([[ 1.11022302e-16, -1.00000000e+00,  5.55111512e-17,
@@ -157,8 +150,7 @@ T_cam_reachy = reachy.cameras.depth.get_extrinsics()
         -4.88122743e-03],
        [ 0.00000000e+00,  0.00000000e+00,  0.00000000e+00,
          1.00000000e+00]])
-
 ```
 
-That's it for the cameras  ! 
+That's it for the cameras! 
 Now, we are going to record and replay movements.
