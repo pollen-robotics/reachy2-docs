@@ -122,22 +122,22 @@ reachy.r_arm.forward_kinematics([0, 0, 0, -90, 0, 0, 0])
 ```
 
 ### Understand the result
-The 4x4 matrix returned by the **`forward_kinematics()`** method is what is often called a **pose**. It actually encodes both the 3D translation (as a 3D vector) and the 3D rotation (as a 3x3 matrix) into one single representation.
+
+The 4x4 matrix returned by the **`forward_kinematics()`** method is often referred to as a **pose**. It encodes both the 3D translation (a 3D vector) and the 3D rotation (a 3x3 matrix) into a single representation: the **4x4 homogeneous transformation matrix**. :sunglasses:
 
 $$\begin{bmatrix}
-R_{11} & R_{12} & R_{13} & T_x\\\\\\
-R_{21} & R_{22} & R_{23} & T_y\\\\\\
-R_{31} & R_{32} & R_{33} & T_z\\\\\\
+R_{11} & R_{12} & R_{13} & T_x\\\\
+R_{21} & R_{22} & R_{23} & T_y\\\\
+R_{31} & R_{32} & R_{33} & T_z\\\\
 0 & 0 & 0 & 1
 \end{bmatrix}$$
 
-The instruction
-
+The following function returns the current pose of the right end-effector based on the present position of each joint in the right arm:
 ```python
 reachy.r_arm.forward_kinematics()
 ```
 
-returns the current pose of the right end-effector, based on the present position of every joint in the right arm.
+
 
 You can also compute the pose for a given joints position. To do that, just pass the list of position as argument of forward_kinematics. Be careful to respect the order of the position you give and to give all the joints in the arm kinematic chain (i.e. from *shoulder_pitch* to *wrist_roll*).
 
@@ -158,8 +158,8 @@ As of the rotation matrix, the identity matrix corresponds to the zero position 
 Here we obtained the rotation matrix
 
 $$\begin{bmatrix}
-0 & 0 & -1\\\\\\
-0 & 1 & 0 \\\\\\
+0 & 0 & -1\\\\
+0 & 1 & 0 \\\\
 1 & 0 & 0
 \end{bmatrix}$$
 
@@ -182,7 +182,7 @@ So scipy tells us that a rotation of -90° along the y axis has been made to get
 
 The inverse kinematics is the exact opposite of the forward kinematics. From a 4x4 pose in Reachy 2 coordinate system, it gives a list of joints positions to reach this target.
 
-Knowing where you arm is located in the 3D space can be useful but most of the time what you want is to move the arm in cartesian coordinates. You want to have the possibility to say: 
+Knowing where your arm is located in the 3D space can be useful but most of the time what you want is to move the arm in cartesian coordinates. You want to have the possibility to say: 
 > “Move your hand to [x, y, z] with a 90° rotation around the Y axis”. 
 
 This is what **`goto()`** does, if the input is a 4x4 matrix. 
@@ -216,7 +216,7 @@ Contrary to the forward kinematics which has a unique answer (giving all joints 
 
 ### A word about reachability
 
-Not all poses are reachable. A simple case of a non-reachable pose is one that is too far away. A more complex case would be a pose that would require at least one joint to go beyond its phyisical limits in order to get there, one can imagine poses where the wrist is hyper-flexed, or the elbow is bend backwards.
+Not all poses are reachable. A simple case of a non-reachable pose is one that is too far away. A more complex case would be a pose that would require at least one joint to go beyond its physical limits in order to get there. One can imagine poses where the wrist is hyper-flexed, or the elbow is bent backwards.
 The Inverse Kinematics uses a symbolic algorithm that always knows if a pose is reachable or not (free from numerical solver pitfalls like initial seed dependence or local minima).
 If the pose is not reachable, the `inverse_kinematics()` function will raise an exception. Therefore it's a good practice to call it using try/except keywords.
 
@@ -250,7 +250,6 @@ And to complete our corners, we can deduce D from A and C. D coordinates should 
 
 $$D = \begin{pmatrix}0.3 & -0.1 & -0.3\end{pmatrix}$$
 
-{{< warning icon="👉🏾" text="<b>Remember that you always have to provide poses to the inverse kinematics that are actually reachable by the robot.</b> If you're not sure whether the 3D point that you defined is reachable by Reachy, you can move the arm with your hand in compliant mode (meaning turned off), ask the forward kinematics and check the 3D translation component of the returned pose. " >}}
 
 But having the 3D position is not enough to design a pose. You also need to provide the 3D orientation via a rotation matrix. It's often the tricky part when building a target pose matrix.
 
