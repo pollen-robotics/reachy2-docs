@@ -16,7 +16,7 @@ toc: true
 
 ## A) Remove Reachy and its accessories out of the box
 
-Reachy will arrive in a big box. Be sure to have at least 4 people to safely lift the robot out of the box, and use a crowbar to open the box. Cut the fireproof fabric with a pair of scissors. Remove Reachy and its accessories out of the box. You should have:
+Reachy will arrive in a big box. Be sure to have at least 4 people to safely lift the robot out of the box, and use a crowbar to open the box. Cut the firewall fabric with a pair of scissors. Remove Reachy and its accessories out of the box. You should have:
 
 - Printed user guide, safety guidelines, and invoice
 - Battery charger
