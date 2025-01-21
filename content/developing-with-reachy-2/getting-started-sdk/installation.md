@@ -55,19 +55,19 @@ We recommend you to use a virtual environment, that will allow you to have all t
 
 1. You can use Miniconda, which is a minimal version of the Anaconda Python distribution. You need to download it [there](https://www.anaconda.com/download/success) : scroll down until you reach the Miniconda Installers and click on the Windows installer. 
 
-    {{< img "images/sdk/getting-started/conda_install.png" 300x "miniconda">}}
+    {{< img "images/sdk/getting-started/conda_install.png" 500x "miniconda">}}
     
 2. Launch the .exe you just downloaded and follow the installation procedure. 
     
-    {{< img "images/sdk/getting-started/conda_install_2.png" 300x "miniconda installer">}}
+    {{< img "images/sdk/getting-started/conda_install_2.png" 500x "miniconda installer">}}
     
 3. Open the Anaconda Powershell Prompt on your applications and type `conda create -n <env_name> python=3.10 git`, for example `conda create -n reachy python=3.10 git` (to install the supported version of Python and Git with your new environment)
     
-    {{< img "images/sdk/getting-started/create_env.png" 300x "create venv">}}
+    {{< img "images/sdk/getting-started/create_env.png" 800x "create venv">}}
     
 4. Then activate your virtual environment : `conda activate <env_name>`
     
-    {{< img "images/sdk/getting_started/activate_env.png" 300x "activate venv">}}
+    {{< img "images/sdk/getting-started/activate_env.png" 800x "activate venv">}}
     
 
 ### Install the SDK Client :
