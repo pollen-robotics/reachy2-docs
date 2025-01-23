@@ -14,4 +14,3 @@ weight: 140
 toc: true
 ---
 
-*Page in progress*

@@ -14,4 +14,74 @@ weight: 130
 toc: true
 ---
 
-*Page in progress*
+Our Orbita actuators are parallel mechanisms (as opposed to serial mechanisms that are found in a majority of robots), powered by Maxon DC brushless motors. Our actuators are faster consume less power, and mimic human-like movements especially for Orbita 3D.
+
+## Orbita 3D
+
+Orbita 3D is used in Reachy’s neck and wrist(s). Orbita 3D is a special design with 3 concentric and stepped motorized axes, driven by brushless geared motors with a power of 40W each.
+
+Custom embedded electronics capable of controlling the motors in FOC, communicating in ethercat.
+
+Origin taking procedure at each restart, to find the nominal position whatever the position before ignition.
+
+  {{< img-center "images/hardware-guide/specifications/motors-actuators/orbita3D.png" 600x "Orbita3D" >}}
+
+**Key points:**
+
+- Yaw: infinite rotation
+- Pitch / Roll: +/- 45°
+- Reversible articulation
+- Hollow axis diameter 10mm
+- Dedicated on-board electronics
+- 24V power supply
+- Ethercat protocol
+- FOC control
+- Origin setting when starting the robot
+
+**Payload**
+
+  {{< img-center "images/hardware-guide/specifications/motors-actuators/orbita3D_payload.png" 600x "Orbita3D payload" >}}
+
+
+**Specifications**:
+
+|  | nominal | max |
+| --- | --- | --- |
+| Nominal voltage | 24V | ? |
+| Speed | 50 rpm | 70 rpm |
+| Mass | 3 Kg (@10 cm) | 5 Kg (@10 cm) |
+| Torque | 3 N.m | 15 N.m (yaw) |
+| Angular travel | 90° cone | infinite Yaw rotation |
+| Slack | 0.5 ° | 1° |
+| Diameter | 75 mm |  |
+| Support distance / center of the joint | 95 mm | 108 mm (sphere included) |
+| Length (with motors) | 180 mm | 220 mm (cables included) |
+
+**Mechanical characteristics**:
+
+| Weight | 950 g |
+| --- | --- |
+| Hollow axis diameter | 10 mm |
+| Geared motor | Brushless motor :Maxon ECXT22L
+GearBox : Maxon GPX22C 1:28
+Codeur : Maxon EASY MILE 1024 pts |
+| Internal ratio | 5.33 (64:12) |
+| Reversibility | OK |
+
+**Electronical characteristics**:
+
+| Power supply voltage | 24 V |
+| --- | --- |
+| Protocol  | Ethercat |
+| Driver | FOC Control |
+| Connectors | Ethercat : Pico Blade 5 voies (input & output) |
+| | Power supply : Micro Fit 2 voies (Input & output) |
+| | Programmation : USB2 ou JTAG |
+| Extra  | SPI : Pico Blade 4 voies |
+| | Analog input : Pico Blade 2 voies |
+| | Dynamixel 4 voies |
+
+
+## Orbita 2D
+
+Orbita 2D is used in Reachy’s elbow(s) and shoulder(s) and has 2 degrees of freedom.
