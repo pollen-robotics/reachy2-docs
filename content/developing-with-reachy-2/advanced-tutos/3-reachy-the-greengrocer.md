@@ -26,4 +26,4 @@ What you will learn :
 - How to make Reachy move according to what it sees
 
 
-{{< img-center "images/sdk/tutorials/gif_oranges.gif" 400x "" >}}
+<img src="/gifs/tutorials/gif_oranges.gif" alt="Gif greengrocer" style="display: block; margin: 0 auto;" width="400"> 

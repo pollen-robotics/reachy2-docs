@@ -53,13 +53,13 @@ We recommend using a virtual environment, which allows you to install all the ne
 ### Create the Virtual Environment:
 
 1. Use Miniconda, a minimal version of the Anaconda Python distribution. Download it [here](https://www.anaconda.com/download/success): scroll down to the Miniconda Installers section and click on the Windows installer.  
-    
+
     {{< img "images/sdk/getting-started/conda_install.png" 500x "miniconda">}}
-    
+
 2. Launch the `.exe` you just downloaded and follow the installation procedure.  
-    
+
     {{< img "images/sdk/getting-started/conda_install_2.png" 500x "miniconda installer">}}
-    
+
 3. Open the Anaconda Powershell Prompt from your applications and type:  
     ```bash
     conda create -n <env_name> python=3.10 git
@@ -68,14 +68,14 @@ We recommend using a virtual environment, which allows you to install all the ne
     ```bash
     conda create -n reachy python=3.10 git
     ```
-    
+
     {{< img "images/sdk/getting-started/create_env.png" 800x "create venv">}}
-    
+
 4. Activate your virtual environment:
     ```bash
     conda activate <env_name>
     ```
-    
+
     {{< img "images/sdk/getting-started/activate_env.png" 800x "activate venv">}}
 
     

@@ -26,4 +26,4 @@ What you will learn :
 - How to follow a particular **trajectory** with the end effector.
 
 
-{{< img-center "images/sdk/tutorials/gif_rope.gif" 400x "" >}}
+<img src="/gifs/tutorials/gif_rope.gif" alt="Gif mime" style="display: block; margin: 0 auto;" width="400"> 
