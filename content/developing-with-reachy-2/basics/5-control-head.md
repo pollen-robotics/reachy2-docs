@@ -13,12 +13,16 @@ menu:
 weight: 240
 toc: true
 ---
+<br>
+
+> You can choose to follow our online documentation or to make your Reachy move by following the [notebook n°4](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/4_head_control.ipynb). 
 
 
 ## Head presentation
 
 Reachy 2's head is mounted on an Orbita3D actuator, referred to as the **neck** actuator, giving 3 degrees of freedom to control the head orientation.  
-> Note : the antennas are not motorized for the moment
+
+> Note : the antennas control will be soon integrated in the SDK ! Stay tuned !
 
 <p align="center">
     {{< video "videos/sdk/orbita.mp4" "80%" >}}
@@ -30,10 +34,15 @@ Before starting to control it, connect to your Reachy and turn it on. As in the 
 ```python
 from reachy2_sdk import ReachySDK
 
-reachy = ReachySDK(host='192.168.0.42')  # Replace with the actual IP
+reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
 
 reachy.head
->>> <Head ??>
+>>> <Head on=True actuators= 
+neck: <Orbita3d on=True joints=
+	<OrbitaJoint axis_type="roll" present_position=-0.0 goal_position=0.0 >
+	<OrbitaJoint axis_type="pitch" present_position=-10.0 goal_position=-10.0 >
+	<OrbitaJoint axis_type="yaw" present_position=0.0 goal_position=0.0 >
+
 
 reachy.head.turn_on()  # we turn on only the head
 ```
@@ -41,7 +50,7 @@ reachy.head.turn_on()  # we turn on only the head
 You could of course turn on the whole robot by calling `reachy.turn_on()` directly.
 
 There are several ways to control the head movements:
-- using the `look_at()`, `rotate_to()` and `orient()` methods, called directly at the **head** level. These methods works as [move commands described previously]({{< ref "developing-with-reachy-2/basics/2-understand-moves" >}}).
+- using the `look_at()`, `goto` and `rotate_by` methods, called directly at the **head** level. These methods works as [move commands described previously]({{< ref "developing-with-reachy-2/basics/2-understand-moves" >}}).
 - controlling the joints goal positions, namely **reachy.head.neck.roll**, **reachy.head.neck.pitch** and **reachy.head.neck.yaw**.
 
 ## Head moves methods
@@ -50,7 +59,7 @@ There are several ways to control the head movements:
 
 You can use the `look_at()` function to make the head look at a specific point in space. This point must be given in Reachy 2's coordinate system in **meters**. The coordinate system is the one we have seen previously:
 
-* the X axis corresponds to the foward arrow,
+* the X axis corresponds to the forward arrow,
 * the Y axis corresponds to the right to left arrow,
 * the Z axis corresponds to the up arrow.
 
@@ -58,14 +67,14 @@ The origin of this coordinate system is located in the upper part of the robot t
 
 {{< img-center "images/sdk/first-moves/reachy_frame.jpg" 400x "" >}}
 
-If you want Reachy to look forward you can send it the following.
+If you want Reachy to look forward, you can send it the following : 
 
 ```python
-reachy.head.turn_on() # Don't forget to put the hand in stiff mode
+reachy.head.turn_on() # Don't forget to put the head in stiff mode
 reachy.head.look_at(x=0.5, y=0, z=0.2, duration=1.0)
 ```
 
-You can use multiple *look_at* to chain head movements, or even chain them with the `rotate_to()` and `orient()` functions described below. As seen in the [Understand moves in Reachy 2 section]({{< ref "developing-with-reachy-2/basics/2-understand-moves" >}}), the commands on the head will be stacked.
+You can use multiple *look_at* to chain head movements, or even chain them with the `rotate_by()` and `goto()` functions described below. As seen in the [Understand moves in Reachy 2 section]({{< ref "developing-with-reachy-2/basics/2-understand-moves" >}}), the commands on the head will be stacked.
 
 <p align="center">
     {{< video "videos/sdk/look.mp4" "80%" >}}
@@ -84,93 +93,108 @@ look_front = reachy.head.look_at(x=0.5, y=0, z=0, duration=1.0)
 
 The best way to understand how to use the *look_at* is to play with it. Picture a position you would like Reachy's head to be in, guess a point which could match for the *look_at* and check if you got it right!
 
-Another cool thing is that we can combine Reachy's kinematics with the *look_at* so that Reachy's head follows its hand!
+Another cool thing is that we can combine Reachy's kinematics with the *look_at* so that Reachy's head follows its hand while you're moving it !
 
 <p align="center">
     {{< video "videos/sdk/look_at_hand.mp4" "80%" >}}
 </p>
 
 ```python
-reachy.turn_on('head')
-
 x, y, z = reachy.r_arm.forward_kinematics()[:3, -1]
-reachy.head.look_at(x=x, y=y, z=z, duration=1.0)
-
-time.sleep(0.5)
+reachy.head.look_at(x=x, y=y, z=z, duration=1.0, wait = True)
 
 while True:
     x, y, z = reachy.r_arm.forward_kinematics()[:3, -1]
-    reachy.head.look_at(x=x, y=y, z=z, duration=0.1)
+    reachy.head.look_at(x=x, y=y, z=z, duration=0.1, wait = True)
 ```
 
-What the code says is that we compute the [forward kinematics of Reachy's right arm]({{< ref "developing-with-reachy-2/basics/5-control-head#forward-kinematics" >}}), and the x, y, z of Reachy's right end-effector in the Reachy's coordinates system will be the coordinates of the point used by the *look_at*.
+What the code says is that we compute the [forward kinematics of Reachy's right arm]({{< ref "developing-with-reachy-2/basics/5-control-head#forward-kinematics" >}}), and the x, y, z of Reachy's right end-effector in the Reachy's coordinates system will be the coordinates of the point used by the *look_at*. We use a loop with a blocking movement (*parameter wait=True*) to make the head follow the hand at a frequency of 10Hz. 
 
-### rotate_to()
 
-The `rotate_to()` function is another way to control the head. You directly control the joint of the neck, giving the roll, pitch and yaw angles in degrees. The rotation is made in the order: roll, pitch, yaw, in the Orbita3D coordinate system.
+### goto()
+
+The `goto()` function is another way to control the head. There is two ways to use it :
+- from joints positions (in joint space)
+- from the desired orientation as a quaternion (in cartesian space)
+
+#### From joint positions
+
+ You directly control the joint of the neck, giving the roll, pitch and yaw angles in degrees. The rotation is made in the order: roll, pitch, yaw, in the Orbita3D coordinate system.
 
 {{< img-center "images/sdk/first-moves/orbita_rpy.png" 400x "" >}}
 
 To make the robot looks a little down:
 ```python
-reachy.head.turn_on() # Don't forget to put the hand in stiff mode
-reachy.head.rotate_to(roll=0, pitch=-10, yaw=0, duration=1.0)
+reachy.head.turn_on() # Don't forget to put the head in stiff mode
+reachy.head.goto([0, 10, 0], duration=1.0)
 ```
 
-### orient()
+#### From quaternion
 
-The last method to control the head is the `orient()` method. You can control the head with a quaternion.
+You can control the head with a quaternion.
 
 You can use [pyquaternion library](https://kieranwynn.github.io/pyquaternion/) to create suitable quaternion for this method.
+
 
 ```python
 from pyquaternion import Quaternion
 
-q = Quaternion(axis=[1, 0, 0], angle=3.14159265)
-reachy.head.turn_on()
-reachy.head.orient(q)
+q = Quaternion(axis=[1, 0, 0], angle=3.14159265 / 4) # tilt head about 45° to the right
+reachy.head.goto(q)
 ```
 
+### Rotate_by()
+
+You can also rotate the head from its current position, by using the *rotate_by* function and specifying angular degree values in roll, pitch, yaw, either in Reachy's or head's frame. 
+
+
+```python
+reachy.head.rotate_by(roll=0, pitch=0, yaw=20, frame='head')
+
+reachy.head.rotate_by(roll=-30, pitch=0, yaw=0, frame='robot')
+```
+
+
 ## Joint's goal_position
+
+The *goal_position* attribute of a joint can be used to set a new joint's target position to make it move. However, we recommend using the **goto()** method to move the motors which provides better control on the joint's trajectories.  
+
+Using goal_position will make the motor move **as fast as it can**, so be careful when using it.  
+
+```python
+reachy.head.neck.roll.goal_position = 30
+reachy.send_goal_positions()
+```
+
+:warning: goal_position must be written in **degrees**.
 
 
 ## Read head position
 
-You can read the head orientation in two different ways:
+You can read the head positions using : 
 
-- using the `get_orientation()` method, which returns a quaternion
-- using the `get_joints_positions()` method, which the neck's roll, pitch and yaw present_position.
+- Cartesian space : `get_current_orientation()` will give the head orientation as a quaternion according to the robot's frame
 
-### get_orientation()
+
+- Joint space : `get_current_positions()` will give the neck's roll, pitch and yaw present_position
+
+:warning: *Don't forget, there is a 10-degrees difference between the cartesian space and joint space, so we recommand you to not mix them.*
+
+### In cartesian space :
 
 ```python
-q = reachy.head.get_orientation()
-print(q)
->>> ??
+reachy.head.get_current_orientation()
+>>> Quaternion(0.9794632485822068, 0.10189819035488734, -0.01081920496959773, 0.17364172391166605)
 ```
 
-### get_joints_positions()
+### In joint space : 
 
 In case you feel more comfortable using roll, pitch, yaw angles rather than working with quaternions, you can retrieve those values from the **neck joints**.
 
-```python
-reachy.head.rotate_to(20, 30, -10)
-time.sleep(2)
-reachy.head.get_joints_positions()
->>> [20, 30, -10]   #  roll=20, pitch=30, yaw=-10
-```
-
-Be careful that contrary to the quaternion that offers a unique representation of a rotation, it is not the case of the euler angles. Several angles combination can lead to the same orientation in space. For example:
 
 ```python
-reachy.head.rotate_to(70, -100, 80)  #  roll=70, pitch=-100, yaw=80
-time.sleep(2)
-reachy.head.get_joints_positions()
->>> [-110, -80, -100]   #  roll=-110, pitch=-80, yaw=-100
+reachy.head.get_current_positions()
+>>> [11.881595589573665, -8.976164597791765, 22.07170507647743]
 ```
 
-The values are different, nevertheless it is the same final orientation. You can convince yourself doing:
-```python
-reachy.head.rotate_to(-110, -80, -100)
-```
-The head won't move.
+Now that we can move the head, let's focus on its cameras !
