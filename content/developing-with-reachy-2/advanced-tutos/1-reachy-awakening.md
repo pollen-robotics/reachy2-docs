@@ -45,4 +45,4 @@ What you will learn:
 - How to make it move its **arms**
 - How to **synchronize** head and arms movements
 
-{{< img-center "images/sdk/tutorials/gif_awake.gif" 400x "" >}}
+<img src="/gifs/tutorials/gif_awake.gif" alt="Gif awake" style="display: block; margin: 0 auto;" width="400"> 
