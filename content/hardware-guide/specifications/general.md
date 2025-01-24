@@ -14,17 +14,6 @@ weight: 100
 toc: true
 ---
 
-## Computer
-One computer to run Reachy 2’s stack:
-
-- [Solidrun Bedrock v3000](https://www.solid-run.com/industrial-computers/bedrock-v3000-basic/)
-- CPU computer (as opposed to GPU/TPU used for AI needs)
-- Fanless industrial PC
-    
-  {{< img-center "images/hardware-guide/specifications/general/bedrock_image.png" 600x "Bedrock v3000 computer" >}}    
-
-Note: For AI needs, processing will be done via customer’s own computers at this stage
-
 ## Key features
 
 - 2x 7 DoF Arms made of parallel joints (2x 2DoF & 1x 3DoF)
@@ -35,7 +24,7 @@ Note: For AI needs, processing will be done via customer’s own computers at th
 - Modular design (right arm strictly identical to left arm)
 - High reachability
 
-## **Architecture**
+## Architecture
 
 Reachy 7 DoF arm is made of 2x Orbita 2D actuators for Shoulder & Elbow, and 1x Orbita 3D actuator for wrist. Reachy neck is made of 1x Orbita 3D too.
 
@@ -71,3 +60,14 @@ Based on robot’s origin: **10° Pitch**
     
   {{< img-center "images/hardware-guide/specifications/general/joints_localisation_3.png" 200x "Joints localisation" >}}
 
+
+## Computer
+One computer to run Reachy 2’s stack:
+
+- [Solidrun Bedrock v3000](https://www.solid-run.com/industrial-computers/bedrock-v3000-basic/)
+- CPU computer (as opposed to GPU/TPU used for AI needs)
+- Fanless industrial PC  
+
+  {{< img-center "images/hardware-guide/specifications/general/bedrock_image.png" 600x "Bedrock v3000 computer" >}}    
+
+Note: For AI needs, processing will be done via customer’s own computers at this stage
