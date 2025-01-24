@@ -16,6 +16,8 @@ toc: true
 
 ## Head vision module
 
+### Modules
+
   {{< img-center "images/hardware-guide/specifications/vision/head_module.png" 600x "Head vision module" >}}
 
 Our vision module combines several features in a single module in Reachy’s head:
@@ -32,7 +34,21 @@ Different applications will use different cameras:
 - *Teleoperation -* RGB cameras with fish-eye lenses to stream 3D vision to a VR headset
 - *AI -* Time of Flight (ToF) module for accurate depth measurement and 3D mapping and RGB cameras for capturing the scene.
 
+### Localisation
+
+- Head camera *(localisation based on robot’s origin)*
+    
+  {{< img-center "images/hardware-guide/specifications/vision/stereo_localisation.png" 600x "Stereo cameras localisation" >}}
+    
+    
+- Head TOF *(localisation based on robot’s origin)*
+    
+  {{< img-center "images/hardware-guide/specifications/vision/tof_localisation.png" 600x "ToF localisation" >}}
+
+
 ## Torso vision module
+
+### Module
 
   {{< img-center "images/hardware-guide/specifications/vision/orbbec.png" 600x "Orbbec camera" >}}
 
@@ -45,22 +61,8 @@ Reachy has a RGB-D camera in its torso to improve its manipulation capabilities.
   {{< img-center "images/hardware-guide/specifications/vision/torso_camera.png" 600x "Torso camera" >}}
 
 
-**Sensors localisations**
+### Localisation
 
-- Head camera
-    
-  {{< img-center "images/hardware-guide/specifications/vision/stereo_localisation.png" 600x "Stereo cameras localisation" >}}
-    
-    Localisation based on robot’s origin
-    
-- Head TOF
-    
-  {{< img-center "images/hardware-guide/specifications/vision/tof_dimension.png" 600x "ToF localisation" >}}
-
-    Localisation based on robot’s origin 
-    
-- Torso camera
+- Torso camera *(localisation based on robot’s origin)*
     
   {{< img-center "images/hardware-guide/specifications/vision/orbbec_localisation.png" 600x "Orbbec localisation" >}}
-
-    Localisation based on robot’s origin

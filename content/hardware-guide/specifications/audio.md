@@ -33,11 +33,13 @@ It has been designed for two main use cases:
 
 - **Teleoperation**:
     - Robot ⇒ Operator - Hear what’s going on around the robot with spatialised audio for an immersive experience
-    - Operator ⇒ Environment / Person - Communicate with the robot’s direct environment
+    - Operator ⇒ Environment / Person - Communicate with the robot’s direct environment  
+
+</br>
 
 - **Artificial Intelligence**:
     - Speech to text (STT): Reachy can translate voice into text
     - Text to Speech (TTS): Reachy translates text into a human-like voice
     - Different use cases are possible:
         - Voice command (e.g. voice ⇒ text ⇒ code ⇒ action)
-        - Conversational robot (e.g. voice ⇒ text ⇒ voice)
+        - Conversational robot (e.g. voice ⇒ text ⇒ voice)  

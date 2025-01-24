@@ -43,11 +43,13 @@ Reachy 7 DoF arm is made of 2x Orbita 2D actuators for Shoulder & Elbow, and 1x 
 
 ### General dimensions
 
-  {{< img-center "images/hardware-guide/specifications/general/robot_dimension.png" 600x "Robot dimension" >}}
+  {{< img-center "images/hardware-guide/specifications/general/robot_dimension.png" 600x "Robot dimensions" >}}
 
-  {{< img-center "images/hardware-guide/specifications/general/arm_dimension.png" 600x "Arm dimension" >}}
+  {{< img-center "images/hardware-guide/specifications/general/arm_dimension.png" 600x "Arm dimensions" >}}
 
-  {{< img-center "images/hardware-guide/specifications/general/mb_dimension.png" 600x "Mobile base dimension" >}}
+  {{< img-center "images/hardware-guide/specifications/general/head_dimension.png" 500x "Head dimensions" >}}
+
+  {{< img-center "images/hardware-guide/specifications/general/mb_dimension.png" 500x "Mobile base dimensions" >}}
 
 
 ### Joints localisation
@@ -57,11 +59,15 @@ The robot's origin is defined by the intersection of the shoulder line and the v
   {{< img-center "images/hardware-guide/specifications/general/joints_localisation_1.png" 600x "Joints localisation" >}}
 
 
-- Shoulders : -15° Roll / 10° Yaw
+#### Shoulders 
+
+Based on robot’s origin: **-15° Roll and 10° Yaw**
     
   {{< img-center "images/hardware-guide/specifications/general/joints_localisation_2.png" 400x "Joints localisation" >}}
     
-- Neck : 10° Pitch
+#### Neck 
+
+Based on robot’s origin: **10° Pitch**
     
   {{< img-center "images/hardware-guide/specifications/general/joints_localisation_3.png" 200x "Joints localisation" >}}
 
