@@ -14,26 +14,24 @@ weight: 200
 toc: true
 ---
 
-
 ## A) Remove Reachy and its accessories out of the box
 
-Reachy will arrive in a big box. Be sure to be at least 4 people to safely lift the robot out of the box, and a crowbar to open the box. Cut the firewall fabric with a pair of scissors. Remove Reachy and its accessories out of the box. You should have:
+Reachy will arrive in a big box. Be sure to have at least 4 people to safely lift the robot out of the box, and use a crowbar to open the box. Cut the firewall fabric with a pair of scissors. Remove Reachy and its accessories out of the box. You should have:
 
-- Printed user guide, safety guidelines and invoice
+- Printed user guide, safety guidelines, and invoice
 - Battery charger
 - Mini USB cable
 - LCD screen kit
 - Emergency stop button
 - 2 plastic pieces for placing the emergency button
 
-## B) Lift the robot out of the box
+## B) Lift the Robot Out of the Box
 
-Reachy 2 weighs 50kg its heavy, make sure you are at least 4 people. Place people around the box as showed below.
+Reachy 2 weighs 50 kg; it's heavy, so make sure you have at least 4 people. Position people around the box as shown below.
 
 {{< img-center "images/getting-started/setup-reachy2/unbox-reachy2/Reachy2-getting-started-1-B_lift-robot.png" 300x "Lift robot" >}}
 
-
-## C) Adjust robot size
+## C) Adjust Robot Size
 
 <img src="/gifs/getting-started/setup-reachy2/unbox-reachy2/Reachy2_getting-started-1-C_Adjust-robot-size_864x864.gif" alt="Adjust robot size" style="display: block; margin: 0 auto;" width="300">  
 

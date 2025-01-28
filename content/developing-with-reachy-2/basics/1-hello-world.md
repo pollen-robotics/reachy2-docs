@@ -18,120 +18,115 @@ url: "/developing-with-reachy-2/basics/1-hello-world/"
 
 ## Materials
 
-To guide you through the SDK's functionalities, you can follow this written documentation (which is more complete), as well as the notebooks provided, so you can learn as you interact with your robot. 
+To guide you through the SDK's functionalities, you can follow this written documentation (which is more complete) as well as the provided notebooks, allowing you to learn interactively with your robot. 
 
-####  Find the notebooks
+#### Find the Notebooks
 <details>
-<summary> If you cloned the reachy2_sdk repository </summary>
+<summary>If you cloned the reachy2_sdk repository</summary>
 
-You can find the example notebooks in reachy2_sdk/src/examples. 
+You can find the example notebooks in `reachy2_sdk/src/examples`.
 </details>
 
 <details>
-<summary>If you installed the reachy2_sdk from Pypi</summary> 
-You haven't installed the examples on your computer. You can clone the folder in the directory that you want, by copying and pasting the instructions below into a terminal, in the desired folder. This will add an <i>examples_sdk</i> folder where you can find all the notebooks! 
-<br>
-<br>
+<summary>If you installed the reachy2_sdk from PyPI</summary>
 
+The examples are not installed by default. Clone the folder with the following commands in your desired directory. This will add an `examples_sdk` folder containing all notebooks.
 
-
-
-  ```python
-  git clone --no-checkout https://github.com/pollen-robotics/reachy2-sdk.git examples_sdk
-  cd examples_sdk
-  git sparse-checkout init --cone
-  git sparse-checkout set src/examples
-  git checkout develop
-  mv src/examples/* .
-  rm -rf src/
-  ```
-
+```bash
+git clone --no-checkout https://github.com/pollen-robotics/reachy2-sdk.git examples_sdk
+cd examples_sdk
+git sparse-checkout init --cone
+git sparse-checkout set src/examples
+git checkout develop
+mv src/examples/* .
+rm -rf src/
+```
 </details>
 
-#### Follow them
+#### Follow the Notebooks
 
 <details>
-<summary>
-If you have any trouble making the notebooks work, please follow those steps : </summary>
+<summary>If you encounter issues with the notebooks, follow these steps:</summary>
 
-1. In a terminal, go to the folder containing the notebooks 
-	(if the repo has been cloned: *reachy2_sdk/src/examples*, if downloaded: *examples_sdk*) : 
-   > ```cd path/to/folder```
+1. Navigate to the folder containing the notebooks:
+   ```bash
+   cd path/to/folder
+   ```
 
-2. Open your code editor by writing the command 
+2. Open your code editor:
+   ```bash
+   code .
+   ```
 
-    > ```code .```
+3. Execute the first cell. If prompted, install Jupyter and Python extensions by clicking "Yes."
 
-3. When you execute the first cell on your code editor, it may ask you if you want to install the jupyter and python extensions : click on “yes”.
+4. Select the appropriate kernel:
+   - Choose a Python environment and select your virtual environment.
 
-4. Then it will ask you to choose the kernel : choose a python environment then select your virtual environment. 
+   {{< img-center "images/sdk/first-moves/python_env.png" 600x "Select Python environment" >}}
+   {{< img-center "images/sdk/first-moves/reachy_env.png" 600x "Select Reachy environment" >}}
 
-    {{< img-center "images/sdk/first-moves/python_env.png" 600x "python env" >}}
-    {{< img-center "images/sdk/first-moves/reachy_env.png" 600x "reachy env" >}}
+5. Allow access if prompted by a Windows security popup:
+   {{< img-center "images/sdk/first-moves/firewall.png" 300x "Firewall permission" >}}
 
-5. A windows security popup can appear, click on “Allow” 
-    {{< img-center "images/sdk/first-moves/firewall.png" 300x "firewall" >}}
+6. Install the `ipykernel` package to run the notebooks:
+   {{< img-center "images/sdk/first-moves/pykernel.png" 600x "Install ipykernel" >}}
 
-6. Install the ipykernel package to make the notebooks run :
-    {{< img-center "images/sdk/first-moves/pykernel.png" 600x "pykernel" >}}
-
-You are now ready !
-
+You are now ready to proceed!
 </details>
 
 <br>
 
-## Be ready to move
+## Be Ready to Move
 
-### 1. Connect to the robot
+### 1. Connect to the Robot
 
-If you followed the instructions from ["Connect to Reachy 2"]({{< ref "developing-with-reachy-2/getting-started-sdk/connect-reachy2" >}}), you know how to get Reachy's IP address and how to connect to the robot in a Python interface with the command  : 
-
+Follow the instructions in ["Connect to Reachy 2"]({{< ref "developing-with-reachy-2/getting-started-sdk/connect-reachy2" >}}) to find Reachy's IP address. Connect to the robot with:
 *(type `python` first in your terminal)*
 
-``` python
+```python
 from reachy2_sdk import ReachySDK
 
 reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
 ```
 
 <details>
-<summary>Check the connection </summary>
+<summary>Check the Connection</summary>
 
-You can check the connection with your robot with:
+Verify the connection:
 ```python
 reachy.is_connected()
 >>> True
 ```
 
-If the connection has been lost, and the problem has been resolved, you can reconnect to the robot with the `connect()` method:
+If the connection is lost and the issue is resolved, reconnect with:
 ```python
 reachy.connect()
 ```
-
 </details>
 
+### 2. Turn On / Turn Off Motors
 
-### 2. Turn on / turn off motors
+#### The Whole Robot
 
-
-#### The whole robot
-
-When starting, your robot is in compliant mode, which means you can move its parts by manipulating manually the robot. In this mode, the robot won't respond to any command you send to it.
-
-At each use, you will have to turn on your robot's motors doing:
+When starting, the robot is in compliant mode, allowing manual manipulation of its parts. In this mode, the robot won't respond to any command you send to it. To activate motor control:
 ```python
 reachy.turn_on()
 ```
 
-At the end of your session or program, switch off the motors to send them back to compliant mode doing: 
+At the end of your session, return to compliant mode:
 ```python
 reachy.turn_off()
 ```
+This will act on all parts of your robot, including the mobile base.
 
-This will act on all parts of your robot, including the mobile base.  
+:warning: Turning off can be a bit brutal, especially if the arms are raised. You can use `reachy.turn_off_smoothly()` for torques to gradually decrease:
+```python
+reachy.turn_off_smoothly()
+```
+All parts are detailed below in [ReachySDK attributes]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachy-attributes" >}}).
 
-:warning: Turning off can be a bit brutal, especially if the arms are raised. You can use `reachy.turn_off_smoothly()` for torques to gradually decrease. 
+At any time, you can check the state of your robot using the `is_on()` or `is_off()` method. Note that it will return True only if **all parts** are in the requested state. This means both methods can return False if the right arm is ON but not the left one for example.
 
 #### Robot parts
 
@@ -145,6 +140,7 @@ reachy.l_arm.turn_off()
 All parts are detailed below in [ReachySDK attributes]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachy-attributes" >}}).
 
 At any time, you can check the state of your robot using the `is_on()` or `is_off()` method. Note that it will return True only if **all parts** are in the requested state. This means both methods can return False if the right arm is on but not the left one for example.
+
 
 ```python
 # Turn on all parts
@@ -184,7 +180,6 @@ By default, this movement is made in 2 seconds. You can choose to specify a cust
 ```python
 reachy.goto_posture('elbow_90', duration=5)
 ```
-
 
 ## ReachySDK object
 
@@ -349,6 +344,7 @@ The *reachy* object has several methods, 8 of them being basic methods useful to
 - [reachy.is_on()](#reachyis_on)
 - [reachy.is_off()](#reachyis_off)
 - [reachy.goto_posture()](#reachygoto_posture)
+
 
 #### reachy.connect()
 Method to establish a connection with the robot.

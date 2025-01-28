@@ -86,7 +86,7 @@ reachy.l_arm.goto([0, 0, 0, 0, 0, 0, 0], duration = 0) # raises an exception
 
 ### Goto interpolation mode
 
-The goto methods generates a trajectory between the present position and the goal position. This trajectory is then interpolated at a predefined frequency (100Hz) to compute all intermediary target positions that should be followed before reaching the final goal position. Depending on the interpolation mode chosen, you can have a better control over speed and acceleration.
+The goto methods generates a trajectory between the present position and the goal position. This trajectory is then interpolated at a predefined frequency (150Hz) to compute all intermediary target positions that should be followed before reaching the final goal position. Depending on the interpolation mode chosen, you can have a better control over speed and acceleration.
 
 Two interpolation modes are available when sending a goto command:
 - the **linear** interpolation mode
@@ -218,7 +218,7 @@ You get information on the part involved, the target joint values, the duration 
 
 ### Part execution state
 
-As the sequence can become complex, you can get information for each part on its current status, to know which movement is being played and know which others are waiting to be played.  
+As the sequence can become complex, you can get information for each part on its current status, to know which movement is being played and know which orders are waiting to be played.
 For each part, the following methods are available:
 - **`get_goto_playing()`**: will return the id of the currently played goto on the part
 - **`get_goto_queue()`**: will return the ids of all stacked goto commands waiting to be played on the part

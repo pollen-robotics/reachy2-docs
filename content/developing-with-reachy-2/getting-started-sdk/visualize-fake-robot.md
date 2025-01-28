@@ -1,5 +1,5 @@
 ---
-title: "Visualize with fake robot"
+title: "Visualize with Fake Robot"
 description: "Use a fake robot mode to test your moves before using the real robot"
 lead: "Use a fake robot mode to test your moves before using the real robot"
 date: 2023-07-26T08:05:23+02:00
@@ -14,14 +14,26 @@ weight: 120
 toc: true
 ---
 
-For now, Reachy doesn't have any collision avoidance restrictions (left arm against right arm, arm against torso, etc.).
+Reachy currently does not have any collision avoidance restrictions (e.g., left arm against right arm, arm against torso).
 
-So before implementing any new behaviour on your Reachy, we recommand you to test your movements on a fake mode. That means that your physical robot won't move but the simulated one will.  As so, you will be able to visualize what Reachy will do and to adapt your moves before testing it on the real one. 
+To ensure safe and effective behavior on your Reachy, we recommend testing your movements in a **fake mode** before implementing them on the physical robot. In this mode, the physical robot will not move, but the simulated version will. This allows you to visualize Reachy's actions and adapt them as needed before testing on the real robot.
 
-For that, blablabla
+## Steps to Use Fake Mode
 
+1. **Enable Fake Mode**:
 
-Then you can go back to the dashboard, click on **Visualisation tools** and you will see Rviz with your fake Reachy. 
+   The easiest way to enable fake mode is through graphical tools. This feature is currently available in Plum (a tool users can access but is primarily used internally). Enabling fake mode via the Dashboard itself is not yet supported.
 
+   For advanced users working in development mode and launching the stack manually, you can enable fake mode by adding `fake:=true` when starting the stack. For example:
 
-Now, you are ready to make your robot move ! You can skip to the *Basics*.
+   ```bash
+   ros2 launch reachy_bringup reachy.launch.py start_sdk_server:=true start_rviz:=true fake:=true
+   ```
+
+2. **Launch Visualization Tools**:
+
+   Access the dashboard and click on **Visualization Tools**. This will open RViz, where you can see a fake Reachy in action.
+
+## Next Steps
+
+Now that you have tested your movements in fake mode, you are ready to make your robot move! Proceed to the [Basics]({{< ref "basics" >}}) section to start implementing behaviors on your physical Reachy.
