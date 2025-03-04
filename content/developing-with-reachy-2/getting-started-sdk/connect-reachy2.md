@@ -43,7 +43,7 @@ You can check that everything is working as expected by running the following Py
 
 ```
 $ python3
-from reachy_sdk import ReachySDK
+from reachy2_sdk import ReachySDK
 
 # Replace with the actual IP you've found.
 reachy = ReachySDK(host='the.reachy.ip.found.')
