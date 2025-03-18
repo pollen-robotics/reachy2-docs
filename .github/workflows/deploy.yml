@@ -60,12 +60,13 @@ jobs:
             --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Verify build output
-        run: ls -la ./public
+        run: ls -la ./public  # Debugging step to verify files exist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+          name: github-pages  # Explicitly setting artifact name
 
   # Deployment job
   deploy:
@@ -82,6 +83,16 @@ jobs:
           echo "GITHUB_REF: $GITHUB_REF"
           echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
 
+      - name: Download Artifact (Ensure it exists)
+        uses: actions/download-artifact@v3
+        with:
+          name: github-pages  # Match artifact name
+          path: ./public
+
+      - name: Verify Downloaded Artifact
+        run: ls -la ./public  # Debugging step to confirm files exist before deployment
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
+
