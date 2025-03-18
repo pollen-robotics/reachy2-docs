@@ -85,6 +85,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
-
-      - name: Output Deployment URL
-        run: echo "Deployment URL: https://pollen-robotics.github.io/reachy2-docs/"
