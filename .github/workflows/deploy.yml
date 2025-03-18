@@ -55,6 +55,8 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: List uploaded artifacts
+        run: ls -la ./public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
