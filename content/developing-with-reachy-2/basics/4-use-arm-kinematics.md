@@ -95,7 +95,7 @@ Using the kinematic model, we can compute the 3D position and orientation of the
 Each arm has a **`forward_kinematics()`** method. To use it, first connect to your Reachy.
 
 ```python
-from reachy_sdk import ReachySDK
+from reachy2_sdk import ReachySDK
 
 reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
 
@@ -195,7 +195,7 @@ You need to specify a target pose in Reachy coordinate system as an argument.
 Let's for example ask the inverse kinematics of the current pose, using the forward kinematics.
 
 ```python
-from reachy_sdk import ReachySDK
+from reachy2_sdk import ReachySDK
 
 reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
 

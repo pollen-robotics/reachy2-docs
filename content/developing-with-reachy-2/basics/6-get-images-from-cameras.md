@@ -34,7 +34,7 @@ from reachy2_sdk.media.camera import CameraView
 First, connect to your Reachy:
 
 ```python
-from reachy_sdk import ReachySDK
+from reachy2_sdk import ReachySDK
 
 reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
 
@@ -98,7 +98,7 @@ The depth camera operates similarly to the teleop camera but captures additional
 
 You can retrieve RGB images using `get_frame()`:
 ```python
-from reachy_sdk import ReachySDK
+from reachy2_sdk import ReachySDK
 from reachy2_sdk.media.camera import CameraView
 
 reachy = ReachySDK(host='10.0.0.201')

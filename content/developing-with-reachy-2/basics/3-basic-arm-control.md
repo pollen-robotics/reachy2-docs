@@ -66,7 +66,7 @@ To access a specific joint, you can either use *reachy.joints* which has each jo
 First, connect to your Reachy.
 
 ```python
-from reachy_sdk import ReachySDK
+from reachy2_sdk import ReachySDK
 
 reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
 
