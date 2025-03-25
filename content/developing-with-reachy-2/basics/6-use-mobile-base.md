@@ -1,5 +1,5 @@
 ---
-title: "8. Use the mobile base"
+title: "6. Use the mobile base"
 description: "First mobile base movements using the Python SDK"
 lead: "First mobile base movements"
 date: 2023-07-26T08:05:23+02:00
@@ -10,7 +10,7 @@ type: docs
 menu:
   developing-with-reachy-2:
     parent: "SDK basics"
-weight: 270
+weight: 250
 toc: true
 ---
 <br>
@@ -69,7 +69,7 @@ reachy_mobile.mobile_base.reset_odometry()
 ## Moving the mobile base
 
 ### Using the `goto` method
-The `goto()` method expects a goal position in the [odom frame]({{< ref "/developing-with-reachy-2/basics/8-use-mobile-base#odom-frame" >}}), consisting of three elements: x (meters), y (meters), and theta (degrees).
+The `goto()` method expects a goal position in the [odom frame]({{< ref "/developing-with-reachy-2/basics/6-use-mobile-base#odom-frame" >}}), consisting of three elements: x (meters), y (meters), and theta (degrees).
 
 :warning: **Important:** The odom frame is world-fixed, and the robot's position is continuously updated as long as the HAL is running (the HAL starts automatically when the robot boots). By default, **if you ask for a `goto(0, 0, 0)`, the robot will attempt to return to its position at boot-up.**
 

@@ -1,5 +1,5 @@
 ---
-title: "7. Record and replay trajectories"
+title: "9. Record and replay trajectories"
 description: "Record and replay trajectories using the Python SDK"
 lead: "Record and replay trajectories"
 date: 2023-07-26T08:05:23+02:00
@@ -10,7 +10,7 @@ type: docs
 menu:
   developing-with-reachy-2:
     parent: "SDK basics"
-weight: 260
+weight: 280
 toc: true
 ---
 <br>

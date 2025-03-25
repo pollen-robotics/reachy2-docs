@@ -185,7 +185,7 @@ reachy.goto_posture('elbow_90', duration=5)
 
 The *reachy* object instanciated from the ReachySDK class above is the root access to get all incoming information from Reachy 2 (joints or sensors) and to control each part of the robot (left/right arm, head, mobile base).  
 
-The *reachy* object has 7 attributes and numerous methods which you can find in the [documentation](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html). 
+The *reachy* object has 10 attributes and numerous methods which you can find in the [documentation](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html). 
 
 If you want to have an overview, you can browse the basic attributes and methods below. 
 
@@ -209,6 +209,48 @@ The *reachy* detailed attributes give access to info, parts and sensors of the r
 [reachy.r_arm]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachyr_arm" >}})  
 [reachy.tripod]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachytripod" >}})
 
+#### reachy.audio
+
+
+#### reachy.audit
+```python
+reachy.audit
+>>> {'r_arm': {'shoulder': 'Ok', 'elbow': 'Ok', 'wrist': 'Ok', 'gripper': None}, 'l_arm': {'shoulder': 'Ok', 'elbow': 'Ok', 'wrist': 'Ok', 'gripper': None}, 'head': {'neck': 'Ok', 'l_antenna': None, 'r_antenna': None}}
+```
+
+#### reachy.cameras
+
+[Camera object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.cameras) containing both cameras of Reachy (teleop and depth one).
+
+```python
+reachy.cameras
+>>> <CameraManager intialized_cameras=
+        <Camera name="depth" stereo=False> 
+        <Camera name="teleop" stereo=True> 
+>
+```
+
+#### reachy.head
+
+[Head object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.head) containing the three joints composing the Orbita actuator along with methods for its kinematics or to control it.
+
+```python
+reachy.head
+>>> <Head on=False actuators=
+        neck: <Orbita3d on=False joints=
+        <OrbitaJoint axis_type="roll" present_position=4.76 goal_position=4.76 >
+        <OrbitaJoint axis_type="pitch" present_position=-14.26 goal_position=-14.26 >
+        <OrbitaJoint axis_type="yaw" present_position=19.11 goal_position=19.11 >
+>
+        l_antenna: <Antenna on=False joints=
+        <DynamixelMotor on=False present_position=54.32 goal_position=54.32 >
+>
+        r_antenna: <Antenna on=False joints=
+        <DynamixelMotor on=False present_position=-52.73 goal_position=-52.73 >
+>
+>
+```
+
 #### reachy.info
 
 [Info object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/config/reachy_info.html) containing Reachy's informations
@@ -223,18 +265,7 @@ reachy.info
 	battery_voltage=30.0 >
  ```
 
-#### reachy.mobile_base
-
-[Mobile_base object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.mobile_base) containing the informations about the mobile base. 
-
-```python
-reachy.mobile_base
->>> <MobileBase on=True 
- lidar_safety_enabled=True 
- battery_voltage=26.6>
-```
-
-#### reachy.joints
+ #### reachy.joints
 
 [Joint object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.joints) containing every joint of the robot, from its arms to its head. This is useful when you want to get information, like the position, from all joints at once.
 
@@ -264,27 +295,6 @@ reachy.joints
 
 ```
 
-#### reachy.head
-
-[Head object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.head) containing the three joints composing the Orbita actuator along with methods for its kinematics or to control it.
-
-```python
-reachy.head
->>> <Head on=False actuators=
-        neck: <Orbita3d on=False joints=
-        <OrbitaJoint axis_type="roll" present_position=4.76 goal_position=4.76 >
-        <OrbitaJoint axis_type="pitch" present_position=-14.26 goal_position=-14.26 >
-        <OrbitaJoint axis_type="yaw" present_position=19.11 goal_position=19.11 >
->
-        l_antenna: <Antenna on=False joints=
-        <DynamixelMotor on=False present_position=54.32 goal_position=54.32 >
->
-        r_antenna: <Antenna on=False joints=
-        <DynamixelMotor on=False present_position=-52.73 goal_position=-52.73 >
->
->
-```
-
 #### reachy.l_arm
 
 [Arm object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.l_arm) containing every joint in the left arm along with its kinematics methods.
@@ -311,6 +321,16 @@ reachy.l_arm
 >
 ```
 
+#### reachy.mobile_base
+
+[Mobile_base object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.mobile_base) containing the informations about the mobile base. 
+
+```python
+reachy.mobile_base
+>>> <MobileBase on=True 
+ lidar_safety_enabled=True 
+ battery_voltage=26.6>
+```
 
 #### reachy.r_arm
 
@@ -338,26 +358,9 @@ reachy.r_arm
 >
 ```
 
-#### reachy.cameras
-
-[Camera object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.cameras) containing both cameras of Reachy (teleop and depth one).
-
-```python
-reachy.cameras
->>> <CameraManager intialized_cameras=
-        <Camera name="depth" stereo=False> 
-        <Camera name="teleop" stereo=True> 
->
-```
-
-#### reachy.audio
 
 
-#### reachy.audit
-```python
-reachy.audit
->>> {'r_arm': {'shoulder': 'Ok', 'elbow': 'Ok', 'wrist': 'Ok', 'gripper': None}, 'l_arm': {'shoulder': 'Ok', 'elbow': 'Ok', 'wrist': 'Ok', 'gripper': None}, 'head': {'neck': 'Ok', 'l_antenna': None, 'r_antenna': None}}
-```
+
 
 #### reachy.tripod
 ```python
@@ -370,7 +373,7 @@ reachy.tripod
 <details>
 <summary><b>Reachy's basic methods</b></summary>
 
-The *reachy* object has several methods, 8 of them being basic methods useful to start using the robot. The other methods are related to robot movements, and will be detailed in a more advanced section.
+The *reachy* object has several methods, 9 of them being basic methods useful to start using the robot. The other methods are related to robot movements, and will be detailed in a more advanced section.
 
 #### List of basic methods
 

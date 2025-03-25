@@ -14,3 +14,4 @@ weight: 50
 toc: true
 ---
 
+Find the complete auto-generated [SDK documentation here](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk.html)!

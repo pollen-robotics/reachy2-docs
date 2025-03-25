@@ -49,7 +49,7 @@ reachy.head.turn_on()  # Turn on only the head
 You could, of course, turn on the whole robot by calling `reachy.turn_on()` directly.
 
 There are several ways to control the head movements:
-- Using the `look_at()`, `goto()`, and `rotate_by()` methods, called directly at the **head** level. These methods work as [move commands described previously]({{< ref "developing-with-reachy-2/basics/2-understand-moves" >}}).
+- Using the `look_at()`, `goto()`, and `rotate_by()` methods, called directly at the **head** level. These methods work as [move commands described previously]({{< ref "developing-with-reachy-2/basics/2-understand-gotos" >}}).
 - Controlling the joints' goal positions, namely **reachy.head.neck.roll**, **reachy.head.neck.pitch**, and **reachy.head.neck.yaw**.
 
 ## Head moves methods
@@ -73,7 +73,7 @@ reachy.head.turn_on() # Don't forget to put the head in stiff mode
 reachy.head.look_at(x=0.5, y=0, z=0.2, duration=1.0)
 ```
 
-You can use multiple `look_at()` calls to chain head movements or even chain them with the `rotate_by()` and `goto()` functions described below. As seen in the [Understand moves in Reachy 2 section]({{< ref "developing-with-reachy-2/basics/2-understand-moves" >}}), the commands on the head will be stacked.
+You can use multiple `look_at()` calls to chain head movements or even chain them with the `rotate_by()` and `goto()` functions described below. As seen in the [Understand moves in Reachy 2 section]({{< ref "developing-with-reachy-2/basics/2-understand-gotos" >}}), the commands on the head will be stacked.
 
 <p align="center">
     {{< video "videos/sdk/look.mp4" "80%" >}}

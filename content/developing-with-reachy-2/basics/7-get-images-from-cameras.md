@@ -1,5 +1,5 @@
 ---
-title: "6. Get images from cameras"
+title: "7. Get images from cameras"
 description: "Image acquisition using the Python SDK"
 lead: "Image acquisition"
 date: 2023-07-26T08:05:23+02:00
@@ -10,7 +10,7 @@ type: docs
 menu:
   developing-with-reachy-2:
     parent: "SDK basics"
-weight: 250
+weight: 260
 toc: true
 ---
 <br>

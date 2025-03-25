@@ -201,7 +201,7 @@ There are two important concepts to be aware of :
 - gotos are stacked for a part (i.e. they run one after another),
 - but each part is independent (i.e. a goto for the left arm will run in parallel with a goto for the right arm).
 
-### Gotos are non-blocking for other parts 
+### Gotos are non-blocking 
 
 It means you can send a goto command on different parts, it won't wait for the movement to be executed on the first part to execute the other one, but will follow the timing of your code.
 
