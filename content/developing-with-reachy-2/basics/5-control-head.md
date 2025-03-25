@@ -20,15 +20,21 @@ toc: true
 
 ## Head presentation
 
-Reachy 2's head is mounted on an Orbita3D actuator, referred to as the **neck** actuator, giving 3 degrees of freedom to control the head orientation.  
+Reachy 2's head is mounted on an Orbita3D actuator, referred to as the **neck**.  
 
-> Note: The antennas control will soon be integrated into the SDK! Stay tuned!
+The complete **head** is composed of the following elements:
+- **neck**, a 3-degree-of-freedom actuator (Orbita3D) that controls the orientation of the head (pitch, roll, and yaw)
+- **l_antenna**, the left antenna, modeled as an actuator with a single joint.
+- **r_antenna**, the right antenna, modeled as an actuator with a single joint.  
+
 
 <p align="center">
     {{< video "videos/sdk/orbita.mp4" "80%" >}}
 </p>
 
-Before starting to control it, connect to your Reachy and turn it on. As in the other pages:
+### The actuators
+
+Before starting to control it, connect to your Reachy and turn it on. As in the other pages, let's check the head part:
 
 ```python
 from reachy2_sdk import ReachySDK
@@ -36,23 +42,53 @@ from reachy2_sdk import ReachySDK
 reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
 
 reachy.head
->>> <Head on=True actuators= 
-neck: <Orbita3d on=True joints=
-	<OrbitaJoint axis_type="roll" present_position=-0.0 goal_position=0.0 >
-	<OrbitaJoint axis_type="pitch" present_position=-10.0 goal_position=-10.0 >
-	<OrbitaJoint axis_type="yaw" present_position=0.0 goal_position=0.0 >
+>>> <Head on=False actuators=
+	neck: <Orbita3d on=False joints=
+	<OrbitaJoint axis_type="roll" present_position=0.24 goal_position=0.24 >
+	<OrbitaJoint axis_type="pitch" present_position=-8.44 goal_position=-8.44 >
+	<OrbitaJoint axis_type="yaw" present_position=14.01 goal_position=14.01 >
+>
+	l_antenna: <Antenna on=False joints=
+	<DynamixelMotor on=False present_position=2.37 goal_position=2.37 >
+>
+	r_antenna: <Antenna on=False joints=
+	<DynamixelMotor on=False present_position=-5.54 goal_position=-5.54 >
+>
+>
 
-
-reachy.head.turn_on()  # Turn on only the head
+reachy.head.turn_on()  # Turn on only the head, making neck and both antennas stiff
 ```
 
 You could, of course, turn on the whole robot by calling `reachy.turn_on()` directly.
 
+### The joints
+
+It works exactly the same as for the arms, you can access each joint from the actuator it belongs to, for example `reachy.head.neck.pitch`.  
+As said previously, the antennas are actuators with a single joint, that is directly accessed at the antenna'a level.  
+
+```python
+reachy.head.joints
+>>> {'neck.roll': <OrbitaJoint axis_type="roll" present_position=0.24 goal_position=0.24 >,
+'neck.pitch': <OrbitaJoint axis_type="pitch" present_position=-8.44 goal_position=-8.44 >,
+'neck.yaw': <OrbitaJoint axis_type="yaw" present_position=14.01 goal_position=14.01 >,
+'l_antenna': <DynamixelMotor on=True present_position=2.37 goal_position=2.37 >,
+'r_antenna': <DynamixelMotor on=True present_position=-5.54 goal_position=-5.54 >}
+```
+
 There are several ways to control the head movements:
-- Using the `look_at()`, `goto()`, and `rotate_by()` methods, called directly at the **head** level. These methods work as [move commands described previously]({{< ref "developing-with-reachy-2/basics/2-understand-gotos" >}}).
+- Using the `look_at()`, `goto()`, and `rotate_by()` methods, called directly at the **head** level. These methods work as [goto commands described previously]({{< ref "developing-with-reachy-2/basics/2-understand-gotos" >}}).
 - Controlling the joints' goal positions, namely **reachy.head.neck.roll**, **reachy.head.neck.pitch**, and **reachy.head.neck.yaw**.
 
-## Head moves methods
+## Head goto methods
+
+In most cases, when referring to **head movement commands**, we are actually referring to **neck movements**. All motion-related functions available under `reachy.head` affect the **neck**, which is responsible for controlling the orientation of the head.
+
+The **antennas**, while also part of the head, are controlled separately:
+- Use `reachy.head.l_antenna` to control the **left antenna**.
+- Use `reachy.head.r_antenna` to control the **right antenna**.
+
+Each antenna is treated as an independent actuator with its own motion commands. This separation allows for fine control of both expressive neck movements and subtle antenna gestures.  
+A section is dedicated to the [Antennas control]({{< ref "developing-with-reachy-2/basics/5-control-head#antennas-control" >}}).
 
 ### look_at()
 
@@ -165,19 +201,13 @@ reachy.send_goal_positions()
 
 You can read the head positions using:
 
-- **Cartesian space**: `get_current_orientation()` will give the head orientation as a quaternion in the robot's frame.
 - **Joint space**: `get_current_positions()` will give the neck's roll, pitch, and yaw `present_position`.
+- **Cartesian space**: `get_current_orientation()` will give the head orientation as a quaternion in the robot's frame.
+
 
 :warning: *There is a 10-degree offset between cartesian space and joint space. We recommend avoiding mixing them.*
 
-### In cartesian space:
-
-```python
-reachy.head.get_current_orientation()
->>> Quaternion(0.9794632485822068, 0.10189819035488734, -0.01081920496959773, 0.17364172391166605)
-```
-
-### In joint space:
+### Joint space: get_current_positions()
 
 If you prefer using roll, pitch, yaw angles rather than working with quaternions, you can retrieve those values from the **neck joints**.
 
@@ -186,4 +216,18 @@ reachy.head.get_current_positions()
 >>> [11.881595589573665, -8.976164597791765, 22.07170507647743]
 ```
 
+### Cartesian space: get_current_orientation()
+
+```python
+reachy.head.get_current_orientation()
+>>> Quaternion(0.9794632485822068, 0.10189819035488734, -0.01081920496959773, 0.17364172391166605)
+```
+
+
 Now that we can move the head, let's focus on its cameras!
+
+## Antennas control
+
+### goto()
+
+### Read antennas positions

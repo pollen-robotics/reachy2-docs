@@ -17,23 +17,43 @@ toc: true
 
 > You can choose to follow our online documentation or directly test the mobile base movements on your Reachy by following the [notebook n°6](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/6_mobile_base.ipynb). 
 
-## What is accessible on the mobile base
+## Mobile base presentation
 The following elements are accessible through *reachy.mobile_base*:
 * Battery level
 * Odometry of the base
 * Lidar
-* Control and drive modes
+* Control and drive modes *(not detailed here)*
 * `goto`, `translate_by`, `rotate_by`, and `set_speed` methods to make the mobile base move.
 
-## Information
+### Information
 
 You can find details by calling the `mobile_base` attribute directly:
 ```python
 reachy.mobile_base
 >>> <MobileBase on=True 
  lidar_safety_enabled=True 
- battery_voltage=25.5>
+ battery_voltage=26.3>
 ```
+
+#### battery_voltage
+
+The battery voltage can be directly accessed using `reachy.mobile_base.battery_voltage`.
+
+```python
+reachy.mobile_base.battery_voltage
+>>> 26.3
+```
+
+### Sensors
+
+The mobile contains a **Lidar sensor**, accessible with:
+```python3
+reachy.mobile_base.lidar
+>>> <Lidar safety_enabled=True>
+```
+
+This Lidar is responsible for **object detection**, and offers a **safety** to avoid collision.  
+The Lidar features are detailed in the dedicated [Lidar section]({{< ref "developing-with-reachy-2/basics/6-use-mobile-base#lidar" >}}).
 
 You can retrieve the odometry by calling the `get_current_odometry()` function:
 ```python
@@ -48,6 +68,16 @@ reachy.mobile_base.get_current_odometry()
 
 ## Frames
 
+Understanding coordinate frames is essential when working with mobile robots, as they define how positions and orientations are interpreted and transformed.
+
+Reachy 2’s mobile base operates using two main reference frames:
+1. The **robot frame**, which moves with the robot and defines its egocentric perspective.
+2. The **odom frame**, which represents a fixed world reference used to estimate the robot’s global position over time.
+
+These frames follow standard robotics conventions and are crucial for tasks like navigation, localization, and trajectory planning.
+
+Let’s take a closer look at each of them:
+
 ### Robot frame
 The robot frame, also called the egocentric or `base_link` frame, is **rigidly attached to the robot**. Its (0, 0) point is the projection on the floor of the center of the mobile base.
 **X points forward, Y points left, and Theta increases counterclockwise.**
@@ -57,23 +87,28 @@ The robot frame, also called the egocentric or `base_link` frame, is **rigidly a
 *It follows ROS' conventions described in [REP 105 “Coordinate Frames for Mobile Platforms”](https://www.ros.org/reps/rep-0105.html)*
 
 ### Odom frame
-The odom frame is a **world-fixed frame**. The position (x, y, theta) of the robot in the odom frame is continuously updated by the HAL through odometry calculations. These calculations currently rely solely on wheel measurements to estimate the robot's movement. While the robot's position is continuous, **it should never be used as a long-term reference due to inevitable drift.**
+The odom frame is a **world-fixed frame**. The position (x, y, theta) of the robot in the odom frame is continuously updated through odometry calculations. These calculations currently rely solely on wheel measurements to estimate the robot's movement. While the robot's position is continuous, **it should never be used as a long-term reference due to inevitable drift.**  
 
 {{< img-center "images/sdk/mobile-base/odom_frame.png" 400x "" >}}
 
-The initial position of the odom frame matches the robot's position at startup. The odom frame can be reset to the robot's current position using:
+### Resetting the Odom frame
+The initial position of the odom frame matches the robot's position at startup. The odom frame can be reset at anytime to the robot's current position using:
 ```python
 reachy_mobile.mobile_base.reset_odometry()
 ```
 
-## Moving the mobile base
+After this call, the robot’s current position becomes the new origin `(0, 0, 0)` of the odom frame.
 
-### Using the `goto` method
-The `goto()` method expects a goal position in the [odom frame]({{< ref "/developing-with-reachy-2/basics/6-use-mobile-base#odom-frame" >}}), consisting of three elements: x (meters), y (meters), and theta (degrees).
+---
+
+## Mobile base goto methods
+
+### goto()
+The **`goto()`** method expects a goal position in the **[odom frame]({{< ref "/developing-with-reachy-2/basics/6-use-mobile-base#odom-frame" >}})**, consisting of three elements: x (meters), y (meters), and theta (degrees).
 
 :warning: **Important:** The odom frame is world-fixed, and the robot's position is continuously updated as long as the HAL is running (the HAL starts automatically when the robot boots). By default, **if you ask for a `goto(0, 0, 0)`, the robot will attempt to return to its position at boot-up.**
 
-To perform a `goto` relative to the robot's current position, use the `reset_odometry()` method. For example, create an instance of Reachy with:
+To perform a `goto()` relative to the robot's current position, use the `reset_odometry()` method. For example, create an instance of Reachy with:
 
 ```python
 from reachy2_sdk import ReachySDK
@@ -103,7 +138,7 @@ You can define two types of stop conditions through optional parameters:
 - **Timeout:** Stops the `goto` after a specified duration (in seconds). There is a **default timeout** that scales with the distance of the `goto` command.
 - **Spatial tolerance:** Stops the `goto` when the robot is within specified tolerances for x, y, theta, and Euclidean distance.
 
-### Using the `translate_by` / `rotate_by` methods
+### translate_by() / rotate_by()
 
 Unlike the `goto` method, which relies on the odometric frame, the `translate_by` and `rotate_by` methods configure translations and rotations relative to the robot's **current position**.
 
@@ -118,7 +153,7 @@ reachy.mobile_base.translate_by(x=0.3, y=0.0)
 
 With these methods, there is no need to reset the odometry before performing movements.
 
-### Using the `set_speed` method
+## Mobile base set_goal_speed()
 Since the mobile base is holonomic, the `set_goal_speed()` method expects three speed commands in the robot frame:
 - **x_vel:** Linear speed in m/s along the X-axis (positive forward).
 - **y_vel:** Linear speed in m/s along the Y-axis (positive left).
@@ -137,6 +172,7 @@ reachy.mobile_base.send_speed_command()
 
 *Note: The HAL includes a drive mode for speed commands with variable durations. While it creates a service instead of relying on a topic, the niche use case did not warrant SDK integration. However, it exists if needed!*
 
+## Read mobile base position and speed
 ## Lidar
 
 A safety measure prevents the robot from approaching obstacles detected by its lidar. The mobile base slows down as it nears an obstacle and stops completely if the obstacle gets too close.

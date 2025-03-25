@@ -118,8 +118,8 @@ reachy.send_goal_positions()
 
 ### The gripper
 
-Grippers are part of arms: this means that if the arm is switched on, so is the gripper.  
-However, in most cases, the gripper is controlled independently from the rest of the arm.  
+Grippers are part of arms: this means that if the arm is turned on, so is the gripper.  
+However, in most cases, the **gripper is controlled independently** from the rest of the arm.  
 
 To get access to a gripper, you have to go through the corresponding arm: 
 ```python
@@ -131,7 +131,7 @@ reachy.r_arm.gripper
 
 A section is dedicated to the [Gripper control]({{< ref "developing-with-reachy-2/basics/3-basic-arm-control#gripper-control" >}}).
 
-## Arm moves methods
+## Arm goto methods
 
 Arms can be controlled in two spaces:
 
@@ -329,17 +329,65 @@ Moves the gripper along a leftward elliptical arc, with a custom arc radius of 1
 
 ### translate_by() / rotate_by()
 
-To simplify your life, you have access to functions to easily compute translation or rotation, in the robot or gripper frame, in **cartesian space**. 
-For example, you can use the `translate_by(...)` method to send the gripper up, asking for a translation 10cm up in Reachy's frame (+0.1m on Reachy's z-axis), and a rotation of 20° around the z-axis of the gripper: 
+*Simplifying Cartesian motions with `translate_by()` and `rotate_by()`!*
 
-```python
-reachy.r_arm.translate_by(x=0, y=0, z=0.1, frame="robot")
-reachy.r_arm.rotate_by(roll=0, pitch=0, yaw=20, frame="gripper")
-```
+When working in **Cartesian space**, you often need to compute a new 4×4 pose matrix to describe where you want the gripper to move. Manually building these matrices can be complex and error-prone—especially when dealing with rotations and different coordinate frames.
+
+To make this easier, Reachy 2 SDK provides built-in helper functions:
+- **`translate_by()`**: 
+    This function allows you to move the gripper **relative to its current pose** by specifying a translation vector in meters.
+
+    For example:
+    ```python
+    reachy.r_arm.translate_by(x=0, y=0, z=0.1, frame="robot")
+    ```
+    This moves the gripper **10 cm upward** in Reachy's base coordinate frame (positive z-axis of the robot).
+    
+    ---
+
+- **`rotate_by()`**: 
+    Similarly, `rotate_by()` lets you apply a **relative rotation** to the gripper’s current pose, using angles (in degrees by default, but you can use radians with `degrees=False`).
+
+    For example:
+    ```python
+    reachy.r_arm.rotate_by(roll=0, pitch=0, yaw=20, frame="gripper")
+    ```
+    This rotates the gripper by **20° around its own z-axis**, meaning the motion is done in the **gripper's local frame**.
+
+#### Frames of Reference
+
+You can specify the frame in which the motion is applied using the `frame` parameter:
+- `"robot"`: motion is relative to the **robot’s base**.
+- `"gripper"`: motion is relative to the **gripper’s pose**.  
+
+
+#### Goto-Based Functions
+
+These functions compute the **necessary target pose** behind the scenes and send the appropriate **`goto()` command** for you — making it easier to chain natural translations or rotations without needing to manipulate matrices directly.  
+
+Both `translate_by()` and `rotate_by()` are goto-based functions. This means:
+- They follow the same internal mechanisms as `goto()`
+- They are **stackable**: you can queue multiple motions
+- They are **cancelable**: you can interrupt them using the appropriate cancel method
+- They support most standard `goto()` parameters
+
+**Important notes on relative behavior**  
+These motions are computed relative to the target pose of the most recent `goto()` command — whether that command is currently executing or is queued.
+
+If no `goto()` command is playing, the movement will be computed relative to the gripper’s current pose.
+
+
+**⚠️ Warning: Effect of cancelled goto**  
+If the last `goto()` command is canceled after being issued, any subsequent `translate_by()` or `rotate_by()` calls will still compute their motion based on the original target of the canceled command, not the actual gripper position at cancellation time or the previous `goto()`.  
+This means:
+- The computed motion remains unchanged even if the prior `goto()` was interrupted.
+- The final pose will still be relative to the intended (but not reached) target of that canceled movement.  
+
+---
 
 ## Read arm position
 
-### In joint space : get_current_positions()
+### Joint space: get_current_positions()
 
 You can retrieve the values from each **arm joint** using the **`get_current_positions()`** method.  
 
@@ -369,7 +417,7 @@ reachy.r_arm.get_current_positions()
 ```
 
 
-### In cartesian space : forward_kinematics()
+### Cartesian space: forward_kinematics()
 
 You can get the end effector position of Reachy in Reachy 2 coordinate system using forward kinematics.  
 
