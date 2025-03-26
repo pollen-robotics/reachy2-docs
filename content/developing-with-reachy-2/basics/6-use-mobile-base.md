@@ -228,6 +228,12 @@ The `goto()` will return only when the motion is *considered* finished (based on
 
 ---
 
+##### Degrees
+
+The degrees parameter does work like for the other parts, `degrees=False` will make the function interpret the `theta` and `angle_tolerance` parameters as radians rather than the default degrees.
+
+---
+
 #### Examples of mobile base's goto() usage
 
 Here’s a commented set of examples that demonstrate how to use the `goto()` function with Reachy 2’s mobile_base, covering various use cases and parameters like `wait`, `tolerances`, `timeout`, and chaining behavior.
@@ -360,12 +366,15 @@ Like for the other parts, these motions are computed relative to the goal of the
 
 If no `goto()` command is playing, the movement will be computed relative to the robot's current pose.
 
+<details id="cancelled-mobile-base-goto">
+<summary><b>⚠️ Warning: Effect of cancelled goto</b></summary>
 
-**⚠️ Warning: Effect of cancelled goto**  
 If the last `goto()` command is canceled after being issued, any subsequent `translate_by()` or `rotate_by()` calls will still compute their motion based on the original target of the canceled command, not the actual robot position and orientation at cancellation time or the previous `goto()`.  
 This means:
 - The computed motion remains unchanged even if the prior `goto()` was interrupted.
 - The final pose will still be relative to the intended (but not reached) target of that canceled movement.  
+
+</details>
 
 
 ## Mobile base set_goal_speed()
@@ -497,8 +506,6 @@ To **reset the safety distances to their default values**, use:
 ```python
 reachy.mobile_base.lidar.reset_safety_default_distances()
 ```
-
-Congratulations! You now know all the basics of Reachy's SDK! Let's move on to implementing complex behaviors! 
 
 ### Getting the Lidar map
 

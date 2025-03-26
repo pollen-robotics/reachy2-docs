@@ -79,9 +79,9 @@ It can also be sent to grippers as antennas, as mentioned earlier:
 - reachy.head.l_antenna
 
 It is defined by 3 parameters: 
-- the **joint commands**, as a list of articular degree values (7 for the arms and 3 for the head)
-- the **duration**, in seconds - *set to 2 by default*
-- the **interpolation mode**, 'linear' or 'minimum_jerk' - *set to 'minimum_jerk' by default*
+- a **target**, which can be either a **joint commands** as  (a list of 7 articular degree values for the arms and 3 for the head, and a single float for grippers and antennas), or a **cartesian command** (for the arms and head only).
+- a **duration**, in seconds - *set to 2 by default*
+- an **interpolation mode**, 'linear' or 'minimum_jerk' - *set to 'minimum_jerk' by default*
 
 
 ### Goto duration 

@@ -359,7 +359,7 @@ To make this easier, Reachy 2 SDK provides built-in helper functions:
 You can specify the frame in which the motion is applied using the `frame` parameter:
 - `"robot"`: motion is relative to the **robot’s base**.
 - `"gripper"`: motion is relative to the **gripper’s pose**.  
-
+→ Default frame is "robot"
 
 #### Goto-Based Functions
 

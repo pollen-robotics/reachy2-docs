@@ -122,4 +122,5 @@ for joints_positions in trajectories:
 
 > The `check_positions` parameter is used to verify that the goal positions have been reached after the command has been sent and that there have been no problems with unreachable positions. This process can take time and slow your replay. Since this is a recording, all poses are necessarily reachable, so there's no need to waste processing time on this check. 
 
-Now all we have to do is move the mobile base!
+
+Congratulations! You now know all the basics of Reachy's SDK! Let's move on to implementing complex behaviors! 

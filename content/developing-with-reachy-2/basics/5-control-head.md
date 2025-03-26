@@ -87,12 +87,21 @@ The **antennas**, while also part of the head, are controlled separately:
 - Use `reachy.head.l_antenna` to control the **left antenna**.
 - Use `reachy.head.r_antenna` to control the **right antenna**.
 
-Each antenna is treated as an independent actuator with its own motion commands. This separation allows for fine control of both expressive neck movements and subtle antenna gestures.  
+Each antenna is treated as an independent actuator with its own motion commands.   
 A section is dedicated to the [Antennas control]({{< ref "developing-with-reachy-2/basics/5-control-head#antennas-control" >}}).
+
+The 3 following methods `look_at()`, `goto()` and `rotate_by()` are **goto-based**, meaning they are, as seen in the [Understand gotos in Reachy 2 section]({{< ref "developing-with-reachy-2/basics/2-understand-gotos" >}}):
+- **Stackable** (queued in order)
+- **Interruptible**
+- Support parameters like:
+    - `duration`
+    - `wait`
+	- `interpolation_mode`
+	- `degrees` (for joint space)
 
 ### look_at()
 
-You can use the `look_at()` function to make the head look at a specific point in space. This point must be given in Reachy 2's coordinate system in **meters**. The coordinate system is the one we have seen previously:
+The **`look_at()`** method makes the head orient itself to **face a 3D point**, expressed in **Reachy’s coordinate system**, in meters. The coordinate system is the one we have seen previously:
 
 * The X axis corresponds to the forward arrow.
 * The Y axis corresponds to the right-to-left arrow.
@@ -102,6 +111,7 @@ The origin of this coordinate system is located in the upper part of the robot t
 
 {{< img-center "images/sdk/first-moves/reachy_frame.jpg" 400x "" >}}
 
+**🦾 Example 1: Look forward**  
 If you want Reachy to look forward, you can send it the following: 
 
 ```python
@@ -109,8 +119,9 @@ reachy.head.turn_on() # Don't forget to put the head in stiff mode
 reachy.head.look_at(x=0.5, y=0, z=0.2, duration=1.0)
 ```
 
-You can use multiple `look_at()` calls to chain head movements or even chain them with the `rotate_by()` and `goto()` functions described below. As seen in the [Understand moves in Reachy 2 section]({{< ref "developing-with-reachy-2/basics/2-understand-gotos" >}}), the commands on the head will be stacked.
+You can use multiple `look_at()` calls to chain head movements or even chain them with the `rotate_by()` and `goto()` functions described below.
 
+**🦾 Example 2: Chaining look_at**  
 <p align="center">
     {{< video "videos/sdk/look.mp4" "80%" >}}
 </p>
@@ -128,6 +139,7 @@ look_front = reachy.head.look_at(x=0.5, y=0, z=0, duration=1.0)
 
 The best way to understand how to use the `look_at()` function is to experiment with it. Picture a position you would like Reachy's head to be in, guess a point for the `look_at()` coordinates, and check if you got it right!
 
+**🦾 Example 3: Follow Reachy's hand**  
 Another cool thing is combining Reachy's kinematics with the `look_at()` so that Reachy's head follows its hand while you're moving it!
 
 <p align="center">
@@ -151,22 +163,52 @@ The `goto()` function is another way to control the head. There are two ways to 
 - From joint positions (in joint space).
 - From the desired orientation as a quaternion (in cartesian space).
 
-#### From joint positions
+#### In joint space
 
-You directly control the joints of the neck, giving the roll, pitch, and yaw angles in degrees. The rotation is performed in the order: roll, pitch, yaw, within the Orbita3D coordinate system.
+You directly control the joints of the neck, giving the [roll, pitch, yaw] angles (in degrees by default). The rotation is performed in the order: roll, pitch, yaw, within the Orbita3D coordinate system.
 
-{{< img-center "images/sdk/first-moves/orbita_rpy.png" 400x "" >}}
+{{< img-center "images/sdk/first-moves/orbita_rpy.png" 300x "" >}}
 
+**🦾 Example 1: Look slightly down**  
 To make the robot look slightly downward:
 ```python
 reachy.head.turn_on() # Don't forget to put the head in stiff mode
 reachy.head.goto([0, 10, 0], duration=1.0)
 ```
 
-#### From quaternion
+**🦾 Example 2: Cancel all executing and pending head motions**  
+Do not forget you can use all the goto functions described in [Understand gotos in Reachy 2]({{< ref "developing-with-reachy-2/basics/2-understand-gotos" >}}), for example to cancel the moves on Reachy's head:
+```python
+# Queue up several motions
+reachy.head.look_at(x=0.5, y=-0.3, z=0.2, duration=2.0)
+reachy.head.goto(roll=-5 , pitch=10, yaw=0, duration=1.0)
+
+# Cancel all head movements
+reachy.head.cancel_all_goto()
+```
+
+**🦾 Example 3: Use radians instead of degrees**  
+
+```python
+# Define a target pose in radians: [roll, pitch, yaw]
+# Example: slight downward tilt (pitch = 0.3 rad ≈ 17°)
+target_pose_radians = [0.0, 0.3, 0.0]
+
+# Send the command
+reachy.head.goto(
+    target_pose_radians,
+    degrees=False,         # Use radians instead of degrees
+    duration=1.5,
+    wait=True,
+    interpolation_mode='minimum_jerk'
+)
+```
+
+#### In cartesian space
 
 You can control the head with a quaternion. Use the [pyquaternion library](https://kieranwynn.github.io/pyquaternion/) to create suitable quaternions for this method.
 
+**🦾 Example: Tilt head to the right**  
 ```python
 from pyquaternion import Quaternion
 
@@ -176,13 +218,53 @@ reachy.head.goto(q)
 
 ### rotate_by()
 
-You can rotate the head from its current position using the `rotate_by()` function. Specify angular degree values for roll, pitch, and yaw in either Reachy's or the head's frame. 
+The `rotate_by()` method lets you apply a relative rotation (in degrees by default) from the current pose of the head. Specify angular degree values for roll, pitch, and yaw in either Reachy's or the head's frame. 
+
+#### Frames of Reference
+
+You can specify the frame in which the rotation is applied using the `frame` parameter:
+- `"robot"`: motion is relative to the **robot’s base**.
+- `"head"`: motion is relative to the **head’s local frame**.  
+→ Default frame is "robot"
+
+**🦾 Example 1: Rotations in different frames**  
+```python
+# Rotate 20° yaw in the head's local frame
+reachy.head.rotate_by(yaw=20, frame='head')
+
+# Rotate -30° roll in the robot frame
+reachy.head.rotate_by(roll=-30, frame='robot')
+```
+
+**🦾 Example 2: Chain look_at() with rotate_by() and goto() (joint space)**  
 
 ```python
-reachy.head.rotate_by(roll=0, pitch=0, yaw=20, frame='head')
+# Look slightly to the right and wait
+reachy.head.look_at(x=0.5, y=-0.3, z=0.1, duration=1.0, wait=True)
 
-reachy.head.rotate_by(roll=-30, pitch=0, yaw=0, frame='robot')
+# Then rotate head 15° more to the right from its current orientation
+reachy.head.rotate_by(yaw=15, frame='head', duration=1.0, wait=True)
+
+# Then use joint-space goto to tilt head slightly down (pitch = 15°)
+reachy.head.goto([0, 15, 0], duration=1.5, wait=True, interpolation_mode='linear')
 ```
+
+
+**Important notes on relative behavior**  
+These motions are computed relative to the target pose of the most recent `goto()` command — whether that command is currently executing or is queued.
+
+If no `goto()` command is playing, the movement will be computed relative to the head’s current pose.
+
+<details id="cancelled-head-goto">
+<summary><b>⚠️ Warning: Effect of cancelled goto</b></summary>
+
+If the last `goto()` command is canceled after being issued, any subsequent `rotate_by()` calls will still compute their motion based on the original target of the canceled command, not the actual head orientation at cancellation time or the previous `goto()`.  
+This means:
+- The computed motion remains unchanged even if the prior `goto()` was interrupted.
+- The final pose will still be relative to the intended (but not reached) target of that canceled movement. 
+
+</details>
+
 
 ## Joint's goal_position
 
@@ -205,7 +287,7 @@ You can read the head positions using:
 - **Cartesian space**: `get_current_orientation()` will give the head orientation as a quaternion in the robot's frame.
 
 
-:warning: *There is a 10-degree offset between cartesian space and joint space. We recommend avoiding mixing them.*
+:warning: *There is a 10-degree offset between cartesian space and joint space, as shown in the [hardware guide]({{< ref "hardware-guide/specifications/general#neck" >}}). We recommend avoiding mixing them.*
 
 ### Joint space: get_current_positions()
 
@@ -228,6 +310,59 @@ Now that we can move the head, let's focus on its cameras!
 
 ## Antennas control
 
+Reachy 2's head includes two expressive antennas—**left** and **right**—which can be controlled independently. Each antenna is a simple actuator with **one degree of freedom**, and can be used for animations.
+
+You can access the antennas via:
+- `reachy.head.l_antenna` — Left antenna
+- `reachy.head.r_antenna` — Right antenna
+
 ### goto()
+They both expose a `goto()` method, with the same standard parameters and behavior as other actuators in joint space:
+- **target** *(float)* – Target position, in degrees by default.
+- **duration** *(float)* – Movement duration in seconds.
+- **degrees** *(bool)* – If False, interpret the position in radians.
+- **wait** *(bool)* – Whether to block until the motion is complete.
+- **interpolation_mode** *(str)* – 'minimum_jerk' (default) or 'linear'.
+
+--- 
+
+**🦾 Example 1: Move left antenna to 45° in 1 second**  
+```python
+reachy.head.l_antenna.goto(45, duration=1.0)
+```
+
+---
+
+**🦾 Example 2: Wiggle both antennas at the same time**
+```python
+# Raise both antennas
+reachy.head.l_antenna.goto(60, duration=0.5)
+reachy.head.r_antenna.goto(60, duration=0.5)
+
+# Lower both antennas
+reachy.head.l_antenna.goto(0, duration=0.5)
+reachy.head.r_antenna.goto(0, duration=0.5)
+```
+---
+
+**🦾 Example 3: Move one antenna after the other and use radians**
+```python
+import math
+
+# Smooth flick with minimum jerk
+reachy.head.l_antenna.goto(90, duration=0.7, interpolation_mode='minimum_jerk', wait=True)
+# Move right antenna to π/4 radians (~45°)
+reachy.head.r_antenna.goto(math.pi / 4, degrees=False, duration=0.3, interpolation_mode='minimum_jerk')
+```
+
 
 ### Read antennas positions
+
+The antenna is an actuator with a single joint, so you can directly read its **present_position** doing:
+```python
+reachy.head.r_antenna.present_position
+>>> 50.04
+
+reachy.head.l_antenna.present_position
+>>> 29.03
+```
