@@ -14,7 +14,7 @@ weight: 50
 toc: true
 ---
 
-## 🤖 Welcome to the Reachy 2 SDK
+## 🧑‍💻 Welcome to the Reachy 2 SDK
 
 The **Reachy 2 SDK** is the easiest and most intuitive way to **program behaviors** for your Reachy 2 robot.
 
