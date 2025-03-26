@@ -444,3 +444,12 @@ reachy.goto_posture()
 ```
 
 </details>
+
+<br>
+
+---
+
+**🔌 You know how to connect to your robot—great start!**  
+Now you’re ready to **dive into the SDK** and begin your journey through these tutorials.
+
+Let’s explore what Reachy can do, one step at a time.

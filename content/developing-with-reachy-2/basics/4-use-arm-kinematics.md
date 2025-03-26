@@ -309,4 +309,10 @@ The result should look like this:
     {{< video "videos/sdk/goto_ik.mp4" "80%" >}}
 </p>
 
-Now, we are going to move the head !
+<br>
+
+---
+
+**✨ Got everything?**  
+Awesome! Now it’s time to bring Reachy to life and **move the head**.  
+Let’s give it some personality! 💫

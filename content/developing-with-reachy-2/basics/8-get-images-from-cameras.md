@@ -1,5 +1,5 @@
 ---
-title: "7. Get images from cameras"
+title: "8. Get images from cameras"
 description: "Image acquisition using the Python SDK"
 lead: "Image acquisition"
 date: 2023-07-26T08:05:23+02:00
@@ -10,7 +10,7 @@ type: docs
 menu:
   developing-with-reachy-2:
     parent: "SDK basics"
-weight: 260
+weight: 270
 toc: true
 ---
 <br>
@@ -152,5 +152,11 @@ T_cam_reachy = reachy.cameras.depth.get_extrinsics()
          1.00000000e+00]])
 ```
 
-That's it for the cameras! 
-Now, we are going to record and replay movements.
+<br>
+
+---
+
+**📸 That’s it for the cameras!**  
+Now that Reachy can see, let’s give it the power to **hear and speak**.
+
+🎧 Up next: **Learn how to use audio** with your robot—to **record sound**, **play audio files**, and make Reachy even more interactive!

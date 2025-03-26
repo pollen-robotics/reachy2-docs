@@ -1,5 +1,5 @@
 ---
-title: "9. Record and replay trajectories"
+title: "7. Record and replay trajectories"
 description: "Record and replay trajectories using the Python SDK"
 lead: "Record and replay trajectories"
 date: 2023-07-26T08:05:23+02:00
@@ -10,7 +10,7 @@ type: docs
 menu:
   developing-with-reachy-2:
     parent: "SDK basics"
-weight: 280
+weight: 260
 toc: true
 ---
 <br>
@@ -122,5 +122,13 @@ for joints_positions in trajectories:
 
 > The `check_positions` parameter is used to verify that the goal positions have been reached after the command has been sent and that there have been no problems with unreachable positions. This process can take time and slow your replay. Since this is a recording, all poses are necessarily reachable, so there's no need to waste processing time on this check. 
 
+<br>
 
-Congratulations! You now know all the basics of Reachy's SDK! Let's move on to implementing complex behaviors! 
+---
+
+**🏅 You’re now a movement expert on Reachy 2.**  
+There’s no secret left when it comes to making the robot move with precision and style.
+
+But movement alone isn’t enough—if you want Reachy to **interact with the world**, it needs to **see** and **hear** what's around it.
+
+🎥 Up next: **Learn how to use Reachy’s cameras** and open the door to perception-driven interaction!

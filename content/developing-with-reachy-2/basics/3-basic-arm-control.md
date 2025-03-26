@@ -579,3 +579,14 @@ reachy.r_arm.gripper.get_current_opening()
 reachy.r_arm.gripper.opening
 >>> 20  # almost closed
 ```
+
+<br>
+
+---
+
+**🧭 We’ve mentioned it a lot throughout this page…**  
+But now it’s time to **dive deeper** into the world of **arm kinematics**.
+
+Understanding how Reachy’s arm moves in 3D space—how joint angles, forward kinematics, and poses all come together—is a crucial step toward control of the robot motion.
+
+**Buckle up.** The journey into kinematics starts on the next page! 💪

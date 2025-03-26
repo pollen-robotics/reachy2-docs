@@ -400,3 +400,11 @@ reachy.l_arm.cancel_all_goto()
 ```
 
 The movement on the head will continue, but all the movements of the left will be stopped and the left arm queue cleaned.
+
+<br>
+
+---
+
+👏 **Yes, you did it!**.  
+Understanding how `goto()` works is *key* to mastering how Reachy moves and behaves. Whether you're controlling the arms, head, gripper, or mobile base, knowing how motions are stacked, when they end, how they can be interrupted, will unlock a whole new level of control.  
+Keep going—you’re ready for your first moves! 🚀🤖

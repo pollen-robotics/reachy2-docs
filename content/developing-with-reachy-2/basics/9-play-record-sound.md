@@ -1,5 +1,5 @@
 ---
-title: "8. Play and record sounds"
+title: "9. Play and record sounds"
 description: "Use the audio API of the Python SDK"
 lead: "Make some noise - Use the audio API"
 date: 2023-07-26T08:05:23+02:00
@@ -10,7 +10,7 @@ type: docs
 menu:
   developing-with-reachy-2:
     parent: "SDK basics"
-weight: 270
+weight: 280
 toc: true
 ---
 <br>
@@ -149,3 +149,12 @@ This copies the file from Reachy’s system to your local machine, at the given 
 ---
 
 You can now chain audio playback with gestures or head motions for expressive sequences!
+
+
+And...
+
+**🎉 Congratulations!**  
+You now know all the **basics of Reachy’s SDK**—movement, perception, audio, and more.  
+
+Now it’s time to level up.  
+**Let’s move on to implementing complex behaviors in the [Advanced tutorials]({{< ref "developing-with-reachy-2/advanced-tutos/1-reachy-awakening" >}})**! 🚀🤖

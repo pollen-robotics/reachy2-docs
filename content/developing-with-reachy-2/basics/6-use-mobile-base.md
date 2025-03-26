@@ -518,3 +518,11 @@ lidar_map = reachy.mobile_base.lidar.get_map()
 It returns the current map as an RGB image.
 
 > No map is available in FAKE mode.
+
+<br>
+
+---
+
+**🥳 You now know how to use `goto()` on any part of Reachy.**  
+But what if you want to do more—like **record and replay a movement**, or even control Reachy at **high frequency** in real time?  
+*Spoiler alert: that's exactly what's coming next!*

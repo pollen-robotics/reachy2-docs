@@ -366,3 +366,11 @@ reachy.head.r_antenna.present_position
 reachy.head.l_antenna.present_position
 >>> 29.03
 ```
+
+<br>
+
+---
+
+👀 **Still with us?**  
+Awesome—just **one more part to go**!  
+Discover how to use the mobile base on the next page.
