@@ -24,6 +24,7 @@ ReachySDK for Reachy 2 offers you methods to make movements with the arms and he
 
 Those methods work the same way on different robot's parts, such the arms, the head or the mobile base.  
 
+{{< alert icon="⚠️" text="<b>Important note:</b> The <code>goto()</code> function is <b>not designed for high-frequency control</b>. It is meant to move the robot to a <b>specific target position</b>—whether in joint space or Cartesian space—with a smooth, time-based trajectory. <br> If your goal is to continuously adjust the robot’s position or follow a live trajectory, a dedicated method for high-frequency control is introduced in <b><a href=\"https://pollen-robotics.github.io/reachy2-docs/developing-with-reachy-2/basics/7-record-replay-trajectories\">7.Record and replay trajectories</a></b>! ⚡🤖" >}}
 
 The methods to use in order to control the robot are:  
 
@@ -106,6 +107,8 @@ You **cannot set a duration to 0 second**. This will raise an exception in your 
 ```python
 reachy.l_arm.goto([0, 0, 0, 0, 0, 0, 0], duration = 0) # raises an exception
 ```
+
+{{< alert icon="⚠️" text="You should <b>not use very short durations</b> with <code>goto()</code>, as it’s not intended for rapid updates or real-time control loops." >}}
 
 ### Goto interpolation mode
 

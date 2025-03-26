@@ -16,10 +16,19 @@ toc: true
 
 ## A) Check your network
 
+🌐 To communicate with Reachy 2, your computer and the robot must be **on the same network**. You can do this:
+- via **Ethernet** (recommended for stability), or
+- via **WiFi** (if both devices are on the same WiFi network).  
+
 Ensure your computer is on the same network as Reachy’s, preferably via a wired connection.
 
 {{< img-center "images/getting-started/setup-reachy2/connect-reachy2/Reachy2-getting-started-4-A_check-network.png" 500x "Check network" >}}
 
+<br>
+
+**⚠️ Important if using ethernet:**
+Do not plug an Ethernet cable directly between your computer and the robot.
+Instead, connect the robot’s Ethernet cable to your router or switch, so it becomes part of your local network—just like your computer.
 
 ## B) Connect to the dashboard
 

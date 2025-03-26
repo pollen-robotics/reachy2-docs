@@ -17,20 +17,33 @@ slug: "connect-reachy2"
 url: "/developing-with-reachy-2/getting-started-sdk/connect-reachy2/"
 ---
 
-<br>
+Before you can start sending commands or running code, you need to **connect to your Reachy 2**. Here’s how to get set up:
 
-To be able to connect to your Reachy 2, you first need to be on the same network (either via Ethernet or WiFi).
+## Step 1 — Be on the same network
 
-Then you need to find your robot's IP address. Unfortunately, you can't use its .local address for the SDK. You have two ways to do that : via the dashboard (the easiest way) or via the LCD screen. 
+🌐 To communicate with Reachy 2, your computer and the robot must be **on the same network**. You can do this:
+- via **Ethernet** (recommended for stability), or
+- via **WiFi** (if both devices are on the same WiFi network).
 
-## Using the dashboard
+**⚠️ Important if using ethernet:**
+Do not plug an Ethernet cable directly between your computer and the robot.
+Instead, connect the robot’s Ethernet cable to your router or switch, so it becomes part of your local network—just like your computer.
 
-You can use your robot name to access the dashboard : for that, you type on a browser `reachy_name.local:8000/`. 
+## Step 2 — Find Reachy’s IP address
+
+You’ll need the robot’s IP address to connect using the SDK.
+
+> ⚠️ Note: You can’t use the *`*.local`* hostname to connect with the SDK—you’ll need the actual IP address (e.g., `192.168.1.42`).
+
+There are two ways to find it:
+
+### Option 1: Using the dashboard
+
+Open a browser on your computer (on the same network as the robot), and goto `reachy_name.local:8000/`.
 
 Once you are in the dashboard, you can click on **Network** and you will find the IP addresses of your robot (WiFi and Ethernet). 
 
-
-## Using the LCD screen
+### Option 2: Using the LCD screen
 
 If you are not able to access the dashboard, you can turn off completely your robot. Then, you can plug the supplied LCD screen on the USB port of the mobile base.
 
@@ -39,6 +52,9 @@ Turn on your robot again, and it should display display the robot's IP addresses
 {{< img-center "images/sdk/getting-started/IP_address.jpg" 400x "" >}}
 
 
+## Step 3 — Connect!
+
+Once you’ve got the IP, you’re ready to connect using the SDK!  
 You can check that everything is working as expected by running the following Python code in a terminal on your virtual environment :
 
 ```

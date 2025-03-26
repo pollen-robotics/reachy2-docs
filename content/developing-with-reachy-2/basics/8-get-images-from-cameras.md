@@ -15,7 +15,7 @@ toc: true
 ---
 <br>
 
-> You can choose to follow our online documentation or directly see images from your Reachy by following the [notebook n°5](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/5_cameras_images.ipynb).
+> You can choose to follow our online documentation or directly see images from your Reachy by following the [notebook n°6](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/6_cameras_images.ipynb).
 
 This section assumes that you have gone through the [Hello World]({{< ref "developing-with-reachy-2/basics/1-hello-world" >}}) guide to learn how to connect to the robot.
 
