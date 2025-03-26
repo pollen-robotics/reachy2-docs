@@ -574,4 +574,8 @@ You can also read the **opening** of the gripper, still as a percentage (0 is cl
 ```python
 reachy.r_arm.gripper.get_current_opening()
 >>> 20  # almost closed
+
+# Or directly:
+reachy.r_arm.gripper.opening
+>>> 20  # almost closed
 ```
