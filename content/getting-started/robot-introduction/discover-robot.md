@@ -19,6 +19,9 @@ toc: true
 
 **Reachy 2** is a versatile, expressive, and open robotic platform designed to explore the future of **human-robot interaction**, **assistive robotics**, and **AI-driven behaviors**.
 
+{{< youtube T3RdwDkZA9c >}}
+<br>
+
 It combines the **dexterity of a humanoid upper body**, the **mobility of a holonomic base**, and a rich set of **sensors**—including stereo vision, microphones, a speaker, lidar, and more. Whether you want to build an expressive assistant, a teleoperated avatar, or a robot that learns from demonstration, Reachy 2 gives you the tools to make it happen.
 
 
@@ -46,17 +49,6 @@ It combines the **dexterity of a humanoid upper body**, the **mobility of a holo
 >- Its gripper, head, cameras, and sensors combine to create a fully interactive system
 >- And with VR teleoperation or Python-based control, you’re in command—whether you want to guide it live or program intelligent behaviors
 
-<br>
-
-### 👥 Who is it for?
-
-Reachy 2 is designed for:
-- **Researchers**, working on robotics, AI, HRI, or rehabilitation
-- **Educators**, introducing students to embodied intelligence
-- **Developers**, prototyping robotics applications in Python or ROS
-- **Artists & creatives**, building robots with personality and presence
-
-<br>
 
 ### What can you do with it?
 
@@ -73,4 +65,4 @@ With Reachy 2, you can:
 
 Whether you’re taking your first steps in robotics or pushing the boundaries of embodied AI, **Reachy 2 is your platform to explore, learn, and innovate**.
 
-Let’s bring robots to life—together. 🤝🤖
+Let’s bring robots to life together! 🤝🤖
