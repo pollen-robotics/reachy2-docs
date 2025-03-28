@@ -28,7 +28,7 @@ The Audio API allows you to:
 - Play and stop audio.
 - Record using the microphones.
 
-> ⚠️ **Note:** Audio files are stored in a **temporary folder** on Reachy’s internal computer and are **deleted at each reboot**. There’s no persistent storage yet. The file management is very basic, allowing just a list of files in a single folder..
+> ⚠️ **Note:** Audio files are stored in a **temporary folder** on Reachy’s internal computer and are **deleted at each reboot**. There’s no persistent storage yet. The file management is very basic, allowing just a list of files in a single folder.
 
 ---
 
@@ -112,7 +112,7 @@ Recording is just as simple! You can have Reachy record from its stereo micropho
 > ⚠️ Note: For now, **only `.ogg` format is supported when recording**.
 
 ### Record audio
-To start a 5-second clip recording in the background:
+To start a 5-second clip recording in the background, with the file name *tutorial*:
 ```python
 reachy.audio.record_audio('tutorial.ogg', duration_secs=5)
 ```

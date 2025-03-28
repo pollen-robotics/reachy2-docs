@@ -184,7 +184,7 @@ The **`goto()`** method takes a 4x4 matrix expressing the target pose of Reachy 
 
 As described in the page [Understand gotos in Reachy 2]({{< ref "developing-with-reachy-2/basics/2-understand-gotos" >}}), there are several parameters you can modify to customize your `goto()` movement on the arm:
 - **standard goto parameters**:
-    - **duration** *(float)* – Specifies the duration of the movement in seconds, which is of 2 seconds by default.
+    - **duration** *(float)* – Specifies the duration of the movement in seconds, which is 2 by default.
     - **wait** *(bool)* – If set to True, the method becomes blocking and waits until the movement is complete.
     - **interpolation_mode** *(str)* – Defines the trajectory profile used to reach the target. Available options are:  
         - 'minimum_jerk' (default) – Smooth motion with minimal jerk.  
@@ -193,7 +193,7 @@ As described in the page [Understand gotos in Reachy 2]({{< ref "developing-with
 <br>
 
 - **joint space specific goto parameter**:
-    - **degrees** *(bool)* – Specifies how long (in seconds) the motion should take.  
+    - **degrees** *(bool)* – Specifies if the angular value is in degree or in radians (default to degrees). 
 <br>
 
 - **cartesian space specific goto parameters**:
@@ -419,13 +419,13 @@ reachy.r_arm.get_current_positions()
 
 ### Cartesian space: forward_kinematics()
 
-You can get the end effector position of Reachy in Reachy 2 coordinate system using forward kinematics.  
+You can get the end effector pose of Reachy in Reachy 2 coordinate system using forward kinematics.  
 
 Call:
 ```python
 reachy.l_arm.forward_kinematics()
 ```
-to get the position of the left gripper in Cartesian space.
+to get the pose of the left gripper in Cartesian space.
 
 > Read next section on [Use arm kinematics]({{< ref "developing-with-reachy-2/basics/4-use-arm-kinematics" >}}) to better understand the use of the `forward_kinematics()` method.  
 

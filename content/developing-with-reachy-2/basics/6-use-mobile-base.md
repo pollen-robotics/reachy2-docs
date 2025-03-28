@@ -85,7 +85,7 @@ The odom frame is a **world-fixed frame**. The position (x, y, theta) of the rob
 ### Resetting the Odom frame
 The initial position of the odom frame matches the robot's position at startup. The odom frame can be reset at anytime to the robot's current position using:
 ```python
-reachy_mobile.mobile_base.reset_odometry()
+reachy.mobile_base.reset_odometry()
 ```
 
 After this call, the robot’s current position becomes the new origin `(0, 0, 0)` of the odom frame.
@@ -107,7 +107,7 @@ A simple `goto()` command on the mobile base will look like:
 reachy.mobile_base.goto(x=0.2, y=0, theta=20)
 ```
 
-:warning: **Important:** The odom frame is world-fixed, and the robot's position is continuously updated as long as the HAL is running (the HAL starts automatically when the robot boots). By default, **if you ask for a `goto(0, 0, 0)`, the robot will attempt to return to its position at boot-up.**
+:warning: **Important:** The odom frame is world-fixed, and the robot's position is continuously updated as long as the robot is powered up. By default, **if you ask for a `goto(0, 0, 0)`, the robot will attempt to return to its position at boot-up.**
 
 To perform a `goto()` relative to the robot's current position, use the `reset_odometry()` method before sending the command.  
 
@@ -191,7 +191,7 @@ Unlike the arms or head, where movement duration is explicitly defined using a d
 These parameters give you fine control over how and when a goto() is considered finished.
 
 ##### Tolerances
-Tolerances define **how close** the robot must be to the goal before the motion is considered finished.
+Tolerances define **how close** the robot must be to the goal for the motion to be considered finished.
 - **distance_tolerance** *(float, in meters)*  
 The maximum distance allowed between the robot’s current `(x, y)` position and the target to consider the `goto()` completed.  
 → Default: `0.05` meters (5 cm)
@@ -388,7 +388,7 @@ Since Reachy 2's mobile base is holonomic, it can move in any direction and rota
 **🦾 Example: Send a goal speed to the mobile base**
 ```python
 # Set the desired velocity (0.5 m/s forward, 20 deg/s rotation)
-reachy.mobile_base.set_goal_speed(x=0.5, y=0.0, theta=20.0)
+reachy.mobile_base.set_goal_speed(vx=0.5, vy=0.0, vtheta=20.0)
 
 # Send the command
 reachy.mobile_base.send_speed_command()

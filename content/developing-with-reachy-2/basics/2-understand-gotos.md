@@ -80,7 +80,7 @@ It can also be sent to grippers as antennas, as mentioned earlier:
 - reachy.head.l_antenna
 
 It is defined by 3 parameters: 
-- a **target**, which can be either a **joint commands** as  (a list of 7 articular degree values for the arms and 3 for the head, and a single float for grippers and antennas), or a **cartesian command** (for the arms and head only).
+- a **target**, which can be either a **joint commands** (as a list of 7 articular degree values for the arms and 3 for the head, and a single float for grippers and antennas), or a **cartesian command** (for the arms and head only).
 - a **duration**, in seconds - *set to 2 by default*
 - an **interpolation mode**, 'linear' or 'minimum_jerk' - *set to 'minimum_jerk' by default*
 
@@ -139,6 +139,9 @@ reachy.l_arm.goto([0, -10, 0, 0, 0, 0, 0], interpolation_mode='minimum_jerk')
 
 ```
 
+*Note that there is a third interpolation mode for the arm, the **elliptical** one, that you will see in details in the next section.*
+
+
 ## Goto commands - mobile_base
 
 The goto parameters for the mobile base are a little different, as you cannot ask the mobile base to reach a target position in a given time. Instead of trying to reach the given position in a given time, the robot will take as long as needed to reach its goal, or be interrupted by the timeout you can set as parameter.
@@ -147,8 +150,8 @@ The parameters are:
 - the **x** target, in meters
 - the **y** target, in meters
 - the **theta** target, in degrees by default
-- the **distance_tolerance** and **angle_tolerance**, to define how close to your target the robot must be to consider the target has been reached
-- a **timeout** value, to stop the movement if the target has been reached after a certain amount of time
+- the **distance_tolerance** and **angle_tolerance**, to define how close to your target the robot must be to consider the target has been reached (*optional*)
+- a **timeout** value, to stop the movement if the target hasn't been reached after a certain amount of time (*optional*)
 
 ```python
 # Rotation to reach a 90-degrees-rotation around the odom coordinate system
@@ -179,7 +182,7 @@ print(f"y: {round(reachy.mobile_base.odometry['y'], 1)}")
 print(f"theta: {round(reachy.mobile_base.odometry['theta'], 1)}")
 ```
 
-Let's do the same movement by adding a timetout to the forward goto:
+Let's do the same movement by adding a timeout to the forward goto:
 ```python
 # Set back the robot in position 0
 reachy.mobile_base.goto(x=0, y=0, theta=0)
@@ -293,14 +296,14 @@ print(f'After 4 seconds, goto 1 is finished : {goto1_is_finished}')
 >>> True
 ```
 
-We then have for the l_arm the goto_1
+We then have the goto_1 for the l_arm : 
 
 ```python
 print(f"Part: {reachy.get_goto_request(goto_1).part}")
 print(f"Request: {reachy.get_goto_request(goto_1).request}")
 ```
 
-And the mobile base the second one:
+And  the second one for the mobile base:
 ```python
 if reachy.mobile_base is not None:
     print(f"Part: {reachy.get_goto_request(goto_2).part}")
@@ -408,6 +411,6 @@ The movement on the head will continue, but all the movements of the left will b
 
 ---
 
-👏 **Yes, you did it!**.  
+👏 **Yes, you did it!**
 Understanding how `goto()` works is *key* to mastering how Reachy moves and behaves. Whether you're controlling the arms, head, gripper, or mobile base, knowing how motions are stacked, when they end, how they can be interrupted, will unlock a whole new level of control.  
 Keep going—you’re ready for your first moves! 🚀🤖
