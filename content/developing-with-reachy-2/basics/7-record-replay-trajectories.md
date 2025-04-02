@@ -1,7 +1,7 @@
 ---
 title: "7. Record and replay trajectories"
-description: "Record and replay trajectories using the Python SDK"
-lead: "Record and replay trajectories"
+description: "Trajectories with high-frequency control on Reachy 2"
+lead: "Play, record, replay trajectories at high frequency"
 date: 2023-07-26T08:05:23+02:00
 lastmod: 2023-07-26T08:05:23+02:00
 draft: false
@@ -13,17 +13,69 @@ menu:
 weight: 260
 toc: true
 ---
-<br>
 
-You can easily record joint trajectories directly on Reachy, store and replay them later. This page will show you how to implement such mechanisms. 
+So far, you've seen how to use `goto()` to move Reachy to specific positions. While this is perfect for **high-level actions**, it’s **not meant for high-frequency control**, like following a fast-changing target, reacting continuously to sensor input, or replaying smooth demonstrations with precision.
 
-All examples given below will show trajectory recordings on each of the robot's joints. The position of each motor will be stored at a predefined frequency (typically 100Hz). Similarly, the replay will set new target positions using the same frequency. These basic examples do not perform any kind of filtering or modification of the data.
+That’s where **recording and replaying trajectories** comes in.
 
-In the following examples, we will assume that you are already connected to your robot and know how to control individual motors.
+## Use of send_goal_positions()
+
+When you want Reachy to follow a **continuous trajectory**—whether captured from teleoperation, a learned model, or an external controller—you need something more responsive than `goto()`.
+
+The `send_goal_positions()` method sends the specified goal positions to all the joints you provided a `goal_position` for:
+- It allows you to **send joint positions frame by frame**, at high frequency (e.g. 100 Hz).
+- It gives you **low-latency, real-time-like control** of the robot’s motion.
+
+**Unlike `goto()`**, this method **does not interpolate** between positions, and sends the goal_position immediately.
+
+
+**⚠️ Important: Use only for continuous trajectories**  
+
+{{< warning icon="🛑" text="When you use <code>send_goal_positions()</code>, Reachy will attempt to move to the goal position <b>as fast as it can</b>. This means you must only use it to send <b>small, continuous steps</b>, where each goal is close to the current position. <br>If the gap between the current and target joint positions is too large, this can result in unsafe movements." >}}
+
+#### Examples of reachy.send_goal_positions() usage
+
+**🦾 Example 1: Set all joints to 0°**  
+Before calling `send_goal_positions()`, you must manually set `goal_position` for each joint you want to control.
+
+> ⚠️ **Do not play this example on a real robot**
+```python
+# Set all joints to position 0
+for joint in reachy.joints.values():
+    joint.goal_position = 0
+
+# Send the command to the robot
+reachy.send_goal_positions()
+```
+---
+**🦾 Example 2: Play a sine wave on r_arm elbow**  
+This example simulates sending high-frequency control to create a smooth trajectory:
+
+```python
+import time
+import math
+
+# Parameters
+frequency = 0.5  # Hz, so one full movement every 2 seconds
+duration = 5     # seconds
+update_rate = 0.01  # 100Hz
+
+start_time = time.time()
+
+while time.time() - start_time < duration:
+    t = time.time() - start_time
+    angle = -25 + 25 * math.sin(2 * math.pi * frequency * t)  # Range: 0° to -50°
+    reachy.r_arm.elbow.pitch.goal_position = angle
+    reachy.send_goal_positions()
+    time.sleep(update_rate)
+```
+---
 
 ## Recording a trajectory
 
-To record a trajectory, we will simply get the current positions of individual motors at a predefined frequency. We will first define a list of motors that we want to record. In this example, we will only record the joints from the right arm, but you can similarly record a single motor or all motors of the robot at once.
+{{< alert icon="📝" text="These basic examples do not perform any kind of filtering or modification of the data. <br>In the following examples, we will assume that you are already connected to your robot and know how to control individual joints." >}}
+
+To record a trajectory, we will simply get the current positions of individual motors at a predefined frequency, typically 100Hz. We will first define a list of motors that we want to record. In this example, we will only record the joints from the right arm, but you can similarly record a single joint or all joints of the robot at once.
 
 ```python
 # assuming we run something like this before:
@@ -122,4 +174,13 @@ for joints_positions in trajectories:
 
 > The `check_positions` parameter is used to verify that the goal positions have been reached after the command has been sent and that there have been no problems with unreachable positions. This process can take time and slow your replay. Since this is a recording, all poses are necessarily reachable, so there's no need to waste processing time on this check. 
 
-Now all we have to do is move the mobile base!
+<br>
+
+---
+
+**🏅 You’re now a movement expert on Reachy 2.**  
+There’s no secret left when it comes to making the robot move with precision and style.
+
+But movement alone isn’t enough—if you want Reachy to **interact with the world**, it needs to **see** and **hear** what's around it.
+
+🎥 Up next: **Learn how to use Reachy’s cameras** and open the door to perception-driven interaction!

@@ -42,7 +42,7 @@ The **kinematic model** describes the motion of a robot mathematically without c
 
 We have defined the full kinematic model of the arm, including the translation and rotation required to move from one joint to the next. For a right arm equipped with a gripper, it looks like this:
 
-|Motor|Translation|Rotation|
+|Joint|Translation|Rotation|
 |-----|-----------|--------|
 |r_arm.shoulder.pitch|(0, -0.019, 0)|(0, 1, 0)|
 |r_arm.shoulder.roll|(0, 0, 0)|(1, 0, 0)|
@@ -51,7 +51,7 @@ We have defined the full kinematic model of the arm, including the translation a
 |r_arm.wrist.roll|(0, 0, -0.120)|(0, 0, 1)|
 |r_arm.wrist.pitch|(0, 0, 0)|(0, 1, 0)|
 |r_arm.wrist.yaw|(0, 0, 0)|(1, 0, 0)|
-|r_gripper|(0, ??, ??)|(0, 0, 0)|
+|r_arm.gripper|(0, ??, ??)|(0, 0, 0)|
 
 To use and understand the kinematic model, you need to know how Reachy's coordinate system is defined (from Reachy's perspective). See below:
 
@@ -95,7 +95,7 @@ Using the kinematic model, we can compute the 3D position and orientation of the
 Each arm has a **`forward_kinematics()`** method. To use it, first connect to your Reachy.
 
 ```python
-from reachy_sdk import ReachySDK
+from reachy2_sdk import ReachySDK
 
 reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
 
@@ -195,7 +195,7 @@ You need to specify a target pose in Reachy coordinate system as an argument.
 Let's for example ask the inverse kinematics of the current pose, using the forward kinematics.
 
 ```python
-from reachy_sdk import ReachySDK
+from reachy2_sdk import ReachySDK
 
 reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
 
@@ -309,4 +309,10 @@ The result should look like this:
     {{< video "videos/sdk/goto_ik.mp4" "80%" >}}
 </p>
 
-Now, we are going to move the head !
+<br>
+
+---
+
+**✨ Got everything?**  
+Awesome! Now it’s time to bring Reachy to life and **move the head**.  
+Let’s give it some personality! 💫

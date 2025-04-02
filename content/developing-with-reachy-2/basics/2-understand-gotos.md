@@ -1,5 +1,5 @@
 ---
-title: "2. Understand moves in Reachy 2"
+title: "2. Understand gotos in Reachy 2"
 description: "How gotos work"
 lead: "How gotos work to create movements sequences"
 date: 2023-07-26T08:05:23+02:00
@@ -18,12 +18,13 @@ toc: true
 
 > You can choose to follow our online documentation or to make your Reachy move by following the [notebook n°2](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/2_goto_introduction.ipynb). 
 
-## Moves methods
+## Gotos methods
 
-ReachySDK for Reachy 2 offers you methods to make movements with the arms and head, controlling the target position in several way, choosing the duration of the movement, or even the interpolation mode.  
+ReachySDK for Reachy 2 offers you methods to make movements with the arms and head, controlling the target position in several ways, choosing the duration of the movement, or even the interpolation mode. We called them **Goto**.  
 
-Those methods work the same way on the arms and the head, but **not on the mobile base**.  
+Those methods work the same way on different robot's parts, such the arms, the head or the mobile base.  
 
+{{< alert icon="⚠️" text="<b>Important note:</b> The <code>goto()</code> function is <b>not designed for high-frequency control</b>. It is meant to move the robot to a <b>specific target position</b>—whether in joint space or Cartesian space—with a smooth, time-based trajectory. <br> If your goal is to continuously adjust the robot’s position or follow a live trajectory, a dedicated method for high-frequency control is introduced in <b><a href=\"https://pollen-robotics.github.io/reachy2-docs/developing-with-reachy-2/basics/7-record-replay-trajectories\">7.Record and replay trajectories</a></b>! ⚡🤖" >}}
 
 The methods to use in order to control the robot are:  
 
@@ -46,19 +47,42 @@ The methods to use in order to control the robot are:
     - **`look_at()`**: you control the head by giving a point in the robot coordinate system the head will look at
 
     - **`rotate_by()`**: you can rotate the head in relation to its current position, by setting roll, pitch and yaw values in degrees, either in relation to the robot's frame of reference or to the head.
+<br>
+<br>
+- **for the mobile base:**
+    - **`goto()`**: you control the mobile base by giving a position to reach in the odometry frame of the mobile base
 
 
-## Goto commands
+Grippers and antennas also support goto commands:
 
-A goto command can only be sent on parts:
+- **for the grippers:**
+    - **`goto()`**: you control the position or opening of the gripper
+<br>
+<br>
+- **for the antennas:**
+    - **`goto()`**: you control the position of the antennas
+
+<br>
+
+> The following tutorial only shows examples for the arms, head and mobile_base, but most of the description is also true for the goto commands on the grippers and antennas.
+
+## Goto commands - arms and head
+
+A goto command can be sent on parts:
 - reachy.l_arm
 - reachy.r_arm
 - reachy.head
 
-and is defined by 3 parameters : 
-- the **joint commands**, as a list of articular degree values (7 for the arms and 3 for the head)
-- the **duration**, in seconds - *set to 2 by default*
-- the **interpolation mode**, 'linear' or 'minimum_jerk' - *set to 'minimum_jerk' by default*
+It can also be sent to grippers as antennas, as mentioned earlier:
+- reachy.r_arm.gripper
+- reachy.l_arm.gripper
+- reachy.head.r_antenna
+- reachy.head.l_antenna
+
+It is defined by 3 parameters: 
+- a **target**, which can be either a **joint commands** (as a list of 7 articular degree values for the arms and 3 for the head, and a single float for grippers and antennas), or a **cartesian command** (for the arms and head only).
+- a **duration**, in seconds - *set to 2 by default*
+- an **interpolation mode**, 'linear' or 'minimum_jerk' - *set to 'minimum_jerk' by default*
 
 
 ### Goto duration 
@@ -83,6 +107,8 @@ You **cannot set a duration to 0 second**. This will raise an exception in your 
 ```python
 reachy.l_arm.goto([0, 0, 0, 0, 0, 0, 0], duration = 0) # raises an exception
 ```
+
+{{< alert icon="⚠️" text="You should <b>not use very short durations</b> with <code>goto()</code>, as it’s not intended for rapid updates or real-time control loops." >}}
 
 ### Goto interpolation mode
 
@@ -113,13 +139,75 @@ reachy.l_arm.goto([0, -10, 0, 0, 0, 0, 0], interpolation_mode='minimum_jerk')
 
 ```
 
+*Note that there is a third interpolation mode for the arm, the **elliptical** one, that you will see in details in the next section.*
+
+
+## Goto commands - mobile_base
+
+The goto parameters for the mobile base are a little different, as you cannot ask the mobile base to reach a target position in a given time. Instead of trying to reach the given position in a given time, the robot will take as long as needed to reach its goal, or be interrupted by the timeout you can set as parameter.
+
+The parameters are:
+- the **x** target, in meters
+- the **y** target, in meters
+- the **theta** target, in degrees by default
+- the **distance_tolerance** and **angle_tolerance**, to define how close to your target the robot must be to consider the target has been reached (*optional*)
+- a **timeout** value, to stop the movement if the target hasn't been reached after a certain amount of time (*optional*)
+
+```python
+# Rotation to reach a 90-degrees-rotation around the odom coordinate system
+reachy.mobile_base.goto(x=0, y=0, theta=90)
+```
+
+### Goto tolerances
+
+You can modify the tolerances around the goal position you want to reach. Tuning the tolerances will modify the precision of the position at arrival, but also modify the time the mobile base will take before considering its movement over. You will learn more about these tolerances in the mobile_base tutorial.
+
+### Goto timeout
+
+You don't have any duration parameters to control the mobile base, but you can use the timeout to stop the mobile base goto after a certain amount of time.
+The movement is stopped if the target has not been reached after the duration of this timeout. In the case the target has been reached before the timeout is over, the timeout will have no impact.
+
+```python
+# Set back the robot in position 0
+reachy.mobile_base.goto(x=0, y=0, theta=0)
+
+# Move forward by 30cm
+reachy.mobile_base.goto(x=0.3, y=0, theta=0)
+```
+
+If we print the current position of the robot once it has stopped, we can see it has reached the goal position:
+```python
+print(f"x: {round(reachy.mobile_base.odometry['x'], 1)}")
+print(f"y: {round(reachy.mobile_base.odometry['y'], 1)}")
+print(f"theta: {round(reachy.mobile_base.odometry['theta'], 1)}")
+```
+
+Let's do the same movement by adding a timeout to the forward goto:
+```python
+# Set back the robot in position 0
+reachy.mobile_base.goto(x=0, y=0, theta=0)
+
+# Move forward by 30cm, with a timeout of 0.5 seconds
+reachy.mobile_base.goto(x=0.3, y=0, theta=0, timeout=0.8)
+```
+If we print the current position, we can see the robot was stopped before reaching the target:
+
+```python
+print(f"x: {round(reachy.mobile_base.odometry['x'], 1)}")
+print(f"y: {round(reachy.mobile_base.odometry['y'], 1)}")
+print(f"theta: {round(reachy.mobile_base.odometry['theta'], 1)}")
+```
+
+> Default timeout is **100 seconds**.
+
+
 ## Goto execution
 
 There are two important concepts to be aware of : 
 - gotos are stacked for a part (i.e. they run one after another),
 - but each part is independent (i.e. a goto for the left arm will run in parallel with a goto for the right arm).
 
-### Goto is non-blocking for other parts 
+### Gotos are non-blocking 
 
 It means you can send a goto command on different parts, it won't wait for the movement to be executed on the first part to execute the other one, but will follow the timing of your code.
 
@@ -131,7 +219,7 @@ reachy.r_arm.goto([0, 0, -10, -90, 0, 0, -15], duration = 2)
 
 This sequence will take 3 seconds to execute, as the right arm will start its movement 1 second after the left arm has started its own movement. They will finish at the same time.
 
-### Goto is blocking and stacked for a part
+### Gotos are stacked for a part
 
 It means that you can send several goto commands on a part one after another without any delay, they will be played in this order, but will wait for the previous goto to be finished.  
 
@@ -190,6 +278,8 @@ Let's take an example:
 
 ```python
 goto_1 = reachy.l_arm.goto([0, 0, 0, -60, 0, 0, 0], duration = 3)
+if reachy.mobile_base is not None:
+    goto_2 = reachy.mobile_base.goto(0.2, 0, 0)
 
 time.sleep(1)
 
@@ -206,11 +296,20 @@ print(f'After 4 seconds, goto 1 is finished : {goto1_is_finished}')
 >>> True
 ```
 
-Retrieve the joint requests of a goto command from its ID:
-
+We then have the goto_1 for the l_arm : 
 
 ```python
-reachy.get_goto_joints_request(goto_1)
+print(f"Part: {reachy.get_goto_request(goto_1).part}")
+print(f"Request: {reachy.get_goto_request(goto_1).request}")
+```
+
+And  the second one for the mobile base:
+```python
+if reachy.mobile_base is not None:
+    print(f"Part: {reachy.get_goto_request(goto_2).part}")
+    print(f"Request: {reachy.get_goto_request(goto_2).request}")
+else: 
+    print("Cell content ignored, no mobile_base is available")
 ```
 
 You get information on the part involved, the target joint values, the duration of the movement, and the interpolation mode. 
@@ -307,3 +406,11 @@ reachy.l_arm.cancel_all_goto()
 ```
 
 The movement on the head will continue, but all the movements of the left will be stopped and the left arm queue cleaned.
+
+<br>
+
+---
+
+👏 **Yes, you did it!**
+Understanding how `goto()` works is *key* to mastering how Reachy moves and behaves. Whether you're controlling the arms, head, gripper, or mobile base, knowing how motions are stacked, when they end, how they can be interrupted, will unlock a whole new level of control.  
+Keep going—you’re ready for your first moves! 🚀🤖

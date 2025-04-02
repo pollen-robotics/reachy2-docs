@@ -185,7 +185,7 @@ reachy.goto_posture('elbow_90', duration=5)
 
 The *reachy* object instanciated from the ReachySDK class above is the root access to get all incoming information from Reachy 2 (joints or sensors) and to control each part of the robot (left/right arm, head, mobile base).  
 
-The *reachy* object has 7 attributes and numerous methods which you can find in the [documentation](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html). 
+The *reachy* object has 10 attributes and numerous methods which you can find in the [documentation](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html). 
 
 If you want to have an overview, you can browse the basic attributes and methods below. 
 
@@ -198,120 +198,24 @@ The *reachy* detailed attributes give access to info, parts and sensors of the r
 
 #### List of attributes
 
-[reachy.info]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachyinfo" >}})  
-[reachy.mobile_base]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachymobile_base" >}})  
-[reachy.joints]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachyjoints" >}})  
-[reachy.head]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachyhead" >}}) 
-[reachy.l_arm]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachyl_arm" >}})  
-[reachy.r_arm]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachyr_arm" >}}) 
+[reachy.audio]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachyaudio" >}})  
+[reachy.audit]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachyaudit" >}})  
 [reachy.cameras]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachycameras" >}})  
- 
-#### reachy.info
+[reachy.head]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachyhead" >}})  
+[reachy.info]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachyinfo" >}})  
+[reachy.joints]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachyjoints" >}})  
+[reachy.l_arm]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachyl_arm" >}})  
+[reachy.mobile_base]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachymobile_base" >}})  
+[reachy.r_arm]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachyr_arm" >}})  
+[reachy.tripod]({{< ref "developing-with-reachy-2/basics/1-hello-world#reachytripod" >}})
 
-[Info object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/config/reachy_info.html) containing Reachy's informations
+#### reachy.audio
 
+
+#### reachy.audit
 ```python
-reachy.info
->>> <ReachyInfo mode="FAKE" 
-	robot_serial_number="reachy2-pvt01" 
-	hardware_version="" 
-	core_software_version="1.7.3.18" 
-	battery_voltage=30.0 >
- ```
-
-#### reachy.mobile_base
-
-[Mobile_base object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.mobile_base) containing the informations about the mobile base. 
-
-
-#### reachy.joints
-
-[Joint object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.joints) containing every joint of the robot, from its arms to its head. This is useful when you want to get information, like the position, from all joints at once.
-
-```python
-reachy.joints
->>> {'r_arm.shoulder.pitch': <OrbitaJoint axis_type="pitch" present_position=0.0 goal_position=0.0 >,
-	'r_arm.shoulder.roll': <OrbitaJoint axis_type="roll" present_position=0.0 goal_position=0.0 >,
-	'r_arm.elbow.yaw': <OrbitaJoint axis_type="yaw" present_position=0.0 goal_position=0.0 >,
-	'r_arm.elbow.pitch': <OrbitaJoint axis_type="pitch" present_position=0.0 goal_position=0.0 >,
-	'r_arm.wrist.roll': <OrbitaJoint axis_type="roll" present_position=0.0 goal_position=0.0 >,
-	'r_arm.wrist.pitch': <OrbitaJoint axis_type="pitch" present_position=-0.0 goal_position=-0.0 >,
-	'r_arm.wrist.yaw': <OrbitaJoint axis_type="yaw" present_position=-0.0 goal_position=-0.0 >,
-	'l_arm.shoulder.pitch': <OrbitaJoint axis_type="pitch" present_position=0.0 goal_position=0.0 >,
-	'l_arm.shoulder.roll': <OrbitaJoint axis_type="roll" present_position=0.0 goal_position=0.0 >,
-	'l_arm.elbow.yaw': <OrbitaJoint axis_type="yaw" present_position=0.0 goal_position=0.0 >,
-	'l_arm.elbow.pitch': <OrbitaJoint axis_type="pitch" present_position=0.0 goal_position=0.0 >,
-	'l_arm.wrist.roll': <OrbitaJoint axis_type="roll" present_position=0.0 goal_position=0.0 >,
-	'l_arm.wrist.pitch': <OrbitaJoint axis_type="pitch" present_position=-0.0 goal_position=-0.0 >,
-	'l_arm.wrist.yaw': <OrbitaJoint axis_type="yaw" present_position=-0.0 goal_position=-0.0 >,
-	'head.neck.roll': <OrbitaJoint axis_type="roll" present_position=0.0 goal_position=0.0 >,
-	'head.neck.pitch': <OrbitaJoint axis_type="pitch" present_position=-0.0 goal_position=-0.0 >,
-	'head.neck.yaw': <OrbitaJoint axis_type="yaw" present_position=-0.0 goal_position=-0.0 >}
-
-```
-
-#### reachy.head
-
-[Head object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.head) containing the three joints composing the Orbita actuator along with methods for its kinematics or to control it.
-
-```python
-reachy.head
->>> <Head on=False actuators=
-	neck: <Orbita3d on=False joints=
-	<OrbitaJoint axis_type="roll" present_position=0.0 goal_position=0.0 >
-	<OrbitaJoint axis_type="pitch" present_position=-0.0 goal_position=-0.0 >
-	<OrbitaJoint axis_type="yaw" present_position=-0.0 goal_position=-0.0 >
-
->>
-```
-
-#### reachy.l_arm
-
-[Arm object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.l_arm) containing every joint in the left arm along with its kinematics methods.
-
-```python
-reachy.l_arm
->>> <Arm on=False actuators=
-	shoulder: <Orbita2d on=False joints=
-	<OrbitaJoint axis_type="pitch" present_position=0.0 goal_position=0.0 >
-	<OrbitaJoint axis_type="roll" present_position=0.0 goal_position=0.0 >
->
-	elbow: <Orbita2d on=False joints=
-	<OrbitaJoint axis_type="yaw" present_position=0.0 goal_position=0.0 >
-	<OrbitaJoint axis_type="pitch" present_position=0.0 goal_position=0.0 >
->
-	wrist: <Orbita3d on=False joints=
-	<OrbitaJoint axis_type="roll" present_position=0.0 goal_position=0.0 >
-	<OrbitaJoint axis_type="pitch" present_position=-0.0 goal_position=-0.0 >
-	<OrbitaJoint axis_type="yaw" present_position=-0.0 goal_position=-0.0 >
->
->
-
-```
-
-
-#### reachy.r_arm
-
-[Arm object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.r_arm) containing every joint in the right arm along with its kinematics methods.
-
-```python
-reachy.r_arm
->>> <Arm on=False actuators=
-	shoulder: <Orbita2d on=False joints=
-	<OrbitaJoint axis_type="pitch" present_position=0.0 goal_position=0.0 >
-	<OrbitaJoint axis_type="roll" present_position=0.0 goal_position=0.0 >
->
-	elbow: <Orbita2d on=False joints=
-	<OrbitaJoint axis_type="yaw" present_position=0.0 goal_position=0.0 >
-	<OrbitaJoint axis_type="pitch" present_position=0.0 goal_position=0.0 >
->
-	wrist: <Orbita3d on=False joints=
-	<OrbitaJoint axis_type="roll" present_position=0.0 goal_position=0.0 >
-	<OrbitaJoint axis_type="pitch" present_position=-0.0 goal_position=-0.0 >
-	<OrbitaJoint axis_type="yaw" present_position=-0.0 goal_position=-0.0 >
->
->
-
+reachy.audit
+>>> {'r_arm': {'shoulder': 'Ok', 'elbow': 'Ok', 'wrist': 'Ok', 'gripper': None}, 'l_arm': {'shoulder': 'Ok', 'elbow': 'Ok', 'wrist': 'Ok', 'gripper': None}, 'head': {'neck': 'Ok', 'l_antenna': None, 'r_antenna': None}}
 ```
 
 #### reachy.cameras
@@ -321,9 +225,147 @@ reachy.r_arm
 ```python
 reachy.cameras
 >>> <CameraManager intialized_cameras=
-	
+        <Camera name="depth" stereo=False> 
+        <Camera name="teleop" stereo=True> 
 >
+```
 
+#### reachy.head
+
+[Head object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.head) containing the three joints composing the Orbita actuator along with methods for its kinematics or to control it.
+
+```python
+reachy.head
+>>> <Head on=False actuators=
+        neck: <Orbita3d on=False joints=
+        <OrbitaJoint axis_type="roll" present_position=4.76 goal_position=4.76 >
+        <OrbitaJoint axis_type="pitch" present_position=-14.26 goal_position=-14.26 >
+        <OrbitaJoint axis_type="yaw" present_position=19.11 goal_position=19.11 >
+>
+        l_antenna: <Antenna on=False joints=
+        <DynamixelMotor on=False present_position=54.32 goal_position=54.32 >
+>
+        r_antenna: <Antenna on=False joints=
+        <DynamixelMotor on=False present_position=-52.73 goal_position=-52.73 >
+>
+>
+```
+
+#### reachy.info
+
+[Info object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/config/reachy_info.html) containing Reachy's informations
+
+```python
+reachy.info
+>>> <ReachyInfo mode="REAL" 
+	robot_serial_number="reachy2-pvt01" 
+	hardware_version="" 
+	core_software_version="1.7.4.11" 
+ 	robot_api_version="1.0.18"
+	battery_voltage=30.0 >
+ ```
+
+ #### reachy.joints
+
+[Joint object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.joints) containing every joint of the robot, from its arms to its head. This is useful when you want to get information, like the position, from all joints at once.
+
+```python
+reachy.joints
+>>> {'r_arm.shoulder.pitch': <OrbitaJoint axis_type="pitch" present_position=2.93 goal_position=2.93 >,
+	'r_arm.shoulder.roll': <OrbitaJoint axis_type="roll" present_position=16.06 goal_position=16.06 >,
+	'r_arm.elbow.yaw': <OrbitaJoint axis_type="yaw" present_position=9.9 goal_position=9.9 >,
+	'r_arm.elbow.pitch': <OrbitaJoint axis_type="pitch" present_position=-9.23 goal_position=-9.23 >,
+	'r_arm.wrist.roll': <OrbitaJoint axis_type="roll" present_position=-13.98 goal_position=-13.98 >,
+	'r_arm.wrist.pitch': <OrbitaJoint axis_type="pitch" present_position=-2.85 goal_position=-2.85 >,
+	'r_arm.wrist.yaw': <OrbitaJoint axis_type="yaw" present_position=-18.11 goal_position=-18.11 >,
+	'r_arm.gripper': <GripperJoint on=False present_position=129.81 goal_position=129.81 >,
+	'l_arm.shoulder.pitch': <OrbitaJoint axis_type="pitch" present_position=-0.31 goal_position=-0.31 >,
+	'l_arm.shoulder.roll': <OrbitaJoint axis_type="roll" present_position=-15.01 goal_position=-15.01 >,
+	'l_arm.elbow.yaw': <OrbitaJoint axis_type="yaw" present_position=-5.86 goal_position=-5.86 >,
+	'l_arm.elbow.pitch': <OrbitaJoint axis_type="pitch" present_position=-4.81 goal_position=-4.81 >,
+	'l_arm.wrist.roll': <OrbitaJoint axis_type="roll" present_position=-3.49 goal_position=-3.49 >,
+	'l_arm.wrist.pitch': <OrbitaJoint axis_type="pitch" present_position=18.09 goal_position=18.09 >,
+	'l_arm.wrist.yaw': <OrbitaJoint axis_type="yaw" present_position=9.01 goal_position=9.01 >,
+	'l_arm.gripper': <GripperJoint on=False present_position=128.5 goal_position=128.5 >,
+	'head.neck.roll': <OrbitaJoint axis_type="roll" present_position=4.76 goal_position=4.76 >,
+	'head.neck.pitch': <OrbitaJoint axis_type="pitch" present_position=-14.26 goal_position=-14.26 >,
+	'head.neck.yaw': <OrbitaJoint axis_type="yaw" present_position=19.11 goal_position=19.11 >,
+	'head.l_antenna': <DynamixelMotor on=False present_position=54.32 goal_position=54.32 >,
+	'head.r_antenna': <DynamixelMotor on=False present_position=-52.73 goal_position=-52.73 >}
+
+```
+
+#### reachy.l_arm
+
+[Arm object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.l_arm) containing every joint in the left arm along with its kinematics methods.
+
+```python
+reachy.l_arm
+>>> <Arm on=False actuators=
+        shoulder: <Orbita2d on=False joints=
+        <OrbitaJoint axis_type="pitch" present_position=-0.31 goal_position=-0.31 >
+        <OrbitaJoint axis_type="roll" present_position=-15.01 goal_position=-15.01 >
+>
+        elbow: <Orbita2d on=False joints=
+        <OrbitaJoint axis_type="yaw" present_position=-5.86 goal_position=-5.86 >
+        <OrbitaJoint axis_type="pitch" present_position=-4.81 goal_position=-4.81 >
+>
+        wrist: <Orbita3d on=False joints=
+        <OrbitaJoint axis_type="roll" present_position=-3.49 goal_position=-3.49 >
+        <OrbitaJoint axis_type="pitch" present_position=18.09 goal_position=18.09 >
+        <OrbitaJoint axis_type="yaw" present_position=9.01 goal_position=9.01 >
+>
+        gripper: <ParallelGripper on=False joints=
+        <GripperJoint on=False present_position=128.5 goal_position=128.5 >
+>
+>
+```
+
+#### reachy.mobile_base
+
+[Mobile_base object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.mobile_base) containing the informations about the mobile base. 
+
+```python
+reachy.mobile_base
+>>> <MobileBase on=True 
+ lidar_safety_enabled=True 
+ battery_voltage=26.6>
+```
+
+#### reachy.r_arm
+
+[Arm object](https://pollen-robotics.github.io/reachy2-sdk/reachy2_sdk/reachy_sdk.html#ReachySDK.r_arm) containing every joint in the right arm along with its kinematics methods.
+
+```python
+reachy.r_arm
+>>> <Arm on=False actuators=
+        shoulder: <Orbita2d on=False joints=
+        <OrbitaJoint axis_type="pitch" present_position=2.93 goal_position=2.93 >
+        <OrbitaJoint axis_type="roll" present_position=16.06 goal_position=16.06 >
+>
+        elbow: <Orbita2d on=False joints=
+        <OrbitaJoint axis_type="yaw" present_position=9.9 goal_position=9.9 >
+        <OrbitaJoint axis_type="pitch" present_position=-9.23 goal_position=-9.23 >
+>
+        wrist: <Orbita3d on=False joints=
+        <OrbitaJoint axis_type="roll" present_position=-13.98 goal_position=-13.98 >
+        <OrbitaJoint axis_type="pitch" present_position=-2.85 goal_position=-2.85 >
+        <OrbitaJoint axis_type="yaw" present_position=-18.11 goal_position=-18.11 >
+>
+        gripper: <ParallelGripper on=False joints=
+        <GripperJoint on=False present_position=129.81 goal_position=129.81 >
+>
+>
+```
+
+
+
+
+
+#### reachy.tripod
+```python
+reachy.tripod
+>>> <Tripod height=0.996 >
 ```
 
 </details>
@@ -331,7 +373,7 @@ reachy.cameras
 <details>
 <summary><b>Reachy's basic methods</b></summary>
 
-The *reachy* object has several methods, 8 of them being basic methods useful to start using the robot. The other methods are related to robot movements, and will be detailed in a more advanced section.
+The *reachy* object has several methods, 9 of them being basic methods useful to start using the robot. The other methods are related to robot movements, and will be detailed in a more advanced section.
 
 #### List of basic methods
 
@@ -402,3 +444,12 @@ reachy.goto_posture()
 ```
 
 </details>
+
+<br>
+
+---
+
+**🔌 You know how to connect to your robot—great start!**  
+Now you’re ready to **dive into the SDK** and begin your journey through these tutorials.
+
+Let’s explore what Reachy can do, one step at a time.

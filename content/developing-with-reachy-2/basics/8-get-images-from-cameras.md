@@ -1,5 +1,5 @@
 ---
-title: "6. Get images from cameras"
+title: "8. Get images from cameras"
 description: "Image acquisition using the Python SDK"
 lead: "Image acquisition"
 date: 2023-07-26T08:05:23+02:00
@@ -10,12 +10,12 @@ type: docs
 menu:
   developing-with-reachy-2:
     parent: "SDK basics"
-weight: 250
+weight: 270
 toc: true
 ---
 <br>
 
-> You can choose to follow our online documentation or directly see images from your Reachy by following the [notebook n°5](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/5_cameras_images.ipynb).
+> You can choose to follow our online documentation or directly see images from your Reachy by following the [notebook n°6](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/6_cameras_images.ipynb).
 
 This section assumes that you have gone through the [Hello World]({{< ref "developing-with-reachy-2/basics/1-hello-world" >}}) guide to learn how to connect to the robot.
 
@@ -34,7 +34,7 @@ from reachy2_sdk.media.camera import CameraView
 First, connect to your Reachy:
 
 ```python
-from reachy_sdk import ReachySDK
+from reachy2_sdk import ReachySDK
 
 reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
 
@@ -98,7 +98,7 @@ The depth camera operates similarly to the teleop camera but captures additional
 
 You can retrieve RGB images using `get_frame()`:
 ```python
-from reachy_sdk import ReachySDK
+from reachy2_sdk import ReachySDK
 from reachy2_sdk.media.camera import CameraView
 
 reachy = ReachySDK(host='10.0.0.201')
@@ -152,5 +152,11 @@ T_cam_reachy = reachy.cameras.depth.get_extrinsics()
          1.00000000e+00]])
 ```
 
-That's it for the cameras! 
-Now, we are going to record and replay movements.
+<br>
+
+---
+
+**📸 That’s it for the cameras!**  
+Now that Reachy can see, let’s give it the power to **hear and speak**.
+
+🎧 Up next: **Learn how to use audio** with your robot—to **record sound**, **play audio files**, and make Reachy even more interactive!

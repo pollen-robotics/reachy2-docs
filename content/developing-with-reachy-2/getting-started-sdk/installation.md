@@ -137,4 +137,11 @@ The SDK relies on a few third-party Python packages, such as:
 
 These will be **installed automatically** when you install the SDK.
 
-{{< warning icon="👉🏾" text="Now that you have reachy2-sdk installed on your computer, you can connect to your robot and learn how to use it with the Getting Started Notebooks. So keep up!" >}}
+<br>
+
+---
+
+**✅ Now that you have `reachy2-sdk` installed on your computer,**  
+you’re all set to **connect to your robot** and start exploring with the **Getting Started Notebooks**.
+
+So keep up—**Reachy is waiting!** 🚀📓
