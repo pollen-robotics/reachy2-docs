@@ -14,9 +14,36 @@ weight: 400
 toc: true
 ---
 
-If you want to try movements on the robot without using the real robot, you can install a simulated Reachy 2 on your computer, and run it the same way the real robot is run. You'll have a rviz window to see the fake robot move. 
+> Whether you **don’t have a Reachy 2 robot** yet or simply want to **prototype without using the real robot**, the simulation is the perfect place to start. 
+ 
+We provide a preconfigured **Docker image** that lets you explore and develop for Reachy 2 on any operating system. In just a few steps, you’ll be able to interact with a fully simulated robot, ideal for testing behaviors, building applications, or just getting familiar with the platform.
 
-The easiest way is using a docker image. We will thus assume that you already have docker installed and setup.
+You can set up the simulation in two ways:
+- Pull the [ready-to-use image from Docker Hub](https://hub.docker.com/r/pollenrobotics/reachy2)
+- Pull it yourself from our [GitHub repository](https://github.com/pollen-robotics/docker_reachy2_core) *(not available yet)*
+
+## From Docker Hub
+
+### 1. Install Docker
+Follow the installation instructions for [Docker Desktop](https://www.docker.com/products/docker-desktop/)⁠.  
+You don't need to be logged in, as the image is open.
+
+### 2. Run the Robot Simulation
+
+#### Option 1: Via Docker Desktop (GUI)
+
+#### Option 2: Via Command Line Interface
+
+
+### 3. Accessing the Displays
+#### Rviz/Gazebo
+To access Rviz or Gazebo, open the following URL in your web browser: [localhost:6080/vnc.html?autoconnect=1&resize=remote⁠](http://localhost:6080/vnc.html?autoconnect=1&resize=remote⁠)
+
+#### Jupyter Notebook
+To access the notebook interface, go to: [localhost:8888/tree](http://localhost:8888/tree⁠)⁠
+
+## From GitHub
+We will thus assume that you already have docker installed and setup.
 
 Clone the sources of our docker, and pull the sources:
 ```python
@@ -54,6 +81,6 @@ Keep this terminal open, and in a second terminal:
 ```python
 # terminal 2
 docker exec -it core bash
-python3 ../dev/reachy2-sdk/src/example/test_goto.py
+python3 dev/reachy2-sdk/src/example/draw_square.py
 ```
 > If you have the Python SDK installed on your computer, you can launch the example outside the container.

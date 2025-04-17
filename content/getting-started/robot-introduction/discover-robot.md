@@ -14,6 +14,7 @@ weight: 50
 toc: true
 ---
 
+{{< info icon="💻" text="<b>Don't have a Reachy 2 robot yet?</b> No problem!</br>We provide a <b><a href=\"https://pollen-robotics.github.io/reachy2-docs/developing-with-reachy-2/simulation/simulation-installation/\">ready-to-use Docker image</a></b>  that lets you run a full simulation of the robot core on any operating system." >}}
 
 ## 🤖 Meet Reachy 2
 
