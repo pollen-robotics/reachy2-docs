@@ -31,6 +31,33 @@ Download [Docker Desktop](https://www.docker.com/products/docker-desktop/) for y
   
 You don't need to be logged in, as the image is open.
 
+#### Additional platform-specific instructions
+<details>
+<summary>MacOS (Apple Silicon)</summary>
+
+**Apple Silicon (M1/M2)**  
+For Apple Silicon Macs, Docker uses Rosetta to run x86_64 images.  
+Follow these steps after installing Docker Desktop:
+1. **Install Rosetta:** Run the following command to install Rosetta: 
+```bash
+softwareupdate --install-rosetta
+```
+2. **Enable Rosetta in Docker:**
+- Go to `Docker settings` > `General`
+- Check `Use Virtualization Framework`
+- Check `Use Rosetta for x86/amd64 emulation on Apple Silicon`
+- Click `Apply & Restart`  
+
+If the Rosetta integration option is not available, update your macOS version (it should be available from macOS Sonoma (v14)).
+
+3. **Check Emulation:** To verify that emulation is working, run:
+```bash
+docker run --rm --platform linux/amd64 busybox uname -m
+```
+
+This should output `x86_64` if emulation is working.
+</details>
+
 ### 2. Run the Robot Simulation
 
 <details>
@@ -92,7 +119,7 @@ docker run --rm --platform linux/amd64 -p 8888:8888 -p 6080:6080 -p 50051:50051 
 
 </details>
 
-### 3. Accessing the Displays
+### 3. Access the Displays
 #### Rviz/Gazebo
 To access Rviz or Gazebo, open the following URL in your web browser: [localhost:6080/vnc.html?autoconnect=1&resize=remote⁠](http://localhost:6080/vnc.html?autoconnect=1&resize=remote⁠)
 
