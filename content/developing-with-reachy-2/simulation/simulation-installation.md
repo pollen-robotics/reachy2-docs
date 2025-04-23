@@ -132,6 +132,10 @@ To access the notebook interface, go to: [localhost:8888/tree](http://localhost:
 
 
 ## From GitHub *(not available yet)*
+
+
+<details>
+<summary><i>Coming soon</i></summary>
 We will thus assume that you already have docker installed and setup.
 
 Clone the sources of our docker, and pull the sources:
@@ -173,6 +177,8 @@ docker exec -it core bash
 python3 dev/reachy2-sdk/src/example/draw_square.py
 ```
 > If you have the Python SDK installed on your computer, you can launch the example outside the container.
+
+</details>
 
 ## Develop with the Simulation
 
