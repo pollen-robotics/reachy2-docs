@@ -24,16 +24,73 @@ You can set up the simulation in two ways:
 
 ## From Docker Hub
 
-### 1. Install Docker
-Follow the installation instructions for [Docker Desktop](https://www.docker.com/products/docker-desktop/)⁠.  
+### 1. Install Docker 
+Download [Docker Desktop](https://www.docker.com/products/docker-desktop/) for your OS and follow the install instructions.  
+
+{{< img-center "images/sdk/simulation/docker-website.png" 600x "Install Docker Desktop" >}}
+  
 You don't need to be logged in, as the image is open.
 
 ### 2. Run the Robot Simulation
 
-#### Option 1: Via Docker Desktop (GUI)
+<details>
+<summary><b>Option 1: Via Docker Desktop (GUI)</b></summary>
 
-#### Option 2: Via Command Line Interface
+1. From Docker Desktop, search for **reachy2** image in the search bar (you don't need to sign in):
+{{< img-center "images/sdk/simulation/search-for-reachy2.png" 600x "Search for reachy2 image" >}}
 
+2. Click **Pull** and wait a few minutes for the image to be downloaded:
+{{< img-center "images/sdk/simulation/pull-button.png" 600x "Pull reachy2 image" >}}
+
+3. When the download is over, click **Run** to launch a container of the image via the Docker Desktop GUI. This will open a configuration pop-up.
+{{< img-center "images/sdk/simulation/run-button.png" 600x "Run reachy2 container" >}}
+
+4. Make sure you expand the **Optional settings** to configure properly the ports, and configure the port as shown below:
+{{< img-center "images/sdk/simulation/container-settings.png" 600x "Expand container settings" >}}
+{{< img-center "images/sdk/simulation/settings-completed.png" 600x "Configure settings" >}}
+
+5. Click **Run** to finally launch the container!
+{{< img-center "images/sdk/simulation/final-run.png" 600x "Finally run the container" >}}
+
+6. After a few seconds, you should have a running container displaying the following elements:
+{{< img-center "images/sdk/simulation/run-success.png" 600x "Container is running" >}}
+
+</details>
+
+<details>
+<summary><b>Option 2: Via Command Line Interface (CLI)</b></summary>
+
+If you prefer using the terminal, you can run the following command:
+
+```bash
+docker run --rm --platform linux/amd64 -p 8888:8888 -p 6080:6080 -p 50051:50051 --name reachy2 docker.io/pollenrobotics/reachy2
+```
+
+This is a one-liner that launches the container with the required ports exposed.  
+
+
+If using an Apple Silicon (aarch64) platform, add `--platform linux/amd64` to the command.
+
+*Note:* you have a terminal accessible from Docker Desktop
+{{< img-center "images/sdk/simulation/terminal-location.png" 600x "Terminal in Docker Desktop" >}}
+
+You can simply enable it:
+{{< img-center "images/sdk/simulation/enable-terminal.png" 600x "Enable terminal in Docker Desktop" >}}
+and run the previous command:
+{{< img-center "images/sdk/simulation/enter-cli.png" 600x "Run command line" >}}
+
+</details>
+
+<details>
+<summary><b>Running with Gazebo</b></summary>
+
+To launch the simulation with Gazebo and additional configurations, you can add arguments to the CLI command like this:
+
+```bash
+docker run --rm --platform linux/amd64 -p 8888:8888 -p 6080:6080 -p 50051:50051 --name reachy2 docker.io/pollenrobotics/reachy2 start_rviz:=true start_sdk_server:=true fake:=true orbbec:=false gazebo:=true
+```
+
+</details>
 
 ### 3. Accessing the Displays
 #### Rviz/Gazebo
@@ -42,7 +99,12 @@ To access Rviz or Gazebo, open the following URL in your web browser: [localhost
 #### Jupyter Notebook
 To access the notebook interface, go to: [localhost:8888/tree](http://localhost:8888/tree⁠)⁠
 
-## From GitHub
+> Those two links are available in the logs when the container is launched:
+> {{< img-center "images/sdk/simulation/run-success-links.png" 600x "Displays links in the logs" >}}
+> {{< img-center "images/sdk/simulation/displays-links.png" 600x "Displays links in the logs zoom" >}}
+
+
+## From GitHub *(not available yet)*
 We will thus assume that you already have docker installed and setup.
 
 Clone the sources of our docker, and pull the sources:
