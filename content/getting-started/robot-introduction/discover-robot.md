@@ -14,8 +14,6 @@ weight: 50
 toc: true
 ---
 
-{{< info icon="💻" text="<b>Don't have a Reachy 2 robot yet?</b> No problem!</br>We provide a <b><a href=\"https://pollen-robotics.github.io/reachy2-docs/developing-with-reachy-2/simulation/simulation-installation/\">ready-to-use Docker image</a></b>  that lets you run a full simulation of the robot core on any operating system." >}}
-
 ## 🤖 Meet Reachy 2
 
 **Reachy 2** is a versatile, expressive, and open robotic platform designed to explore the future of **human-robot interaction**, **assistive robotics**, and **AI-driven behaviors**.
@@ -59,6 +57,11 @@ With Reachy 2, you can:
 - Use vision, speech, or lidar to react to the environment  
 - Record, replay, and synchronize multimodal behaviors  
 - Explore telepresence, assistance, and autonomous decision-making
+
+<br>
+
+> 💻 **Don't have a Reachy 2 robot yet?** No problem!  
+> We provide a [ready-to-use Docker](https://pollen-robotics.github.io/reachy2-docs/developing-with-reachy-2/simulation/simulation-installation/) image that lets you run a full simulation of the robot core on any operating system.
 
 <br>
 
