@@ -14,9 +14,30 @@ weight: 400
 toc: true
 ---
 
-> Whether you **don’t have a Reachy 2 robot** yet or simply want to **prototype without using the real robot**, the simulation is the perfect place to start. 
+> Whether you **don’t have a Reachy 2 robot** yet or you simply want to **prototype without using the real robot**, the simulation is the perfect place to start. 
  
-We provide a preconfigured **Docker image** that lets you explore and develop for Reachy 2 on any operating system. In just a few steps, you’ll be able to interact with a fully simulated robot, ideal for testing behaviors, building applications, or just getting familiar with the platform.
+The simulation environment replicates the behavior of the real Reachy 2 robot, allowing you to prototype and test your programs — even if you don’t have a physical robot.  
+
+It behaves similarly to the **fake mode** of the **core service** available on a real Reachy 2, meaning you can control the robot as if it were real, but without any hardware dependencies.
+
+✅ **What works:**
+- Full compatibility with the **Python SDK**
+- Access to the **ROS 2 interface**, just like with the real robot
+- Accurate simulation of **robot movements** and **responses**
+
+
+🚫 **What’s not included:**
+- **Camera access** is not available in simulation
+- The **WebRTC service** is not simulated, meaning teleoperation features are not supported
+
+
+To use it, we provide a preconfigured **Docker image** that let you explore and develop for Reachy 2 on any operating system. In just a few steps, you’ll be able to interact with a fully simulated robot, ideal for testing behaviors, building applications, or just getting familiar with the platform.
+
+> Don’t hesitate to check out the **[Python SDK section]({{< ref "developing-with-reachy-2/basics/1-hello-world" >}})** to get started with programming the robot in simulation!
+
+
+
+# Installation
 
 You can set up the simulation in two ways:
 - Pull the [ready-to-use image from Docker Hub](https://hub.docker.com/r/pollenrobotics/reachy2)
@@ -179,21 +200,3 @@ python3 dev/reachy2-sdk/src/example/draw_square.py
 > If you have the Python SDK installed on your computer, you can launch the example outside the container.
 
 </details>
-
-## Develop with the Simulation
-
-The simulation environment replicates the behavior of the real Reachy 2 robot, allowing you to prototype and test your programs — even if you don’t have a physical robot.  
-
-It behaves similarly to the **fake mode** of the **core service** available on a real Reachy 2, meaning you can control the robot as if it were real, but without any hardware dependencies.
-
-✅ **What works:**
-- Full compatibility with the **Python SDK**
-- Access to the **ROS 2 interface**, just like with the real robot
-- Accurate simulation of **robot movements** and **responses**
-
-
-🚫 **What’s not included:**
-- **Camera access** is not available in simulation
-- The **WebRTC service** is not simulated, meaning teleoperation features are not supported
-
-> Don’t hesitate to check out the **[Python SDK section]({{< ref "developing-with-reachy-2/basics/1-hello-world" >}})** to get started with programming the robot in simulation!
