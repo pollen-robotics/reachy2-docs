@@ -59,6 +59,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+          cname: docs.pollen-robotics.com
 
   deploy:
     environment:
