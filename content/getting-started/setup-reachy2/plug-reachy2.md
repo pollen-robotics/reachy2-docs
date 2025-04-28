@@ -15,15 +15,14 @@ toc: true
 ---
 
 ## A) Plug in the Emergency Stop Button
-
-<img src="/gifs/getting-started/setup-reachy2/plug-reachy2/Reachy2_getting-started-2-A_Plug-stop-btn_864x864.gif" alt="Plug stop button" style="display: block; margin: 0 auto;" width="300">  
+{{< img-center "/gifs/getting-started/setup-reachy2/plug-reachy2/Reachy2_getting-started-2-A_Plug-stop-btn_864x864.gif" 300x "Plug stop button" >}}  
 
 <br />
 Connect the emergency stop button to one of the black connectors (<b>A</b>) on the mobile base.
 
 ## B) Connect the Battery
 
-<img src="/gifs/getting-started/setup-reachy2/plug-reachy2/Reachy2_getting-started-2-B_connect-battery_864x864.gif" alt="Connect battery" style="display: block; margin: 0 auto;" width="300">  
+{{< img-center "/gifs/getting-started/setup-reachy2/plug-reachy2/Reachy2_getting-started-2-B_connect-battery_864x864.gif" 300x "Connect battery" >}}  
 
 <br />
 Make sure the emergency stop button is pressed.
@@ -32,14 +31,14 @@ Plug the black and red wire (**B1**) into the mobile base. Then plug the yellow 
 
 ## C) Connect the Mobile Base to the USB Port
 
-<img src="/gifs/getting-started/setup-reachy2/plug-reachy2/Reachy2_getting-started-2-C_Connect-USB port_864x864.gif" alt="Connect USB port" style="display: block; margin: 0 auto;" width="300"> 
+{{< img-center "/gifs/getting-started/setup-reachy2/plug-reachy2/Reachy2_getting-started-2-C_Connect-USB port_864x864.gif" 300x "Connect USB port" >}}  
 
 <br />
 Connect the USB cable (<b>C</b>) coming from the mobile base.
 
 ## D) Connect Reachy to Your Network 
 
-<img src="/gifs/getting-started/setup-reachy2/plug-reachy2/Reachy2_getting-started-2-D_plug-ethernet_864x864.gif" alt="Plug Ethernet cable" style="display: block; margin: 0 auto;" width="300"> 
+{{< img-center "/gifs/getting-started/setup-reachy2/plug-reachy2/Reachy2_getting-started-2-D_plug-ethernet_864x864.gif" 300x "Plug ethernet cable" >}}
 
 <br />
 Plug the Ethernet cable from Reachy’s computer to your router. It should now be directly accessible on your network.

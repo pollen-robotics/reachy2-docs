@@ -25,5 +25,4 @@ What you will learn :
 - How to switch from the image frame to the robot frame
 - How to make Reachy move according to what it sees
 
-
-<img src="/gifs/tutorials/gif_oranges.gif" alt="Gif greengrocer" style="display: block; margin: 0 auto;" width="400"> 
+{{< img-center "/gifs/tutorials/gif_oranges.gif" 400x "Gif greengrocer" >}}
