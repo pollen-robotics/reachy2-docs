@@ -23,7 +23,12 @@ It’s built to help you:
 - access its **sensors**, like cameras, lidar, and microphones,
 - and create rich, expressive, and interactive behaviors with Python.
 
-Whether you want to perform simple movements, play sounds, track an object, or design complex human-robot interactions, the SDK gives you a **high-level and accessible interface** to do it all.
+Whether you want to perform simple movements, play sounds, track an object, or design complex human-robot interactions, the SDK gives you a **high-level and accessible interface** to do it all.  
+
+<br> 
+
+> 💻 **Don't have a Reachy 2 robot yet?** No problem!  
+> We provide a [ready-to-use Docker](https://pollen-robotics.github.io/reachy2-docs/developing-with-reachy-2/simulation/simulation-installation/) image that lets you run a full simulation of the robot core on any operating system.
 
 <br> 
 
