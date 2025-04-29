@@ -24,7 +24,7 @@ If you have an older version, you can find the documentation for older versions:
     Other versions
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="https://docs.pollen-robotics.com/">Reachy 2023</a></li>
+    <li><a class="dropdown-item" href="https://pollen-robotics.github.io/reachy-2023-docs/">Reachy 2023</a></li>
     <li><a class="dropdown-item" href="https://pollen-robotics.github.io/reachy-2021-docs/">Reachy 2021</a></li>
     <li><a class="dropdown-item" href="https://pollen-robotics.github.io/reachy-2019-docs/">Reachy 2019</a></li>
   </ul>

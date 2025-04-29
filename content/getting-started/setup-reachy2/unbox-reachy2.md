@@ -33,7 +33,7 @@ Reachy 2 weighs 50 kg; it's heavy, so make sure you have at least 4 people. Posi
 
 ## C) Adjust Robot Size
 
-<img src="/gifs/getting-started/setup-reachy2/unbox-reachy2/Reachy2_getting-started-1-C_Adjust-robot-size_864x864.gif" alt="Adjust robot size" style="display: block; margin: 0 auto;" width="300">  
+{{< img-center "/gifs/getting-started/setup-reachy2/plug-reachy2/Reachy2_getting-started-1-C_Adjust-robot-size_864x864.gif" 300x "Adjust robot size" >}}
 
 <br />
 Hold down the mobile base and ask someone to unscrew all pods (not too much, 90° should be enough), and lift the robot’s torso to adjust the height. Make sure Reachy’s head is straight and arms are far from the tripod.

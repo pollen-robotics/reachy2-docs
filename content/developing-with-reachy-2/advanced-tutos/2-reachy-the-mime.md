@@ -25,5 +25,4 @@ What you will learn :
 - How and when to use **blocking** gotos,
 - How to follow a particular **trajectory** with the end effector.
 
-
-<img src="/gifs/tutorials/gif_rope.gif" alt="Gif mime" style="display: block; margin: 0 auto;" width="400"> 
+{{< img-center "/gifs/tutorials/gif_rope.gif" 400x "Gif mime" >}}

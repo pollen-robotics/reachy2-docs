@@ -16,14 +16,14 @@ toc: true
 
 ## A) Start the Mobile Base
 
-<img src="/gifs/getting-started/setup-reachy2/start-reachy2/Reachy2_getting-started-3-A_start-mobile-base_864x864.gif" alt="Start mobile base" style="display: block; margin: 0 auto;" width="300">  
+{{< img-center "/gifs/getting-started/setup-reachy2/start-reachy2/Reachy2_getting-started-3-A_start-mobile-base_864x864.gif" 300x "Start mobile base" >}}
 
 <br />
 Press the mobile base button (next to the mobile base’s LCD screen).
 
 ## B) Calibrate Reachy
 
-<img src="/gifs/getting-started/setup-reachy2/start-reachy2/Reachy2_getting-started-3-B_Calibrate-Reachy_864x864.gif" alt="Calibrate Reachy" style="display: block; margin: 0 auto;" width="300"> 
+{{< img-center "/gifs/getting-started/setup-reachy2/start-reachy2/Reachy2_getting-started-3-B_Calibrate-Reachy_864x864.gif" 300x "Calibrate Reachy" >}}
 
 <br />
 Press and turn the emergency stop button clockwise to raise it. The automatic calibration process will start.
@@ -32,7 +32,7 @@ Press and turn the emergency stop button clockwise to raise it. The automatic ca
 
 ## C) Turn on Reachy’s Computer
 
-<img src="/gifs/getting-started/setup-reachy2/start-reachy2/Reachy2_getting-started-3-C_Turn-on-Reachys-computer_864x864.gif" alt="Turn on Reachy's computer" style="display: block; margin: 0 auto;" width="300"> 
+{{< img-center "/gifs/getting-started/setup-reachy2/start-reachy2/Reachy2_getting-started-3-C_Turn-on-Reachys-computer_864x864.gif" 300x "Turn on Reachy's computer" >}}
 
 Press the button located on Reachy’s back. It takes up to 2 minutes for the computer to start. You will hear a little bubbly sound when Reachy is ready.
 
