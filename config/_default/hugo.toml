@@ -1,5 +1,5 @@
 title = "Reachy 2"
-baseurl = "http://localhost/"
+baseurl = "https://docs.pollen-robotics.com/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true

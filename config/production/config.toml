@@ -1,2 +1,2 @@
-baseurl = "https://pollen-robotics.github.io/reachy2-docs/"
+baseurl = "https://docs.pollen-robotics.com/"
 canonifyURLs = true
