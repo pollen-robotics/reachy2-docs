@@ -4,28 +4,28 @@
 
 [[main]]
   name = "Getting started"
-  url = "/getting-started/robot-introduction/discover-robot/"
+  url = "/reachy2-docs/getting-started/robot-introduction/discover-robot/"
   weight = 10
 
 [[main]]
   name = "Hardware guide"
-  url = "/hardware-guide/specifications/general/"
+  url = "/reachy2-docs/hardware-guide/specifications/general/"
   weight = 20
 
 [[main]]
   name = "Developing with reachy 2"
-  url = "/developing-with-reachy-2/sdk-introduction/discover-sdk/"
+  url = "/reachy2-docs/developing-with-reachy-2/sdk-introduction/discover-sdk/"
   weight = 30
 
 [[main]]
   name = "Teleoperation"
   weight = 40
-  url = "/teleoperation/teleoperation-introduction/discover-teleoperation/"
+  url = "/reachy2-docs/teleoperation/teleoperation-introduction/discover-teleoperation/"
 
 [[main]]
   name = "Help"
   weight = 50
-  url = "/help/debug/debug-checklist/"
+  url = "/reachy2-docs/help/debug/debug-checklist/"
 
 #############################################
 [[social]]
