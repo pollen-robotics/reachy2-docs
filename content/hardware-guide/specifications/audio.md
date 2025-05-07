@@ -12,6 +12,9 @@ menu:
     parent: "Specifications"
 weight: 120
 toc: true
+seo:
+  title: "Reachy 2 Audio System: Microphones, Speakers & AI Integration"
+  description: "Discover the audio system of Reachy 2, including Lavalier Go microphones, custom speakers, and the Rode AI-Micro interface. Learn how this system supports teleoperation and AI, enabling voice recognition and communication."
 ---
 
 The audio system is made of : 

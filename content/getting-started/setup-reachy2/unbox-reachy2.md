@@ -12,6 +12,9 @@ menu:
     parent: "Setup Reachy 2"
 weight: 200
 toc: true
+seo:
+  title: "Unboxing and Setting Up Reachy 2 – Step-by-Step Guide"
+  description: "Safely unbox and set up Reachy 2 with step-by-step instructions for lifting the robot, adjusting its height, and organizing included accessories."
 ---
 
 ## A) Remove Reachy and its accessories out of the box

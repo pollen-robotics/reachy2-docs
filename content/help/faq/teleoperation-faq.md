@@ -12,6 +12,9 @@ menu:
     parent: "FAQ"
 toc: true
 weight: 230
+seo:
+  title: "Reachy 2 Teleoperation Application FAQ"
+  description: "Frequently asked questions on the VR teleoperation application for Reachy 2. Learn how to troubleshoot issues and optimize your experience."
 ---
 
 ## Problems with the app

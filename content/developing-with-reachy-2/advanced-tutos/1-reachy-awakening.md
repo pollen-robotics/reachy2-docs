@@ -12,6 +12,9 @@ menu:
     parent: "Advanced tutorials"
 weight: 300
 toc: true
+seo:
+  title: "Tutorial: Make Reachy 2 Wake Up – Synchronize Head and Arm Movements"
+  description: "Learn how to program Reachy 2 to perform a wake-up sequence with synchronized head and arm motions. Follow this beginner-friendly tutorial using the ReachySDK to animate your robot."
 ---
 <br>
 

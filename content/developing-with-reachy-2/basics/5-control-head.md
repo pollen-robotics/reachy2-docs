@@ -12,6 +12,9 @@ menu:
     parent: "SDK basics"
 weight: 240
 toc: true
+seo:
+  title: "How to Control Reachy 2’s Head and Antennas: Look At, Rotate, and Animate"
+  description: "Learn to control Reachy 2’s head and antennas using look_at, goto, and rotate_by commands. Master pitch, roll, yaw movements, antenna animations, and read positions in joint and Cartesian space."
 ---
 <br>
 

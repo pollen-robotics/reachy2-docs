@@ -12,6 +12,9 @@ menu:
     parent: "SDK basics"
 weight: 250
 toc: true
+seo:
+  title: "How to Control Reachy 2’s Mobile Base: Goto, Translate, Rotate, and Lidar Safety"
+  description: "Master Reachy 2’s mobile base with detailed control methods: goto, translate_by, rotate_by, speed commands, lidar safety, and odometry reset. Learn to navigate safely and efficiently using the robot and odom frames."
 ---
 <br>
 

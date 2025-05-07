@@ -12,6 +12,9 @@ menu:
     parent: "Contact support"
 toc: true
 weight: 300
+seo:
+  title: "Need Help? Community and Pollen Support"
+  description: "Get help from the Pollen community or contact Pollen support for assistance with your Reachy 2."
 ---
 
 ## Forum

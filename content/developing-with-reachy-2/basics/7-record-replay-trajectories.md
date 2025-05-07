@@ -12,6 +12,9 @@ menu:
     parent: "SDK basics"
 weight: 260
 toc: true
+seo:
+  title: "How to Record and Replay High-Frequency Trajectories on Reachy 2"
+  description: "Learn how to record, visualize, and replay smooth high-frequency joint trajectories on Reachy 2. Perfect for teleoperation, learning demos, or responsive robot control."
 ---
 
 So far, you've seen how to use `goto()` to move Reachy to specific positions. While this is perfect for **high-level actions**, it’s **not meant for high-frequency control**, like following a fast-changing target, reacting continuously to sensor input, or replaying smooth demonstrations with precision.

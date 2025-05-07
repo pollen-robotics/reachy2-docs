@@ -12,6 +12,9 @@ menu:
     parent: "Update Reachy 2"
 weight: 300
 toc: true
+seo:
+  title: "How to Use Reachy 2 Dashboard for Updates – Advanced Management Guide"
+  description: "Learn how to manage and install updates for Reachy 2 using the dashboard. This guide includes advanced update management steps to ensure your robot’s services stay up-to-date."
 ---
 
 ## Use the Dashboard

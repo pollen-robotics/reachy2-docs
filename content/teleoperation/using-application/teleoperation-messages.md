@@ -12,6 +12,9 @@ menu:
     parent: "Using Reachy2Teleoperation application"
 weight: 350
 toc: true
+seo:
+  title: "Understanding Warnings and Errors in Reachy Teleoperation"
+  description: "Learn to recognize and handle Reachy 2 teleoperation warnings (grey) and errors (red) to ensure safe, effective robot control. Stop if errors appear."
 ---
 
 

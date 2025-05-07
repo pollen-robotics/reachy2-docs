@@ -12,6 +12,9 @@ menu:
     parent: "Setup Reachy 2"
 weight: 230
 toc: true
+seo:
+  title: "Connecting to Reachy 2 – Network Setup and Dashboard Access"
+  description: "Learn how to connect Reachy 2 to your local network and access its web-based dashboard using a hostname or IP address."
 ---
 
 ## A) Check your network

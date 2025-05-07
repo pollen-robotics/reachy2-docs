@@ -12,6 +12,9 @@ menu:
     parent: "Discover the Python SDK"
 weight: 50
 toc: true
+seo:
+  title: "Welcome to the Reachy 2 SDK: Your Guide to Programming Interactive Robot Behaviors"
+  description: "Discover the Reachy 2 SDK, your go-to tool for programming interactive robot behaviors. Learn how to control arms, head, gripper, and mobile base with ease."
 ---
 
 ## 🧑‍💻 Welcome to the Reachy 2 SDK

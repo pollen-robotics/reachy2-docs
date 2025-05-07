@@ -12,6 +12,9 @@ menu:
     parent: "Advanced tutorials"
 weight: 320
 toc: true
+seo:
+  title: "Tutorial: Teach Reachy 2 to Sort Fruits with Object Detection"
+  description: "Learn how to program Reachy 2 to sort fruits using object detection. This tutorial guides you through the process of detecting fruits, switching frames, and making Reachy move based on its visual input."
 ---
 
 <br>

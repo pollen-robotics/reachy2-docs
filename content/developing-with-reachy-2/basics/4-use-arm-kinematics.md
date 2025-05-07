@@ -12,6 +12,9 @@ menu:
     parent: "SDK basics"
 weight: 230
 toc: true
+seo:
+  title: "Master Reachy 2 Arm Kinematics: Coordinate Systems, Forward and Inverse Kinematics"
+  description: "Learn how to use Reachy 2’s arm coordinate system, forward and inverse kinematics, and 4x4 pose matrices to control precise movements in joint and Cartesian space. Step-by-step guide for advanced robot programming."
 ---
 
 ## Arm coordinate system

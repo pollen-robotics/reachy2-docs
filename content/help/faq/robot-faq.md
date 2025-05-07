@@ -12,6 +12,9 @@ menu:
     parent: "FAQ"
 toc: true
 weight: 200
+seo:
+  title: "Reachy 2 Connection & Troubleshooting Guide"
+  description: "Learn how to connect to Reachy 2 via SSH, or hardwired; set WiFi, adjust volume, and troubleshoot motor, camera, or sound issues."
 ---
 
 <details>

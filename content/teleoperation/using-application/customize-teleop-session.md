@@ -12,6 +12,9 @@ menu:
     parent: "Using Reachy2Teleoperation application"
 weight: 340
 toc: true
+seo:
+  title: "Configure Audio and Motion Sickness Settings in Reachy 2 VR"
+  description: "Set up audio levels and motion sickness options like reticle, tunneling, or reduced screen for a smoother Reachy 2 VR teleoperation experience."
 ---
 
 

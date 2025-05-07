@@ -15,6 +15,9 @@ weight: 110
 toc: true
 slug: "connect-reachy2"
 url: "/developing-with-reachy-2/getting-started-sdk/connect-reachy2/"
+seo:
+  title: "How to Connect to Reachy 2: Step-by-Step Guide"
+  description: "Learn how to connect to Reachy 2 for seamless robot control. Follow these steps to find Reachy 2's IP address, connect via Ethernet or WiFi, and start using the SDK."
 ---
 
 Before you can start sending commands or running code, you need to **connect to your Reachy 2**. Here’s how to get set up:

@@ -12,6 +12,9 @@ menu:
     parent: "Discover teleoperation"
 weight: 50
 toc: true
+seo:
+  title: " Introduction to Reachy 2 Teleoperation App"
+  description: "Discover how to control Reachy 2 in real time using VR! Move, see, and interact through the teleoperation app for immersive robot control."
 ---
 
 ## 🕹️ Introduction to the Reachy 2 Teleoperation Application

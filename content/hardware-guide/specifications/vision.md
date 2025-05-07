@@ -12,6 +12,9 @@ menu:
     parent: "Specifications"
 weight: 110
 toc: true
+seo:
+  title: "Reachy 2 Vision Module: Head & Torso Camera Specifications"
+  description: "Explore Reachy 2’s head and torso vision modules, featuring RGB cameras, Time of Flight (ToF) sensors, and RGB-D technology for enhanced manipulation. Learn how the cameras enable teleoperation, AI, and 3D mapping."
 ---
 
 ## Head vision module

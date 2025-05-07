@@ -8,6 +8,9 @@ draft: false
 images: []
 toc: true
 hidden: true
+seo:
+  title: "How to Connect Reachy 2 to WiFi – Serial and Network Setup Guide"
+  description: "Learn how to connect Reachy 2 to WiFi via serial connection and network setup, with detailed instructions for configuring your robot’s network connection."
 ---
 
 ## WiFi

@@ -12,6 +12,9 @@ menu:
     parent: "FAQ"
 toc: true
 weight: 210
+seo:
+  title: "Reachy 2 Python SDK FAQ"
+  description: "Frequently asked questions on the Python SDK for Reachy 2. Learn how to connect to the robot, troubleshoot issues, and more."
 ---
 
 <details>
