@@ -12,6 +12,9 @@ menu:
     parent: "Debug"
 toc: true
 weight: 100
+seo:
+  title: "Debug checklist"
+  description: "Quickly recover Reachy 2: press emergency stop, adjust arms/head, raise button, restart reachy2-core and webrtc services via dashboard."
 ---
 
 

@@ -12,6 +12,9 @@ menu:
     parent: "Getting started with the SDK"
 weight: 100
 toc: true
+seo:
+  title: "How to Install the Reachy 2 Python SDK on Windows, Linux, and macOS"
+  description: "Follow this step-by-step guide to install the Reachy 2 Python SDK on Windows, Linux, or macOS. Learn how to set up a virtual environment and install the SDK from PyPI or source."
 ---
 
 ## How to Install the Python SDK

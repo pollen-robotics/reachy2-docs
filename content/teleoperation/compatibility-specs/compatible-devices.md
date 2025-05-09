@@ -12,6 +12,9 @@ menu:
     parent: "Compatibility & Specifications"
 weight: 100
 toc: true
+seo:
+  title: "Compatible VR Headsets and PC Requirements for Reachy 2"
+  description: "Check VR headset compatibility and PC specs for Reachy 2 teleoperation: Meta Quest, Valve Index, HTC Vive, Oculus Rift, Windows 10, GTX 970+."
 ---
 
 ## Compatible VR headsets

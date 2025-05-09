@@ -12,6 +12,9 @@ menu:
     parent: "Setup Reachy 2"
 weight: 240
 toc: true
+seo:
+  title: "How to Completely Power Off Reachy 2 – Power Consumption and Shutdown Guide"
+  description: "Follow these steps to power off Reachy 2 completely, manage its power consumption, and maximize battery life for long-term storage."
 ---
 
 ## Steps to Completely Turn Off Your Robot

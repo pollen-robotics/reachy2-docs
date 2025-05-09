@@ -12,6 +12,9 @@ menu:
     parent: "Using Reachy2Teleoperation application"
 weight: 330
 toc: true
+seo:
+  title: "Meta Quest Controller Mapping for Reachy 2 VR"
+  description: "View Meta Quest controller mappings for Reachy 2 VR, including standard inputs, gripper control, mobile base, head orientation, and emergency stop."
 ---
 
 > A reminder of the controller inputs mapping is available in the **help** section of the *transition room* in the VR teleoperation application:  

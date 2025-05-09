@@ -12,6 +12,9 @@ menu:
     parent: "Getting started with the SDK"
 weight: 120
 toc: true
+seo:
+  title: "How to Use Fake Mode on Reachy 2 for Safe Movement Testing"
+  description: "Learn how to enable and use fake mode on Reachy 2 to safely test robot movements in simulation before applying them on the physical robot. Step-by-step instructions for setup and visualization."
 ---
 
 Reachy currently does not have any collision avoidance restrictions (e.g., left arm against right arm, arm against torso).

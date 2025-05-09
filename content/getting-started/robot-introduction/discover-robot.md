@@ -12,6 +12,9 @@ menu:
     parent: "Discover Reachy 2"
 weight: 50
 toc: true
+seo:
+  title: "Reachy 2 – A Versatile Humanoid Robot for Interaction, AI & Research"
+  description: "Discover Reachy 2, an expressive and modular humanoid robot designed for human-robot interaction, AI research, teleoperation, and real-world object manipulation."
 ---
 
 ## 🤖 Meet Reachy 2

@@ -12,6 +12,9 @@ menu:
     parent: "SDK basics"
 weight: 210
 toc: true
+seo:
+  title: "Master Reachy 2 Goto Commands: Control Arms, Head, Grippers, and Mobile Base"
+  description: "Learn how to use Reachy 2's powerful goto commands to control movements of arms, head, grippers, and mobile base. Step-by-step guide on duration, interpolation, queuing, and cancellation."
 ---
 
 <br>

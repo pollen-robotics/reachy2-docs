@@ -12,6 +12,9 @@ menu:
     parent: "Using Reachy2Teleoperation application"
 weight: 310
 toc: true
+seo:
+  title: "Using the Emergency Stop in Reachy 2 Teleoperation"
+  description: "Activate Reachy 2’s VR emergency stop anytime using controller combos to halt commands, reduce torque, and make the robot compliant instantly."
 ---
 
 

@@ -12,6 +12,9 @@ menu:
     parent: "Safety first"
 weight: 100
 toc: true
+seo:
+  title: "Reachy 2 Safety Guidelines – Operating Your Humanoid Robot Safely"
+  description: "Learn how to safely operate Reachy 2 with essential guidelines covering workspace setup, user responsibilities, manual interactions, and mobile base precautions."
 ---
 
 {{< warning icon="👉🏾" text="Read this guide carefully before operating Reachy 2 to ensure safe and effective use." >}}

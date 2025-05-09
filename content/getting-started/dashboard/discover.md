@@ -12,6 +12,9 @@ menu:
     parent: "Dashboard"
 weight: 400
 toc: true
+seo:
+  title: "How to Find Reachy 2's IP Address and Access the Dashboard – Step-by-Step Guide"
+  description: "Learn how to find Reachy 2's IP address and connect to the dashboard to manage the robot’s services. Step-by-step instructions for easy setup and network management."
 ---
 
 ## 1. Find Reachy 2's IP Address

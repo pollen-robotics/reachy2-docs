@@ -12,6 +12,9 @@ menu:
     parent: "Getting started with teleoperation"
 weight: 200
 toc: true
+seo:
+  title: "Download and Install the Reachy 2 Teleoperation App on Windows"
+  description: "Install Reachy 2’s teleoperation app on Windows with ease. Follow our guide for VR device setup, app download, and smooth installation steps."
 ---
 
 > Reachy 2 is already fully compatible with the teleoperation application. You have nothing to install on the robot. All the installation must be done on your own Windows computer.

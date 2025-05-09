@@ -12,6 +12,9 @@ menu:
     parent: "SDK basics"
 weight: 270
 toc: true
+seo:
+  title: "How to Access Reachy 2’s Teleop and Depth Cameras with Python"
+  description: "Learn how to capture images and depth data from Reachy 2’s head and torso cameras using the ReachySDK. Get RGB frames, depth maps, and camera parameters for perception tasks in Python."
 ---
 <br>
 

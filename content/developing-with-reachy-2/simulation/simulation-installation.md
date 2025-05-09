@@ -12,6 +12,9 @@ menu:
     parent: "Simulation"
 weight: 400
 toc: true
+seo:
+  title: "How to Run Reachy 2 Simulation with Docker: Step-by-Step Setup Guide"
+  description: "Learn how to set up and run the Reachy 2 simulation using a preconfigured Docker image. Follow detailed steps for Windows, macOS, or Linux to prototype and test robot behaviors without hardware."
 ---
 
 > Whether you **don’t have a Reachy 2 robot** yet or you simply want to **prototype without using the real robot**, the simulation is the perfect place to start. 

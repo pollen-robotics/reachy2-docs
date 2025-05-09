@@ -12,6 +12,9 @@ menu:
     parent: "Specifications"
 weight: 100
 toc: true
+seo:
+  title: "Reachy 2 Specifications: Key Features, Architecture & Dimensions"
+  description: "Discover the key features and architecture of Reachy 2, including its 7 DoF arms, omnidirectional mobile base, and modular design. Explore the robot’s dimensions and actuator localization."
 ---
 
 ## Key features

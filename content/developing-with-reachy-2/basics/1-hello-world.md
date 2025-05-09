@@ -14,6 +14,9 @@ weight: 200
 toc: true
 slug: "1-hello-world"
 url: "/developing-with-reachy-2/basics/1-hello-world/"
+seo:
+  title: "How to Use Reachy 2 SDK: Connect, Control, and Program Your Robot"
+  description: "Learn how to connect to Reachy 2, control its movements, and explore its features using the SDK. Get started with our interactive notebooks and examples."
 ---
 
 ## Materials

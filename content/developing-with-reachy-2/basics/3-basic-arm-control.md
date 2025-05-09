@@ -14,6 +14,9 @@ weight: 220
 toc: true
 slug: "3-basic-arm-control"
 url: "/developing-with-reachy-2/basics/3-basic-arm-control/"
+seo:
+  title: "How to Control Reachy 2’s Arm and Gripper: Joint, Cartesian, and Goto Commands"
+  description: "Learn how to control Reachy 2's arm and gripper using joint space, Cartesian space, and goto commands. Explore actuator structure, motion parameters, and advanced control methods for precise robotics programming."
 ---
 <br>
 

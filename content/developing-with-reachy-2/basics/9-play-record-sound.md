@@ -12,6 +12,9 @@ menu:
     parent: "SDK basics"
 weight: 280
 toc: true
+seo:
+  title: "How to Use Reachy 2’s Audio: Play Sounds and Record with Microphones"
+  description: "Learn how to upload, play, and manage audio files on Reachy 2’s speaker, and record sound from its dual microphones using the ReachySDK. Enable interactive audio features with Python."
 ---
 <br>
 

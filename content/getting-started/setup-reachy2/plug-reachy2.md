@@ -12,6 +12,9 @@ menu:
     parent: "Setup Reachy 2"
 weight: 210
 toc: true
+seo:
+  title: "Connecting Reachy 2 – Power, Network, and Emergency Stop Setup"
+  description: "Learn how to safely connect Reachy 2 by setting up the emergency stop button, battery, USB link, and network access to get your robot ready for use."
 ---
 
 ## A) Plug in the Emergency Stop Button

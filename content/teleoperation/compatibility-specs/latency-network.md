@@ -12,6 +12,9 @@ menu:
     parent: "Compatibility & Specifications"
 weight: 110
 toc: true
+seo:
+  title: "Latency Benchmarks for Reachy 2 VR Teleoperation"
+  description: "Reachy 2 achieves ~74 ms hand-to-gripper and ~135 ms glass-to-glass VR latency under good conditions for smooth teleoperation."
 ---
 
 As we know latency is crucial for a good experience in VR teleoperation, we put a lot of effort in making the latency as small as possible.  

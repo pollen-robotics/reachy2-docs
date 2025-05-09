@@ -12,6 +12,9 @@ menu:
     parent: "Advanced tutorials"
 weight: 310
 toc: true
+seo:
+  title: "Tutorial: Turn Reachy 2 Into a Mime – Synchronize Arms and Mobile Base"
+  description: "Learn how to program Reachy 2 to mimic pulling an invisible rope! This tutorial teaches you to coordinate arm and mobile base movements, use blocking gotos, and follow precise end-effector trajectories."
 ---
 
 In [this tutorial](https://github.com/pollen-robotics/reachy2-tutorials/blob/main/2_Reachy_the_mime.ipynb),  we will transform Reachy into a mime who pulls an invisible rope.

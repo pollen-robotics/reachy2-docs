@@ -12,6 +12,9 @@ menu:
     parent: "Getting started with teleoperation"
 weight: 220
 toc: true
+seo:
+  title: "Important Teleoperation Guidelines for Safely Using Reachy 2"
+  description: "Learn essential guidelines for safe, smooth teleoperation of Reachy 2 to avoid damage and ensure precise, reliable robot control."
 ---
 
 

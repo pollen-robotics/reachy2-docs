@@ -12,6 +12,9 @@ menu:
     parent: "Getting started with teleoperation"
 weight: 210
 toc: true
+seo:
+  title: " Connect Reachy 2 Teleoperation App to Your Robot"
+  description: "Learn how to connect the Reachy 2 teleoperation app to your robot. Follow our step-by-step guide for a seamless connection process."
 ---
 
 ## 1. Find Reachy 2 IP

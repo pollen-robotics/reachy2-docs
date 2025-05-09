@@ -12,6 +12,9 @@ menu:
     parent: "Setup Reachy 2"
 weight: 220
 toc: true
+seo:
+  title: "Powering Up and Calibrating Reachy 2 – First-Time Startup Guide"
+  description: "Follow this guide to start Reachy 2’s mobile base, run its automatic calibration, and power on its onboard computer for the first time."
 ---
 
 ## A) Start the Mobile Base

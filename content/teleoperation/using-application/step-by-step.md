@@ -12,6 +12,9 @@ menu:
     parent: "Using Reachy2Teleoperation application"
 weight: 300
 toc: true
+seo:
+  title: "How to Use the Reachy 2 Teleoperation App"
+  description: "Learn to connect, start, and safely operate Reachy 2 using the VR teleoperation app. Follow best practices for smooth, intuitive robot control."
 ---
 
 
