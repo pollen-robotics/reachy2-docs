@@ -1,3 +1,4 @@
-public/
+public/*
+!public/CNAME
 resources/_gen/
 .vscode/
