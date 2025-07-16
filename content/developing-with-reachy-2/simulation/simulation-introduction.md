@@ -34,15 +34,16 @@ It behaves similarly to the **fake mode** of the **core service** available on a
 
 
 🚫 **What’s not included:**
-- **Camera access** is not available in simulation
+- **Camera access** is not available yet in simulation (*coming soon*)
 - The **WebRTC service** is not simulated, meaning teleoperation features are not supported
+- *Mobile base is not available yet in MuJoCo*
 
 
 ## Simulation platforms
 
 2 platforms are currently supported for simulation:
 - **Gazebo**
-- **MuJoCo** (*still work in progress*)
+- **MuJoCo** (*still a work in progress*)
 
 
 ## Supported OS
