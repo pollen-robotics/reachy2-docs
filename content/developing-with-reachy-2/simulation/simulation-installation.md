@@ -17,13 +17,12 @@ seo:
   description: "Learn how to set up and run the Reachy 2 simulation using a preconfigured Docker image. Follow detailed steps for Windows, macOS, or Linux to prototype and test robot behaviors without hardware."
 ---
 
-You can set up the simulation in two ways:
-- Pull the [ready-to-use image from Docker Hub](https://hub.docker.com/r/pollenrobotics/reachy2)
-- Pull it yourself from our [GitHub repository](https://github.com/pollen-robotics/docker_reachy2_core) *(not available yet)*
+To set up the simulation, you will need to use the [ready-to-use image from Docker Hub](https://hub.docker.com/r/pollenrobotics/reachy2).  
 
-## From Docker Hub
+Both the **Gazebo and MuJoCo simulation**s rely on the **same image** — you just need to choose which one to use when launching the container.
 
-### 1. Install Docker 
+
+## 1. Install Docker 
 Download [Docker Desktop](https://www.docker.com/products/docker-desktop/) for your OS and follow the install instructions.  
 
 {{< img-center "images/sdk/simulation/docker-website.png" 600x "Install Docker Desktop" >}}
@@ -57,7 +56,7 @@ docker run --rm --platform linux/amd64 busybox uname -m
 This should output `x86_64` if emulation is working.
 </details>
 
-### 2. Run the Robot Simulation
+## 2. Run the Robot Simulation
 
 <details>
 <summary><b>Option 1: Via Docker Desktop (GUI)</b></summary>
@@ -107,8 +106,7 @@ and run the previous command:
 
 </details>
 
-<details>
-<summary><b>Running with Gazebo</b></summary>
+### Running with Gazebo
 
 To launch the simulation with Gazebo and additional configurations, you can add arguments to the CLI command like this:
 
@@ -116,65 +114,28 @@ To launch the simulation with Gazebo and additional configurations, you can add 
 docker run --rm --platform linux/amd64 -p 8888:8888 -p 6080:6080 -p 50051:50051 --name reachy2 docker.io/pollenrobotics/reachy2 start_rviz:=true start_sdk_server:=true fake:=true orbbec:=false gazebo:=true
 ```
 
-</details>
+### Running with MuJoCo
 
-### 3. Access the Displays
-#### Rviz/Gazebo
-To access Rviz or Gazebo, open the following URL in your web browser: [localhost:6080/vnc.html?autoconnect=1&resize=remote⁠](http://localhost:6080/vnc.html?autoconnect=1&resize=remote⁠)
+To launch the simulation with MuJoCo, modify arguments of the CLI command as follow:
 
-#### Jupyter Notebook
+```bash
+docker run --rm --platform linux/amd64 -p 8888:8888 -p 6080:6080 -p 50051:50051 --name reachy2 docker.io/pollenrobotics/reachy2 start_rviz:=true start_sdk_server:=true fake:=true orbbec:=false mujoco:=true
+```
+{{< alert icon="⚠️" text="The mobile base is not handled yet in MuJoCo" >}}
+
+## 3. Access the Displays
+### Rviz / Gazebo / MuJoCo
+To access the displays, open the following URL in your web browser: [localhost:6080/vnc.html?autoconnect=1&resize=remote⁠](http://localhost:6080/vnc.html?autoconnect=1&resize=remote⁠)
+
+### Jupyter Notebook
 To access the notebook interface, go to: [localhost:8888/tree](http://localhost:8888/tree⁠)⁠
 
 > Those two links are available in the logs when the container is launched:
 > {{< img-center "images/sdk/simulation/run-success-links.png" 600x "Displays links in the logs" >}}
 > {{< img-center "images/sdk/simulation/displays-links.png" 600x "Displays links in the logs zoom" >}}
 
+<br>
 
-## From GitHub *(not available yet)*
+---
 
-
-<details>
-<summary><i>Coming soon</i></summary>
-We will thus assume that you already have docker installed and setup.
-
-Clone the sources of our docker, and pull the sources:
-```python
-git clone git@github.com:pollen-robotics/docker_reachy2_core.git  
-cd docker_reachy2_core  
-./sources checkout stable  
-```
-
-Then download the configuration files:
-```python
-git clone git@github.com:pollen-robotics/reachy_config_example.git
-cp -r reachy_config_example/.reachy_config ~/
-```
-
-In your docker_reachy2_core folder, compose a container with:
-```python
-docker compose -f mode/dev.yaml up -d core
-```
-> This can take a few minutes to compose.
-
-Build:
-```python
-full_build
-cbuilds
-```
-
-
-In a first terminal, launch the robot server:
-```python
-# terminal 1
-docker exec -it core bash
-ros2 launch reachy_bringup reachy.launch.py fake:=true start_sdk_server:=true start_rviz:=true
-```
-Keep this terminal open, and in a second terminal:
-```python
-# terminal 2
-docker exec -it core bash
-python3 dev/reachy2-sdk/src/example/draw_square.py
-```
-> If you have the Python SDK installed on your computer, you can launch the example outside the container.
-
-</details>
+Don’t hesitate to check out the [**Python SDK section**]({{< ref "developing-with-reachy-2/sdk-introduction/discover-sdk/" >}}) to get started with programming the robot in simulation!

@@ -47,5 +47,5 @@ It behaves similarly to the **fake mode** of the **core service** available on a
 
 ## Supported OS
 
-To use simulation, we provide a preconfigured **Docker image** that let you explore and develop for Reachy 2 on **any operating system**.  
+To use simulation, we provide a preconfigured [**Docker image**](https://hub.docker.com/r/pollenrobotics/reachy2) that let you explore and develop for Reachy 2 on **any operating system**.  
 In just a few steps, you’ll be able to interact with a fully simulated robot, ideal for testing behaviors, building applications, or just getting familiar with the platform.
