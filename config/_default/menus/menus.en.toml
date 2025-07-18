@@ -14,7 +14,7 @@
 
 [[main]]
   name = "Developing with reachy 2"
-  url = "/developing-with-reachy-2/sdk-introduction/discover-sdk/"
+  url = "developing-with-reachy-2/simulation/simulation-introduction/"
   weight = 30
 
 [[main]]
