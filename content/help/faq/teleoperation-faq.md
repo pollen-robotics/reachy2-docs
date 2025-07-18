@@ -17,7 +17,7 @@ seo:
   description: "Frequently asked questions on the VR teleoperation application for Reachy 2. Learn how to troubleshoot issues and optimize your experience."
 ---
 
-## Problems with the app
+## Problems with the installed app
 
 <details>
 <summary>The app is lagging a lot, what can I do ?</summary>
@@ -31,18 +31,29 @@ Finally, it can be a GPU issue : FAQ GPU.
 </details>
 
 <details>
+<summary>The app opens on my computer, but does not appear in the headset (Meta headset)</summary>
+
+1. **Is the link activated?**  
+
+You must activate the link in order to be able to use the teleoperation app in your headset.
+
+This may be due to several things:
+
+- Is the link activated?  
+Before 
+
+- Check the drivers
+
+</details>
+
+
+## Problems with the Unity project
+
+<details>
 <summary>When I hit “play”, I have a loading page in my device and I never enter the app</summary>
 
 *From source installation only*  
 Go to Edition > Project Settings > XR Plug-in Management. Check that Initialize XR on Start-Up and Oculus are selected. If so, try to unselect the first one and try again.
-
-</details>
-
-<details>
-<summary>Tunnelling appears only in one eye</summary>
-
-*From source installation only*  
-Go to Edition > Project Settings > XR Plug-in Management > Oculus > Stereo rendering mode : select multi pass and try again. 
 
 </details>
 
