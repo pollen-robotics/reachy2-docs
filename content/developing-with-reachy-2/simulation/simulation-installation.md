@@ -19,7 +19,7 @@ seo:
 
 To set up the simulation, you will need to use the [ready-to-use image from Docker Hub](https://hub.docker.com/r/pollenrobotics/reachy2).  
 
-Both the **Gazebo and MuJoCo simulation**s rely on the **same image** — you just need to choose which one to use when launching the container.
+Both the **Gazebo and MuJoCo simulations** rely on the **same image** — you just need to choose which one to use when launching the container.
 
 
 ## 1. Install Docker 
@@ -138,4 +138,4 @@ To access the notebook interface, go to: [localhost:8888/tree](http://localhost:
 
 ---
 
-Don’t hesitate to check out the [**Python SDK section**]({{< ref "developing-with-reachy-2/sdk-introduction/discover-sdk/" >}}) to get started with programming the robot in simulation!
+Don’t hesitate to check out the **next section** to get started with programming the robot in simulation!
