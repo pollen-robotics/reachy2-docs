@@ -10,45 +10,19 @@ type: docs
 menu:
   developing-with-reachy-2:
     parent: "Simulation"
-weight: 400
+weight: 31
 toc: true
 seo:
   title: "How to Run Reachy 2 Simulation with Docker: Step-by-Step Setup Guide"
   description: "Learn how to set up and run the Reachy 2 simulation using a preconfigured Docker image. Follow detailed steps for Windows, macOS, or Linux to prototype and test robot behaviors without hardware."
 ---
 
-> Whether you **don’t have a Reachy 2 robot** yet or you simply want to **prototype without using the real robot**, the simulation is the perfect place to start. 
- 
-The simulation environment replicates the behavior of the real Reachy 2 robot, allowing you to prototype and test your programs — even if you don’t have a physical robot.  
+To set up the simulation, you will need to use the [ready-to-use image from Docker Hub](https://hub.docker.com/r/pollenrobotics/reachy2).  
 
-It behaves similarly to the **fake mode** of the **core service** available on a real Reachy 2, meaning you can control the robot as if it were real, but without any hardware dependencies.
-
-✅ **What works:**
-- Full compatibility with the **Python SDK**
-- Access to the **ROS 2 interface**, just like with the real robot
-- Accurate simulation of **robot movements** and **responses**
+Both the **Gazebo and MuJoCo simulations** rely on the **same image** — you just need to choose which one to use when launching the container.
 
 
-🚫 **What’s not included:**
-- **Camera access** is not available in simulation
-- The **WebRTC service** is not simulated, meaning teleoperation features are not supported
-
-
-To use it, we provide a preconfigured **Docker image** that let you explore and develop for Reachy 2 on any operating system. In just a few steps, you’ll be able to interact with a fully simulated robot, ideal for testing behaviors, building applications, or just getting familiar with the platform.
-
-> Don’t hesitate to check out the **[Python SDK section]({{< ref "developing-with-reachy-2/basics/1-hello-world" >}})** to get started with programming the robot in simulation!
-
-
-
-# Installation
-
-You can set up the simulation in two ways:
-- Pull the [ready-to-use image from Docker Hub](https://hub.docker.com/r/pollenrobotics/reachy2)
-- Pull it yourself from our [GitHub repository](https://github.com/pollen-robotics/docker_reachy2_core) *(not available yet)*
-
-## From Docker Hub
-
-### 1. Install Docker 
+## 1. Install Docker 
 Download [Docker Desktop](https://www.docker.com/products/docker-desktop/) for your OS and follow the install instructions.  
 
 {{< img-center "images/sdk/simulation/docker-website.png" 600x "Install Docker Desktop" >}}
@@ -82,7 +56,7 @@ docker run --rm --platform linux/amd64 busybox uname -m
 This should output `x86_64` if emulation is working.
 </details>
 
-### 2. Run the Robot Simulation
+## 2. Run the Robot Simulation
 
 <details>
 <summary><b>Option 1: Via Docker Desktop (GUI)</b></summary>
@@ -132,8 +106,7 @@ and run the previous command:
 
 </details>
 
-<details>
-<summary><b>Running with Gazebo</b></summary>
+### Running with Gazebo
 
 To launch the simulation with Gazebo and additional configurations, you can add arguments to the CLI command like this:
 
@@ -141,65 +114,28 @@ To launch the simulation with Gazebo and additional configurations, you can add 
 docker run --rm --platform linux/amd64 -p 8888:8888 -p 6080:6080 -p 50051:50051 --name reachy2 docker.io/pollenrobotics/reachy2 start_rviz:=true start_sdk_server:=true fake:=true orbbec:=false gazebo:=true
 ```
 
-</details>
+### Running with MuJoCo
 
-### 3. Access the Displays
-#### Rviz/Gazebo
-To access Rviz or Gazebo, open the following URL in your web browser: [localhost:6080/vnc.html?autoconnect=1&resize=remote⁠](http://localhost:6080/vnc.html?autoconnect=1&resize=remote⁠)
+To launch the simulation with MuJoCo, modify arguments of the CLI command as follow:
 
-#### Jupyter Notebook
+```bash
+docker run --rm --platform linux/amd64 -p 8888:8888 -p 6080:6080 -p 50051:50051 --name reachy2 docker.io/pollenrobotics/reachy2 start_rviz:=true start_sdk_server:=true fake:=true orbbec:=false mujoco:=true
+```
+{{< alert icon="⚠️" text="The mobile base is not handled yet in MuJoCo" >}}
+
+## 3. Access the Displays
+### Rviz / Gazebo / MuJoCo
+To access the displays, open the following URL in your web browser: [localhost:6080/vnc.html?autoconnect=1&resize=remote⁠](http://localhost:6080/vnc.html?autoconnect=1&resize=remote⁠)
+
+### Jupyter Notebook
 To access the notebook interface, go to: [localhost:8888/tree](http://localhost:8888/tree⁠)⁠
 
 > Those two links are available in the logs when the container is launched:
 > {{< img-center "images/sdk/simulation/run-success-links.png" 600x "Displays links in the logs" >}}
 > {{< img-center "images/sdk/simulation/displays-links.png" 600x "Displays links in the logs zoom" >}}
 
+<br>
 
-## From GitHub *(not available yet)*
+---
 
-
-<details>
-<summary><i>Coming soon</i></summary>
-We will thus assume that you already have docker installed and setup.
-
-Clone the sources of our docker, and pull the sources:
-```python
-git clone git@github.com:pollen-robotics/docker_reachy2_core.git  
-cd docker_reachy2_core  
-./sources checkout stable  
-```
-
-Then download the configuration files:
-```python
-git clone git@github.com:pollen-robotics/reachy_config_example.git
-cp -r reachy_config_example/.reachy_config ~/
-```
-
-In your docker_reachy2_core folder, compose a container with:
-```python
-docker compose -f mode/dev.yaml up -d core
-```
-> This can take a few minutes to compose.
-
-Build:
-```python
-full_build
-cbuilds
-```
-
-
-In a first terminal, launch the robot server:
-```python
-# terminal 1
-docker exec -it core bash
-ros2 launch reachy_bringup reachy.launch.py fake:=true start_sdk_server:=true start_rviz:=true
-```
-Keep this terminal open, and in a second terminal:
-```python
-# terminal 2
-docker exec -it core bash
-python3 dev/reachy2-sdk/src/example/draw_square.py
-```
-> If you have the Python SDK installed on your computer, you can launch the example outside the container.
-
-</details>
+Don’t hesitate to check out the **next section** to get started with programming the robot in simulation!

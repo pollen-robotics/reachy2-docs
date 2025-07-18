@@ -9,5 +9,5 @@ images: []
 type: docs
 menu:
   developing-with-reachy-2:
-weight: 40
+weight: 3
 ---
