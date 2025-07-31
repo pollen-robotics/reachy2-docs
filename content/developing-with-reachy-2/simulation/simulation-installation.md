@@ -121,7 +121,16 @@ To launch the simulation with MuJoCo, modify arguments of the CLI command as fol
 ```bash
 docker run --rm --platform linux/amd64 -p 8888:8888 -p 6080:6080 -p 50051:50051 --name reachy2 docker.io/pollenrobotics/reachy2 start_rviz:=true start_sdk_server:=true fake:=true orbbec:=false mujoco:=true
 ```
-{{< alert icon="⚠️" text="The mobile base is not handled yet in MuJoCo" >}}
+
+This will open the MuJoCo simulation with Reachy 2 in a default empty scene. </br>
+</br>
+More scenes are available in the [Reachy 2 MuJoCo Assets repository](https://github.com/pollen-robotics/reachy2_mujoco_assets). To use a different provided scene (let's say `fruits_scene.xml`), you can run the same command as above with the scene argument added:
+
+```bash
+docker run --rm --platform linux/amd64 -p 8888:8888 -p 6080:6080 -p 50051:50051 --name reachy2 docker.io/pollenrobotics/reachy2 start_rviz:=true start_sdk_server:=true fake:=true orbbec:=false mujoco:=true scene:=fruits
+```
+
+Don't hesitate to add your own scenes to the `reachy2_mujoco_assets` repository and use them in the same way!
 
 ## 3. Access the Displays
 ### Rviz / Gazebo / MuJoCo
