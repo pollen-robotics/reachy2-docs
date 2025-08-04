@@ -116,6 +116,8 @@ docker run --rm --platform linux/amd64 -p 8888:8888 -p 6080:6080 -p 50051:50051 
 
 ### Running with MuJoCo
 
+*⚠️ For now, MuJoCo's performance in the simulator is very low, but we're working on it.*
+
 To launch the simulation with MuJoCo, modify arguments of the CLI command as follow:
 
 ```bash
