@@ -20,7 +20,7 @@ seo:
 <br>
 
 
-In this [tutorial](https://github.com/pollen-robotics/reachy2-tutorials/blob/main/3_Reachy_the_greengrocer.ipynb), we will ask Reachy to sort fruits on a table and to drop them in user-defined places, according to which fruit it is.
+In this [tutorial](https://github.com/pollen-robotics/reachy2-tutorials/blob/main/notebooks/3_Reachy_the_greengrocer.ipynb), we will ask Reachy to sort fruits on a table and to drop them in user-defined places, according to which fruit it is.
 
 What you will learn :
 
