@@ -40,7 +40,7 @@ Now that you're all set up, have fun !
 
 ## Reachy's Awakening 
 
-In [this tutorial](https://github.com/pollen-robotics/reachy2-tutorials/blob/main/1_Reachy_awakening.ipynb), we will make Reachy do the awake sequence, which is a series of movements that makes it look like it is waking up. It involves moving its head and arms and can be used as a starting point for more complex sequences.
+In [this tutorial](https://github.com/pollen-robotics/reachy2-tutorials/blob/main/notebooks/1_Reachy_awakening.ipynb), we will make Reachy do the awake sequence, which is a series of movements that makes it look like it is waking up. It involves moving its head and arms and can be used as a starting point for more complex sequences.
 
 What you will learn:
 

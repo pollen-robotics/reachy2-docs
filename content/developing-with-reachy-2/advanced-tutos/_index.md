@@ -25,7 +25,7 @@ The first two use only the **SDK Client**, and the last one adds object detectio
 You will find the GitHub repository just [there](https://github.com/pollen-robotics/reachy2-tutorials), and to make the third tutorial with pollen-vision, you need to install the library on your virtual environment : 
 
 ```python 
-pip install --user --no-warn-script-location "pollen-vision[vision] @ git+https://github.com/pollen-robotics/pollen-vision.git@develop"
+pip install --user --no-warn-script-location "pollen-vision[vision] @ git+https://github.com/pollen-robotics/pollen-vision.git@2.0.1"
 pip install depthai
 ```
 
