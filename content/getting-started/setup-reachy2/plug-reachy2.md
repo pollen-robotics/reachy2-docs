@@ -44,4 +44,4 @@ Connect the USB cable (<b>C</b>) coming from the mobile base.
 {{< img-center "/gifs/getting-started/setup-reachy2/plug-reachy2/Reachy2_getting-started-2-D_plug-ethernet_864x864.gif" 300x "Plug ethernet cable" >}}
 
 <br />
-Plug the Ethernet cable from Reachy’s computer to your router. It should now be directly accessible on your network.
+Plug the Ethernet cable from Reachy’s computer (Ethernet port n°1) to your router. It should now be directly accessible on your network.

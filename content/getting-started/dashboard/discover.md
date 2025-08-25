@@ -17,39 +17,35 @@ seo:
   description: "Learn how to find Reachy 2's IP address and connect to the dashboard to manage the robot’s services. Step-by-step instructions for easy setup and network management."
 ---
 
-## 1. Find Reachy 2's IP Address
 
-After you connect the robot to the network, it should have an IP address. The LCD screen connected to Reachy's back should display its IP address.
-
-{{< img-center "images/vr/getting-started/lcd-display.png" 400x "" >}}
-
-If the LCD screen is not working or is unplugged, check the "Find My IP" section to learn other ways to get the IP address.
-> Note: The LCD screen will not work if you plug it in after turning on the computer.
-
-## 2. Connect from the Navigator
+## 1. Connect from the Navigator
 
 From your computer, on the same network, open a browser and go to:  
-**`http://<IP.address>:8000/`**
+**`http://<IP.address>:8000/`** or **`http://<robot.name>:8000/`** 
 
-> For example, if the screen indicates `192.168.1.42`, connect to `http://192.168.1.42:8000/` 
+> If you need a reminder on how to get the IP or the name of your robot, go back to [Connect Reachy section]({{< ref "getting-started/setup-reachy2/connect-reachy2/#b-connect-to-the-dashboard" >}})
 
-You should arrive at a services page:
+You should arrive on the **Robot Monitoring** section :
 
 {{< img-center "images/docs/getting-started/dashboard.png" 600x "dashboard" >}}
 
-This tool is designed to help you **start easier with the robot** and **facilitate quick debugging**.
+The dashboard is designed to help you **start easier with the robot** and **facilitate quick debugging**.
 
-The dashboard provides an overview of the robot's state and allows quick access to features (e.g., changing a robot's part compliance).
+It provides an overview of the robot's state and allows quick access to features (e.g., changing a robot's part compliance).
 
-## Features Overview
+## 2. Features Overview
 
 What does the dashboard provide?
 
+* **Access the robot's state** - **Reachy control page**</br> 
+Get robot's info, state of the joints, even send posture command. 
+
+
 * **Access the services** - **Services page**</br> 
-Stop or restart the robot's services, see robot logs *(coming soon)*.
+Stop or restart the robot's services, see robot logs.
 
 * **Manage network connection** - **Network page**</br> 
-Choose a WiFi network to connect the robot to.
+Choose a WiFi network to connect the robot to and get the IP addresses.
 
 * **Update robot software** - **Updates page**</br>
 Get the latest software versions of the robot, and choose the services you want to update.
@@ -57,9 +53,11 @@ Get the latest software versions of the robot, and choose the services you want 
 * **Visualize robot state** - **Visualization tools page**</br> 
 Get RViz visualization or display live data from ROS topics with Foxglove.
 
-* **Send robot commands** - **Reachy control page**</br> 
-*Coming soon*
+* **Get images and control audio features** - **Media page**
+Get torso and head camera frames and manage the volume of input and output. 
 
-On each page, the **serial number** of your robot is also displayed. 
+
+
+On each page, the **serial number** of your robot is also displayed.
 
 More information is available for each page in the content section.

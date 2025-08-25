@@ -29,7 +29,13 @@ Press the mobile base button (next to the mobile base’s LCD screen).
 {{< img-center "/gifs/getting-started/setup-reachy2/start-reachy2/Reachy2_getting-started-3-B_Calibrate-Reachy_864x864.gif" 300x "Calibrate Reachy" >}}
 
 <br />
-Press and turn the emergency stop button clockwise to raise it. The automatic calibration process will start.
+
+
+Make sure Reachy is in the correct position, with its head straight, arms at its sides, and wrists straight (as shown in the photo).
+
+{{< img-center "/images/getting-started/setup-reachy2/start-reachy2/straight_posture.jpg" 200x "Reachy straight posture" >}} 
+
+Then press and turn the emergency stop button clockwise to raise it. The automatic calibration process will start.
 
 {{< alert icon="🤖" text="The robot is going to move slightly during the calibration process. Do not touch the robot, and make sure the arms do not encounter any obstacles (tripod included) during its movements." >}}
 

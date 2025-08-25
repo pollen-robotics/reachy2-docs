@@ -15,11 +15,25 @@ seo:
 
 ## WiFi
 
-On your first connection to a network, the simplest method is to connect your robot with an Ethernet cable.  
+On your first connection to a network, the simplest method is to connect your robot to the same network as your computer, with an Ethernet cable. 
 
-If you cannot do this:
 
-Use the appropriate cable and connect your computer directly to Reachy 2's computer. The cable must be plugged into port (b) of Reachy 2's hardware interface.  
+1. Go to the dashboard by reaching  **`http://<IP.address>:8000/`** or **`http://<robot.name>:8000/`** 
+
+2. Go to the **Network** section and click on **Update List**. 
+
+{{< img-center "images/docs/getting-started/network_dashboard.png" 500x "Network section in dashboard" >}}
+{{< img-center "images/docs/getting-started/update_list.png" 500x "Update Wifi List" >}}
+
+3. Scroll through the detected Wi-Fi networks in **‘Select a network’** and select the one you want. Then add the password and press **Connect**.
+
+4. Check that your new connexion appears : 
+{{< img-center "images/docs/getting-started/wifi_ip.png" 500x "New Wifi IP address" >}}
+
+<details>
+<summary> <b>If you cannot do this:</b></summary>
+
+Use the appropriate cable and connect your computer directly to Reachy 2's computer. The cable must be plugged into port "Console" of Reachy 2's hardware interface.  
 
 {{< img-center "images/docs/getting-started/serial-connection.png" 400x "Serial connection port" >}}
 
@@ -54,5 +68,7 @@ nmcli device wifi connect <wifi.name> password <your.password>
 > ```bash
 > nmcli device wifi connect POLLEN-WIFI password superstrongpassword
 > ```
+
+</details>
 
 {{< my-button link="/getting-started/setup-reachy2/connect-reachy2/" label="< Back to network connection" >}}
