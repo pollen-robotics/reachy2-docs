@@ -170,3 +170,5 @@ Check in your laptop settings that your device is selected as “Output” and "
 During teleoperation, the cameras and sound are managed by the webrtc service.  
 This service is automatically launched when you start Reachy 2 computer. 
 </details>
+
+{{< alert icon="👉" text="If your problem persists or is not listed in the FAQ, please contact the [support forum](https://forum.pollen-robotics.com/).">}}

@@ -30,10 +30,8 @@ The complete **head** is composed of the following elements:
 - **l_antenna**, the left antenna, modeled as an actuator with a single joint.
 - **r_antenna**, the right antenna, modeled as an actuator with a single joint.  
 
+{{< img-center "/gifs/sdk/head_moving.gif" 400x "Moving head" >}}
 
-<p align="center">
-    {{< video "videos/sdk/orbita.mp4" "80%" >}}
-</p>
 
 ### The actuators
 
@@ -45,19 +43,18 @@ from reachy2_sdk import ReachySDK
 reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
 
 reachy.head
->>> <Head on=False actuators=
-	neck: <Orbita3d on=False joints=
-	<OrbitaJoint axis_type="roll" present_position=0.24 goal_position=0.24 >
-	<OrbitaJoint axis_type="pitch" present_position=-8.44 goal_position=-8.44 >
-	<OrbitaJoint axis_type="yaw" present_position=14.01 goal_position=14.01 >
+>>> <Head on=True actuators=
+	neck: <Orbita3d on=True joints=
+	<OrbitaJoint axis_type="roll" present_position=0.0 goal_position=0.0 >
+	<OrbitaJoint axis_type="pitch" present_position=10.0 goal_position=10.0 >
+	<OrbitaJoint axis_type="yaw" present_position=-0.0 goal_position=0.0 >
 >
-	l_antenna: <Antenna on=False joints=
-	<DynamixelMotor on=False present_position=2.37 goal_position=2.37 >
+	l_antenna: <Antenna on=True joints=
+	<DynamixelMotor on=True present_position=0.0 goal_position=0.0 >
 >
-	r_antenna: <Antenna on=False joints=
-	<DynamixelMotor on=False present_position=-5.54 goal_position=-5.54 >
->
->
+	r_antenna: <Antenna on=True joints=
+	<DynamixelMotor on=True present_position=0.0 goal_position=0.0 >
+
 
 reachy.head.turn_on()  # Turn on only the head, making neck and both antennas stiff
 ```
@@ -112,7 +109,7 @@ The **`look_at()`** method makes the head orient itself to **face a 3D point**, 
 
 The origin of this coordinate system is located in the upper part of the robot trunk.
 
-{{< img-center "images/sdk/first-moves/reachy_frame.jpg" 400x "" >}}
+{{< img-center "images/sdk/first-moves/reachy_frame.png" 400x "" >}}
 
 **🦾 Example 1: Look forward**  
 If you want Reachy to look forward, you can send it the following: 
@@ -125,9 +122,8 @@ reachy.head.look_at(x=0.5, y=0, z=0.2, duration=1.0)
 You can use multiple `look_at()` calls to chain head movements or even chain them with the `rotate_by()` and `goto()` functions described below.
 
 **🦾 Example 2: Chaining look_at**  
-<p align="center">
-    {{< video "videos/sdk/look.mp4" "80%" >}}
-</p>
+
+{{< img-center "/gifs/sdk/head-goto.gif" 400x "Look at" >}}
 
 Here is the code to reproduce this:
 
@@ -145,9 +141,7 @@ The best way to understand how to use the `look_at()` function is to experiment 
 **🦾 Example 3: Follow Reachy's hand**  
 Another cool thing is combining Reachy's kinematics with the `look_at()` so that Reachy's head follows its hand while you're moving it!
 
-<p align="center">
-    {{< video "videos/sdk/look_at_hand.mp4" "80%" >}}
-</p>
+{{< img-center "/gifs/sdk/follow-arm.gif" 400x "Head following arm" >}}
 
 ```python
 x, y, z = reachy.r_arm.forward_kinematics()[:3, -1]
@@ -158,7 +152,7 @@ while True:
     reachy.head.look_at(x=x, y=y, z=z, duration=0.1, wait=True)
 ```
 
-This code calculates the [forward kinematics of Reachy's right arm]({{< ref "developing-with-reachy-2/basics/5-control-head#forward-kinematics" >}}). The x, y, z coordinates of Reachy's right end-effector in Reachy's coordinate system are used as the target for `look_at()`. The loop with a blocking movement (parameter `wait=True`) ensures the head follows the hand at a frequency of 10Hz.
+This code calculates the [forward kinematics of Reachy's right arm]({{< ref "developing-with-reachy-2/basics/4-use-arm-kinematics#forward-kinematics" >}}). The x, y, z coordinates of Reachy's right end-effector in Reachy's coordinate system are used as the target for `look_at()`. The loop with a blocking movement (parameter `wait=True`) ensures the head follows the hand at a frequency of 10Hz.
 
 ### goto()
 

@@ -10,7 +10,7 @@ type: docs
 menu:
   getting-started:
     parent: "Setup Reachy 2"
-weight: 240
+weight: 250
 toc: true
 seo:
   title: "How to Completely Power Off Reachy 2 – Power Consumption and Shutdown Guide"
@@ -32,6 +32,9 @@ This will stop the power supply to the computer and the devices powered by USB.
 
 **D) Stop the Mobile Base Button.**  
 The screen will remain ON for 2 seconds; do not be surprised.
+
+
+*You can store the emergency stop button in the base designed for it, located on the rear bar of the tripod :* {{< img-center "/images/getting-started/setup-reachy2/stop-reachy2/emergency_button_holder.jpg" 150x "How to store the emergency button" >}}
 
 ## Understanding the Power Consumption
 

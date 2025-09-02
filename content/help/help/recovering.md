@@ -13,9 +13,9 @@ weight: "10"
 
 ## Fast recovering
 
-The simpliest way to recover from an error (for example an arm not responding anymore) is to **power cycle the motors and restart the services**.  
+The simpliest way to recover from an error (for example, an arm not responding anymore) is to **power cycle the motors and restart the services**.  
 
-It as a fast recovery procedure that may cover 80% of unexpected behavior.   
+It is a fast recovery procedure that may cover 80% of unexpected behavior.   
 
 To do so:
 1. Suspend your current use of the robot

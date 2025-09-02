@@ -26,3 +26,5 @@ Check that you are not on a fake mode (mode that only makes the virtual robot mo
 Check on the dashboard services that everything is fine, especially in the reachy2-core logs. If you see errors, restart the core.
 
 </details>
+
+{{< alert icon="👉" text="If your problem persists or is not listed in the FAQ, please contact the [support forum](https://forum.pollen-robotics.com/).">}}

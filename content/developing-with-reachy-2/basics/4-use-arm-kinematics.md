@@ -47,18 +47,22 @@ We have defined the full kinematic model of the arm, including the translation a
 
 |Joint|Translation|Rotation|
 |-----|-----------|--------|
-|r_arm.shoulder.pitch|(0, -0.019, 0)|(0, 1, 0)|
+|r_arm.shoulder.pitch|(0, -0.20, 0)|(0, 1, 0)|
 |r_arm.shoulder.roll|(0, 0, 0)|(1, 0, 0)|
-|r_arm.elbow.yaw|(0, 0, -0.280)|(0, 0, 1)|
+|r_arm.elbow.yaw|(0, 0, -0.28)|(0, 0, 1)|
 |r_arm.elbow.pitch|(0, 0, 0)|(0, 1, 0)|
-|r_arm.wrist.roll|(0, 0, -0.120)|(0, 0, 1)|
+|r_arm.wrist.roll|(0, 0, -0.28)|(0, 0, 1)|
 |r_arm.wrist.pitch|(0, 0, 0)|(0, 1, 0)|
 |r_arm.wrist.yaw|(0, 0, 0)|(1, 0, 0)|
-|r_arm.gripper|(0, ??, ??)|(0, 0, 0)|
+|r_arm.gripper|(0, 0, -0.11)|(0, 0, 0)|
 
 To use and understand the kinematic model, you need to know how Reachy's coordinate system is defined (from Reachy's perspective). See below:
 
-{{< img-center "images/sdk/first-moves/arm_axis.png" 400x "" >}}
+{{< img-dual
+  "images/sdk/first-moves/arm_axis.png" "150x"
+  "images/sdk/first-moves/arm_dimensions.png" "150x"
+  "Arm axis" "Arm dimensions"
+>}}
 
 - The X axis corresponds to the forward arrow.
 - The Y axis corresponds to the right-to-left arrow.
@@ -66,20 +70,20 @@ To use and understand the kinematic model, you need to know how Reachy's coordin
 
 The origin of this coordinate system is located in the upper part of the robot trunk, inside Reachy. Imagine a segment from the left shoulder to the right shoulder—the origin is the midpoint of this segment, just behind the center of Pollen's logo on Reachy's torso.
 
-{{< img-center "images/sdk/first-moves/reachy_frame.jpg" 400x "" >}}
+{{< img-center "images/sdk/first-moves/reachy_frame.png" 400x "" >}}
 
 > Units in this coordinate system are **meters**. For example, the point (0.3, -0.2, 0) is 30 cm in front of the origin, 20 cm to the right, and at the same height.
 
 ### End effector location
 
-The end effector is a virtual joint located in the gripper and referred to as *'right_tip'* or *'left_tip'* in the [URDF file](https://github.com/pollen-robotics/reachy_kinematics/blob/master/reachy.URDF), as shown below.
+The end effector is a virtual joint located in the gripper and referred to as *'r_arm_tip'* or *'l_arm_tip'* in the [URDF file](https://github.com/pollen-robotics/reachy2_core/blob/develop/reachy_description/urdf/reachy.urdf.xacro), as shown below.
 
 {{< img-center "images/sdk/first-moves/eef.png" 400x "" >}}
 
-The red dot corresponds to the *'right_tip'*. You can see the right and left end-effectors animated below.
+The red dot corresponds to the *'r_arm_tip'*. You can see the right and left end-effectors animated below.
 
 <p align="center">
-    {{< video "videos/sdk/eef.mp4" "80%" >}}
+    {{< video "videos/sdk/eef.mp4" "70%" >}}
 </p>
 
 ### Switching between joint and cartesian coordinates
@@ -101,12 +105,15 @@ Each arm has a **`forward_kinematics()`** method. To use it, first connect to yo
 from reachy2_sdk import ReachySDK
 
 reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
+reachy.turn_on()
+reachy.goto_posture() # Set your Reachy in a default posture
 
 reachy.r_arm.forward_kinematics()
->>> array([[-0.015,  0.001, -1.   ,  0.384],
-       [ 0.086,  0.996, -0.001, -0.224],
-       [ 0.996, -0.086, -0.015, -0.273],
+>>> array([[ 0.985, -0.168, -0.045,  0.03 ],
+       [ 0.174,  0.951,  0.255, -0.368],
+       [ 0.   , -0.259,  0.966, -0.638],
        [ 0.   ,  0.   ,  0.   ,  1.   ]])
+
 ```
 
 The method returns a 4x4 matrix indicating the position and orientation of the end effector in Reachy 2's coordinate system.
@@ -148,13 +155,13 @@ For example, we can compute the forward kinematics for the right-angle position 
 
 ```python
 reachy.r_arm.forward_kinematics(right_angle_position)
->>> array([[ 0.    ,  0.    , -1.    ,  0.3675],
-       [ 0.    ,  1.    ,  0.    , -0.202 ],
-       [ 1.    ,  0.    ,  0.    , -0.28  ],
-       [ 0.    ,  0.    ,  0.    ,  1.    ]])
+>>> array([[-0.045, -0.168, -0.985,  0.387],
+       [ 0.255,  0.951, -0.174, -0.205],
+       [ 0.966, -0.259, -0.   , -0.27 ],
+       [ 0.   ,  0.   ,  0.   ,  1.   ]])
 ```
 
-With this result, we can tell that when the right arm is in the right angle position, the right end-effector is 37cm in front of the origin, 20cm to the left and 28cm below the origin.
+With this result, we can tell that when the right arm is in the right angle position, the right end-effector is 39cm in front of the origin, 20.5cm to the right and 27cm below the origin.
 
 As of the rotation matrix, the identity matrix corresponds to the zero position of the robot which is when the hand is facing toward the bottom.
 
@@ -235,23 +242,23 @@ To make this more concrete, let's first try with a simple example. We will make 
 
 The virtual corner is represented below.
 
-{{< img-center "images/sdk/first-moves/square_setup.jpg" 400x "" >}}
+{{< img-center "images/sdk/first-moves/square_setup.png" 400x "" >}}
 
 For our starting corner A, let's imagine a point in front of the robot, on its right and below its base. With Reachy coordinate system, we can define such a point with the following coordinates:
 
-$$A = \begin{pmatrix}0.3 & -0.4 & -0.3\end{pmatrix}$$
+$$A = \begin{pmatrix}0.4 & -0.5 & -0.2\end{pmatrix}$$
 
 The coordinates of B should match A except the z component which should be higher. Hence 
 
-$$B = \begin{pmatrix}0.3 & -0.4 & 0.0\end{pmatrix}$$
+$$B = \begin{pmatrix}0.4 & -0.5 & 0.0\end{pmatrix}$$
 
 For the corner C, we want a point on the same z level as B, in the inner space of Reachy and in the same plane as A and B. So we only need to change the y component of B. We can take for example :
 
-$$C = \begin{pmatrix}0.3 & -0.1 & 0.0\end{pmatrix}$$
+$$C = \begin{pmatrix}0.4 & -0.3 & 0.0\end{pmatrix}$$
 
 And to complete our corners, we can deduce D from A and C. D coordinates should match C, except its z component, which must the same as A. Hence
 
-$$D = \begin{pmatrix}0.3 & -0.1 & -0.3\end{pmatrix}$$
+$$D = \begin{pmatrix}0.4 & -0.3 & -0.2\end{pmatrix}$$
 
 
 But having the 3D position is not enough to design a pose. You also need to provide the 3D orientation via a rotation matrix. It's often the tricky part when building a target pose matrix.
@@ -262,12 +269,11 @@ We know from before which rotation matrix corresponds to this rotation, but we c
 
 ```python
 from reachy2_sdk.utils.utils import get_pose_matrix
-get_pose_matrix([0.3, -0.4, -0.3], [0,-90,0])
->>> array([[ 0. ,  0. , -1. ,  0.3],
-       [ 0. ,  1. ,  0. , -0.4],
-       [ 1. ,  0. ,  0. , -0.3],
+get_pose_matrix([0.4, -0.5, -0.2], [0,-90,0])
+>>> array([[ 0. ,  0. , -1. ,  0.4],
+       [ 0. ,  1. ,  0. , -0.5],
+       [ 1. ,  0. ,  0. , -0.2],
        [ 0. ,  0. ,  0. ,  1. ]])
-
 ```
 
 We got the 4x4 matrix that we expected!
@@ -276,13 +282,12 @@ You can also move the arm with your hand where you want it to be and use the for
 
 Here, having the rotation matrix and the 3D positions for our points A and B, we can build both target pose matrices.
 
-
-| **Matrix** | **Values**                                      |
+| | **Values**                                      |
 |------------|-------------------------------------------------|
-| **A**      | `np.array([[0, 0, -1, 0.3], [0, 1, 0, -0.4], [1, 0, 0, -0.3], [0, 0, 0, 1]])` |
-| **B**      | `np.array([[0, 0, -1, 0.3], [0, 1, 0, -0.4], [1, 0, 0, 0.0], [0, 0, 0, 1]])`  |
-| **C**      | `np.array([[0, 0, -1, 0.3], [0, 1, 0, -0.1], [1, 0, 0, 0.0], [0, 0, 0, 1]])`  |
-| **D**      | `np.array([[0, 0, -1, 0.3], [0, 1, 0, -0.1], [1, 0, 0, -0.3], [0, 0, 0, 1]])` |
+| **A**      | `np.array([[0, 0, -1, 0.4], [0, 1, 0, -0.5], [1, 0, 0, -0.2], [0, 0, 0, 1]])` |
+| **B**      | `np.array([[0, 0, -1, 0.4], [0, 1, 0, -0.5], [1, 0, 0, 0.0], [0, 0, 0, 1]])`  |
+| **C**      | `np.array([[0, 0, -1, 0.4], [0, 1, 0, -0.3], [1, 0, 0, 0.0], [0, 0, 0, 1]])`  |
+| **D**      | `np.array([[0, 0, -1, 0.4], [0, 1, 0, -0.3], [1, 0, 0, -0.2], [0, 0, 0, 1]])` |
 
 
 #### Sending the movements commands
@@ -306,11 +311,11 @@ reachy.r_arm.goto(D)
 reachy.r_arm.turn_off_smoothly()
 ```
 
+*You can also find the script directly in the SDK repository, in the [examples section](https://github.com/pollen-robotics/reachy2-sdk/blob/develop/src/examples/draw_square.py).*
+
 The result should look like this:
 
-<p align="center">
-    {{< video "videos/sdk/goto_ik.mp4" "80%" >}}
-</p>
+{{< img-center "/gifs/sdk/goto_ik.gif" 400x "Goto square" >}}
 
 <br>
 

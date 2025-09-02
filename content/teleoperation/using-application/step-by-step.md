@@ -77,6 +77,9 @@ The motors are automatically turned into compliant mode when quitting the mirror
 
 8. When you are ready, **face the mirror completely** and click on "Ready". The position of the actual robot appears in a semi-transparent green color. This may be useful when you've left the robot in a certain position that you would like to keep when entering the teleoperation. Hold (A) to start the teleoperation.
 
+{{< warning icon="🔴" text="If the blue avatar of the robot <b> is significantly different </b> from the current position of your robot, <b>DO NOT START TELEOPERATION</b>! <br><b>Recalibrate</b> by pressing the emergency stop button, returning the joints to a neutral position and releasing the emergency button." >}}
+<br>
+
 {{< img "images/vr/use-teleop/mirror-ready.png" 600x "Start teleoperation">}}  </br>
 
 9. (NEW) You first have the control of the head and the mobile base, but **not of the arms**. Take a few seconds to check the robot surroundings and go to an appropriate place before starting the full teleoperation. When the environment is safe, **press A** to get the full control. You can also go back to the mirror room pressing the related button with your laser beam.
@@ -91,7 +94,20 @@ The motors are automatically turned into compliant mode when quitting the mirror
 
 
 ## Use Reachy's emotions
-*Use of the antennas emotion is not available on Reachy 2.*
+
+Bring Reachy to life with antenna movements!
+It can express four distinct emotions using its antennae: happy, angry, sad, and confused.
+
+To trigger an emotion during teleoperation:
+1. Press the **X button** on your controller.
+2. Use the joystick to select the emotion you want.
+
+{{< img "images/vr/use-teleop/emotions-panel.png" 600x "Emotions panel">}}
+
+
+The animation will play for a few seconds, adding expressiveness to your robot’s interactions.
+
+
 
 ## Application features
 
@@ -158,6 +174,6 @@ The "Reset position" button is placed at the bottom of the mirror, under the A l
 
 {{% expand "> Exit and lock position"%}}
 While press (A) to exit the teleoperation, you may hold (X) to activate the position lock. A lock is displayed when doing so.
-{{< img "images/vr/use-teleop/exit-lock.png" 600x "Exit and lock">}}
+{{< img "images/vr/use-teleop/exit-lock.png" 400x "Exit and lock">}}
 The robot will stayed locked while you'll be back in the mirror room. This can be useful to keep a certain position while you need to take a break, change position or remove the headset. The position of the robot will be displayed by the semi-transparent green robot when you will restart the teleoperation.
 {{% /expand %}}

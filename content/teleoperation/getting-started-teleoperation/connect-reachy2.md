@@ -19,14 +19,10 @@ seo:
 
 ## 1. Find Reachy 2 IP
 
-In many cases, you will be able to use the name of the robot to connect.  
-Find your robot name in its back, below its neck.  
+You can either use your robot's name (written on the back of its neck) or its IP address. 
 
+> If you need help finding its IP address, go to [this section]({{< ref "/getting-started/setup-reachy2/connect-reachy2/#a-check-your-network" >}})
 
-If your network setup is configured so it does not work with the local name, you can get its exact IP by connecting to the dashboard, in the Network section.  
-
-
-Can't find the IP? Use the LCD screen to get information.
 
 ## 2. Check your VR setup is ready
 
@@ -48,7 +44,7 @@ Run *Reachy2Teleoperation* from your computer.
 
 Create a new robot entry in the menu with the IP address you previously found.  
 The IP can either be:
-- the robot name followed by **.local**.<br />For example, if your robot name was **reachy2-beta0**, enter "**reachy2-beta0.local**".
+- the robot name followed by **.local**.<br />For example, if your robot name was **r2-0000**, enter "**r2-0000.local**".
 - the real robot IP, as written in the Network section of the dashboard.
 
 > Note that you must select the input fields with your VR beam and fill them in using your computer keyboard.  

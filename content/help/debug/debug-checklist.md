@@ -20,14 +20,14 @@ seo:
 
 ## Fast recovering
 
-The simpliest way to recover from an error (for example an arm not responding anymore) is to **power cycle the motors and restart the services**.  
+The simpliest way to recover from an error (for example, an arm not responding anymore) is to **power cycle the motors and restart the services**.  
 
 This fast recovery procedure may cover 80% of unexpected behavior.   
 
 To do so:
 1. Suspend your current use of the robot
-2. Press the emergency stop button
-3. Make sure to put the arms and head in a suitable position before restarting the motors
-4. Press and turn clockwise the emergency stop button to raise it
-5. Go to the dashboard and click on *Restart* for `reachy2-core` then `webrtc`
+2. Press the **emergency stop** button
+3. Make sure to put the arms and head in a **suitable position** before restarting the motors
+4. Press and turn clockwise the **emergency stop** button to raise it
+5. Go to the **dashboard** and click on *Restart* for `reachy2-core` then `webrtc`
 
