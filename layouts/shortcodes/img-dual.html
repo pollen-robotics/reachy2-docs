@@ -1,0 +1,14 @@
+{{ $img1 := resources.Get (.Get 0) }}
+{{ $img2 := resources.Get (.Get 2) }}
+{{ if and $img1 $img2 }}
+  {{ $resized1 := $img1.Resize (.Get 1) }}
+  {{ $resized2 := $img2.Resize (.Get 3) }}
+  <div style="display: flex; justify-content: center; gap: 8rem; align-items: center;">
+    <img alt="{{ .Get 4 }}" src="{{ $resized1.RelPermalink }}" width="{{ $resized1.Width }}" height="{{ $resized1.Height }}">
+    <img alt="{{ .Get 5 }}" src="{{ $resized2.RelPermalink }}" width="{{ $resized2.Width }}" height="{{ $resized2.Height }}">
+  </div>
+{{ else }}
+  <p style="text-align: center; color: red;">
+    Image not found: {{ if not $img1 }}{{ .Get 0 }}{{ else }}{{ .Get 2 }}{{ end }}
+  </p>
+{{ end }}

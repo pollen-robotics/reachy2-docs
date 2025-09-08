@@ -18,7 +18,7 @@ seo:
 ---
 
 > A reminder of the controller inputs mapping is available in the **help** section of the *transition room* in the VR teleoperation application:  
-{{< img "images/vr/use-teleop/help-panel.png" 600x "Help panel in VR transition room">}}
+{{< img "images/vr/use-teleop/mirror-help.png" 600x "Info menu">}}
 
 
 ## Meta Quest
@@ -32,7 +32,7 @@ seo:
 |**A**|**At robot teleoperation start:** Start robot teleoperation|
 |       |**During teleoperation:** Return to menu|
 |**B**|**During teleoperation:** Mobile base boost|
-|**X**|**When leaving teleoperation (A pressed):** Lock robot position|
+|**X**|**During teleoperation**: Emotions panel <br> **When leaving teleoperation (A pressed):** Lock robot position|
 |**Left Thumbstick**|**During teleoperation:** Control mobile base translation|
 |**Right Thumbstick**|**During teleoperation:** Control mobile base rotation|
 |**Left Index Trigger**|**In menu:** Select button|

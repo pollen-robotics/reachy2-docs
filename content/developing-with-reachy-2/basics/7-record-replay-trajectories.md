@@ -34,7 +34,7 @@ The `send_goal_positions()` method sends the specified goal positions to all the
 
 **⚠️ Important: Use only for continuous trajectories**  
 
-{{< warning icon="🛑" text="When you use <code>send_goal_positions()</code>, Reachy will attempt to move to the goal position <b>as fast as it can</b>. This means you must only use it to send <b>small, continuous steps</b>, where each goal is close to the current position. <br>If the gap between the current and target joint positions is too large, this can result in unsafe movements." >}}
+{{< warning icon="🛑" text="When you use <code>send_goal_positions()</code>, Reachy will attempt to move to the goal position <b>as fast as it can</b>. This means you must only use it to send <b>small, continuous steps</b>, where each goal is close to the current position. <br>If the gap between the current and target joint positions is too large, this can result in <b>unsafe movements</b> or <b>emergency freeze</b> of the robot." >}}
 
 #### Examples of reachy.send_goal_positions() usage
 

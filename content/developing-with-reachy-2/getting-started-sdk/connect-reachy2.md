@@ -42,7 +42,7 @@ There are two ways to find it:
 
 ### Option 1: Using the dashboard
 
-Open a browser on your computer (on the same network as the robot), and goto `reachy_name.local:8000/`.
+Open a browser on your computer (on the same network as the robot), and go to `http://reachy_name.local:8000/`.
 
 Once you are in the dashboard, you can click on **Network** and you will find the IP addresses of your robot (WiFi and Ethernet). 
 
@@ -50,7 +50,7 @@ Once you are in the dashboard, you can click on **Network** and you will find th
 
 If you are not able to access the dashboard, you can turn off completely your robot. Then, you can plug the supplied LCD screen on the USB port of the mobile base.
 
-Turn on your robot again, and it should display display the robot's IP addresses (alternately Ethernet and WiFi) : 
+Turn on your robot again, and it should display the robot's IP addresses (alternately Ethernet and WiFi) : 
 
 {{< img-center "images/sdk/getting-started/IP_address.jpg" 400x "" >}}
 

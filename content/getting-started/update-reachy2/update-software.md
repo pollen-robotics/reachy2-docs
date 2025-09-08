@@ -21,7 +21,7 @@ seo:
 
 The update of the robot can be entirely done with the dashboard.  
 
-From the **Updates** tab, check if updates are available:
+From the **Updates** section, check if updates are available:
 
 {{< img-center "images/docs/update/dashboard-update-page.png" 600x "" >}}
 

@@ -36,7 +36,6 @@ It behaves similarly to the **fake mode** of the **core service** available on a
 🚫 **What’s not included:**
 - **Camera access** is not available yet in simulation (*coming soon*)
 - The **WebRTC service** is not simulated, meaning teleoperation features are not supported
-- *Mobile base is not available yet in MuJoCo*
 
 
 ## Simulation platforms
@@ -50,3 +49,5 @@ It behaves similarly to the **fake mode** of the **core service** available on a
 
 To use simulation, we provide a preconfigured [**Docker image**](https://hub.docker.com/r/pollenrobotics/reachy2) that let you explore and develop for Reachy 2 on **any operating system**.  
 In just a few steps, you’ll be able to interact with a fully simulated robot, ideal for testing behaviors, building applications, or just getting familiar with the platform.
+
+{{< alert icon="💡" text="Go to the next section for instructions on how to install the simulation!" >}}

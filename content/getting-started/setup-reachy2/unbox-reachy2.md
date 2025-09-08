@@ -26,7 +26,6 @@ Reachy will arrive in a big box. Be sure to have at least 4 people to safely lif
 - Mini USB cable
 - LCD screen kit
 - Emergency stop button
-- 2 plastic pieces for placing the emergency button
 
 ## B) Lift the Robot Out of the Box
 

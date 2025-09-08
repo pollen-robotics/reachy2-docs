@@ -25,18 +25,34 @@ To ensure safe and effective behavior on your Reachy, we recommend testing your 
 
 1. **Enable Fake Mode**:
 
-   The easiest way to enable fake mode is through graphical tools. This feature is currently available in Plum (a tool users can access but is primarily used internally). Enabling fake mode via the Dashboard itself is not yet supported.
+   The easiest way to enable fake mode is through graphical tools. This feature is currently available in Plum (a tool users can access but is primarily used internally). 
+   
+   To go to Plum, reach `http://your-robot-name.local:5000/`  (you need to be on the same network as the robot), then press the button Reachy2 core fake :
+   {{< img-center "images/sdk/getting-started/plum_fake_mode.png" 600x "Fake mode on Plum" >}}
 
+   You can check that your robot is in Fake mode, by connecting to it and check its info :
+   ```python
+    reachy = ReachySDK('10.0.0.201') # Replace with your robot IP address
+    reachy.info
+    <ReachyInfo mode="FAKE" 
+      ....
+   ```
+   
+   > 💡 *Enabling fake mode via the Dashboard will be soon available !*
+
+  <details><summary> For advanced users :</summary>
    For advanced users working in development mode and launching the stack manually, you can enable fake mode by adding `fake:=true` when starting the stack. For example:
 
    ```bash
    ros2 launch reachy_bringup reachy.launch.py start_sdk_server:=true start_rviz:=true fake:=true
    ```
+   </details>
 
 2. **Launch Visualization Tools**:
 
    Access the dashboard and click on **Visualization Tools**. This will open RViz, where you can see a fake Reachy in action.
 
+
 ## Next Steps
 
-Now that you have tested your movements in fake mode, you are ready to make your robot move! Proceed to the [Basics]({{< ref "basics" >}}) section to start implementing behaviors on your physical Reachy.
+Now that you have tested your movements in fake mode, you are ready to make your robot move! Proceed to the [Basics section]({{< ref "developing-with-reachy-2/basics/1-hello-world.md" >}}) to start implementing behaviors on your physical Reachy.

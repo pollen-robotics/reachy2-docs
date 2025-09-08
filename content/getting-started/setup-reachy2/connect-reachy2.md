@@ -35,15 +35,19 @@ Instead, connect the robot’s Ethernet cable to your router or switch, so it be
 
 ## B) Connect to the dashboard
 
-Check the name of your robot at its back and type it followed with **.local:8000** in your web browser.  
+Check the name of your robot at its back of neck and type it followed with **.local:8000** in your web browser.  
 
-> Example: for a robot called `reachy2-pvt00`, type **`reachy2-pvt00.local:8000`** in your web browser
+> Example: for a robot called `r2-0000`, type **`http://r2-0000.local:8000/`** in your web browser
 
-You can also connect to the dashboard via Reachy’s IP address.  
-Connect the LCD screen provided to the USB port on the mobile base (this must be done before starting the robot). Reachy’s IP address will appear.  
-Open a tab in your web browser and enter Reachy's IP adress followed with **:8000**.  
+You can also connect to the dashboard via Reachy’s IP address.
 
-> Example: for a robot with IP `192.168.0.100`, type **`192.168.0.100:8000`** in your web browser
+To know it, you can use the LCD screen provided. For that, turn off your robot then connect the LCD screen to the USB port on the mobile base. Reachy’s IP addresses (WiFi and Ethernet) will appear.  
+
+{{< img-center "/images/getting-started/setup-reachy2/connect-reachy2/lcd_screen.jpg" 300x "LCD screen plugged" >}}  
+
+Open a tab in your web browser and enter Reachy's IP address followed with **:8000**.  
+
+> Example: for a robot with IP `192.168.0.100`, type **`http://192.168.0.100:8000/`** in your web browser
 
 **Click on “Reachy awake” to confirm that Reachy is well set-up.**
 

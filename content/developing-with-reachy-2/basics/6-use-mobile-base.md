@@ -163,7 +163,7 @@ reachy.mobile_base.goto(x=0.2, y=0.0, theta=0.0)
 **🦾 Example 3: Sequential movements with odometry reset**
 
 Let's do the same by resetting the odometry between the two commands:
-```
+```python
 import time
 
 # Move 30cm forward, to reach x=30cm in the current odometry frame

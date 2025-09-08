@@ -1,11 +1,16 @@
 ---
 title: "Connect your robot to the WiFi"
-description: "How to connect your robot to the WiFi without using the dashboard."
-lead: "How to connect Reachy 2 to WiFi without the dashboard"
+description: "How to connect your robot to the WiFi with and without the dashboard"
+lead: "How to connect Reachy 2 to WiFi with and without the dashboard"
 date: 2023-08-09T14:43:31+02:00
 lastmod: 2023-08-09T14:43:31+02:00
 draft: false
 images: []
+type: docs
+menu:
+  getting-started:
+    parent: "Setup Reachy 2"
+weight: 240
 toc: true
 hidden: true
 seo:
@@ -15,11 +20,22 @@ seo:
 
 ## WiFi
 
-On your first connection to a network, the simplest method is to connect your robot with an Ethernet cable.  
+Once you're on the dashboard (*if you need a reminder, go back to the [previous section]({{< ref "getting-started/setup-reachy2/connect-reachy2/#b-connect-to-the-dashboard" >}})*): 
 
-If you cannot do this:
+1. Go to the **Network** section and click on **Update List**. 
 
-Use the appropriate cable and connect your computer directly to Reachy 2's computer. The cable must be plugged into port (b) of Reachy 2's hardware interface.  
+{{< img-center "images/docs/getting-started/network_dashboard.png" 500x "Network section in dashboard" >}}
+{{< img-center "images/docs/getting-started/update_list.png" 500x "Update Wifi List" >}}
+
+2. Scroll through the detected Wi-Fi networks in **‘Select a network’** and select the one you want. Then add the password and press **Connect**.
+
+3. Check that your new connexion appears : 
+{{< img-center "images/docs/getting-started/wifi_ip.png" 500x "New Wifi IP address" >}}
+
+<details>
+<summary> <b>If you can't do this :</b></summary>
+
+Use the appropriate cable and connect your computer directly to Reachy 2's computer. The cable must be plugged into port "Console" of Reachy 2's hardware interface.  
 
 {{< img-center "images/docs/getting-started/serial-connection.png" 400x "Serial connection port" >}}
 
@@ -55,4 +71,5 @@ nmcli device wifi connect <wifi.name> password <your.password>
 > nmcli device wifi connect POLLEN-WIFI password superstrongpassword
 > ```
 
-{{< my-button link="/getting-started/setup-reachy2/connect-reachy2/" label="< Back to network connection" >}}
+</details>
+
