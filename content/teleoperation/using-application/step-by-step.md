@@ -77,7 +77,7 @@ The motors are automatically turned into compliant mode when quitting the mirror
 
 8. When you are ready, **face the mirror completely** and click on "Ready". The position of the actual robot appears in a semi-transparent green color. This may be useful when you've left the robot in a certain position that you would like to keep when entering the teleoperation. Hold (A) to start the teleoperation.
 
-{{< warning icon="🔴" text="If the blue avatar of the robot <b> is significantly different </b> from the current position of your robot, <b>DO NOT START TELEOPERATION</b>! <br><b>Recalibrate</b> by pressing the emergency stop button, returning the joints to a neutral position and releasing the emergency button." >}}
+{{< alert icon="🚨" text="If the blue avatar of the robot <b> is significantly different </b> from the current position of your robot, <b>the teleoperation won't start</b>. That means that the calibration went wrong. <br><b>Recalibrate</b> by pressing the emergency stop button, returning the joints to a neutral position and releasing the emergency button." >}}
 <br>
 
 {{< img "images/vr/use-teleop/mirror-ready.png" 600x "Start teleoperation">}}  </br>
@@ -100,7 +100,7 @@ It can express four distinct emotions using its antennae: happy, angry, sad, and
 
 To trigger an emotion during teleoperation:
 1. Press the **X button** on your controller.
-2. Use the joystick to select the emotion you want.
+2. Use the left joystick to select the emotion you want.
 
 {{< img "images/vr/use-teleop/emotions-panel.png" 600x "Emotions panel">}}
 

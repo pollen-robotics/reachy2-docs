@@ -106,13 +106,14 @@ from reachy2_sdk import ReachySDK
 
 reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
 reachy.turn_on()
-reachy.goto_posture() # Set your Reachy in a default posture
+reachy.goto_posture(wait=True) # Set your Reachy in a default posture
 
 reachy.r_arm.forward_kinematics()
->>> array([[ 0.985, -0.168, -0.045,  0.03 ],
-       [ 0.174,  0.951,  0.255, -0.368],
-       [ 0.   , -0.259,  0.966, -0.638],
+>>> array([[ 1.   ,  0.001, -0.015,  0.01 ],
+       [ 0.001,  0.996,  0.086, -0.257],
+       [ 0.015, -0.086,  0.996, -0.657],
        [ 0.   ,  0.   ,  0.   ,  1.   ]])
+
 
 ```
 
@@ -154,10 +155,10 @@ You can also compute the pose for a given joints position. To do that, just pass
 For example, we can compute the forward kinematics for the right-angle position we defined earlier.
 
 ```python
-reachy.r_arm.forward_kinematics(right_angle_position)
->>> array([[-0.045, -0.168, -0.985,  0.387],
-       [ 0.255,  0.951, -0.174, -0.205],
-       [ 0.966, -0.259, -0.   , -0.27 ],
+reachy.r_arm.forward_kinematics(right_angled_position)
+>>> array([[-0.015,  0.001, -1.   ,  0.384],
+       [ 0.086,  0.996, -0.001, -0.224],
+       [ 0.996, -0.086, -0.015, -0.273],
        [ 0.   ,  0.   ,  0.   ,  1.   ]])
 ```
 

@@ -42,6 +42,8 @@ from reachy2_sdk import ReachySDK
 
 reachy = ReachySDK(host='10.0.0.201')  # Replace with the actual IP
 
+reachy.head.turn_on()  # Turn on only the head, making neck and both antennas stiff
+
 reachy.head
 >>> <Head on=True actuators=
 	neck: <Orbita3d on=True joints=
@@ -54,9 +56,6 @@ reachy.head
 >
 	r_antenna: <Antenna on=True joints=
 	<DynamixelMotor on=True present_position=0.0 goal_position=0.0 >
-
-
-reachy.head.turn_on()  # Turn on only the head, making neck and both antennas stiff
 ```
 
 You could, of course, turn on the whole robot by calling `reachy.turn_on()` directly.

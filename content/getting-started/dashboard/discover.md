@@ -37,7 +37,7 @@ It provides an overview of the robot's state and allows quick access to features
 
 What does the dashboard provide?
 
-* **Access the robot's state** - **Reachy control page**</br> 
+* **Access the robot's state** - **Robot page**</br> 
 Get robot's info, state of the joints, even send posture command. 
 
 
