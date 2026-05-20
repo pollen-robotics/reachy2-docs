@@ -45,7 +45,7 @@ Then press and turn the emergency stop button clockwise to raise it. The automat
 
 Press the button located on Reachy’s back. It takes up to 2 minutes for the computer to start. You will hear a little bubbly sound when Reachy is ready.
 
-> 💡 On the latest robots, the button is located on the right side of the robot's torso.
+> ℹ️ On the latest robots, the button is located on the right side of the robot torso.
 > {{< img-center "/images/getting-started/setup-reachy2/start-reachy2/new_start_button.jpg" 200x "Reachy new start button" >}} 
 
 {{< alert icon="🔌" text="We advise unplugging the computer after each use for power saving, because the USB ports still consume current when the computer is off." >}}
